@@ -7,7 +7,18 @@
     
     <title>浏览器工作过程 - </title>
     
-    <meta name="description" content="相似问题： 打开一个网址会发生什么？ 浏览器是怎样工作的？ 简述一次完整的 HTTP 请求过程    First Of All：在浏览器地址栏输入 URL 并回车  DNS 域名解析  搜索浏览器自身缓存的 DNS 记录  浏览器自身也带有一层DNS缓存。Chrome 缓存1000条DNS解析结果，缓存时间大概在一分钟左右。 （Chrome浏览器通过输入：chrome://net-internals/#dns 打开DNS缓存页面） 搜索操作系统缓存和 hosts 文件  发生在浏览器缓存中没有找到需要的记录或记录已经过期的时候。 在Windows操作系统中，可以通过 ipconfig /displaydns 命令查看本机当前的缓存。 通过hosts文件，你可以手动指定一个域名和其对应的IP解析结果，并且该结果一旦被使用，同样会被缓存到操作系统缓存中。 Windows 系统的 hosts 文件在 %systemroot%\system32\drivers\etc 下，linux 系统的 hosts 文件在 /etc/hosts 下。 向域名解析服务器发送解析请求  发生在 hosts 文件和操作系统缓存中没有找到需要的记录或记录已经过期。 第一台被访问的域名解析服务器就是我们平时在设置中填写的DNS服务器一项。 一般一台域名解析服务器会被地理位置临近的大量用户使用（特别是ISP的DNS），一般常见的网站域名解析都能在这里命中。 递归&#43;迭代解析 DNS  发生在域名解析服务器也没有该域名的记录时。 从根域服务器（IPv4 只有13台）-&gt; 得到 IP 地址，返回给浏览器  浏览器缓存 -&gt; 浏览器 host 文件/本地缓存 -&gt; 浏览器 域名解析服务器 -&gt; 浏览器 （xxx.">
+    <meta name="description" content="相似问题：
+打开一个网址会发生什么？
+浏览器是怎样工作的？
+简述一次完整的 HTTP 请求过程
+  First Of All：在浏览器地址栏输入 URL 并回车
+ DNS 域名解析  搜索浏览器自身缓存的 DNS 记录  浏览器自身也带有一层 DNS 缓存。Chrome 缓存 1000 条 DNS 解析结果，缓存时间大概在一分钟左右。
+（Chrome 浏览器通过输入：chrome://net-internals/#dns 打开 DNS 缓存页面）
+搜索操作系统缓存和 hosts 文件  发生在浏览器缓存中没有找到需要的记录或记录已经过期的时候。
+在 Windows 操作系统中，可以通过 ipconfig /displaydns 命令查看本机当前的缓存。
+通过 hosts 文件，你可以手动指定一个域名和其对应的 IP 解析结果，并且该结果一旦被使用，同样会被缓存到操作系统缓存中。
+Windows 系统的 hosts 文件在 %systemroot%\system32\drivers\etc 下，linux 系统的 hosts 文件在 /etc/hosts 下。
+向域名解析服务器发送解析请求  发生在 hosts 文件和操作系统缓存中没有找到需要的记录或记录已经过期。 第一台被访问的域名解析服务器就是我们平时在设置中填写的 DNS 服务器一项。 一般一台域名解析服务器会被地理位置临近的大量用户使用（特别是 ISP 的 DNS），一般常见的网站域名解析都能在这里命中。">
     <meta name="author" content="">
     
     <link href="/an-old-hope.min.css" rel="stylesheet">
@@ -81,54 +92,55 @@
     <div class="post-meta">June 9, 2020</div>
   </header>
   <div class="post-content"><blockquote>
-<p><strong>相似问题</strong>： <!-- raw HTML omitted -->
-打开一个网址会发生什么？ <!-- raw HTML omitted -->
-浏览器是怎样工作的？ <!-- raw HTML omitted -->
-简述一次完整的 HTTP 请求过程 <!-- raw HTML omitted --></p>
+<p><strong>相似问题</strong>：<br>
+<em>打开一个网址会发生什么？</em><br>
+<em>浏览器是怎样工作的？</em><br>
+<em>简述一次完整的 HTTP 请求过程</em></p>
 </blockquote>
 <hr>
-<ul>
-<li>First Of All：在浏览器地址栏输入 URL 并回车</li>
-</ul>
-<h6 id="dns-域名解析">DNS 域名解析</h6>
+<p>First Of All：在浏览器地址栏输入 URL 并回车</p>
+<hr>
+<h3 id="dns-域名解析">DNS 域名解析</h3>
 <ol>
 <li>搜索浏览器自身缓存的 DNS 记录</li>
 </ol>
-<pre><code>浏览器自身也带有一层DNS缓存。Chrome 缓存1000条DNS解析结果，缓存时间大概在一分钟左右。
-（Chrome浏览器通过输入：chrome://net-internals/#dns 打开DNS缓存页面）
-</code></pre><ol start="2">
+<p>浏览器自身也带有一层 DNS 缓存。Chrome 缓存 1000 条 DNS 解析结果，缓存时间大概在一分钟左右。<br>
+（Chrome 浏览器通过输入：chrome://net-internals/#dns 打开 DNS 缓存页面）</p>
+<ol start="2">
 <li>搜索操作系统缓存和 hosts 文件</li>
 </ol>
-<pre><code>发生在浏览器缓存中没有找到需要的记录或记录已经过期的时候。
-在Windows操作系统中，可以通过 ipconfig /displaydns 命令查看本机当前的缓存。
-通过hosts文件，你可以手动指定一个域名和其对应的IP解析结果，并且该结果一旦被使用，同样会被缓存到操作系统缓存中。
-Windows 系统的 hosts 文件在 %systemroot%\system32\drivers\etc 下，linux 系统的 hosts 文件在 /etc/hosts 下。
-</code></pre><ol start="3">
+<p>发生在浏览器缓存中没有找到需要的记录或记录已经过期的时候。<br>
+在 Windows 操作系统中，可以通过 <code>ipconfig /displaydns</code> 命令查看本机当前的缓存。<br>
+通过 hosts 文件，你可以手动指定一个域名和其对应的 IP 解析结果，并且该结果一旦被使用，同样会被缓存到操作系统缓存中。<br>
+Windows 系统的 hosts 文件在 <code>%systemroot%\system32\drivers\etc</code> 下，linux 系统的 hosts 文件在 <code>/etc/hosts</code> 下。</p>
+<ol start="3">
 <li>向域名解析服务器发送解析请求</li>
 </ol>
-<pre><code>发生在 hosts 文件和操作系统缓存中没有找到需要的记录或记录已经过期。
-第一台被访问的域名解析服务器就是我们平时在设置中填写的DNS服务器一项。
-一般一台域名解析服务器会被地理位置临近的大量用户使用（特别是ISP的DNS），一般常见的网站域名解析都能在这里命中。
-</code></pre><ol start="4">
+<p>发生在 hosts 文件和操作系统缓存中没有找到需要的记录或记录已经过期。
+第一台被访问的域名解析服务器就是我们平时在设置中填写的 DNS 服务器一项。
+一般一台域名解析服务器会被地理位置临近的大量用户使用（特别是 ISP 的 DNS），一般常见的网站域名解析都能在这里命中。</p>
+<ol start="4">
 <li>递归+迭代解析 DNS</li>
 </ol>
-<pre><code>发生在域名解析服务器也没有该域名的记录时。
-从根域服务器（IPv4 只有13台）-&gt;
-</code></pre><ol start="5">
+<p>发生在域名解析服务器也没有该域名的记录时。
+从根域服务器（IPv4 只有 13 台）-&gt;</p>
+<ol start="5">
 <li>得到 IP 地址，返回给浏览器</li>
 </ol>
-<pre><code>浏览器缓存 -&gt; 浏览器
-host 文件/本地缓存 -&gt; 浏览器
-域名解析服务器 -&gt; 浏览器
-（xxx.xxx域服务器 -&gt; .xxx域服务器 -&gt; 根域服务器）
-</code></pre><h6 id="tcp-连接">TCP 连接</h6>
-<h6 id="发起-http-请求">发起 HTTP 请求</h6>
-<h6 id="服务器处理请求">服务器处理请求</h6>
-<h6 id="服务器响应请求">服务器响应请求</h6>
-<h6 id="浏览器解析渲染">浏览器解析渲染</h6>
+<p>浏览器缓存 -&gt; 浏览器<br>
+host 文件/本地缓存 -&gt; 浏览器<br>
+域名解析服务器 -&gt; 浏览器<br>
+（xxx.xxx 域服务器 -&gt; .xxx 域服务器 -&gt; 根域服务器）</p>
+<h3 id="tcp-连接">TCP 连接</h3>
+<h3 id="发起-http-请求">发起 HTTP 请求</h3>
+<h3 id="服务器处理请求">服务器处理请求</h3>
+<h3 id="服务器响应请求">服务器响应请求</h3>
+<h3 id="浏览器解析渲染">浏览器解析渲染</h3>
 <blockquote>
 <p><strong>参考来源</strong>：<br>
-<a href="http://taligarsiel.com/Projects/howbrowserswork1.htm">http://taligarsiel.com/Projects/howbrowserswork1.htm</a> <!-- raw HTML omitted --> &gt; <a href="https://www.cnblogs.com/dengzz/p/5544122.html">https://www.cnblogs.com/dengzz/p/5544122.html</a> <!-- raw HTML omitted --> &gt; <a href="https://juejin.im/post/5b148a2ce51d4506965908d2">https://juejin.im/post/5b148a2ce51d4506965908d2</a> <!-- raw HTML omitted --></p>
+<a href="http://taligarsiel.com/Projects/howbrowserswork1.html">http://taligarsiel.com/Projects/howbrowserswork1.html</a><br>
+<a href="https://www.cnblogs.com/dengzz/p/5544122.html">https://www.cnblogs.com/dengzz/p/5544122.html</a><br>
+<a href="https://juejin.im/post/5b148a2ce51d4506965908d2">https://juejin.im/post/5b148a2ce51d4506965908d2</a></p>
 </blockquote>
 </div>
   <footer class="post-footer">
