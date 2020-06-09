@@ -1,26 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Notes on </title>
-    <link>/categories/notes/</link>
-    <description>Recent content in Notes on </description>
+    <title>字符编码 on </title>
+    <link>/tags/%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81/</link>
+    <description>Recent content in 字符编码 on </description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 09 Jun 2020 18:27:30 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 28 Oct 2019 00:58:33 +0800</lastBuildDate>
     
-	<atom:link href="/categories/notes/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Python Launcher</title>
-      <link>/python/python-launcher/</link>
-      <pubDate>Tue, 09 Jun 2020 18:27:30 +0800</pubDate>
-      
-      <guid>/python/python-launcher/</guid>
-      <description>1. 什么是 Python Launcher 原文：
-New in version 3.3.
-The Python launcher for Windows is a utility which aids in locating and executing of different Python versions. It allows scripts (or the command-line) to indicate a preference for a specific Python version, and will locate and execute that version.
-Unlike the PATH variable, the launcher will correctly select the most appropriate version of Python. It will prefer per-user installations over system-wide ones, and orders by language version rather than using the most recently installed version.</description>
-    </item>
     
     <item>
       <title>计算机字符编码详解</title>
@@ -34,15 +22,6 @@ ASCII ASCII（American Standard Code for Information Interchange，美国信息�
 MBCS MBCS（Muilti-Bytes Charecter Set，多字节字符集）使用两个字节来代表一个字符的各种汉字延伸编码方式，又称为 ANSI 编码。在简体中文系统下，ANSI 编码代表 GB2312 编码；日文操作系统下，ANSI 编码代表 Shift_JIS 编码；韩文操作系统下，ANSI 编码代表 Euc-kr 编码。不统一的编码标准会不可避免地出现冲突。
 GBK 和 gb2312 见上
 UCS Universal Character Set, UCS（中文：通用字符集）是由 ISO 制定的 ISO 10646（或称 ISO/IEC 10646）标准所定义的标准字符集。UCS-2：使用两个定长的字节来表示一个字符。UCS-4：是一个更大的尚未填充完全的 31 位字符集，加上恒为 0 的首位，共需占据 32 位，即四字节。理论上最多能表示 231 个字符，完全可以涵盖一切语言所用的符号。</description>
-    </item>
-    
-    <item>
-      <title>Second</title>
-      <link>/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/second/</link>
-      <pubDate>Tue, 17 Sep 2019 17:02:02 +0800</pubDate>
-      
-      <guid>/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/second/</guid>
-      <description>我的第二篇博客 </description>
     </item>
     
   </channel>

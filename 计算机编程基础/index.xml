@@ -1,26 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Notes on </title>
-    <link>/categories/notes/</link>
-    <description>Recent content in Notes on </description>
+    <title>计算机编程基础s on </title>
+    <link>/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/</link>
+    <description>Recent content in 计算机编程基础s on </description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 09 Jun 2020 18:27:30 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 28 Oct 2019 00:58:33 +0800</lastBuildDate>
     
-	<atom:link href="/categories/notes/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Python Launcher</title>
-      <link>/python/python-launcher/</link>
-      <pubDate>Tue, 09 Jun 2020 18:27:30 +0800</pubDate>
-      
-      <guid>/python/python-launcher/</guid>
-      <description>1. 什么是 Python Launcher 原文：
-New in version 3.3.
-The Python launcher for Windows is a utility which aids in locating and executing of different Python versions. It allows scripts (or the command-line) to indicate a preference for a specific Python version, and will locate and execute that version.
-Unlike the PATH variable, the launcher will correctly select the most appropriate version of Python. It will prefer per-user installations over system-wide ones, and orders by language version rather than using the most recently installed version.</description>
-    </item>
     
     <item>
       <title>计算机字符编码详解</title>
