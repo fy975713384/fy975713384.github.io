@@ -5,10 +5,19 @@
     <link>/tags/</link>
     <description>Recent content in Tags on </description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 09 Jun 2020 18:27:30 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 09 Jun 2020 19:01:55 +0800</lastBuildDate>
     
 	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>notes</title>
+      <link>/tags/notes/</link>
+      <pubDate>Tue, 09 Jun 2020 19:01:55 +0800</pubDate>
+      
+      <guid>/tags/notes/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Python</title>
@@ -25,15 +34,6 @@
       <pubDate>Mon, 28 Oct 2019 00:58:33 +0800</pubDate>
       
       <guid>/tags/%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>notes</title>
-      <link>/tags/notes/</link>
-      <pubDate>Tue, 17 Sep 2019 17:02:02 +0800</pubDate>
-      
-      <guid>/tags/notes/</guid>
       <description></description>
     </item>
     
