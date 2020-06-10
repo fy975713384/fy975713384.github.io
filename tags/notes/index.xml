@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>notes on </title>
+    <title>notes on Wing</title>
     <link>/tags/notes/</link>
-    <description>Recent content in notes on </description>
+    <description>Recent content in notes on Wing</description>
     <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
     <lastBuildDate>Tue, 09 Jun 2020 19:01:55 +0800</lastBuildDate>
     
 	<atom:link href="/tags/notes/index.xml" rel="self" type="application/rss+xml" />

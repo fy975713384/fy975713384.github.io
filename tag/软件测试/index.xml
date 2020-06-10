@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>软件测试 on Wing</title>
+    <link>/tag/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/</link>
+    <description>Recent content in 软件测试 on Wing</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 24 Aug 2018 14:32:45 +0800</lastBuildDate>
+    
+	<atom:link href="/tag/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>我的测试观</title>
+      <link>/2018/08/24/%E6%88%91%E7%9A%84%E6%B5%8B%E8%AF%95%E8%A7%82/</link>
+      <pubDate>Fri, 24 Aug 2018 14:32:45 +0800</pubDate>
+      
+      <guid>/2018/08/24/%E6%88%91%E7%9A%84%E6%B5%8B%E8%AF%95%E8%A7%82/</guid>
+      <description>软件测试的终极目标 确保终端用户的满意度 软件测试的任务 帮助团队对其产品或项目的质量有一个具体的感知 有效地完成探索式测试过程，找出系统中隐藏的风</description>
+    </item>
+    
+  </channel>
+</rss>

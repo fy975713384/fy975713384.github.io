@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>前端 on Wing</title>
+    <link>/tag/%E5%89%8D%E7%AB%AF/</link>
+    <description>Recent content in 前端 on Wing</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 09 Jun 2020 19:01:55 +0800</lastBuildDate>
+    
+	<atom:link href="/tag/%E5%89%8D%E7%AB%AF/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>浏览器工作过程</title>
+      <link>/2020/06/09/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%B7%A5%E4%BD%9C%E8%BF%87%E7%A8%8B/</link>
+      <pubDate>Tue, 09 Jun 2020 19:01:55 +0800</pubDate>
+      
+      <guid>/2020/06/09/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%B7%A5%E4%BD%9C%E8%BF%87%E7%A8%8B/</guid>
+      <description>相似问题： 打开一个网址会发生什么？ 浏览器是怎样工作的？ 简述一次完整的 HTTP 请求过程 First Of All：在浏览器地址栏输入 URL 并回车 DNS 域名解析 搜索浏览器自身</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Wing</title>
+    <link>/posts/</link>
+    <description>Recent content in Posts on Wing</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 09 Jun 2020 19:01:55 +0800</lastBuildDate>
+    
+	<atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>浏览器工作过程</title>
+      <link>/2020/06/09/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%B7%A5%E4%BD%9C%E8%BF%87%E7%A8%8B/</link>
+      <pubDate>Tue, 09 Jun 2020 19:01:55 +0800</pubDate>
+      
+      <guid>/2020/06/09/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%B7%A5%E4%BD%9C%E8%BF%87%E7%A8%8B/</guid>
+      <description>相似问题： 打开一个网址会发生什么？ 浏览器是怎样工作的？ 简述一次完整的 HTTP 请求过程 First Of All：在浏览器地址栏输入 URL 并回车 DNS 域名解析 搜索浏览器自身</description>
+    </item>
+    
+    <item>
+      <title>Python Launcher（for Windows）</title>
+      <link>/2020/06/09/python-launcherfor-windows/</link>
+      <pubDate>Tue, 09 Jun 2020 18:27:30 +0800</pubDate>
+      
+      <guid>/2020/06/09/python-launcherfor-windows/</guid>
+      <description>1. 什么是 Python Launcher 原文： New in version 3.3. The Python launcher for Windows is a utility which aids in locating and executing of different Python versions. It allows scripts (or the command-line) to indicate a preference for a specific Python version, and will locate and execute that version. Unlike the PATH variable, the launcher will correctly select the most appropriate version of Python. It will</description>
+    </item>
+    
+    <item>
+      <title>计算机字符编码详解</title>
+      <link>/2019/10/28/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81%E8%AF%A6%E8%A7%A3/</link>
+      <pubDate>Mon, 28 Oct 2019 00:58:33 +0800</pubDate>
+      
+      <guid>/2019/10/28/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81%E8%AF%A6%E8%A7%A3/</guid>
+      <description>程序员如果不弄懂字符编码它就会像幽灵一般纠缠你整个职业生涯，各种灵异事件会接踵而来，挥之不去。 &amp;mdash; 刘志军 [知乎] 1 bit = 2 种两种可能性（0或1）</description>
+    </item>
+    
+    <item>
+      <title>养猫前准备</title>
+      <link>/2019/04/14/%E5%85%BB%E7%8C%AB%E5%89%8D%E5%87%86%E5%A4%87/</link>
+      <pubDate>Sun, 14 Apr 2019 19:14:59 +0800</pubDate>
+      
+      <guid>/2019/04/14/%E5%85%BB%E7%8C%AB%E5%89%8D%E5%87%86%E5%A4%87/</guid>
+      <description>猫粮 幼猫粮（1~12 个月）：K9 膳食调理大师 全猫粮（年龄不限）：天衡宝 Natural Balance 健乐系列 营养膏（必备）：红狗 RedDog 猫用营养膏 猫窝 猫吊床：挂式猫吊床 猫窝</description>
+    </item>
+    
+    <item>
+      <title>我的测试观</title>
+      <link>/2018/08/24/%E6%88%91%E7%9A%84%E6%B5%8B%E8%AF%95%E8%A7%82/</link>
+      <pubDate>Fri, 24 Aug 2018 14:32:45 +0800</pubDate>
+      
+      <guid>/2018/08/24/%E6%88%91%E7%9A%84%E6%B5%8B%E8%AF%95%E8%A7%82/</guid>
+      <description>软件测试的终极目标 确保终端用户的满意度 软件测试的任务 帮助团队对其产品或项目的质量有一个具体的感知 有效地完成探索式测试过程，找出系统中隐藏的风</description>
+    </item>
+    
+  </channel>
+</rss>

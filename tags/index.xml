@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on </title>
+    <title>Tags on Wing</title>
     <link>/tags/</link>
-    <description>Recent content in Tags on </description>
+    <description>Recent content in Tags on Wing</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Tue, 09 Jun 2020 19:01:55 +0800</lastBuildDate>
     
@@ -11,29 +11,56 @@
     
     
     <item>
-      <title>notes</title>
-      <link>/tags/notes/</link>
+      <title>前端</title>
+      <link>/tag/%E5%89%8D%E7%AB%AF/</link>
       <pubDate>Tue, 09 Jun 2020 19:01:55 +0800</pubDate>
       
-      <guid>/tags/notes/</guid>
+      <guid>/tag/%E5%89%8D%E7%AB%AF/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Python</title>
-      <link>/tags/python/</link>
+      <link>/tag/python/</link>
       <pubDate>Tue, 09 Jun 2020 18:27:30 +0800</pubDate>
       
-      <guid>/tags/python/</guid>
+      <guid>/tag/python/</guid>
       <description></description>
     </item>
     
     <item>
       <title>字符编码</title>
-      <link>/tags/%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81/</link>
+      <link>/tag/%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81/</link>
       <pubDate>Mon, 28 Oct 2019 00:58:33 +0800</pubDate>
       
-      <guid>/tags/%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81/</guid>
+      <guid>/tag/%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>喵星人</title>
+      <link>/tag/%E5%96%B5%E6%98%9F%E4%BA%BA/</link>
+      <pubDate>Sun, 14 Apr 2019 19:14:59 +0800</pubDate>
+      
+      <guid>/tag/%E5%96%B5%E6%98%9F%E4%BA%BA/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>测试杂谈</title>
+      <link>/tag/%E6%B5%8B%E8%AF%95%E6%9D%82%E8%B0%88/</link>
+      <pubDate>Fri, 24 Aug 2018 14:32:45 +0800</pubDate>
+      
+      <guid>/tag/%E6%B5%8B%E8%AF%95%E6%9D%82%E8%B0%88/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>软件测试</title>
+      <link>/tag/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/</link>
+      <pubDate>Fri, 24 Aug 2018 14:32:45 +0800</pubDate>
+      
+      <guid>/tag/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/</guid>
       <description></description>
     </item>
     
