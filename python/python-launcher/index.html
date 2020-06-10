@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
-    <title>Python Launcher - </title>
+    <title>Python Launcher（for Windows） - </title>
     
     <meta name="description" content="1. 什么是 Python Launcher 原文：
 New in version 3.3.
@@ -80,7 +80,7 @@ Unlike the PATH variable, the launcher will correctly select the most appropriat
 
 <article class="post-single">
   <header class="post-header">
-    <h1 class="post-title">Python Launcher</h1>
+    <h1 class="post-title">Python Launcher（for Windows）</h1>
     <div class="post-meta">June 9, 2020</div>
   </header>
   <div class="post-content"><h3 id="1-什么是-python-launcher">1. 什么是 Python Launcher</h3>
@@ -95,34 +95,34 @@ Unlike the PATH variable, the launcher will correctly select the most appropriat
 <p>不同于 PATH 变量，Python Launcher 将正确选择最合适的 Python 版本。它更喜欢每个用户在系统范围内的安装，并且运行指定的 Python 版本，而不是使用最近安装的版本。</p>
 <h3 id="2-python-launcher-的位置">2. Python Launcher 的位置</h3>
 <p>在安装 Python 3.3 以上版本的 Python 时，我们可以看到下图中的一个选项，当我们勾选时，系统便会帮助我们自动安装 Python Launcher</p>
-<p><img src="https://ws1.sinaimg.cn/large/ed19fa55gy1gfm7vqazbvj20iw0bqwhr.jpg" alt="image"></p>
+<p><img src="http://ww1.sinaimg.cn/large/ed19fa55gy1gfn61ddmwlj20iw0bqgnw.jpg" alt="image"></p>
 <p>当点击 Customize installation 时，会显示如下界面：</p>
-<p><img src="https://ws1.sinaimg.cn/large/ed19fa55gy1gfm7uqpwl0j20iw0bqdj3.jpg" alt="image"></p>
+<p><img src="http://ww1.sinaimg.cn/large/ed19fa55gy1gfn68kg4duj20iw0bq40r.jpg" alt="image"></p>
 <p>图中标注的小字告诉我们，安装 Python Launcher 后可以通过全局命令 ‘py’ 来更方便地启动 Python。不勾选 launcher 项时，系统则不会安装 Python Launcher （但默认情况下该工具都是被勾选的）。</p>
 <p>安装好后，我们可以通过注册表和系统文件管理器中找到 py.exe 的位置:</p>
 <ul>
 <li>仅为当前用户安装时：</li>
 </ul>
-<p><img src="https://ws1.sinaimg.cn/large/ed19fa55gy1gfm7x0umdtj20qj0e3ac7.jpg" alt="image"></p>
-<p><img src="https://ws1.sinaimg.cn/large/ed19fa55gy1gfm7xtd4fdj20l20ej76k.jpg" alt="image"></p>
+<p><img src="http://ww1.sinaimg.cn/large/ed19fa55gy1gfn69n6194j20qj0e3ta2.jpg" alt="image"></p>
+<p><img src="http://ww1.sinaimg.cn/large/ed19fa55gy1gfn6a2mkejj20l20ejgmy.jpg" alt="image"></p>
 <ul>
 <li>为所有用户安装时：</li>
 </ul>
-<p><img src="https://ws1.sinaimg.cn/large/ed19fa55gy1gfm7yeb0ecj20qj0e340p.jpg" alt="image">
-<img src="https://ws1.sinaimg.cn/large/ed19fa55gy1gfm7yyl4ikj20m50fhjus.jpg" alt="image"></p>
+<p><img src="http://ww1.sinaimg.cn/large/ed19fa55gy1gfn6azwjjvj20qj0e3abf.jpg" alt="image">
+<img src="http://ww1.sinaimg.cn/large/ed19fa55gy1gfn6b9v8bxj20m50fhq56.jpg" alt="image"></p>
 <h3 id="3-python-launcher-的环境变量">3. Python Launcher 的环境变量</h3>
 <p>为什么 Python Launcher 不需要手动配置环境变量呢？</p>
 <p>当为所有用户安装时，我们会发现 py.exe 被自动安装到 C:\Windows 下了，当我们检查系统默认设置的环境变量时，可以看到下图中的 windir 的值已经默认设置为 C:\Windows ，这第一点对于所有 Windows 系统都是相同的 ，系统安装的时候便会做这些工作。</p>
-<p><img src="https://ws1.sinaimg.cn/large/ed19fa55gy1gfm7zybt67j20ay0ba3za.jpg" alt="image"></p>
+<p><img src="http://ww1.sinaimg.cn/large/ed19fa55gy1gfn6ccrmqpj20ay0badgh.jpg" alt="image"></p>
 <p>当仅为当前用户安装时，我们会发现 py.exe 所在的路径会自动添加到系统的用户变量中：</p>
-<p><img src="https://ws1.sinaimg.cn/large/ed19fa55gy1gfm809rgz7j20ay0bagn0.jpg" alt="image"></p>
+<p><img src="http://ww1.sinaimg.cn/large/ed19fa55gy1gfn6cwk3vcj20ay0bagmo.jpg" alt="image"></p>
 <p>因此，无论以哪种方式安装 Python Launcher 我们都不需要再手动配置环境变量了。</p>
 <h3 id="4-python-launcher-的用法">4. Python Launcher 的用法</h3>
 <p>Python Launcher 的使用方法我们可以通过在命令行中输入 py -h 进行查看，如下图：</p>
-<p><img src="https://ws1.sinaimg.cn/large/ed19fa55gy1gfm80qrrwpj20i706b3yp.jpg" alt="image"></p>
+<p><img src="http://ww1.sinaimg.cn/large/ed19fa55gy1gfn6dbotnrj20i706bmx0.jpg" alt="image"></p>
 <p>同样地，我们也可以通过查阅官方文档进行了解</p>
 <p><a href="https://docs.python.org/3/using/windows.html#launcher">https://docs.python.org/3/using/windows.html#launcher</a></p>
-<p><img src="https://ws1.sinaimg.cn/large/ed19fa55gy1gfm81bpmc8j20mn0ihmyn.jpg" alt="image"></p>
+<p><img src="http://ww1.sinaimg.cn/large/ed19fa55gy1gfn6do1wf3j20mn0ih0t8.jpg" alt="image"></p>
 <h3 id="5-结语">5. 结语</h3>
 <p>综上所述，py -version 启动 python 的方式其实应该是官方更为推崇的一种方式，无需手动设置环境变量，并且能指定启动 python 的版本，功能不要太强大！绝对是在多版本 Python 共存的环境下，启动不同版本 Python 的利器！</p>
 <p>当是需要注意的是，Python Launcher 是 Python3.3 以上版本中新增的组件，并且可以独立地安装和卸载，使用时一定要注意 Python Launcher 被正确地安装在系统中了，否则就会报 <em>&lsquo;py&rsquo; 不是内部或外部命令，也不是可运行的程序或批处理文件</em> 的错误，一定要注意哦！</p>
