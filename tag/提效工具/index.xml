@@ -5,10 +5,19 @@
     <link>/tag/%E6%8F%90%E6%95%88%E5%B7%A5%E5%85%B7/</link>
     <description>Recent content in 提效工具 on Wing</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 30 Sep 2019 15:52:42 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 12 Nov 2019 16:52:49 +0800</lastBuildDate>
     
 	<atom:link href="/tag/%E6%8F%90%E6%95%88%E5%B7%A5%E5%85%B7/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>wrk 性能测试工具详解</title>
+      <link>/2019/11/12/wrk-%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95%E5%B7%A5%E5%85%B7%E8%AF%A6%E8%A7%A3/</link>
+      <pubDate>Tue, 12 Nov 2019 16:52:49 +0800</pubDate>
+      
+      <guid>/2019/11/12/wrk-%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95%E5%B7%A5%E5%85%B7%E8%AF%A6%E8%A7%A3/</guid>
+      <description>wrk 简介 wrk 是一个用于 HTTP 协议的基准测试工具。 基准测试是一种性能测试方法，它通过设计科学的测试方法、测试工具和测试系统，实现对一类测试对象的某项性</description>
+    </item>
     
     <item>
       <title>Mac 上修改 MySQL Workbench 主题配色</title>

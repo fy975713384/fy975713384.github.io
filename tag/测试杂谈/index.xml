@@ -5,7 +5,7 @@
     <link>/tag/%E6%B5%8B%E8%AF%95%E6%9D%82%E8%B0%88/</link>
     <description>Recent content in 测试杂谈 on Wing</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 24 Aug 2018 14:32:45 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 12 Jun 2019 22:32:47 +0800</lastBuildDate>
     
 	<atom:link href="/tag/%E6%B5%8B%E8%AF%95%E6%9D%82%E8%B0%88/index.xml" rel="self" type="application/rss+xml" />
     
@@ -17,6 +17,15 @@
       
       <guid>/2018/08/24/%E6%88%91%E7%9A%84%E6%B5%8B%E8%AF%95%E8%A7%82/</guid>
       <description>软件测试的终极目标 确保终端用户的满意度 软件测试的任务 帮助团队对其产品或项目的质量有一个具体的感知 有效地完成探索式测试过程，找出系统中隐藏的风</description>
+    </item>
+    
+    <item>
+      <title>什么是软件质量</title>
+      <link>/2019/06/12/%E4%BB%80%E4%B9%88%E6%98%AF%E8%BD%AF%E4%BB%B6%E8%B4%A8%E9%87%8F/</link>
+      <pubDate>Wed, 12 Jun 2019 22:32:47 +0800</pubDate>
+      
+      <guid>/2019/06/12/%E4%BB%80%E4%B9%88%E6%98%AF%E8%BD%AF%E4%BB%B6%E8%B4%A8%E9%87%8F/</guid>
+      <description>一、软件质量是什么 GB T 25000.10-2016 标准（基于 ISO/IEC 25010:2011 标准）中将软件质量定义为： 在规定条件下使用时，软件满足用户明确和隐含要求的能力。满足程度越高，质量就越</description>
     </item>
     
   </channel>

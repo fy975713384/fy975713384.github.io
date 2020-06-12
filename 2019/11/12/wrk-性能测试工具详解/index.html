@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+<head>
+  <meta name="generator" content="Hugo 0.72.0" />
+  <meta charset="utf-8">
+  <title>wrk 性能测试工具详解 · Wing</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="wrk 简介 wrk 是一个用于 HTTP 协议的基准测试工具。 基准测试是一种性能测试方法，它通过设计科学的测试方法、测试工具和测试系统，实现对一类测试对象的某项性" />
+
+
+<link rel="canonical" href="/2019/11/12/wrk-%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95%E5%B7%A5%E5%85%B7%E8%AF%A6%E8%A7%A3/" />
+<link rel="icon" href="/images/feather.png" />
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+<link rel="stylesheet" href="/css/den.css">
+
+
+
+
+<meta property="og:title" content="wrk 性能测试工具详解" />
+<meta property="og:description" content="wrk 简介 wrk 是一个用于 HTTP 协议的基准测试工具。 基准测试是一种性能测试方法，它通过设计科学的测试方法、测试工具和测试系统，实现对一类测试对象的某项性" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/2019/11/12/wrk-%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95%E5%B7%A5%E5%85%B7%E8%AF%A6%E8%A7%A3/" />
+<meta property="article:published_time" content="2019-11-12T16:52:49+08:00" />
+<meta property="article:modified_time" content="2019-11-12T16:52:49+08:00" />
+<meta itemprop="name" content="wrk 性能测试工具详解">
+<meta itemprop="description" content="wrk 简介 wrk 是一个用于 HTTP 协议的基准测试工具。 基准测试是一种性能测试方法，它通过设计科学的测试方法、测试工具和测试系统，实现对一类测试对象的某项性">
+<meta itemprop="datePublished" content="2019-11-12T16:52:49&#43;08:00" />
+<meta itemprop="dateModified" content="2019-11-12T16:52:49&#43;08:00" />
+<meta itemprop="wordCount" content="1762">
+
+
+
+<meta itemprop="keywords" content="性能测试,提效工具," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="wrk 性能测试工具详解"/>
+<meta name="twitter:description" content="wrk 简介 wrk 是一个用于 HTTP 协议的基准测试工具。 基准测试是一种性能测试方法，它通过设计科学的测试方法、测试工具和测试系统，实现对一类测试对象的某项性"/>
+</head>
+<body>
+  
+  <div class="header-container" style="background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('/images/background2.jpg'); background-position: center; background-size: cover;">
+  <div class="container">
+  <nav class="header-nav navbar navbar-expand-md navbar-dark light-dark">
+    <div class="header-logo navbar-brand">
+      
+        <a class="float-left" href="/">
+      
+        
+        
+          Wing
+         
+      </a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="nav-menu collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        
+        
+      </ul>
+    </div>
+  </nav>
+</div>
+
+<div class="container header-wrapper">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="header-content">
+        <h1 class="header-title">wrk 性能测试工具详解</h1>
+        <p class="header-date">作者：
+          wing /
+        
+        2019-11-12
+          / 分类：
+          <a href="/category/notes/">Notes</a>
+        </p>
+        
+        <div class="header-underline"></div>
+        
+          <div class="clearfix"></div>
+          <p class="float-right header-tags">
+              <i class="fas fa-tags" aria-hidden="true"></i>
+              <a href="/tag/%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95/">性能测试</a>, 
+                <a href="/tag/%E6%8F%90%E6%95%88%E5%B7%A5%E5%85%B7/">提效工具</a>
+          </p>
+        
+        
+
+      </div>
+    </div>
+  </div>
+</div>
+
+  </div>
+  <main>
+<div class="container content">
+  <article>
+  <h2 id="wrk-简介">wrk 简介</h2>
+<p>wrk 是一个用于 HTTP 协议的基准测试工具。</p>
+<blockquote>
+<p>基准测试是一种性能测试方法，它通过设计科学的测试方法、测试工具和测试系统，实现对一类测试对象的某项性能指标进行定量和可对比的测试。</p>
+</blockquote>
+<p>GitHub 地址：<a href="https://github.com/wg/wrk">https://github.com/wg/wrk</a></p>
+<h2 id="安装">安装</h2>
+<p>Mac 直接使用 HomeBrew 进行安装</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ brew install wrk
+</code></pre></div><h2 id="命令行选项">命令行选项</h2>
+<p>在命令行中输入 <code>wrk</code> 查看命令行选项：</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ wrk
+Usage: wrk &lt;options&gt; &lt;url&gt;
+  Options:
+    -c, --connections &lt;N&gt;  Connections to keep open
+                            <span class="c1"># 设置总的 http 并发连接数</span>
+    -d, --duration    &lt;T&gt;  Duration of <span class="nb">test</span>
+                            <span class="c1"># 设置测试持续时间</span>
+    -t, --threads     &lt;N&gt;  Number of threads to use
+                            <span class="c1"># 设置开启的线程数（不能大于设置的并发请求数）</span>
+    -s, --script      &lt;S&gt;  Load Lua script file
+                            <span class="c1"># 加载指定的 Lua 脚本</span>
+    -H, --header      &lt;H&gt;  Add header to request
+                            <span class="c1"># 添加 http 请求头</span>
+        --latency          Print latency statistics
+                            <span class="c1"># 打印延迟统计情况（建议启用）</span>
+        --timeout     &lt;T&gt;  Socket/request timeout
+    -v, --version          Print version details
+
+  Numeric arguments may include a SI unit <span class="o">(</span>1k, 1M, 1G<span class="o">)</span>
+  Time arguments may include a <span class="nb">time</span> unit <span class="o">(</span>2s, 2m, 2h<span class="o">)</span>
+</code></pre></div><h2 id="基础示例">基础示例</h2>
+<p>GET 请求：</p>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">$ wrk -c100 -t10 -d10s --latency http://localhost:5000/test_get
+<span class="c1"># 100 个请求分 10 个线程压 10 秒</span>
+</code></pre></div><p>控制台输出：</p>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">Running 10s <span class="nb">test</span> @ http://localhost:5000/test_get
+  <span class="m">10</span> threads and <span class="m">100</span> connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   201.71ms   58.06ms 451.62ms   79.16%
+    Req/Sec    27.94     10.18    70.00     73.70%
+  Latency Distribution
+     50%  196.82ms
+     75%  228.07ms
+     90%  261.79ms
+     99%  394.08ms
+  <span class="m">2817</span> requests in 10.10s, 473.18KB <span class="nb">read</span>
+Requests/sec:    278.94
+Transfer/sec:     46.86KB
+</code></pre></div><hr>
+<p>POST 请求：</p>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">$ wrk -c100 -t10 -d10s -s test_post.lua --latency http://localhost:5000/test_post
+<span class="c1"># 使用 test_post.lua 脚本</span>
+</code></pre></div><p>Lua 脚本：</p>
+<div class="highlight"><pre class="chroma"><code class="language-lua" data-lang="lua"><span class="n">wrk.method</span> <span class="o">=</span> <span class="s2">&#34;POST&#34;</span>
+<span class="n">wrk.headers</span><span class="p">[</span><span class="s2">&#34;Content-Type&#34;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&#34;application/json&#34;</span>
+<span class="n">wrk.body</span> <span class="o">=</span> <span class="s1">&#39;{&#34;k1&#34;:1,&#34;k2&#34;:2}&#39;</span>
+</code></pre></div><p>控制台输出：</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">Running 10s <span class="nb">test</span> @ http://localhost:5000/test_post
+  <span class="m">10</span> threads and <span class="m">100</span> connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   188.49ms   60.76ms 352.02ms   67.50%
+    Req/Sec    38.35     23.71   101.00     67.22%
+  Latency Distribution
+     50%  182.22ms
+     75%  230.92ms
+     90%  272.66ms
+     99%  325.02ms
+  <span class="m">3665</span> requests in 10.10s, 604.87KB <span class="nb">read</span>
+Requests/sec:    362.77
+Transfer/sec:     59.87KB
+</code></pre></div><p>注：GET 请求同样可以使用 Lua 脚本</p>
+<h2 id="进阶用法">进阶用法</h2>
+<h3 id="lua-脚本在压测时的全局变量-tabel-wrk">Lua 脚本在压测时的全局变量 (tabel) wrk</h3>
+<h4 id="全局变量">全局变量</h4>
+<div class="highlight"><pre class="chroma"><code class="language-lua" data-lang="lua"><span class="n">wrk</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="n">scheme</span>  <span class="o">=</span> <span class="s2">&#34;http&#34;</span><span class="p">,</span>
+    <span class="n">host</span>    <span class="o">=</span> <span class="s2">&#34;localhost&#34;</span><span class="p">,</span>
+    <span class="n">port</span>    <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+    <span class="n">method</span>  <span class="o">=</span> <span class="s2">&#34;GET&#34;</span><span class="p">,</span>
+    <span class="n">path</span>    <span class="o">=</span> <span class="s2">&#34;/&#34;</span><span class="p">,</span>
+    <span class="n">headers</span> <span class="o">=</span> <span class="p">{},</span>
+    <span class="n">body</span>    <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+    <span class="n">thread</span>  <span class="o">=</span> <span class="o">&lt;</span><span class="n">userdata</span><span class="o">&gt;</span><span class="p">,</span>
+<span class="p">}</span>
+</code></pre></div><h4 id="全局方法">全局方法</h4>
+<div class="highlight"><pre class="chroma"><code class="language-lua" data-lang="lua"><span class="kr">function</span> <span class="nc">wrk</span><span class="p">.</span><span class="nf">format</span><span class="p">(</span><span class="n">method</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">headers</span><span class="p">,</span> <span class="n">body</span><span class="p">)</span>
+<span class="cm">--[[
+</span><span class="cm">  wrk.format 方法返回一个 HTTP 请求的字符串，包含传入参数与 wrk 变量的值的组合。
+</span><span class="cm">]]</span><span class="c1">--</span>
+
+<span class="kr">function</span> <span class="nc">wrk</span><span class="p">.</span><span class="nf">lookup</span><span class="p">(</span><span class="n">host</span><span class="p">,</span> <span class="n">service</span><span class="p">)</span>
+<span class="cm">--[[
+</span><span class="cm">  wrk.lookup 方法返回一个包含主机所有已知地址的 table 和服务对，这对应于 POSIX 的 getaddrinfo() 方法
+</span><span class="cm">]]</span><span class="c1">--</span>
+<span class="c1">-- host:一个主机名或者地址串(IPv4的点分十进制串或者IPv6的16进制串)</span>
+<span class="c1">-- service：服务名可以是十进制的端口号，也可以是已定义的服务名称，如ftp、http等</span>
+
+<span class="kr">function</span> <span class="nc">wrk</span><span class="p">.</span><span class="nf">connect</span><span class="p">(</span><span class="n">addr</span><span class="p">)</span>
+<span class="cm">--[[
+</span><span class="cm">  判断 addr 是否可以连接上，返回布尔值。addr 必须是一个 wrk.lookup() 方法的返回值。
+</span><span class="cm">]]</span><span class="c1">--</span>
+</code></pre></div><h3 id="lua-脚本的生命周期钩子">Lua 脚本的生命周期钩子</h3>
+<h4 id="启动阶段-setup">启动阶段 (Setup)</h4>
+<blockquote>
+<p>启动阶段开始于请求目标 IP 地址已解析且所有线程已经初始化但还没启动的时候</p>
+</blockquote>
+<div class="highlight"><pre class="chroma"><code class="language-lua" data-lang="lua"><span class="kr">function</span> <span class="nf">setup</span><span class="p">(</span><span class="n">thread</span><span class="p">)</span>
+<span class="cm">--[[
+</span><span class="cm">  在脚本文件中实现 setup 方法，wrk 就会在目标 IP 已解析且测试线程初始化完成但还没有启动的时候调用该方法。
+</span><span class="cm">
+</span><span class="cm">  wrk 会为每一个测试线程调用一次 setup 方法，并传入代表测试线程的对象 thread 作为参数。
+</span><span class="cm">  setup 方法中可操作该 thread 对象，获取信息、存储信息、甚至关闭该线程。
+</span><span class="cm">  setup 方法每个线程只执行一次。
+</span><span class="cm">
+</span><span class="cm">  thread 对象提供了 1 个属性，3 个方法：
+</span><span class="cm">    thread.addr 获取或设置线程的服务器地址
+</span><span class="cm">    thread:get(name) 获取线程全局变量
+</span><span class="cm">    thread:set(name, value) 设置线程全局变量
+</span><span class="cm">    thread:stop() 终止线程
+</span><span class="cm">]]</span><span class="c1">--</span>
+</code></pre></div><h4 id="运行阶段-running">运行阶段 (Running)</h4>
+<blockquote>
+<p>运行阶段开始于对 init 方法的单次调用，让后在每个请求周期都调用一次 request 和 response 方法</p>
+</blockquote>
+<div class="highlight"><pre class="chroma"><code class="language-lua" data-lang="lua"><span class="kr">function</span> <span class="nf">init</span><span class="p">(</span><span class="n">args</span><span class="p">)</span>
+<span class="c1">-- 每个线程仅调用 1 次，args 用于获取当前脚本命令行中所有传入的其它命令参数，例如 --env=pre</span>
+
+<span class="kr">function</span> <span class="nf">delay</span><span class="p">()</span>
+<span class="c1">-- 每次发起请求前调用 1 次，在 request 方法前调用，单位为 ms</span>
+
+<span class="kr">function</span> <span class="nf">request</span><span class="p">()</span>
+<span class="c1">-- 每次发起请求前调用 1 次，返回一个包含 HTTP 请求的字符串，wrk 会按该字符串的内容发起 HTTP 请求。</span>
+<span class="c1">-- 通常会在该方法中调用 wrk.format() 生成 HTTP 请求字符串。</span>
+
+<span class="kr">function</span> <span class="nf">response</span><span class="p">(</span><span class="n">status</span><span class="p">,</span> <span class="n">headers</span><span class="p">,</span> <span class="n">body</span><span class="p">)</span>
+<span class="c1">-- 每次请求返回时调用 1 次，wrk 通过传入 HTTP 响应码，响应头，响应体调用。</span>
+</code></pre></div><h4 id="结束阶段-done">结束阶段 (Done)</h4>
+<div class="highlight"><pre class="chroma"><code class="language-lua" data-lang="lua"><span class="kr">function</span> <span class="nf">done</span><span class="p">(</span><span class="n">summary</span><span class="p">,</span> <span class="n">latency</span><span class="p">,</span> <span class="n">requests</span><span class="p">)</span>
+<span class="cm">--[[
+</span><span class="cm">  done 方法接收一个包含测试结果数据的 table 变量 summary 以及两个分别表示每个请求的延迟时间和每个线程的 QPS 的统计对象。持续时间和延迟时间单位均为 ms。
+</span><span class="cm">
+</span><span class="cm">  整个测试过程中仅被调用 1 次。
+</span><span class="cm">
+</span><span class="cm">  summary = {
+</span><span class="cm">    duration = N,  -- 运行持续时间，单位为 ms
+</span><span class="cm">    requests = N,  -- 总共完成的请求书
+</span><span class="cm">    bytes    = N,  -- 总共接收的数据量
+</span><span class="cm">    errors   = {
+</span><span class="cm">      connect = N, -- socket 连接总失败数
+</span><span class="cm">      read    = N, -- socket 连接读取总失败数
+</span><span class="cm">      write   = N, -- socket 连接写入总失败数
+</span><span class="cm">      status  = N, -- total HTTP status codes &gt; 399
+</span><span class="cm">      timeout = N  -- total request timeouts
+</span><span class="cm">    }
+</span><span class="cm">  }
+</span><span class="cm">
+</span><span class="cm">  latency.min              -- 最小延时
+</span><span class="cm">  latency.max              -- 最大延时
+</span><span class="cm">  latency.mean             -- 平均延时
+</span><span class="cm">  latency.stdev            -- 延时标准差
+</span><span class="cm">  latency:percentile(99.0) -- 99th percentile value
+</span><span class="cm">  latency(i)               -- raw value and count
+</span><span class="cm">]]</span><span class="c1">--</span>
+</code></pre></div><h4 id="调用过程示例">调用过程示例</h4>
+<p>命令行语句：</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ wrk -c1 -t1 -d1s -s test_lua.lua http://localhost:5000
+</code></pre></div><p>lua 脚本：</p>
+<div class="highlight"><pre class="chroma"><code class="language-lua" data-lang="lua"><span class="cp">#!/usr/local/bin/lua</span>
+
+<span class="n">wrk.body</span> <span class="o">=</span> <span class="s1">&#39;{&#34;k1&#34;:666}&#39;</span>
+<span class="n">path</span> <span class="o">=</span> <span class="s2">&#34;/test_post&#34;</span>
+
+<span class="kr">function</span> <span class="nf">setup</span><span class="p">(</span><span class="n">thread</span><span class="p">)</span>
+    <span class="n">print</span><span class="p">(</span><span class="s2">&#34;调用 setup()&#34;</span><span class="p">)</span>
+    <span class="n">print</span><span class="p">(</span><span class="n">thread.addr</span><span class="p">)</span>
+<span class="kr">end</span>
+
+<span class="kr">function</span> <span class="nf">init</span><span class="p">(</span><span class="n">args</span><span class="p">)</span>
+    <span class="n">print</span><span class="p">(</span><span class="s2">&#34;调用 init()&#34;</span><span class="p">)</span>
+<span class="kr">end</span>
+
+<span class="kr">function</span> <span class="nf">delay</span><span class="p">()</span>
+    <span class="n">print</span><span class="p">(</span><span class="s2">&#34;调用 delay() 等待 500 ms&#34;</span><span class="p">)</span>
+    <span class="kr">return</span> <span class="mi">500</span>
+<span class="kr">end</span>
+
+<span class="kr">function</span> <span class="nf">request</span><span class="p">()</span>
+    <span class="n">print</span><span class="p">(</span><span class="s2">&#34;调用 resquest()&#34;</span><span class="p">)</span>
+    <span class="kr">return</span> <span class="n">wrk.format</span><span class="p">(</span><span class="s2">&#34;POST&#34;</span><span class="p">,</span> <span class="n">path</span><span class="p">)</span>
+<span class="kr">end</span>
+
+<span class="kr">function</span> <span class="nf">response</span><span class="p">(</span><span class="n">status</span><span class="p">,</span> <span class="n">headers</span><span class="p">,</span> <span class="n">body</span><span class="p">)</span>
+    <span class="n">print</span><span class="p">(</span><span class="s2">&#34;调用 response()&#34;</span><span class="p">)</span>
+    <span class="kr">if</span> <span class="p">(</span><span class="n">status</span> <span class="o">==</span> <span class="mi">200</span><span class="p">)</span>
+    <span class="kr">then</span>
+        <span class="n">path</span> <span class="o">=</span> <span class="s2">&#34;/test_get?k1=&#34;</span> <span class="o">..</span> <span class="n">body</span>
+    <span class="kr">end</span>
+<span class="kr">end</span>
+
+<span class="kr">function</span> <span class="nf">done</span><span class="p">(</span><span class="n">summary</span><span class="p">,</span> <span class="n">latency</span><span class="p">,</span> <span class="n">requests</span><span class="p">)</span>
+    <span class="n">print</span><span class="p">(</span><span class="s2">&#34;调用 done()&#34;</span><span class="p">)</span>
+<span class="kr">end</span>
+</code></pre></div><p>控制台输出：</p>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">调用 setup<span class="o">()</span>
+127.0.0.1:5000
+调用 init<span class="o">()</span>
+调用 resquest<span class="o">()</span>
+Running 1s <span class="nb">test</span> @ http://localhost:5000
+  <span class="m">1</span> threads and <span class="m">1</span> connections
+调用 delay<span class="o">()</span> 等待 <span class="m">500</span> ms
+调用 resquest<span class="o">()</span>
+调用 response<span class="o">()</span>
+调用 delay<span class="o">()</span> 等待 <span class="m">500</span> ms
+调用 resquest<span class="o">()</span>
+调用 response<span class="o">()</span>
+调用 delay<span class="o">()</span> 等待 <span class="m">500</span> ms
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.08ms  135.06us   1.17ms  100.00%
+    Req/Sec     1.50      0.71     2.00    100.00%
+  <span class="m">2</span> requests in 1.01s, 525.00B <span class="nb">read</span>
+  Non-2xx or 3xx responses: <span class="m">1</span>
+Requests/sec:      1.98
+Transfer/sec:     519.09B
+调用 <span class="k">done</span><span class="o">()</span>
+</code></pre></div><p>HTTP 请求日志：</p>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">127.0.0.1 - - <span class="o">[</span>15/Nov/2019 11:10:02<span class="o">]</span> <span class="s2">&#34;POST /test_post HTTP/1.1&#34;</span> <span class="m">200</span> -
+127.0.0.1 - - <span class="o">[</span>15/Nov/2019 11:10:03<span class="o">]</span> <span class="s2">&#34;POST /test_get?k1={&#34;</span>k1<span class="s2">&#34;:666} HTTP/1.1&#34;</span> <span class="m">405</span> -
+</code></pre></div><p>更多使用示例参见：<a href="https://github.com/wg/wrk/tree/master/scripts">https://github.com/wg/wrk/tree/master/scripts</a></p>
+<blockquote>
+<p>参考来源：<br>
+<a href="https://github.com/wg/wrk">https://github.com/wg/wrk</a><br>
+<a href="https://github.com/wg/wrk/blob/master/README.md">https://github.com/wg/wrk/blob/master/README.md</a><br>
+<a href="https://github.com/wg/wrk/blob/master/SCRIPTING">https://github.com/wg/wrk/blob/master/SCRIPTING</a><br>
+<a href="https://juejin.im/post/5a59e74f5188257353008fea#heading-10">https://juejin.im/post/5a59e74f5188257353008fea#heading-10</a><br>
+<a href="https://www.cnblogs.com/xinzhao/p/6233009.html">https://www.cnblogs.com/xinzhao/p/6233009.html</a></p>
+</blockquote>
+
+  </article>
+
+  
+  
+    
+    
+    
+  
+  
+
+
+</div>
+
+  </main><div class="footer gradient-2">
+  <div class="container footer-container ">
+    <div class="row">
+      <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3">
+        <div class="footer-title">网站地图</div>
+        <ul class="list-unstyled">
+            
+              
+                <li><a href="/tags/">标签</a></li>
+              
+              
+                <li><a href="/categories/">分类</a></li>
+              
+            
+            
+            
+            <li><a rel="alternate" type="application/rss&#43;xml" href="/index.xml"><i class="fas fa-rss-square"></i> RSS订阅</a></li>
+            
+            
+            
+        </ul>
+      </div>
+      <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3">
+        
+        <div class="footer-title">社群</div>
+        <ul class="list-unstyled">
+          
+          <li><a href="https://github.com/fy975713384" rel="noopener" target="_blank">GitHub</a></li>
+          
+        </ul>
+        
+      </div>
+      <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3">
+        
+        <div class="footer-title">友链</div>
+        <ul class="list-unstyled">
+          
+          <li><a href="/" rel="noopener" target="_blank">关于我</a></li>
+          
+        </ul>
+        
+      </div> 
+      <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+        <p class="pull-right text-right">
+          <small><em>Proudly powered by <a href="https://gohugo.io/" rel="noopener" target="_blank">Hugo</a></em></small><br/>
+          <small><em>Theme - <a href="https://github.com/shaform/hugo-theme-den" rel="noopener" target="_blank">Den</a></em></small><br/>
+          <small>
+            &copy; 
+            Pan Feng
+            
+              2017 -
+            2020
+          </small>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+  integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+  integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+  integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.5.2/mermaid.min.js"></script>
+<script>
+  window.onload = function () {
+    mermaid.initialize({ theme: 'dark' })
+    mermaid.init(undefined, '.language-mermaid')
+  }
+</script>
+</body>
+</html>

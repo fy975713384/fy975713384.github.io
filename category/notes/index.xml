@@ -5,7 +5,7 @@
     <link>/category/notes/</link>
     <description>Recent content in Notes on Wing</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 09 Jun 2020 19:01:55 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 12 Nov 2019 16:52:49 +0800</lastBuildDate>
     
 	<atom:link href="/category/notes/index.xml" rel="self" type="application/rss+xml" />
     
@@ -20,12 +20,12 @@
     </item>
     
     <item>
-      <title>浏览器工作过程</title>
-      <link>/2020/06/09/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%B7%A5%E4%BD%9C%E8%BF%87%E7%A8%8B/</link>
-      <pubDate>Tue, 09 Jun 2020 19:01:55 +0800</pubDate>
+      <title>wrk 性能测试工具详解</title>
+      <link>/2019/11/12/wrk-%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95%E5%B7%A5%E5%85%B7%E8%AF%A6%E8%A7%A3/</link>
+      <pubDate>Tue, 12 Nov 2019 16:52:49 +0800</pubDate>
       
-      <guid>/2020/06/09/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%B7%A5%E4%BD%9C%E8%BF%87%E7%A8%8B/</guid>
-      <description>相似问题： 打开一个网址会发生什么？ 浏览器是怎样工作的？ 简述一次完整的 HTTP 请求过程 First Of All：在浏览器地址栏输入 URL 并回车 DNS 域名解析 搜索浏览器自身</description>
+      <guid>/2019/11/12/wrk-%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95%E5%B7%A5%E5%85%B7%E8%AF%A6%E8%A7%A3/</guid>
+      <description>wrk 简介 wrk 是一个用于 HTTP 协议的基准测试工具。 基准测试是一种性能测试方法，它通过设计科学的测试方法、测试工具和测试系统，实现对一类测试对象的某项性</description>
     </item>
     
     <item>
@@ -71,6 +71,24 @@
       
       <guid>/2019/06/21/%E9%85%8D%E7%BD%AE%E8%87%AA%E5%B7%B1%E7%9A%84linux%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/</guid>
       <description>近期趁着 6.18 促销新采购了一台阿里云的 Linux 服务器，把配置过程记录如下 采购云服务器 采购平台：阿里云 腾讯云 百度云 Linux 系统：Ubuntu 配置云服务器 登录 Linux</description>
+    </item>
+    
+    <item>
+      <title>什么是软件质量</title>
+      <link>/2019/06/12/%E4%BB%80%E4%B9%88%E6%98%AF%E8%BD%AF%E4%BB%B6%E8%B4%A8%E9%87%8F/</link>
+      <pubDate>Wed, 12 Jun 2019 22:32:47 +0800</pubDate>
+      
+      <guid>/2019/06/12/%E4%BB%80%E4%B9%88%E6%98%AF%E8%BD%AF%E4%BB%B6%E8%B4%A8%E9%87%8F/</guid>
+      <description>一、软件质量是什么 GB T 25000.10-2016 标准（基于 ISO/IEC 25010:2011 标准）中将软件质量定义为： 在规定条件下使用时，软件满足用户明确和隐含要求的能力。满足程度越高，质量就越</description>
+    </item>
+    
+    <item>
+      <title>浏览器工作过程</title>
+      <link>/2019/06/09/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%B7%A5%E4%BD%9C%E8%BF%87%E7%A8%8B/</link>
+      <pubDate>Sun, 09 Jun 2019 19:01:55 +0800</pubDate>
+      
+      <guid>/2019/06/09/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%B7%A5%E4%BD%9C%E8%BF%87%E7%A8%8B/</guid>
+      <description>相似问题： 打开一个网址会发生什么？ 浏览器是怎样工作的？ 简述一次完整的 HTTP 请求过程 First Of All：在浏览器地址栏输入 URL 并回车 DNS 域名解析 搜索浏览器自身</description>
     </item>
     
     <item>

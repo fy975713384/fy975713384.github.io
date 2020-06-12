@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+<head>
+  <meta name="generator" content="Hugo 0.72.0" />
+  <meta charset="utf-8">
+  <title>浏览器工作过程 · Wing</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="相似问题： 打开一个网址会发生什么？ 浏览器是怎样工作的？ 简述一次完整的 HTTP 请求过程 First Of All：在浏览器地址栏输入 URL 并回车 DNS 域名解析 搜索浏览器自身" />
+
+
+<link rel="canonical" href="/2019/06/09/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%B7%A5%E4%BD%9C%E8%BF%87%E7%A8%8B/" />
+<link rel="icon" href="/images/feather.png" />
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+<link rel="stylesheet" href="/css/den.css">
+
+
+
+
+<meta property="og:title" content="浏览器工作过程" />
+<meta property="og:description" content="相似问题： 打开一个网址会发生什么？ 浏览器是怎样工作的？ 简述一次完整的 HTTP 请求过程 First Of All：在浏览器地址栏输入 URL 并回车 DNS 域名解析 搜索浏览器自身" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/2019/06/09/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%B7%A5%E4%BD%9C%E8%BF%87%E7%A8%8B/" />
+<meta property="article:published_time" content="2019-06-09T19:01:55+08:00" />
+<meta property="article:modified_time" content="2019-06-09T19:02:15+08:00" />
+<meta itemprop="name" content="浏览器工作过程">
+<meta itemprop="description" content="相似问题： 打开一个网址会发生什么？ 浏览器是怎样工作的？ 简述一次完整的 HTTP 请求过程 First Of All：在浏览器地址栏输入 URL 并回车 DNS 域名解析 搜索浏览器自身">
+<meta itemprop="datePublished" content="2019-06-09T19:01:55&#43;08:00" />
+<meta itemprop="dateModified" content="2019-06-09T19:02:15&#43;08:00" />
+<meta itemprop="wordCount" content="607">
+
+
+
+<meta itemprop="keywords" content="前端," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="浏览器工作过程"/>
+<meta name="twitter:description" content="相似问题： 打开一个网址会发生什么？ 浏览器是怎样工作的？ 简述一次完整的 HTTP 请求过程 First Of All：在浏览器地址栏输入 URL 并回车 DNS 域名解析 搜索浏览器自身"/>
+</head>
+<body>
+  
+  <div class="header-container" style="background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('/images/background2.jpg'); background-position: center; background-size: cover;">
+  <div class="container">
+  <nav class="header-nav navbar navbar-expand-md navbar-dark light-dark">
+    <div class="header-logo navbar-brand">
+      
+        <a class="float-left" href="/">
+      
+        
+        
+          Wing
+         
+      </a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="nav-menu collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        
+        
+      </ul>
+    </div>
+  </nav>
+</div>
+
+<div class="container header-wrapper">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="header-content">
+        <h1 class="header-title">浏览器工作过程</h1>
+        <p class="header-date">作者：
+          wing /
+        
+        2019-06-09
+          / 分类：
+          <a href="/category/notes/">Notes</a>
+        </p>
+        
+        <div class="header-underline"></div>
+        
+          <div class="clearfix"></div>
+          <p class="float-right header-tags">
+              <i class="fas fa-tags" aria-hidden="true"></i>
+              <a href="/tag/%E5%89%8D%E7%AB%AF/">前端</a>
+          </p>
+        
+        
+
+      </div>
+    </div>
+  </div>
+</div>
+
+  </div>
+  <main>
+<div class="container content">
+  <article>
+  <blockquote>
+<p><strong>相似问题</strong>：<br>
+<em>打开一个网址会发生什么？</em><br>
+<em>浏览器是怎样工作的？</em><br>
+<em>简述一次完整的 HTTP 请求过程</em></p>
+</blockquote>
+<hr>
+<p>First Of All：在浏览器地址栏输入 URL 并回车</p>
+<hr>
+<h3 id="dns-域名解析">DNS 域名解析</h3>
+<ol>
+<li>搜索浏览器自身缓存的 DNS 记录</li>
+</ol>
+<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">浏览器自身也带有一层 DNS 缓存。Chrome 缓存 1000 条 DNS 解析结果，缓存时间大概在一分钟左右。
+（Chrome 浏览器通过输入：chrome://net-internals/#dns 打开 DNS 缓存页面）
+</code></pre></div><ol start="2">
+<li>搜索操作系统缓存和 hosts 文件</li>
+</ol>
+<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">发生在浏览器缓存中没有找到需要的记录或记录已经过期的时候。
+在 Windows 操作系统中，可以通过 `ipconfig /displaydns` 命令查看本机当前的缓存。
+通过 hosts 文件，你可以手动指定一个域名和其对应的 IP 解析结果，并且该结果一旦被使用，同样会被缓存到操作系统缓存中。
+Windows 系统的 hosts 文件在 `%systemroot%\system32\drivers\etc` 下，linux 系统的 hosts 文件在 `/etc/hosts` 下。
+</code></pre></div><ol start="3">
+<li>向域名解析服务器发送解析请求</li>
+</ol>
+<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">发生在 hosts 文件和操作系统缓存中没有找到需要的记录或记录已经过期。
+第一台被访问的域名解析服务器就是我们平时在设置中填写的 DNS 服务器一项。
+一般一台域名解析服务器会被地理位置临近的大量用户使用（特别是 ISP 的 DNS），一般常见的网站域名解析都能在这里命中。
+</code></pre></div><ol start="4">
+<li>递归+迭代解析 DNS</li>
+</ol>
+<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">发生在域名解析服务器也没有该域名的记录时。
+从根域服务器（IPv4 只有 13 台）-&gt;
+</code></pre></div><ol start="5">
+<li>得到 IP 地址，返回给浏览器</li>
+</ol>
+<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">浏览器缓存 -&gt; 浏览器
+host 文件/本地缓存 -&gt; 浏览器
+域名解析服务器 -&gt; 浏览器
+（xxx.xxx 域服务器 -&gt; .xxx 域服务器 -&gt; 根域服务器）
+</code></pre></div><h3 id="tcp-连接">TCP 连接</h3>
+<h3 id="发起-http-请求">发起 HTTP 请求</h3>
+<h3 id="服务器处理请求">服务器处理请求</h3>
+<h3 id="服务器响应请求">服务器响应请求</h3>
+<h3 id="浏览器解析渲染">浏览器解析渲染</h3>
+<blockquote>
+<p><strong>参考来源</strong>：<br>
+<a href="http://taligarsiel.com/Projects/howbrowserswork1.html">http://taligarsiel.com/Projects/howbrowserswork1.html</a><br>
+<a href="https://www.cnblogs.com/dengzz/p/5544122.html">https://www.cnblogs.com/dengzz/p/5544122.html</a><br>
+<a href="https://juejin.im/post/5b148a2ce51d4506965908d2">https://juejin.im/post/5b148a2ce51d4506965908d2</a></p>
+</blockquote>
+
+  </article>
+
+  
+  
+    
+    
+    
+  
+  
+
+
+</div>
+
+  </main><div class="footer gradient-2">
+  <div class="container footer-container ">
+    <div class="row">
+      <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3">
+        <div class="footer-title">网站地图</div>
+        <ul class="list-unstyled">
+            
+              
+                <li><a href="/tags/">标签</a></li>
+              
+              
+                <li><a href="/categories/">分类</a></li>
+              
+            
+            
+            
+            <li><a rel="alternate" type="application/rss&#43;xml" href="/index.xml"><i class="fas fa-rss-square"></i> RSS订阅</a></li>
+            
+            
+            
+        </ul>
+      </div>
+      <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3">
+        
+        <div class="footer-title">社群</div>
+        <ul class="list-unstyled">
+          
+          <li><a href="https://github.com/fy975713384" rel="noopener" target="_blank">GitHub</a></li>
+          
+        </ul>
+        
+      </div>
+      <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3">
+        
+        <div class="footer-title">友链</div>
+        <ul class="list-unstyled">
+          
+          <li><a href="/" rel="noopener" target="_blank">关于我</a></li>
+          
+        </ul>
+        
+      </div> 
+      <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+        <p class="pull-right text-right">
+          <small><em>Proudly powered by <a href="https://gohugo.io/" rel="noopener" target="_blank">Hugo</a></em></small><br/>
+          <small><em>Theme - <a href="https://github.com/shaform/hugo-theme-den" rel="noopener" target="_blank">Den</a></em></small><br/>
+          <small>
+            &copy; 
+            Pan Feng
+            
+              2017 -
+            2020
+          </small>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+  integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+  integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+  integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.5.2/mermaid.min.js"></script>
+<script>
+  window.onload = function () {
+    mermaid.initialize({ theme: 'dark' })
+    mermaid.init(undefined, '.language-mermaid')
+  }
+</script>
+</body>
+</html>
