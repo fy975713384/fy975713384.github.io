@@ -11,21 +11,21 @@
     
     
     <item>
+      <title>🔝 我的测试观</title>
+      <link>/2018/08/24/%E6%88%91%E7%9A%84%E6%B5%8B%E8%AF%95%E8%A7%82/</link>
+      <pubDate>Fri, 24 Aug 2018 14:32:45 +0800</pubDate>
+      
+      <guid>/2018/08/24/%E6%88%91%E7%9A%84%E6%B5%8B%E8%AF%95%E8%A7%82/</guid>
+      <description>软件测试的终极目标 确保终端用户的满意度 软件测试的任务 帮助团队对其产品或项目的质量有一个具体的感知 有效地完成探索式测试过程，找出系统中隐藏的风</description>
+    </item>
+    
+    <item>
       <title>浏览器工作过程</title>
       <link>/2020/06/09/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%B7%A5%E4%BD%9C%E8%BF%87%E7%A8%8B/</link>
       <pubDate>Tue, 09 Jun 2020 19:01:55 +0800</pubDate>
       
       <guid>/2020/06/09/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%B7%A5%E4%BD%9C%E8%BF%87%E7%A8%8B/</guid>
       <description>相似问题： 打开一个网址会发生什么？ 浏览器是怎样工作的？ 简述一次完整的 HTTP 请求过程 First Of All：在浏览器地址栏输入 URL 并回车 DNS 域名解析 搜索浏览器自身</description>
-    </item>
-    
-    <item>
-      <title>Python Launcher（for Windows）</title>
-      <link>/2020/06/09/python-launcherfor-windows/</link>
-      <pubDate>Tue, 09 Jun 2020 18:27:30 +0800</pubDate>
-      
-      <guid>/2020/06/09/python-launcherfor-windows/</guid>
-      <description>1. 什么是 Python Launcher 原文： New in version 3.3. The Python launcher for Windows is a utility which aids in locating and executing of different Python versions. It allows scripts (or the command-line) to indicate a preference for a specific Python version, and will locate and execute that version. Unlike the PATH variable, the launcher will correctly select the most appropriate version of Python. It will</description>
     </item>
     
     <item>
@@ -38,6 +38,42 @@
     </item>
     
     <item>
+      <title>Python函数参数详解</title>
+      <link>/2019/10/06/python%E5%87%BD%E6%95%B0%E5%8F%82%E6%95%B0%E8%AF%A6%E8%A7%A3/</link>
+      <pubDate>Sun, 06 Oct 2019 16:14:18 +0800</pubDate>
+      
+      <guid>/2019/10/06/python%E5%87%BD%E6%95%B0%E5%8F%82%E6%95%B0%E8%AF%A6%E8%A7%A3/</guid>
+      <description>[TOC] Python 函数参数 前言 最近在跟同事讨论一个方法的调用时涉及到了 Python 函数的位置参数和关键字参数的相关知识，发现之前学习 Python 时对函数参数研究的并不透彻，且</description>
+    </item>
+    
+    <item>
+      <title>Mac 上修改 MySQL Workbench 主题配色</title>
+      <link>/2019/09/30/mac-%E4%B8%8A%E4%BF%AE%E6%94%B9-mysql-workbench-%E4%B8%BB%E9%A2%98%E9%85%8D%E8%89%B2/</link>
+      <pubDate>Mon, 30 Sep 2019 15:52:42 +0800</pubDate>
+      
+      <guid>/2019/09/30/mac-%E4%B8%8A%E4%BF%AE%E6%94%B9-mysql-workbench-%E4%B8%BB%E9%A2%98%E9%85%8D%E8%89%B2/</guid>
+      <description>在 Mac 上使用了 Mojava 的深色主题，当我安装 Mysql Workbench 时，它也默认使用了深色主题的配色，但 Mysql Workbench 的深色主题让我十分不适应，因此想改为浅色主题，但发现设置中根本</description>
+    </item>
+    
+    <item>
+      <title>一种RF测试环境参数化配置方法</title>
+      <link>/2019/08/26/%E4%B8%80%E7%A7%8Drf%E6%B5%8B%E8%AF%95%E7%8E%AF%E5%A2%83%E5%8F%82%E6%95%B0%E5%8C%96%E9%85%8D%E7%BD%AE%E6%96%B9%E6%B3%95/</link>
+      <pubDate>Mon, 26 Aug 2019 15:06:49 +0800</pubDate>
+      
+      <guid>/2019/08/26/%E4%B8%80%E7%A7%8Drf%E6%B5%8B%E8%AF%95%E7%8E%AF%E5%A2%83%E5%8F%82%E6%95%B0%E5%8C%96%E9%85%8D%E7%BD%AE%E6%96%B9%E6%B3%95/</guid>
+      <description>自动化测试脚本通常都需要在不同环境中运行，良好的测试环境参数化配置会使脚本的运行具备较高的灵活性。 Robot Framework 框架支持一种「嵌套变量」的特性，我们可</description>
+    </item>
+    
+    <item>
+      <title>配置自己的Linux云服务器</title>
+      <link>/2019/06/21/%E9%85%8D%E7%BD%AE%E8%87%AA%E5%B7%B1%E7%9A%84linux%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/</link>
+      <pubDate>Fri, 21 Jun 2019 15:30:40 +0800</pubDate>
+      
+      <guid>/2019/06/21/%E9%85%8D%E7%BD%AE%E8%87%AA%E5%B7%B1%E7%9A%84linux%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/</guid>
+      <description>近期趁着 6.18 促销新采购了一台阿里云的 Linux 服务器，把配置过程记录如下 采购云服务器 采购平台：阿里云 腾讯云 百度云 Linux 系统：Ubuntu 配置云服务器 登录 Linux</description>
+    </item>
+    
+    <item>
       <title>养猫前准备</title>
       <link>/2019/04/14/%E5%85%BB%E7%8C%AB%E5%89%8D%E5%87%86%E5%A4%87/</link>
       <pubDate>Sun, 14 Apr 2019 19:14:59 +0800</pubDate>
@@ -47,12 +83,48 @@
     </item>
     
     <item>
-      <title>我的测试观</title>
-      <link>/2018/08/24/%E6%88%91%E7%9A%84%E6%B5%8B%E8%AF%95%E8%A7%82/</link>
-      <pubDate>Fri, 24 Aug 2018 14:32:45 +0800</pubDate>
+      <title>RobotFramework 学习资源汇总</title>
+      <link>/2019/02/22/robotframework-%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90%E6%B1%87%E6%80%BB/</link>
+      <pubDate>Fri, 22 Feb 2019 19:12:04 +0800</pubDate>
       
-      <guid>/2018/08/24/%E6%88%91%E7%9A%84%E6%B5%8B%E8%AF%95%E8%A7%82/</guid>
-      <description>软件测试的终极目标 确保终端用户的满意度 软件测试的任务 帮助团队对其产品或项目的质量有一个具体的感知 有效地完成探索式测试过程，找出系统中隐藏的风</description>
+      <guid>/2019/02/22/robotframework-%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90%E6%B1%87%E6%80%BB/</guid>
+      <description>学习网站 官网：http://robotframework.org/ 简书专栏：https://www.jianshu.com/c/483e8f</description>
+    </item>
+    
+    <item>
+      <title>Robot Framework 安装配置</title>
+      <link>/2019/02/19/robot-framework-%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/</link>
+      <pubDate>Tue, 19 Feb 2019 00:27:04 +0800</pubDate>
+      
+      <guid>/2019/02/19/robot-framework-%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/</guid>
+      <description>RF 是最强的自动化测试框架，没有之一！ Robot Framework 最新基于 Windows+Python3 的安装方式，是时候卸载掉 Python2 了！ Robot Framework 介绍 Robot Framework 是一款基于 Python 的功能自动化测试框架。它具备良好的可</description>
+    </item>
+    
+    <item>
+      <title>Windows 下通过 cmder 远程连接 Linux 服务器</title>
+      <link>/2018/12/31/windows-%E4%B8%8B%E9%80%9A%E8%BF%87-cmder-%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5-linux-%E6%9C%8D%E5%8A%A1%E5%99%A8/</link>
+      <pubDate>Mon, 31 Dec 2018 01:16:23 +0800</pubDate>
+      
+      <guid>/2018/12/31/windows-%E4%B8%8B%E9%80%9A%E8%BF%87-cmder-%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5-linux-%E6%9C%8D%E5%8A%A1%E5%99%A8/</guid>
+      <description>阅读引导 需要先在 Windows 系统中安装 cmder 文中用 &amp;ldquo;&amp;rdquo; 表示的字符均需替换为自己机器中真实的名称（注意去掉 &amp;lt;&amp;gt;） 以 &amp;ldquo;$ &amp;quot; 开头的命令代表需要在命令行工</description>
+    </item>
+    
+    <item>
+      <title>Python Launcher（for Windows）</title>
+      <link>/2018/09/09/python-launcherfor-windows/</link>
+      <pubDate>Sun, 09 Sep 2018 18:27:30 +0800</pubDate>
+      
+      <guid>/2018/09/09/python-launcherfor-windows/</guid>
+      <description>1. 什么是 Python Launcher 原文： New in version 3.3. The Python launcher for Windows is a utility which aids in locating and executing of different Python versions. It allows scripts (or the command-line) to indicate a preference for a specific Python version, and will locate and execute that version. Unlike the PATH variable, the launcher will correctly select the most appropriate version of Python. It will</description>
+    </item>
+    
+    <item>
+      <title>使用 Sublime Text 3 编写 RF 脚本</title>
+      <link>/2018/07/16/%E4%BD%BF%E7%94%A8-sublime-text-3-%E7%BC%96%E5%86%99-rf-%E8%84%9A%E6%9C%AC/</link>
+      <pubDate>Mon, 16 Jul 2018 14:34:07 +0800</pubDate>
+      
+      <guid>/2018/07/16/%E4%BD%BF%E7%94%A8-sublime-text-3-%E7%BC%96%E5%86%99-rf-%E8%84%9A%E6%9C%AC/</guid>
+      <description>RF 是最强的自动化测试框架， 没有之一！ 前置条件 已安装 Python2.7 已安装好 Robot Framework 框架和相关 Python2.x 测试库 任何安装目录中都不要出现中文 一、安装配置 Sublime Text 3 在 Sublime 官网根据</description>
     </item>
     
   </channel>

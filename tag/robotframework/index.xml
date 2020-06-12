@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>RobotFramework on Wing</title>
+    <link>/tag/robotframework/</link>
+    <description>Recent content in RobotFramework on Wing</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 26 Aug 2019 15:06:49 +0800</lastBuildDate>
+    
+	<atom:link href="/tag/robotframework/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>一种RF测试环境参数化配置方法</title>
+      <link>/2019/08/26/%E4%B8%80%E7%A7%8Drf%E6%B5%8B%E8%AF%95%E7%8E%AF%E5%A2%83%E5%8F%82%E6%95%B0%E5%8C%96%E9%85%8D%E7%BD%AE%E6%96%B9%E6%B3%95/</link>
+      <pubDate>Mon, 26 Aug 2019 15:06:49 +0800</pubDate>
+      
+      <guid>/2019/08/26/%E4%B8%80%E7%A7%8Drf%E6%B5%8B%E8%AF%95%E7%8E%AF%E5%A2%83%E5%8F%82%E6%95%B0%E5%8C%96%E9%85%8D%E7%BD%AE%E6%96%B9%E6%B3%95/</guid>
+      <description>自动化测试脚本通常都需要在不同环境中运行，良好的测试环境参数化配置会使脚本的运行具备较高的灵活性。 Robot Framework 框架支持一种「嵌套变量」的特性，我们可</description>
+    </item>
+    
+    <item>
+      <title>RobotFramework 学习资源汇总</title>
+      <link>/2019/02/22/robotframework-%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90%E6%B1%87%E6%80%BB/</link>
+      <pubDate>Fri, 22 Feb 2019 19:12:04 +0800</pubDate>
+      
+      <guid>/2019/02/22/robotframework-%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90%E6%B1%87%E6%80%BB/</guid>
+      <description>学习网站 官网：http://robotframework.org/ 简书专栏：https://www.jianshu.com/c/483e8f</description>
+    </item>
+    
+    <item>
+      <title>Robot Framework 安装配置</title>
+      <link>/2019/02/19/robot-framework-%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/</link>
+      <pubDate>Tue, 19 Feb 2019 00:27:04 +0800</pubDate>
+      
+      <guid>/2019/02/19/robot-framework-%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/</guid>
+      <description>RF 是最强的自动化测试框架，没有之一！ Robot Framework 最新基于 Windows+Python3 的安装方式，是时候卸载掉 Python2 了！ Robot Framework 介绍 Robot Framework 是一款基于 Python 的功能自动化测试框架。它具备良好的可</description>
+    </item>
+    
+    <item>
+      <title>使用 Sublime Text 3 编写 RF 脚本</title>
+      <link>/2018/07/16/%E4%BD%BF%E7%94%A8-sublime-text-3-%E7%BC%96%E5%86%99-rf-%E8%84%9A%E6%9C%AC/</link>
+      <pubDate>Mon, 16 Jul 2018 14:34:07 +0800</pubDate>
+      
+      <guid>/2018/07/16/%E4%BD%BF%E7%94%A8-sublime-text-3-%E7%BC%96%E5%86%99-rf-%E8%84%9A%E6%9C%AC/</guid>
+      <description>RF 是最强的自动化测试框架， 没有之一！ 前置条件 已安装 Python2.7 已安装好 Robot Framework 框架和相关 Python2.x 测试库 任何安装目录中都不要出现中文 一、安装配置 Sublime Text 3 在 Sublime 官网根据</description>
+    </item>
+    
+  </channel>
+</rss>

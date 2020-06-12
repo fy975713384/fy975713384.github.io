@@ -20,15 +20,6 @@
     </item>
     
     <item>
-      <title>Python</title>
-      <link>/tag/python/</link>
-      <pubDate>Tue, 09 Jun 2020 18:27:30 +0800</pubDate>
-      
-      <guid>/tag/python/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>字符编码</title>
       <link>/tag/%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81/</link>
       <pubDate>Mon, 28 Oct 2019 00:58:33 +0800</pubDate>
@@ -38,11 +29,74 @@
     </item>
     
     <item>
+      <title>Python</title>
+      <link>/tag/python/</link>
+      <pubDate>Sun, 06 Oct 2019 16:14:18 +0800</pubDate>
+      
+      <guid>/tag/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>提效工具</title>
+      <link>/tag/%E6%8F%90%E6%95%88%E5%B7%A5%E5%85%B7/</link>
+      <pubDate>Mon, 30 Sep 2019 15:52:42 +0800</pubDate>
+      
+      <guid>/tag/%E6%8F%90%E6%95%88%E5%B7%A5%E5%85%B7/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>RF进阶</title>
+      <link>/tag/rf%E8%BF%9B%E9%98%B6/</link>
+      <pubDate>Mon, 26 Aug 2019 15:06:49 +0800</pubDate>
+      
+      <guid>/tag/rf%E8%BF%9B%E9%98%B6/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>RobotFramework</title>
+      <link>/tag/robotframework/</link>
+      <pubDate>Mon, 26 Aug 2019 15:06:49 +0800</pubDate>
+      
+      <guid>/tag/robotframework/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>服务配置</title>
+      <link>/tag/%E6%9C%8D%E5%8A%A1%E9%85%8D%E7%BD%AE/</link>
+      <pubDate>Fri, 21 Jun 2019 15:30:40 +0800</pubDate>
+      
+      <guid>/tag/%E6%9C%8D%E5%8A%A1%E9%85%8D%E7%BD%AE/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>喵星人</title>
       <link>/tag/%E5%96%B5%E6%98%9F%E4%BA%BA/</link>
       <pubDate>Sun, 14 Apr 2019 19:14:59 +0800</pubDate>
       
       <guid>/tag/%E5%96%B5%E6%98%9F%E4%BA%BA/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>RF入门</title>
+      <link>/tag/rf%E5%85%A5%E9%97%A8/</link>
+      <pubDate>Fri, 22 Feb 2019 19:12:04 +0800</pubDate>
+      
+      <guid>/tag/rf%E5%85%A5%E9%97%A8/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cmder</title>
+      <link>/tag/cmder/</link>
+      <pubDate>Mon, 31 Dec 2018 01:16:23 +0800</pubDate>
+      
+      <guid>/tag/cmder/</guid>
       <description></description>
     </item>
     
@@ -61,6 +115,24 @@
       <pubDate>Fri, 24 Aug 2018 14:32:45 +0800</pubDate>
       
       <guid>/tag/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Sublime</title>
+      <link>/tag/sublime/</link>
+      <pubDate>Mon, 16 Jul 2018 14:34:07 +0800</pubDate>
+      
+      <guid>/tag/sublime/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>编辑器</title>
+      <link>/tag/%E7%BC%96%E8%BE%91%E5%99%A8/</link>
+      <pubDate>Mon, 16 Jul 2018 14:34:07 +0800</pubDate>
+      
+      <guid>/tag/%E7%BC%96%E8%BE%91%E5%99%A8/</guid>
       <description></description>
     </item>
     
