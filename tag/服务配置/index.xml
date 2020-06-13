@@ -11,11 +11,11 @@
     
     
     <item>
-      <title>配置自己的Linux云服务器</title>
-      <link>/2019/06/21/%E9%85%8D%E7%BD%AE%E8%87%AA%E5%B7%B1%E7%9A%84linux%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/</link>
+      <title>配置自己的 Linux 云服务器</title>
+      <link>/2019/06/21/%E9%85%8D%E7%BD%AE%E8%87%AA%E5%B7%B1%E7%9A%84-linux-%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/</link>
       <pubDate>Fri, 21 Jun 2019 15:30:40 +0800</pubDate>
       
-      <guid>/2019/06/21/%E9%85%8D%E7%BD%AE%E8%87%AA%E5%B7%B1%E7%9A%84linux%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/</guid>
+      <guid>/2019/06/21/%E9%85%8D%E7%BD%AE%E8%87%AA%E5%B7%B1%E7%9A%84-linux-%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/</guid>
       <description>近期趁着 6.18 促销新采购了一台阿里云的 Linux 服务器，把配置过程记录如下 采购云服务器 采购平台：阿里云 腾讯云 百度云 Linux 系统：Ubuntu 配置云服务器 登录 Linux</description>
     </item>
     

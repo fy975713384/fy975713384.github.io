@@ -38,11 +38,11 @@
     </item>
     
     <item>
-      <title>Python函数参数详解</title>
-      <link>/2019/10/06/python%E5%87%BD%E6%95%B0%E5%8F%82%E6%95%B0%E8%AF%A6%E8%A7%A3/</link>
+      <title>Python 函数参数详解</title>
+      <link>/2019/10/06/python-%E5%87%BD%E6%95%B0%E5%8F%82%E6%95%B0%E8%AF%A6%E8%A7%A3/</link>
       <pubDate>Sun, 06 Oct 2019 16:14:18 +0800</pubDate>
       
-      <guid>/2019/10/06/python%E5%87%BD%E6%95%B0%E5%8F%82%E6%95%B0%E8%AF%A6%E8%A7%A3/</guid>
+      <guid>/2019/10/06/python-%E5%87%BD%E6%95%B0%E5%8F%82%E6%95%B0%E8%AF%A6%E8%A7%A3/</guid>
       <description>[TOC] Python 函数参数 前言 最近在跟同事讨论一个方法的调用时涉及到了 Python 函数的位置参数和关键字参数的相关知识，发现之前学习 Python 时对函数参数研究的并不透彻，且</description>
     </item>
     
@@ -56,20 +56,20 @@
     </item>
     
     <item>
-      <title>一种RF测试环境参数化配置方法</title>
-      <link>/2019/08/26/%E4%B8%80%E7%A7%8Drf%E6%B5%8B%E8%AF%95%E7%8E%AF%E5%A2%83%E5%8F%82%E6%95%B0%E5%8C%96%E9%85%8D%E7%BD%AE%E6%96%B9%E6%B3%95/</link>
+      <title>一种 RF 测试环境参数化配置方法</title>
+      <link>/2019/08/26/%E4%B8%80%E7%A7%8D-rf-%E6%B5%8B%E8%AF%95%E7%8E%AF%E5%A2%83%E5%8F%82%E6%95%B0%E5%8C%96%E9%85%8D%E7%BD%AE%E6%96%B9%E6%B3%95/</link>
       <pubDate>Mon, 26 Aug 2019 15:06:49 +0800</pubDate>
       
-      <guid>/2019/08/26/%E4%B8%80%E7%A7%8Drf%E6%B5%8B%E8%AF%95%E7%8E%AF%E5%A2%83%E5%8F%82%E6%95%B0%E5%8C%96%E9%85%8D%E7%BD%AE%E6%96%B9%E6%B3%95/</guid>
+      <guid>/2019/08/26/%E4%B8%80%E7%A7%8D-rf-%E6%B5%8B%E8%AF%95%E7%8E%AF%E5%A2%83%E5%8F%82%E6%95%B0%E5%8C%96%E9%85%8D%E7%BD%AE%E6%96%B9%E6%B3%95/</guid>
       <description>自动化测试脚本通常都需要在不同环境中运行，良好的测试环境参数化配置会使脚本的运行具备较高的灵活性。 Robot Framework 框架支持一种「嵌套变量」的特性，我们可</description>
     </item>
     
     <item>
-      <title>配置自己的Linux云服务器</title>
-      <link>/2019/06/21/%E9%85%8D%E7%BD%AE%E8%87%AA%E5%B7%B1%E7%9A%84linux%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/</link>
+      <title>配置自己的 Linux 云服务器</title>
+      <link>/2019/06/21/%E9%85%8D%E7%BD%AE%E8%87%AA%E5%B7%B1%E7%9A%84-linux-%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/</link>
       <pubDate>Fri, 21 Jun 2019 15:30:40 +0800</pubDate>
       
-      <guid>/2019/06/21/%E9%85%8D%E7%BD%AE%E8%87%AA%E5%B7%B1%E7%9A%84linux%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/</guid>
+      <guid>/2019/06/21/%E9%85%8D%E7%BD%AE%E8%87%AA%E5%B7%B1%E7%9A%84-linux-%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/</guid>
       <description>近期趁着 6.18 促销新采购了一台阿里云的 Linux 服务器，把配置过程记录如下 采购云服务器 采购平台：阿里云 腾讯云 百度云 Linux 系统：Ubuntu 配置云服务器 登录 Linux</description>
     </item>
     
