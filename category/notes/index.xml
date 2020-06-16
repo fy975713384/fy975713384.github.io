@@ -65,6 +65,15 @@
     </item>
     
     <item>
+      <title>一份测试计划提纲</title>
+      <link>/2019/07/01/%E4%B8%80%E4%BB%BD%E6%B5%8B%E8%AF%95%E8%AE%A1%E5%88%92%E6%8F%90%E7%BA%B2/</link>
+      <pubDate>Mon, 01 Jul 2019 11:58:28 +0800</pubDate>
+      
+      <guid>/2019/07/01/%E4%B8%80%E4%BB%BD%E6%B5%8B%E8%AF%95%E8%AE%A1%E5%88%92%E6%8F%90%E7%BA%B2/</guid>
+      <description>最近在听茹炳晟老师的《软件测试 52 讲》，其中“以终为始，如何才能做好测试计划？”一章讲了关于测试计划的制定，读完之后我感觉受益匪浅。 从事测试工</description>
+    </item>
+    
+    <item>
       <title>配置自己的 Linux 云服务器</title>
       <link>/2019/06/21/%E9%85%8D%E7%BD%AE%E8%87%AA%E5%B7%B1%E7%9A%84-linux-%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/</link>
       <pubDate>Fri, 21 Jun 2019 15:30:40 +0800</pubDate>
@@ -89,6 +98,15 @@
       
       <guid>/2019/06/09/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%B7%A5%E4%BD%9C%E8%BF%87%E7%A8%8B/</guid>
       <description>相似问题： 打开一个网址会发生什么？ 浏览器是怎样工作的？ 简述一次完整的 HTTP 请求过程 First Of All：在浏览器地址栏输入 URL 并回车 DNS 域名解析 搜索浏览器自身</description>
+    </item>
+    
+    <item>
+      <title>测试点归纳-接口功能</title>
+      <link>/2019/05/24/%E6%B5%8B%E8%AF%95%E7%82%B9%E5%BD%92%E7%BA%B3-%E6%8E%A5%E5%8F%A3%E5%8A%9F%E8%83%BD/</link>
+      <pubDate>Fri, 24 May 2019 13:13:07 +0800</pubDate>
+      
+      <guid>/2019/05/24/%E6%B5%8B%E8%AF%95%E7%82%B9%E5%BD%92%E7%BA%B3-%E6%8E%A5%E5%8F%A3%E5%8A%9F%E8%83%BD/</guid>
+      <description>总结归纳是积累经验获得成长最有效的方式 单接口测试： 正常流程 验证响应码和响应报文格式正确 需考虑各种正确的传参组合，包括请求参数的长度、类型、值</description>
     </item>
     
     <item>
@@ -143,6 +161,24 @@
       
       <guid>/2018/07/16/%E4%BD%BF%E7%94%A8-sublime-text-3-%E7%BC%96%E5%86%99-rf-%E8%84%9A%E6%9C%AC/</guid>
       <description>RF 是最强的自动化测试框架， 没有之一！ 前置条件 已安装 Python2.7 已安装好 Robot Framework 框架和相关 Python2.x 测试库 任何安装目录中都不要出现中文 一、安装配置 Sublime Text 3 在 Sublime 官网根据</description>
+    </item>
+    
+    <item>
+      <title>测试点归纳-移动端</title>
+      <link>/2018/07/03/%E6%B5%8B%E8%AF%95%E7%82%B9%E5%BD%92%E7%BA%B3-%E7%A7%BB%E5%8A%A8%E7%AB%AF/</link>
+      <pubDate>Tue, 03 Jul 2018 13:20:20 +0800</pubDate>
+      
+      <guid>/2018/07/03/%E6%B5%8B%E8%AF%95%E7%82%B9%E5%BD%92%E7%BA%B3-%E7%A7%BB%E5%8A%A8%E7%AB%AF/</guid>
+      <description>总结归纳是积累经验获得成长最有效的方式 安装测试 要考虑软件的安装来源 需测试直接安装 apk 包，以及从各应用市场中进行安装都能正常安装成功 要考虑覆盖安</description>
+    </item>
+    
+    <item>
+      <title>测试点归纳 客户端Windows</title>
+      <link>/2018/05/15/%E6%B5%8B%E8%AF%95%E7%82%B9%E5%BD%92%E7%BA%B3-%E5%AE%A2%E6%88%B7%E7%AB%AFwindows/</link>
+      <pubDate>Tue, 15 May 2018 13:23:58 +0800</pubDate>
+      
+      <guid>/2018/05/15/%E6%B5%8B%E8%AF%95%E7%82%B9%E5%BD%92%E7%BA%B3-%E5%AE%A2%E6%88%B7%E7%AB%AFwindows/</guid>
+      <description>总结归纳是积累经验获得成长最有效的方式 安装测试 要考虑监控软件的影响 需测试各种杀毒软件（卡巴、瑞星、360、QQ 电脑管家、mcafee、金山等</description>
     </item>
     
   </channel>
