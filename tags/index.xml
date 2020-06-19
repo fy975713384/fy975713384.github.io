@@ -5,10 +5,37 @@
     <link>/tags/</link>
     <description>Recent content in Tags on Wing</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 12 Nov 2019 16:52:49 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 19 Jun 2020 23:01:23 +0800</lastBuildDate>
     
 	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>iterm2</title>
+      <link>/tag/iterm2/</link>
+      <pubDate>Fri, 19 Jun 2020 23:01:23 +0800</pubDate>
+      
+      <guid>/tag/iterm2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>zsh</title>
+      <link>/tag/zsh/</link>
+      <pubDate>Fri, 19 Jun 2020 23:01:23 +0800</pubDate>
+      
+      <guid>/tag/zsh/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>提效工具</title>
+      <link>/tag/%E6%8F%90%E6%95%88%E5%B7%A5%E5%85%B7/</link>
+      <pubDate>Fri, 19 Jun 2020 23:01:23 +0800</pubDate>
+      
+      <guid>/tag/%E6%8F%90%E6%95%88%E5%B7%A5%E5%85%B7/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>性能测试</title>
@@ -16,15 +43,6 @@
       <pubDate>Tue, 12 Nov 2019 16:52:49 +0800</pubDate>
       
       <guid>/tag/%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>提效工具</title>
-      <link>/tag/%E6%8F%90%E6%95%88%E5%B7%A5%E5%85%B7/</link>
-      <pubDate>Tue, 12 Nov 2019 16:52:49 +0800</pubDate>
-      
-      <guid>/tag/%E6%8F%90%E6%95%88%E5%B7%A5%E5%85%B7/</guid>
       <description></description>
     </item>
     

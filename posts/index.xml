@@ -5,7 +5,7 @@
     <link>/posts/</link>
     <description>Recent content in Posts on Wing</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 12 Nov 2019 16:52:49 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 19 Jun 2020 23:01:23 +0800</lastBuildDate>
     
 	<atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
     
@@ -17,6 +17,15 @@
       
       <guid>/2018/08/24/%E6%88%91%E7%9A%84%E6%B5%8B%E8%AF%95%E8%A7%82/</guid>
       <description>软件测试的终极目标 确保终端用户的满意度 软件测试的任务 帮助团队对其产品或项目的质量有一个具体的感知 有效地完成探索式测试过程，找出系统中隐藏的风</description>
+    </item>
+    
+    <item>
+      <title>Mac 配置 iTerm2 &amp; zsh 终端环境</title>
+      <link>/2020/06/19/mac-%E9%85%8D%E7%BD%AE-iterm2-zsh-%E7%BB%88%E7%AB%AF%E7%8E%AF%E5%A2%83/</link>
+      <pubDate>Fri, 19 Jun 2020 23:01:23 +0800</pubDate>
+      
+      <guid>/2020/06/19/mac-%E9%85%8D%E7%BD%AE-iterm2-zsh-%E7%BB%88%E7%AB%AF%E7%8E%AF%E5%A2%83/</guid>
+      <description>最近很悲催，工作用的 2019 款 13“ MacBookPro 主板坏了（据网管说已经坏了好几个了），而且一时大意没有用 Time Machine 做备份（非工作用的倒是做了 🤪🤪🤪），所以趁机水一</description>
     </item>
     
     <item>
@@ -43,7 +52,7 @@
       <pubDate>Sun, 06 Oct 2019 16:14:18 +0800</pubDate>
       
       <guid>/2019/10/06/python-%E5%87%BD%E6%95%B0%E5%8F%82%E6%95%B0%E8%AF%A6%E8%A7%A3/</guid>
-      <description>[TOC] Python 函数参数 前言 最近在跟同事讨论一个方法的调用时涉及到了 Python 函数的位置参数和关键字参数的相关知识，发现之前学习 Python 时对函数参数研究的并不透彻，且</description>
+      <description>Python 函数参数详解 前言 最近在跟同事讨论一个方法的调用时涉及到了 Python 函数的位置参数和关键字参数的相关知识，发现之前学习 Python 时对函数参数研究的并不透彻，</description>
     </item>
     
     <item>
@@ -151,7 +160,7 @@
       <pubDate>Sun, 09 Sep 2018 18:27:30 +0800</pubDate>
       
       <guid>/2018/09/09/python-launcherfor-windows/</guid>
-      <description>1. 什么是 Python Launcher 原文： New in version 3.3. The Python launcher for Windows is a utility which aids in locating and executing of different Python versions. It allows scripts (or the command-line) to indicate a preference for a specific Python version, and will locate and execute that version. Unlike the PATH variable, the launcher will correctly select the most appropriate version of Python. It will</description>
+      <description>[TOC] Python Launcher（for Windows） 1. 什么是 Python Launcher 原文： New in version 3.3. The Python launcher for Windows is a utility which aids in locating and executing of different Python versions. It allows scripts (or the command-line) to indicate a preference for a specific Python version, and will</description>
     </item>
     
     <item>
