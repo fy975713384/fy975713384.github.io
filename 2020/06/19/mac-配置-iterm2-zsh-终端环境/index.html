@@ -27,7 +27,7 @@
 <meta itemprop="description" content="最近很悲催，工作用的 2019 款 13“ MacBookPro 主板坏了（据网管说已经坏了好几个了），而且一时大意没有用 Time Machine 做备份（非工作用的倒是做了 🤪🤪🤪），所以趁机水一">
 <meta itemprop="datePublished" content="2020-06-19T23:01:23&#43;08:00" />
 <meta itemprop="dateModified" content="2020-06-19T23:01:23&#43;08:00" />
-<meta itemprop="wordCount" content="1213">
+<meta itemprop="wordCount" content="1209">
 
 
 
@@ -114,7 +114,7 @@
   <article>
   <blockquote>
 <p>最近很悲催，工作用的 2019 款 13“ MacBookPro 主板坏了（据网管说已经坏了好几个了），而且一时大意没有用 Time Machine 做备份（非工作用的倒是做了 🤪🤪🤪），所以趁机水一篇吧。。<br>
-所幸的是重要的文件都用了 iCloud 进行同步（下载好慢 🤪🤪🤪），JetBrains 全家桶和 VSCode 都使用插件通过 GitHub gist 进行了同步，所以仅需要手动配置终端环境就 OK 了。</p>
+所幸的是重要的文件都用 iCloud 进行了同步（下载好慢 🤪🤪🤪），JetBrains 全家桶和 VSCode 都通过 GitHub gist 进行了同步，所以仅需要手动配置终端环境就 OK 了。</p>
 </blockquote>
 <blockquote>
 <p>注：本文大部分配置过程可能需要自行准备梯子，否则遇到连接失败的问题时请自行百度相关工具的国内安装方法</p>
@@ -207,7 +207,7 @@
 </li>
 </ul>
 <blockquote>
-<p>参考来源：
+<p>参考来源：<br>
 <a href="https://www.cnblogs.com/weixuqin/p/7029177.html">https://www.cnblogs.com/weixuqin/p/7029177.html</a></p>
 </blockquote>
 
@@ -220,21 +220,25 @@
     
   
   
-<div id="container"></div>
-<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css" />
-<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css" />
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<div id="gitalk-container"></div>
 <script>
-  var gitment = new Gitment({
-    id: '页面 ID', 
+  const gitalk = new Gitalk({
+    clientID: '35afb85e4c521d6dbeb8',
+    clientSecret: '463c9ec266980fd7358a11479beda5284ecf9f71',
+    repo: 'fy975713384.github.io', 
     owner: 'fy975713384',
-    repo: 'fy975713384.github.io',
-    oauth: {
-      client_id: '35afb85e4c521d6dbeb8',
-      client_secret: '463c9ec266980fd7358a11479beda5284ecf9f71',
-    },
+    admin: ['GitHub repo owner and collaborators, only these guys can initialize github issues'],
+    id: 'Mac配置iTerm2\u0026zsh终端环境', 
+    distractionFreeMode: false, 
   })
-  gitment.render('container')
+  gitalk.render('gitalk-container')
 </script>
+
+
+
+
 
 
 
