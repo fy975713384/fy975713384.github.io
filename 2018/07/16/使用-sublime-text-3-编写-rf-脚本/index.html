@@ -231,6 +231,38 @@ GitHub 地址：<a href="https://github.com/andriyko/sublime-robot-framework-ass
     
   
   
+<div class="disqus-comment">
+  <div>
+    <div class="comment-underline"></div>
+  </div>
+  <div class="btn btn-secondary disqus-button" id="load_disqus" onclick="load_disqus()">
+    载入 Disqus 评论
+  </div>
+  <div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = "/2018/07/16/%E4%BD%BF%E7%94%A8-sublime-text-3-%E7%BC%96%E5%86%99-rf-%E8%84%9A%E6%9C%AC/";
+    };
+    function load_disqus() {
+      
+      
+      if (window.location.hostname === 'localhost') return;
+
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      var disqus_shortname = 'Wing';
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      dsq.setAttribute('data-timestamp', +new Date());
+      (document.head || document.body).appendChild(dsq);
+
+      $('#load_disqus').remove();
+    };
+  </script>
+  <noscript
+    >Please enable JavaScript to view the
+    <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+  </noscript>
+  
+</div>
 
 
 </div>

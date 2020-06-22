@@ -137,6 +137,38 @@ Robot Framework 框架支持一种「嵌套变量」的特性，我们可以利�
     
   
   
+<div class="disqus-comment">
+  <div>
+    <div class="comment-underline"></div>
+  </div>
+  <div class="btn btn-secondary disqus-button" id="load_disqus" onclick="load_disqus()">
+    载入 Disqus 评论
+  </div>
+  <div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = "/2019/08/26/%E4%B8%80%E7%A7%8D-rf-%E6%B5%8B%E8%AF%95%E7%8E%AF%E5%A2%83%E5%8F%82%E6%95%B0%E5%8C%96%E9%85%8D%E7%BD%AE%E6%96%B9%E6%B3%95/";
+    };
+    function load_disqus() {
+      
+      
+      if (window.location.hostname === 'localhost') return;
+
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      var disqus_shortname = 'Wing';
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      dsq.setAttribute('data-timestamp', +new Date());
+      (document.head || document.body).appendChild(dsq);
+
+      $('#load_disqus').remove();
+    };
+  </script>
+  <noscript
+    >Please enable JavaScript to view the
+    <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+  </noscript>
+  
+</div>
 
 
 </div>
