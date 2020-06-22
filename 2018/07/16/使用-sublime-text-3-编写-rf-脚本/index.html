@@ -231,38 +231,22 @@ GitHub 地址：<a href="https://github.com/andriyko/sublime-robot-framework-ass
     
   
   
-<div class="disqus-comment">
-  <div>
-    <div class="comment-underline"></div>
-  </div>
-  <div class="btn btn-secondary disqus-button" id="load_disqus" onclick="load_disqus()">
-    载入 Disqus 评论
-  </div>
-  <div id="disqus_thread"></div>
-  <script>
-    var disqus_config = function () {
-      this.page.url = "/2018/07/16/%E4%BD%BF%E7%94%A8-sublime-text-3-%E7%BC%96%E5%86%99-rf-%E8%84%9A%E6%9C%AC/";
-    };
-    function load_disqus() {
-      
-      
-      if (window.location.hostname === 'localhost') return;
+<div id="container"></div>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css" />
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+  var gitment = new Gitment({
+    id: '页面 ID', 
+    owner: 'fy975713384',
+    repo: 'https://github.com/fy975713384/blogs_hugo',
+    oauth: {
+      client_id: '35afb85e4c521d6dbeb8',
+      client_secret: '463c9ec266980fd7358a11479beda5284ecf9f71',
+    },
+  })
+  gitment.render('container')
+</script>
 
-      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-      var disqus_shortname = 'wingblogs';
-      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-      dsq.setAttribute('data-timestamp', +new Date());
-      (document.head || document.body).appendChild(dsq);
-
-      $('#load_disqus').remove();
-    };
-  </script>
-  <noscript
-    >Please enable JavaScript to view the
-    <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
-  </noscript>
-  
-</div>
 
 
 </div>

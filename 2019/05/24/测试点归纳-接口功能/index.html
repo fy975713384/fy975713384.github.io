@@ -162,38 +162,22 @@
     
   
   
-<div class="disqus-comment">
-  <div>
-    <div class="comment-underline"></div>
-  </div>
-  <div class="btn btn-secondary disqus-button" id="load_disqus" onclick="load_disqus()">
-    载入 Disqus 评论
-  </div>
-  <div id="disqus_thread"></div>
-  <script>
-    var disqus_config = function () {
-      this.page.url = "/2019/05/24/%E6%B5%8B%E8%AF%95%E7%82%B9%E5%BD%92%E7%BA%B3-%E6%8E%A5%E5%8F%A3%E5%8A%9F%E8%83%BD/";
-    };
-    function load_disqus() {
-      
-      
-      if (window.location.hostname === 'localhost') return;
+<div id="container"></div>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css" />
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+  var gitment = new Gitment({
+    id: '页面 ID', 
+    owner: 'fy975713384',
+    repo: 'https://github.com/fy975713384/blogs_hugo',
+    oauth: {
+      client_id: '35afb85e4c521d6dbeb8',
+      client_secret: '463c9ec266980fd7358a11479beda5284ecf9f71',
+    },
+  })
+  gitment.render('container')
+</script>
 
-      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-      var disqus_shortname = 'wingblogs';
-      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-      dsq.setAttribute('data-timestamp', +new Date());
-      (document.head || document.body).appendChild(dsq);
-
-      $('#load_disqus').remove();
-    };
-  </script>
-  <noscript
-    >Please enable JavaScript to view the
-    <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
-  </noscript>
-  
-</div>
 
 
 </div>
