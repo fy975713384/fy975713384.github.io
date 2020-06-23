@@ -72,6 +72,20 @@
   </url>
   
   <url>
+    <loc>/tag/python/</loc>
+    <lastmod>2020-03-23T11:46:24+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>/2020/03/23/python-%E6%97%B6%E9%97%B4%E4%B8%8E%E6%97%A5%E6%9C%9F%E5%A4%84%E7%90%86/</loc>
+    <lastmod>2020-03-23T11:46:24+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>/2019/11/12/wrk-%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95%E5%B7%A5%E5%85%B7%E8%AF%A6%E8%A7%A3/</loc>
     <lastmod>2019-11-12T16:52:49+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -95,13 +109,6 @@
   <url>
     <loc>/2019/10/28/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81%E8%AF%A6%E8%A7%A3/</loc>
     <lastmod>2019-10-28T00:58:33+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>/tag/python/</loc>
-    <lastmod>2019-10-06T16:14:18+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -228,6 +235,13 @@
   <url>
     <loc>/tag/%E5%96%B5%E6%98%9F%E4%BA%BA/</loc>
     <lastmod>2019-04-14T19:14:59+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>/2019/03/23/python%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/</loc>
+    <lastmod>2019-03-23T12:19:10+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>

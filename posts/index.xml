@@ -29,6 +29,15 @@
     </item>
     
     <item>
+      <title>Python 时间与日期处理</title>
+      <link>/2020/03/23/python-%E6%97%B6%E9%97%B4%E4%B8%8E%E6%97%A5%E6%9C%9F%E5%A4%84%E7%90%86/</link>
+      <pubDate>Mon, 23 Mar 2020 11:46:24 +0800</pubDate>
+      
+      <guid>/2020/03/23/python-%E6%97%B6%E9%97%B4%E4%B8%8E%E6%97%A5%E6%9C%9F%E5%A4%84%E7%90%86/</guid>
+      <description>Python 时间与日期处理 内置库 time 模块 https://docs.python.org/3/library/time.html# class time.struct_time 实例 索引 实例属性 含义 值 0 tm_year 年 eg: 2020 1 tm_mon 月 range [1, 12] 2 tm_mday 日 range [1, 31] 3 tm_hour 小时 range [0, 23] 4 tm_min 分钟 range [0, 59] 5 tm_sec 秒 range [0, 61] 6 tm_wday 周 range [0,</description>
+    </item>
+    
+    <item>
       <title>wrk 性能测试工具详解</title>
       <link>/2019/11/12/wrk-%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95%E5%B7%A5%E5%85%B7%E8%AF%A6%E8%A7%A3/</link>
       <pubDate>Tue, 12 Nov 2019 16:52:49 +0800</pubDate>
@@ -128,6 +137,15 @@
     </item>
     
     <item>
+      <title>Python面向对象</title>
+      <link>/2019/03/23/python%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/</link>
+      <pubDate>Sat, 23 Mar 2019 12:19:10 +0800</pubDate>
+      
+      <guid>/2019/03/23/python%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/</guid>
+      <description>封装 访问限制 Python 对属性权限的控制是通过属性名来实现的，如果一个属性由双下划线开头 ==__==，该属性就无法被外部访问。 但是，如果一个属性以 __xxx__ 的</description>
+    </item>
+    
+    <item>
       <title>Robot Framework 学习资源汇总</title>
       <link>/2019/02/22/robot-framework-%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90%E6%B1%87%E6%80%BB/</link>
       <pubDate>Fri, 22 Feb 2019 19:12:04 +0800</pubDate>
@@ -170,24 +188,6 @@
       
       <guid>/2018/07/16/%E4%BD%BF%E7%94%A8-sublime-text-3-%E7%BC%96%E5%86%99-rf-%E8%84%9A%E6%9C%AC/</guid>
       <description>RF 是最强的自动化测试框架， 没有之一！ 前置条件 已安装 Python2.7 已安装好 Robot Framework 框架和相关 Python2.x 测试库 任何安装目录中都不要出现中文 一、安装配置 Sublime Text 3 在 Sublime 官网根据</description>
-    </item>
-    
-    <item>
-      <title>测试点归纳-移动端</title>
-      <link>/2018/07/03/%E6%B5%8B%E8%AF%95%E7%82%B9%E5%BD%92%E7%BA%B3-%E7%A7%BB%E5%8A%A8%E7%AB%AF/</link>
-      <pubDate>Tue, 03 Jul 2018 13:20:20 +0800</pubDate>
-      
-      <guid>/2018/07/03/%E6%B5%8B%E8%AF%95%E7%82%B9%E5%BD%92%E7%BA%B3-%E7%A7%BB%E5%8A%A8%E7%AB%AF/</guid>
-      <description>总结归纳是积累经验获得成长最有效的方式 安装测试 要考虑软件的安装来源 需测试直接安装 apk 包，以及从各应用市场中进行安装都能正常安装成功 要考虑覆盖安</description>
-    </item>
-    
-    <item>
-      <title>测试点归纳 客户端Windows</title>
-      <link>/2018/05/15/%E6%B5%8B%E8%AF%95%E7%82%B9%E5%BD%92%E7%BA%B3-%E5%AE%A2%E6%88%B7%E7%AB%AFwindows/</link>
-      <pubDate>Tue, 15 May 2018 13:23:58 +0800</pubDate>
-      
-      <guid>/2018/05/15/%E6%B5%8B%E8%AF%95%E7%82%B9%E5%BD%92%E7%BA%B3-%E5%AE%A2%E6%88%B7%E7%AB%AFwindows/</guid>
-      <description>总结归纳是积累经验获得成长最有效的方式 安装测试 要考虑监控软件的影响 需测试各种杀毒软件（卡巴、瑞星、360、QQ 电脑管家、mcafee、金山等</description>
     </item>
     
   </channel>
