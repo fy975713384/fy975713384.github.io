@@ -38,6 +38,15 @@
     </item>
     
     <item>
+      <title>Python 字符串格式化总结</title>
+      <link>/2018/10/06/python-%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%A0%BC%E5%BC%8F%E5%8C%96%E6%80%BB%E7%BB%93/</link>
+      <pubDate>Sat, 06 Oct 2018 16:14:18 +0800</pubDate>
+      
+      <guid>/2018/10/06/python-%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%A0%BC%E5%BC%8F%E5%8C%96%E6%80%BB%E7%BB%93/</guid>
+      <description>推荐使用 f-Strings 字符串格式化之一：%-formatting 和 string.Template 转化说明符表达式：%[转换标记][宽度[.精确度]]转换类型 转换标记 解释 - 表示左对齐</description>
+    </item>
+    
+    <item>
       <title>Python Launcher（for Windows）</title>
       <link>/2018/09/09/python-launcherfor-windows/</link>
       <pubDate>Sun, 09 Sep 2018 18:27:30 +0800</pubDate>

@@ -173,21 +173,21 @@
     </item>
     
     <item>
+      <title>Python 字符串格式化总结</title>
+      <link>/2018/10/06/python-%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%A0%BC%E5%BC%8F%E5%8C%96%E6%80%BB%E7%BB%93/</link>
+      <pubDate>Sat, 06 Oct 2018 16:14:18 +0800</pubDate>
+      
+      <guid>/2018/10/06/python-%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%A0%BC%E5%BC%8F%E5%8C%96%E6%80%BB%E7%BB%93/</guid>
+      <description>推荐使用 f-Strings 字符串格式化之一：%-formatting 和 string.Template 转化说明符表达式：%[转换标记][宽度[.精确度]]转换类型 转换标记 解释 - 表示左对齐</description>
+    </item>
+    
+    <item>
       <title>Python Launcher（for Windows）</title>
       <link>/2018/09/09/python-launcherfor-windows/</link>
       <pubDate>Sun, 09 Sep 2018 18:27:30 +0800</pubDate>
       
       <guid>/2018/09/09/python-launcherfor-windows/</guid>
       <description>[TOC] Python Launcher（for Windows） 1. 什么是 Python Launcher 原文： New in version 3.3. The Python launcher for Windows is a utility which aids in locating and executing of different Python versions. It allows scripts (or the command-line) to indicate a preference for a specific Python version, and will</description>
-    </item>
-    
-    <item>
-      <title>使用 Sublime Text 3 编写 RF 脚本</title>
-      <link>/2018/07/16/%E4%BD%BF%E7%94%A8-sublime-text-3-%E7%BC%96%E5%86%99-rf-%E8%84%9A%E6%9C%AC/</link>
-      <pubDate>Mon, 16 Jul 2018 14:34:07 +0800</pubDate>
-      
-      <guid>/2018/07/16/%E4%BD%BF%E7%94%A8-sublime-text-3-%E7%BC%96%E5%86%99-rf-%E8%84%9A%E6%9C%AC/</guid>
-      <description>RF 是最强的自动化测试框架， 没有之一！ 前置条件 已安装 Python2.7 已安装好 Robot Framework 框架和相关 Python2.x 测试库 任何安装目录中都不要出现中文 一、安装配置 Sublime Text 3 在 Sublime 官网根据</description>
     </item>
     
   </channel>
