@@ -5,7 +5,7 @@
     <link>/posts/</link>
     <description>Recent content in Posts on Wing</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 19 Jun 2020 23:01:23 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 26 Jul 2020 14:43:51 +0800</lastBuildDate>
     
 	<atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
     
@@ -17,6 +17,15 @@
       
       <guid>/2018/08/24/%E6%88%91%E7%9A%84%E6%B5%8B%E8%AF%95%E8%A7%82/</guid>
       <description>软件测试的终极目标 确保终端用户的满意度 软件测试的任务 帮助团队对其产品或项目的质量有一个具体的感知 有效地完成探索式测试过程，找出系统中隐藏的风</description>
+    </item>
+    
+    <item>
+      <title>搭建自己的静态资源服务器</title>
+      <link>/2020/07/26/%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E6%9C%8D%E5%8A%A1%E5%99%A8/</link>
+      <pubDate>Sun, 26 Jul 2020 14:43:51 +0800</pubDate>
+      
+      <guid>/2020/07/26/%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E6%9C%8D%E5%8A%A1%E5%99%A8/</guid>
+      <description></description>
     </item>
     
     <item>
@@ -179,15 +188,6 @@
       
       <guid>/2018/10/06/python-%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%A0%BC%E5%BC%8F%E5%8C%96%E6%80%BB%E7%BB%93/</guid>
       <description>推荐使用 f-Strings 字符串格式化之一：%-formatting 和 string.Template 转化说明符表达式：%[转换标记][宽度[.精确度]]转换类型 转换标记 解释 - 表示左对齐</description>
-    </item>
-    
-    <item>
-      <title>Python Launcher（for Windows）</title>
-      <link>/2018/09/09/python-launcherfor-windows/</link>
-      <pubDate>Sun, 09 Sep 2018 18:27:30 +0800</pubDate>
-      
-      <guid>/2018/09/09/python-launcherfor-windows/</guid>
-      <description>[TOC] Python Launcher（for Windows） 1. 什么是 Python Launcher 原文： New in version 3.3. The Python launcher for Windows is a utility which aids in locating and executing of different Python versions. It allows scripts (or the command-line) to indicate a preference for a specific Python version, and will</description>
     </item>
     
   </channel>

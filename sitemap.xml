@@ -16,20 +16,6 @@
   </url>
   
   <url>
-    <loc>/tag/iterm2/</loc>
-    <lastmod>2020-06-19T23:01:23+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>/2020/06/19/mac-%E9%85%8D%E7%BD%AE-iterm2-zsh-%E7%BB%88%E7%AB%AF%E7%8E%AF%E5%A2%83/</loc>
-    <lastmod>2020-06-19T23:01:23+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>/category/notes/</loc>
     <lastmod>2020-08-26T15:06:49+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -58,14 +44,42 @@
   </url>
   
   <url>
-    <loc>/tag/zsh/</loc>
+    <loc>/tag/%E6%8F%90%E6%95%88%E5%B7%A5%E5%85%B7/</loc>
+    <lastmod>2020-07-26T14:43:51+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>/2020/07/26/%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E6%9C%8D%E5%8A%A1%E5%99%A8/</loc>
+    <lastmod>2020-07-26T14:43:51+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>/tag/%E6%9C%8D%E5%8A%A1%E9%85%8D%E7%BD%AE/</loc>
+    <lastmod>2020-07-26T14:43:51+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>/tag/iterm2/</loc>
     <lastmod>2020-06-19T23:01:23+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>/tag/%E6%8F%90%E6%95%88%E5%B7%A5%E5%85%B7/</loc>
+    <loc>/2020/06/19/mac-%E9%85%8D%E7%BD%AE-iterm2-zsh-%E7%BB%88%E7%AB%AF%E7%8E%AF%E5%A2%83/</loc>
+    <lastmod>2020-06-19T23:01:23+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>/tag/zsh/</loc>
     <lastmod>2020-06-19T23:01:23+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -172,13 +186,6 @@
   <url>
     <loc>/tag/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/</loc>
     <lastmod>2020-05-15T13:23:58+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>/tag/%E6%9C%8D%E5%8A%A1%E9%85%8D%E7%BD%AE/</loc>
-    <lastmod>2019-06-21T15:30:40+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
