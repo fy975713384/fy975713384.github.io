@@ -28,7 +28,7 @@
 <meta itemprop="description" content="最近很悲催，工作用的 2019 款 13“ MacBookPro 主板坏了（据网管说已经坏了好几个了），而且一时大意没有用 Time Machine 做备份（非工作用的倒是做了 🤪🤪🤪），所以趁机水一">
 <meta itemprop="datePublished" content="2020-06-19T23:01:23+08:00" />
 <meta itemprop="dateModified" content="2020-06-19T23:01:23+08:00" />
-<meta itemprop="wordCount" content="1209">
+<meta itemprop="wordCount" content="1366">
 
 
 
@@ -197,7 +197,28 @@
 </code></pre></div><p>保存便完成了 vim 语法高亮显示</p>
 <p>对其它插件感兴趣的话可以用 Homebrew 搜索一下</p>
 <div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">$ brew search zsh-
-</code></pre></div><h2 id="final-命令行工具推荐">Final. 命令行工具推荐</h2>
+</code></pre></div><h2 id="additional-配置终端网络代理加速你的-homebrew">Additional. 配置终端网络代理加速你的 Homebrew</h2>
+<blockquote>
+<p>由于某些原因 Homebrew 在国内下载速度十分慢，试过很多方法都不太理想（如配置各种国内源），只有配置终端网络代理体验极佳（仅仅需要有梯子）</p>
+</blockquote>
+<ol>
+<li>
+<p>打开代理工具，查看代理服务器设置中的 HTTP 端口号</p>
+</li>
+<li>
+<p>使用 iTerm2 打开 zsh 的配置文件 .zsh</p>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">$ vim ~/.zsh
+</code></pre></div></li>
+<li>
+<p>在文件最底部添加如下两行并保存</p>
+<pre><code>alias proxy=&quot;export ALL_PROXY='http://127.0.0.1:xxxx'&quot;
+alias proxyreset=&quot;unset ALL_PROXY&quot;
+</code></pre></li>
+<li>
+<p>在 iTerm2 中执行 <code>proxy</code> 命令启动代理，执行 <code>proxyreset</code> 则可关闭代理</p>
+</li>
+</ol>
+<h2 id="final-命令行工具推荐">Final. 命令行工具推荐</h2>
 <ul>
 <li>
 <p><a href="https://github.com/wting/autojump">autojump</a></p>
