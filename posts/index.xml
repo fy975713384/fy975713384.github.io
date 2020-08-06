@@ -38,6 +38,24 @@
     </item>
     
     <item>
+      <title>Python 魔法方法之自定义实例属性</title>
+      <link>/2020/06/17/python-%E9%AD%94%E6%B3%95%E6%96%B9%E6%B3%95%E4%B9%8B%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AE%9E%E4%BE%8B%E5%B1%9E%E6%80%A7/</link>
+      <pubDate>Wed, 17 Jun 2020 12:39:01 +0800</pubDate>
+      
+      <guid>/2020/06/17/python-%E9%AD%94%E6%B3%95%E6%96%B9%E6%B3%95%E4%B9%8B%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AE%9E%E4%BE%8B%E5%B1%9E%E6%80%A7/</guid>
+      <description>Python 魔法方法之自定义实例属性 Python 魔法方法系列 让你的代码更加 pythonic __getattribute__ object.__getattribute__(self, name) 方法用于自定义实例属性的访问，使用时需注意： 该魔法方法会在访问实例的任何属性时</description>
+    </item>
+    
+    <item>
+      <title>Python 魔法方法之自定义实例</title>
+      <link>/2020/06/17/python-%E9%AD%94%E6%B3%95%E6%96%B9%E6%B3%95%E4%B9%8B%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AE%9E%E4%BE%8B/</link>
+      <pubDate>Wed, 17 Jun 2020 12:38:01 +0800</pubDate>
+      
+      <guid>/2020/06/17/python-%E9%AD%94%E6%B3%95%E6%96%B9%E6%B3%95%E4%B9%8B%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AE%9E%E4%BE%8B/</guid>
+      <description>Python 魔法方法之自定义实例 Python 魔法方法系列 让你的代码更加 pythonic __new__ object.__new__(cls[, ...]) 方法用于实例的创建，使用时需注意： 该魔法方法接收被请求创建该实例的类作为其第一个参</description>
+    </item>
+    
+    <item>
       <title>Python 时间与日期处理</title>
       <link>/2020/03/23/python-%E6%97%B6%E9%97%B4%E4%B8%8E%E6%97%A5%E6%9C%9F%E5%A4%84%E7%90%86/</link>
       <pubDate>Mon, 23 Mar 2020 11:46:24 +0800</pubDate>
@@ -170,24 +188,6 @@
       
       <guid>/2019/02/19/robot-framework-%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/</guid>
       <description>RF 是最强的自动化测试框架，没有之一！ Robot Framework 最新基于 Windows+Python3 的安装方式，是时候卸载掉 Python2 了！ Robot Framework 介绍 Robot Framework 是一款基于 Python 的功能自动化测试框架。它具备良好的可</description>
-    </item>
-    
-    <item>
-      <title>Windows 下通过 cmder 远程连接 Linux 服务器</title>
-      <link>/2018/12/31/windows-%E4%B8%8B%E9%80%9A%E8%BF%87-cmder-%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5-linux-%E6%9C%8D%E5%8A%A1%E5%99%A8/</link>
-      <pubDate>Mon, 31 Dec 2018 01:16:23 +0800</pubDate>
-      
-      <guid>/2018/12/31/windows-%E4%B8%8B%E9%80%9A%E8%BF%87-cmder-%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5-linux-%E6%9C%8D%E5%8A%A1%E5%99%A8/</guid>
-      <description>阅读引导 需要先在 Windows 系统中安装 cmder 文中用 &amp;ldquo;&amp;rdquo; 表示的字符均需替换为自己机器中真实的名称（注意去掉 &amp;lt;&amp;gt;） 以 &amp;ldquo;$ &amp;quot; 开头的命令代表需要在命令行工</description>
-    </item>
-    
-    <item>
-      <title>Python 字符串格式化总结</title>
-      <link>/2018/10/06/python-%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%A0%BC%E5%BC%8F%E5%8C%96%E6%80%BB%E7%BB%93/</link>
-      <pubDate>Sat, 06 Oct 2018 16:14:18 +0800</pubDate>
-      
-      <guid>/2018/10/06/python-%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%A0%BC%E5%BC%8F%E5%8C%96%E6%80%BB%E7%BB%93/</guid>
-      <description>推荐使用 f-Strings 字符串格式化之一：%-formatting 和 string.Template 转化说明符表达式：%[转换标记][宽度[.精确度]]转换类型 转换标记 解释 - 表示左对齐</description>
     </item>
     
   </channel>
