@@ -25,7 +25,7 @@
       <pubDate>Wed, 17 Jun 2020 12:38:01 +0800</pubDate>
       
       <guid>/2020/06/17/python-%E9%AD%94%E6%B3%95%E6%96%B9%E6%B3%95%E4%B9%8B%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AE%9E%E4%BE%8B/</guid>
-      <description>Python 魔法方法之自定义实例 Python 魔法方法系列 让你的代码更加 pythonic __new__ object.__new__(cls[, ...]) 方法用于实例的创建，使用时需注意： 该魔法方法接收被请求创建该实例的类作为其第一个参</description>
+      <description>Python 魔法方法之自定义实例 Python 魔法方法系列 让你的代码更加 pythonic 构造函数 &amp;amp; 析构函数 学习 Python 的自定义实例魔法方法前需要先了解两个概念，构造函数 和 析构函数。 【</description>
     </item>
     
     <item>
