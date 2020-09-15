@@ -23,12 +23,12 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/2020/06/17/python-%E9%AD%94%E6%B3%95%E6%96%B9%E6%B3%95%E4%B9%8B%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AE%9E%E4%BE%8B%E5%B1%9E%E6%80%A7/" />
 <meta property="article:published_time" content="2020-06-17T12:39:01+08:00" />
-<meta property="article:modified_time" content="2020-06-17T12:39:01+08:00" />
+<meta property="article:modified_time" content="2020-09-15T18:31:35+08:00" />
 <meta itemprop="name" content="Python 魔法方法之自定义实例属性">
 <meta itemprop="description" content="Python 魔法方法之自定义实例属性 Python 魔法方法系列 让你的代码更加 pythonic __getattribute__() object.__getattribute__(self, name) 方法用于自定义实例属性的访问，使用时需注意： 该魔法方法会在访问实例的任何属性时">
 <meta itemprop="datePublished" content="2020-06-17T12:39:01+08:00" />
-<meta itemprop="dateModified" content="2020-06-17T12:39:01+08:00" />
-<meta itemprop="wordCount" content="550">
+<meta itemprop="dateModified" content="2020-09-15T18:31:35+08:00" />
+<meta itemprop="wordCount" content="837">
 
 
 
@@ -215,6 +215,62 @@
 <li>重写该方法时需要返回一个属性值或是触发 <code>AttributeError</code> 异常。</li>
 <li>当定制类继承 <code>Object</code> 时，同时也会继承 <code>object.__getattribute__(self, name)</code>，但它没有执行任何操作。</li>
 </ul>
+<h2 id="__setattr__">__setattr__()</h2>
+<p><code>object.__setattr__(self, name, value)</code> 方法用于自定义实例属性的赋值，使用时需注意：</p>
+<ul>
+<li>该魔法方法会在尝试给实例属性赋值时被调用。</li>
+<li>如果需要给实例属性赋值，则还需要调用基类的同名方法。</li>
+</ul>
+<p>示例代码：</p>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">class</span> <span class="nc">Karen</span><span class="p">:</span>
+    <span class="n">age</span> <span class="o">=</span> <span class="mi">30</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;Karen&#39;</span>
+
+    <span class="k">def</span> <span class="fm">__setattr__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="k">print</span><span class="p">(</span><span class="s1">&#39;__setattr__&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">key</span> <span class="o">==</span> <span class="s1">&#39;age&#39;</span><span class="p">:</span>
+            <span class="k">print</span><span class="p">(</span><span class="s1">&#39;age cannot be modified&#39;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">print</span><span class="p">(</span><span class="s1">&#39;assign value via Object.__setattr__(self, key, value)&#39;</span><span class="p">)</span>
+            <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__setattr__</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+
+
+<span class="n">p</span> <span class="o">=</span> <span class="n">Karen</span><span class="p">()</span>
+<span class="n">p</span><span class="o">.</span><span class="n">age</span> <span class="o">=</span> <span class="s1">&#39;Any&#39;</span>
+<span class="n">p</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;Karen1&#39;</span>
+<span class="k">print</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">age</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+</code></pre></div><p>执行结果：</p>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="fm">__setattr__</span>
+<span class="n">age</span> <span class="n">cannot</span> <span class="n">be</span> <span class="n">modified</span>
+<span class="fm">__setattr__</span>
+<span class="n">assign</span> <span class="n">value</span> <span class="n">via</span> <span class="n">Object</span><span class="o">.</span><span class="fm">__setattr__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+<span class="mi">30</span>
+<span class="n">Karen1</span>
+</code></pre></div><h2 id="__delattr__">__delattr__()</h2>
+<p><code>object.__delattr__(self, name)</code> 方法用于自定义实例属性的删除，使用时需注意：</p>
+<ul>
+<li>该魔法方法会在 <code>del obj.name</code> 或 <code>delattr(obj, name)</code> 时被调用。</li>
+<li>该方法仅当上述动作有意义时才应被实现。</li>
+</ul>
+<p>示例代码：</p>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">class</span> <span class="nc">Karen</span><span class="p">:</span>
+    <span class="n">Katherine</span> <span class="o">=</span> <span class="bp">True</span>
+    <span class="n">Holdon</span> <span class="o">=</span> <span class="bp">True</span>
+    <span class="n">Karen</span> <span class="o">=</span> <span class="bp">True</span>
+
+    <span class="k">def</span> <span class="fm">__delattr__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+        <span class="k">print</span><span class="p">(</span><span class="s1">&#39;__delattr__&#39;</span><span class="p">)</span>
+
+
+<span class="n">p</span> <span class="o">=</span> <span class="n">Karen</span><span class="p">()</span>
+<span class="k">del</span> <span class="n">p</span><span class="o">.</span><span class="n">Katherine</span>
+<span class="nb">delattr</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="s1">&#39;Katherine&#39;</span><span class="p">)</span>
+</code></pre></div><p>执行结果：</p>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="fm">__delattr__</span>
+<span class="fm">__delattr__</span>
+</code></pre></div><h2 id="__dir__">__dir__()</h2>
+<p><code>object.__dir__(self)</code> 在对实例调用 <code>dir()</code> 时被调用。该魔法方法必须返回一个 <code>sequence</code>。<code>dir()</code> 会将该 <code>sequence</code> 转换成列表并进行排序。</p>
 <blockquote>
 <p>参考来源：<br>
 <a href="https://docs.python.org/3/reference/datamodel.html#special-method-names">https://docs.python.org/3/reference/datamodel.html#special-method-names</a></p>
@@ -325,7 +381,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.5.2/mermaid.min.js"></script>
 <script>
   window.onload = function () {
-    mermaid.initialize({ theme: 'dark' })
+    mermaid.initialize({ theme: 'neutral' })
     mermaid.init(undefined, '.language-mermaid')
   }
 </script>
