@@ -5,11 +5,7 @@
     <link>/tag/zsh/</link>
     <description>Recent content in zsh on Wing</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 19 Jun 2020 23:01:23 +0800</lastBuildDate>
-    
-	<atom:link href="/tag/zsh/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Fri, 19 Jun 2020 23:01:23 +0800</lastBuildDate><atom:link href="/tag/zsh/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Mac 配置 iTerm2 &amp; zsh 终端环境</title>
       <link>/2020/06/19/mac-%E9%85%8D%E7%BD%AE-iterm2-zsh-%E7%BB%88%E7%AB%AF%E7%8E%AF%E5%A2%83/</link>

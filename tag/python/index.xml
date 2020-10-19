@@ -5,11 +5,7 @@
     <link>/tag/python/</link>
     <description>Recent content in Python on Wing</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 17 Jun 2020 12:39:01 +0800</lastBuildDate>
-    
-	<atom:link href="/tag/python/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Wed, 17 Jun 2020 12:39:01 +0800</lastBuildDate><atom:link href="/tag/python/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Python 魔法方法之自定义实例属性</title>
       <link>/2020/06/17/python-%E9%AD%94%E6%B3%95%E6%96%B9%E6%B3%95%E4%B9%8B%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AE%9E%E4%BE%8B%E5%B1%9E%E6%80%A7/</link>
@@ -53,6 +49,15 @@
       
       <guid>/2019/03/23/python-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/</guid>
       <description>封装 访问限制 Python 对属性权限的控制是通过属性名来实现的，如果一个属性由双下划线开头 ==__==，该属性就无法被外部访问。 但是，如果一个属性以 __xxx__ 的</description>
+    </item>
+    
+    <item>
+      <title>Python 排序算法实现</title>
+      <link>/2018/10/23/python-%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E5%AE%9E%E7%8E%B0/</link>
+      <pubDate>Tue, 23 Oct 2018 19:14:18 +0800</pubDate>
+      
+      <guid>/2018/10/23/python-%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E5%AE%9E%E7%8E%B0/</guid>
+      <description>稳定排序 冒泡排序 工作原理 它重复地走访过要排序的数列，一次比较两个元素，如果他们的顺序错误就把他们交换过来。走访数列的工作是重复地进行直到没有</description>
     </item>
     
     <item>

@@ -5,11 +5,7 @@
     <link>/tag/cmder/</link>
     <description>Recent content in cmder on Wing</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 31 Dec 2018 01:16:23 +0800</lastBuildDate>
-    
-	<atom:link href="/tag/cmder/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Mon, 31 Dec 2018 01:16:23 +0800</lastBuildDate><atom:link href="/tag/cmder/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Windows 下通过 cmder 远程连接 Linux 服务器</title>
       <link>/2018/12/31/windows-%E4%B8%8B%E9%80%9A%E8%BF%87-cmder-%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5-linux-%E6%9C%8D%E5%8A%A1%E5%99%A8/</link>

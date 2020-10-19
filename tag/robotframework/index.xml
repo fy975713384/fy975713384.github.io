@@ -5,11 +5,7 @@
     <link>/tag/robotframework/</link>
     <description>Recent content in RobotFramework on Wing</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 26 Aug 2019 15:06:49 +0800</lastBuildDate>
-    
-	<atom:link href="/tag/robotframework/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Mon, 26 Aug 2019 15:06:49 +0800</lastBuildDate><atom:link href="/tag/robotframework/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>一种 RF 测试环境参数化配置方法</title>
       <link>/2019/08/26/%E4%B8%80%E7%A7%8D-rf-%E6%B5%8B%E8%AF%95%E7%8E%AF%E5%A2%83%E5%8F%82%E6%95%B0%E5%8C%96%E9%85%8D%E7%BD%AE%E6%96%B9%E6%B3%95/</link>
