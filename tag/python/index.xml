@@ -52,6 +52,15 @@
     </item>
     
     <item>
+      <title>Python 处理系统文件</title>
+      <link>/2019/01/04/python-%E5%A4%84%E7%90%86%E7%B3%BB%E7%BB%9F%E6%96%87%E4%BB%B6/</link>
+      <pubDate>Fri, 04 Jan 2019 11:30:02 +0800</pubDate>
+      
+      <guid>/2019/01/04/python-%E5%A4%84%E7%90%86%E7%B3%BB%E7%BB%9F%E6%96%87%E4%BB%B6/</guid>
+      <description>Python 处理系统文件 内置方法 open() python open() 函数用于打开一个文件，创建一个 file 对象语法：open(name[, mode[, buffering]])name : 一个包含了你要访问的文件名称的字符串值mo</description>
+    </item>
+    
+    <item>
       <title>Python 处理 json</title>
       <link>/2018/12/23/python-%E5%A4%84%E7%90%86-json/</link>
       <pubDate>Sun, 23 Dec 2018 19:14:18 +0800</pubDate>
