@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+<head>
+  <meta name="google-site-verification" content="NqacV5tHWoxzRi2H7KcEVCWMuxSnch23EM-vzsEV3h8" />
+  <meta name="generator" content="Hugo 0.75.1" />
+  <meta charset="utf-8">
+  <title>Python 处理时间与日期 · Wing</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Python 时间与日期处理 内置库 time 模块 https://docs.python.org/3/library/time.html# class time.struct_time 实例 索引 实例属性 含义 值 0 tm_year 年 eg: 2020 1 tm_mon 月 range [1, 12] 2 tm_mday 日 range [1, 31] 3 tm_hour 小时 range [0, 23] 4 tm_min 分钟 range [0, 59] 5 tm_sec 秒 range [0, 61] 6 tm_wday 周 range [0," />
+
+
+<link rel="canonical" href="/2019/03/23/python-%E5%A4%84%E7%90%86%E6%97%B6%E9%97%B4%E4%B8%8E%E6%97%A5%E6%9C%9F/" />
+<link rel="icon" href="/images/wing_icon.png" />
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+<link rel="stylesheet" href="/css/den.css">
+
+
+
+
+<meta property="og:title" content="Python 处理时间与日期" />
+<meta property="og:description" content="Python 时间与日期处理 内置库 time 模块 https://docs.python.org/3/library/time.html# class time.struct_time 实例 索引 实例属性 含义 值 0 tm_year 年 eg: 2020 1 tm_mon 月 range [1, 12] 2 tm_mday 日 range [1, 31] 3 tm_hour 小时 range [0, 23] 4 tm_min 分钟 range [0, 59] 5 tm_sec 秒 range [0, 61] 6 tm_wday 周 range [0," />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/2019/03/23/python-%E5%A4%84%E7%90%86%E6%97%B6%E9%97%B4%E4%B8%8E%E6%97%A5%E6%9C%9F/" />
+<meta property="article:published_time" content="2019-03-23T11:46:24+08:00" />
+<meta property="article:modified_time" content="2020-03-23T11:46:24+08:00" />
+<meta itemprop="name" content="Python 处理时间与日期">
+<meta itemprop="description" content="Python 时间与日期处理 内置库 time 模块 https://docs.python.org/3/library/time.html# class time.struct_time 实例 索引 实例属性 含义 值 0 tm_year 年 eg: 2020 1 tm_mon 月 range [1, 12] 2 tm_mday 日 range [1, 31] 3 tm_hour 小时 range [0, 23] 4 tm_min 分钟 range [0, 59] 5 tm_sec 秒 range [0, 61] 6 tm_wday 周 range [0,">
+<meta itemprop="datePublished" content="2019-03-23T11:46:24+08:00" />
+<meta itemprop="dateModified" content="2020-03-23T11:46:24+08:00" />
+<meta itemprop="wordCount" content="1450">
+
+
+
+<meta itemprop="keywords" content="Python," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Python 处理时间与日期"/>
+<meta name="twitter:description" content="Python 时间与日期处理 内置库 time 模块 https://docs.python.org/3/library/time.html# class time.struct_time 实例 索引 实例属性 含义 值 0 tm_year 年 eg: 2020 1 tm_mon 月 range [1, 12] 2 tm_mday 日 range [1, 31] 3 tm_hour 小时 range [0, 23] 4 tm_min 分钟 range [0, 59] 5 tm_sec 秒 range [0, 61] 6 tm_wday 周 range [0,"/>
+</head>
+<body>
+  
+  <div class="header-container" style="background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('/images/background.jpg'); background-position: center; background-size: cover;">
+  <div class="container">
+  <nav class="header-nav navbar navbar-expand-md navbar-dark light-dark">
+    <div class="header-logo navbar-brand">
+      
+        <a class="float-left" href="/">
+      
+        
+        
+          Wing
+         
+      </a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="nav-menu collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        
+          <li class="nav-item">
+            
+              
+                <a class="nav-link" href="/category/notes/">笔记</a>
+              
+            
+          </li>
+        
+          <li class="nav-item">
+            
+              
+                <a class="nav-link" href="/category/travals/">游记</a>
+              
+            
+          </li>
+        
+        
+      </ul>
+    </div>
+  </nav>
+</div>
+
+<div class="container header-wrapper">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="header-content">
+        <h1 class="header-title">Python 处理时间与日期</h1>
+        <p class="header-date">作者：
+          潘峰 /
+        
+        2019-03-23
+          / 分类：
+          <a href="/category/notes/">Notes</a>
+        </p>
+        
+        <div class="header-underline"></div>
+        
+          <div class="clearfix"></div>
+          <p class="float-right header-tags">
+              <i class="fas fa-tags" aria-hidden="true"></i>
+              <a href="/tag/python/">Python</a>
+          </p>
+        
+        
+
+      </div>
+    </div>
+  </div>
+</div>
+
+  </div>
+  <main>
+<div class="container content">
+  <article>
+  <h1 id="python-时间与日期处理">Python 时间与日期处理</h1>
+<h2 id="内置库">内置库</h2>
+<h3 id="time-模块">time 模块</h3>
+<p><a href="https://docs.python.org/3/library/time.html#">https://docs.python.org/3/library/time.html#</a></p>
+<p><img src="http://ww1.sinaimg.cn/large/ed19fa55gy1ga80i0l694j20go07i752.jpg" alt="时间转换"></p>
+<h4 id="class-timestruct_time-实例"><code>class time.struct_time</code> 实例</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">索引</th>
+<th style="text-align:left">实例属性</th>
+<th style="text-align:left">含义</th>
+<th style="text-align:left">值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">0</td>
+<td style="text-align:left">tm_year</td>
+<td style="text-align:left">年</td>
+<td style="text-align:left">eg: 2020</td>
+</tr>
+<tr>
+<td style="text-align:left">1</td>
+<td style="text-align:left">tm_mon</td>
+<td style="text-align:left">月</td>
+<td style="text-align:left">range [1, 12]</td>
+</tr>
+<tr>
+<td style="text-align:left">2</td>
+<td style="text-align:left">tm_mday</td>
+<td style="text-align:left">日</td>
+<td style="text-align:left">range [1, 31]</td>
+</tr>
+<tr>
+<td style="text-align:left">3</td>
+<td style="text-align:left">tm_hour</td>
+<td style="text-align:left">小时</td>
+<td style="text-align:left">range [0, 23]</td>
+</tr>
+<tr>
+<td style="text-align:left">4</td>
+<td style="text-align:left">tm_min</td>
+<td style="text-align:left">分钟</td>
+<td style="text-align:left">range [0, 59]</td>
+</tr>
+<tr>
+<td style="text-align:left">5</td>
+<td style="text-align:left">tm_sec</td>
+<td style="text-align:left">秒</td>
+<td style="text-align:left">range [0, 61]</td>
+</tr>
+<tr>
+<td style="text-align:left">6</td>
+<td style="text-align:left">tm_wday</td>
+<td style="text-align:left">周</td>
+<td style="text-align:left">range [0, 6]，周一为 0</td>
+</tr>
+<tr>
+<td style="text-align:left">7</td>
+<td style="text-align:left">tm_yday</td>
+<td style="text-align:left">天</td>
+<td style="text-align:left">range [1, 366]</td>
+</tr>
+<tr>
+<td style="text-align:left">8</td>
+<td style="text-align:left">tm_isdst</td>
+<td style="text-align:left">时令</td>
+<td style="text-align:left">0, 1 或 -1</td>
+</tr>
+<tr>
+<td style="text-align:left">N/A</td>
+<td style="text-align:left">tm_zone</td>
+<td style="text-align:left">时区名称缩写</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">N/A</td>
+<td style="text-align:left">tm_gmtoff</td>
+<td style="text-align:left">-</td>
+<td style="text-align:left">以秒为单位的 UTC 以东偏离</td>
+</tr>
+</tbody>
+</table>
+<h4 id="示例代码">示例代码</h4>
+<ul>
+<li>
+<p>导入库：<code>import time</code></p>
+</li>
+<li>
+<p>获取当前时间时间戳</p>
+</li>
+</ul>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">t</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>                       <span class="c1"># 原始时间数据</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">t</span><span class="p">))</span>                  <span class="c1"># 秒级时间戳</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">t</span> <span class="o">*</span> <span class="mi">1000</span><span class="p">))</span>           <span class="c1"># 毫秒级时间戳</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">t</span> <span class="o">*</span> <span class="mi">1000000</span><span class="p">))</span>        <span class="c1"># 微秒级时间戳</span>
+</code></pre></div><ul>
+<li>获取当天的年月日</li>
+</ul>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">time</span><span class="o">.</span><span class="n">localtime</span><span class="p">()</span><span class="o">.</span><span class="n">tm_year</span>  <span class="c1"># 年</span>
+<span class="n">time</span><span class="o">.</span><span class="n">localtime</span><span class="p">()</span><span class="o">.</span><span class="n">tm_mon</span>   <span class="c1"># 月</span>
+<span class="n">time</span><span class="o">.</span><span class="n">localtime</span><span class="p">()</span><span class="o">.</span><span class="n">tm_mday</span>  <span class="c1"># 日</span>
+</code></pre></div><ul>
+<li>获取对应时间的格式化字符串</li>
+</ul>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># 当前时间</span>
+<span class="n">time</span><span class="o">.</span><span class="n">asctime</span><span class="p">()</span>    <span class="c1"># &#39;Wed Mar  4 17:34:54 2020&#39;</span>
+<span class="n">time</span><span class="o">.</span><span class="n">ctime</span><span class="p">()</span>      <span class="c1"># &#39;Wed Mar  4 17:34:54 2020&#39;</span>
+
+<span class="c1"># 指定时间</span>
+<span class="n">time</span><span class="o">.</span><span class="n">asctime</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">localtime</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span>    <span class="c1"># &#39;Thu Jan  1 08:00:00 1970&#39;</span>
+<span class="n">time</span><span class="o">.</span><span class="n">ctime</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>                      <span class="c1"># &#39;Thu Jan  1 08:00:00 1970&#39;</span>
+</code></pre></div><ul>
+<li>时间戳转换成时间字符串</li>
+</ul>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">timestamp</span> <span class="o">=</span> <span class="mi">1577808000</span>
+<span class="n">time_local</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">localtime</span><span class="p">(</span><span class="n">timestamp</span><span class="p">)</span>
+<span class="n">time_str</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%Y-%m-</span><span class="si">%d</span><span class="s1"> %H:%M:%S&#39;</span><span class="p">,</span> <span class="n">time_local</span><span class="p">)</span>  <span class="c1"># &#39;2020-01-01 00:00:00&#39;</span>
+</code></pre></div><ul>
+<li>时间字符串转换成时间戳</li>
+</ul>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">time_str</span> <span class="o">=</span> <span class="s1">&#39;2020-01-01 00:00:00&#39;</span>
+<span class="n">struct_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="n">time_str</span><span class="p">,</span> <span class="s1">&#39;%Y-%m-</span><span class="si">%d</span><span class="s1"> %H:%M:%S&#39;</span><span class="p">)</span>
+<span class="n">timestamp</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">mktime</span><span class="p">(</span><span class="n">struct_time</span><span class="p">))</span>  <span class="c1"># 1577808000</span>
+</code></pre></div><h3 id="datetime-模块">datetime 模块</h3>
+<p><a href="https://docs.python.org/3/library/datetime.html#">https://docs.python.org/3/library/datetime.html#</a></p>
+<p><img src="http://ww1.sinaimg.cn/large/ed19fa55gy1ga80gxo6u0j20go07igmk.jpg" alt="日期转换"></p>
+<h4 id="class-datetimedatetime-常用属性和方法"><code>class datetime.datetime</code> 常用属性和方法</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">类属性</th>
+<th style="text-align:left">含义</th>
+<th style="text-align:left">值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">min</td>
+<td style="text-align:left">最早的可表示的 datetime</td>
+<td style="text-align:left">datetime(1, 1, 1, 0, 0)</td>
+</tr>
+<tr>
+<td style="text-align:left">max</td>
+<td style="text-align:left">最晚的可表示的 datetime</td>
+<td style="text-align:left">datetime(9999, 12, 31, 23, 59, 59, 999999)</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">类方法</th>
+<th style="text-align:left">含义</th>
+<th style="text-align:left">返回值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">today()</td>
+<td style="text-align:left">返回当前本地 datetime (tz=None)</td>
+<td style="text-align:left">datetime 实例对象</td>
+</tr>
+<tr>
+<td style="text-align:left">now(tz=None)</td>
+<td style="text-align:left">返回当前时区 datetime</td>
+<td style="text-align:left">datetime 实例对象</td>
+</tr>
+<tr>
+<td style="text-align:left">utcnow()</td>
+<td style="text-align:left">返回当前 UTC datetime</td>
+<td style="text-align:left">datetime 实例对象</td>
+</tr>
+<tr>
+<td style="text-align:left">fromtimestamp(timestamp, tz=None)</td>
+<td style="text-align:left">返回指定时间戳对应时区时间的 datetime</td>
+<td style="text-align:left">datetime 实例对象</td>
+</tr>
+<tr>
+<td style="text-align:left">utcfromtimestamp(timestamp)</td>
+<td style="text-align:left">返回指定时间戳对应 UTC 时间的 datetime</td>
+<td style="text-align:left">datetime 实例对象</td>
+</tr>
+<tr>
+<td style="text-align:left">fromisoformat(date_string)</td>
+<td style="text-align:left">将符合 ISO 8601 日期与时间组合表示法的字符串转换成 datetime</td>
+<td style="text-align:left">datetime 实例对象</td>
+</tr>
+<tr>
+<td style="text-align:left">strptime(date_string, format)</td>
+<td style="text-align:left">将指定时间字符串转换成对应的时间</td>
+<td style="text-align:left">datetime 实例对象</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">实例属性</th>
+<th style="text-align:left">含义</th>
+<th style="text-align:left">值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">year</td>
+<td style="text-align:left">年</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">month</td>
+<td style="text-align:left">月</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">day</td>
+<td style="text-align:left">日</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">hour</td>
+<td style="text-align:left">时</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">minute</td>
+<td style="text-align:left">分</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">second</td>
+<td style="text-align:left">秒</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">microsecond</td>
+<td style="text-align:left">微秒</td>
+<td style="text-align:left"></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">实例方法</th>
+<th style="text-align:left">含义</th>
+<th style="text-align:left">返回值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">date()</td>
+<td style="text-align:left">返回与 datetime 年月日相同的 date 对象</td>
+<td style="text-align:left">datetime.date(&hellip;)</td>
+</tr>
+<tr>
+<td style="text-align:left">time()</td>
+<td style="text-align:left">返回与 datetime 时分秒微秒以及 fold 相同的 time 对象</td>
+<td style="text-align:left">datetime.time(&hellip;)</td>
+</tr>
+<tr>
+<td style="text-align:left">timetuple()</td>
+<td style="text-align:left">返回 datetime 相同的 time.struct_time 对象</td>
+<td style="text-align:left">time.struct_time(&hellip;)</td>
+</tr>
+<tr>
+<td style="text-align:left">utctimetuple()</td>
+<td style="text-align:left"></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">timestamp()</td>
+<td style="text-align:left"></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">weekday()</td>
+<td style="text-align:left">返回 datetime 星期的序数</td>
+<td style="text-align:left">rang(7)</td>
+</tr>
+<tr>
+<td style="text-align:left">isoformat(&hellip;)</td>
+<td style="text-align:left">返回 datetime 符合 ISO 8601 日期与时间组合表示法的字符串</td>
+<td style="text-align:left">eg: &lsquo;2020-02-02T02:02:02.222222&rsquo;</td>
+</tr>
+<tr>
+<td style="text-align:left">ctime()</td>
+<td style="text-align:left">返回 datetime 的格式化字符串</td>
+<td style="text-align:left">eg: &lsquo;Thu Mar 5 10:43:53 2020&rsquo;</td>
+</tr>
+<tr>
+<td style="text-align:left">strftime(format)</td>
+<td style="text-align:left">将 datetime 转换成对应格式的字符串</td>
+<td style="text-align:left"></td>
+</tr>
+</tbody>
+</table>
+<h4 id="示例代码-1">示例代码</h4>
+<ul>
+<li>
+<p>导入库：<code>from datetime import datetime</code></p>
+</li>
+<li>
+<p>获取当前日期和时间：</p>
+</li>
+</ul>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>  <span class="c1"># 2017-12-24 21:56:22.698000</span>
+</code></pre></div><ul>
+<li>获取当天的年月日</li>
+</ul>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">now</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">today</span><span class="p">()</span>
+<span class="c1"># now = datetime.fromtimestamp(time.time()) 同上</span>
+
+<span class="n">now</span><span class="o">.</span><span class="n">year</span>   <span class="c1"># 年</span>
+<span class="n">now</span><span class="o">.</span><span class="n">month</span>  <span class="c1"># 月</span>
+<span class="n">now</span><span class="o">.</span><span class="n">day</span>    <span class="c1"># 日</span>
+</code></pre></div><ul>
+<li>格式化成需要的时间：</li>
+</ul>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%Y-%m-</span><span class="si">%d</span><span class="s1">_%H-%M-%S&#39;</span><span class="p">)</span>  <span class="c1"># 2020-02-02_02-02-02</span>
+</code></pre></div><ul>
+<li>格式化为 ISO 8601 的日期和时间的组合表示法
+<ul>
+<li>方式一：</li>
+</ul>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span><span class="p">,</span> <span class="n">timezone</span><span class="p">,</span> <span class="n">timedelta</span>
+<span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">(</span><span class="n">tz</span><span class="o">=</span><span class="n">timezone</span><span class="p">(</span><span class="n">timedelta</span><span class="p">(</span><span class="n">hours</span><span class="o">=</span><span class="mi">8</span><span class="p">)))</span><span class="o">.</span><span class="n">isoformat</span><span class="p">()</span>
+</code></pre></div><ul>
+<li>方式二：</li>
+</ul>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">pytz</span>
+<span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">(</span><span class="n">tz</span><span class="o">=</span><span class="n">pytz</span><span class="o">.</span><span class="n">timezone</span><span class="p">(</span><span class="s1">&#39;Asia/Shanghai&#39;</span><span class="p">))</span><span class="o">.</span><span class="n">isoformat</span><span class="p">()</span>
+</code></pre></div><ul>
+<li>方式三：</li>
+</ul>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%Y-%m-</span><span class="si">%d</span><span class="s1">T%T+08:00&#39;</span><span class="p">)</span>
+</code></pre></div></li>
+</ul>
+<h3 id="calendar-模块">calendar 模块</h3>
+<p><a href="https://docs.python.org/3/library/calendar.html#">https://docs.python.org/3/library/calendar.html#</a></p>
+<h4 id="示例代码-2">示例代码</h4>
+<ul>
+<li>
+<p>导入库：<code>import calendar</code></p>
+</li>
+<li>
+<p>获取某年某月的最大天数</p>
+</li>
+</ul>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">calendar</span><span class="o">.</span><span class="n">monthrange</span><span class="p">(</span><span class="mi">2020</span><span class="p">,</span> <span class="mi">2</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>
+</code></pre></div><h2 id="第三方库">第三方库</h2>
+<h3 id="dateutil-库">dateutil 库</h3>
+<ul>
+<li>安装：<code>$ pip install python-dateutil</code></li>
+<li>导入库：</li>
+</ul>
+<hr>
+<blockquote>
+<p>附：</p>
+</blockquote>
+<p>术语表：</p>
+<div class="highlight"><pre class="chroma"><code class="language-plain" data-lang="plain">UTC (Coordinated Universal Time, 国际协调时间)
+以原子时秒长为基础，在时刻上尽量接近于世界时的一种时间计量系统。
+
+GMT (Greenwich Mean Time, 格林威治标准时间)
+格林尼治所在地的标准时间，也是表示地球自转速率的一种形式。以地球自转为基础的时间计量系统。
+
+DST (Daylight Saving Time, 日光节约时间)
+为了节约能源人为规定的一种时间。
+
+CST
+可视为如下4个不同的时区的缩写：
+美国中部时间：Central Standard Time (USA) UT-6:00
+澳大利亚中部时间：Central Standard Time (Australia) UT+9:30
+中国标准时间：China Standard Time UT+8:00
+古巴标准时间：Cuba Standard Time UT-4:00
+</code></pre></div><p>时间参数格式：</p>
+<div class="highlight"><pre class="chroma"><code class="language-plain" data-lang="plain">%a 星期几的简写
+%A 星期几的全称
+%b 月份的简写
+%B 月份的全称
+%c 标准的日期的时间串
+%C 年份的后两位数字
+%d 十进制表示的每月的第几天
+%D 月/天/年
+%e 在两字符域中，十进制表示的每月的第几天
+%F 年-月-日
+%g 年份的后两位数字，使用基于周的年
+%G 年分，使用基于周的年
+%h 简写的月份名
+%H 24小时制的小时
+%I 12小时制的小时
+%j 十进制表示的每年的第几天
+%m 十进制表示的月份
+%M 十时制表示的分钟数
+%n 新行符
+%p 本地的AM或PM的等价显示
+%r 12小时的时间
+%R 显示小时和分钟：hh:mm
+%S 十进制的秒数
+%t 水平制表符
+%T 显示时分秒：hh:mm:ss
+%u 每周的第几天，星期一为第一天 （值从0到6，星期一为0）
+%U 第年的第几周，把星期日做为第一天（值从0到53）
+%V 每年的第几周，使用基于周的年
+%w 十进制表示的星期几（值从0到6，星期天为0）
+%W 每年的第几周，把星期一做为第一天（值从0到53）
+%x 标准的日期串
+%X 标准的时间串
+%y 不带世纪的十进制年份（值从0到99）
+%Y 带世纪部分的十制年份
+%z，%Z 时区名称，如果不能得到时区名称则返回空字符。
+%% 百分号
+</code></pre></div><blockquote>
+<p>参考来源：<br>
+<a href="https://docs.python.org/zh-cn/3/library/time.html">https://docs.python.org/zh-cn/3/library/time.html</a><br>
+<a href="https://docs.python.org/3/library/datetime.html#">https://docs.python.org/3/library/datetime.html#</a><br>
+<a href="https://zhuanlan.zhihu.com/p/23679915">https://zhuanlan.zhihu.com/p/23679915</a></p>
+</blockquote>
+
+  </article>
+
+  
+  
+    
+    
+    
+  
+  
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css" />
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<div id="gitalk-container"></div>
+<script>
+  const gitalk = new Gitalk({
+    id: 'Python处理时间与日期', 
+    owner: 'fy975713384',
+    repo: 'fy975713384.github.io', 
+    clientID: '35afb85e4c521d6dbeb8',
+    clientSecret: '463c9ec266980fd7358a11479beda5284ecf9f71',
+    admin: ['fy975713384'],
+    distractionFreeMode: false, 
+  })
+  gitalk.render('gitalk-container')
+</script>
+
+
+
+
+
+
+
+</div>
+
+  </main><div class="footer gradient-2">
+  <div class="container footer-container ">
+    <div class="row">
+      <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3">
+        <div class="footer-title">网站地图</div>
+        <ul class="list-unstyled">
+            
+              
+                <li><a href="/tags/">标签</a></li>
+              
+              
+                <li><a href="/categories/">分类</a></li>
+              
+            
+            
+            
+            <li><a rel="alternate" type="application/rss&#43;xml" href="/index.xml"><i class="fas fa-rss-square"></i> RSS订阅</a></li>
+            
+            
+            
+        </ul>
+      </div>
+      <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3">
+        
+        <div class="footer-title">社群</div>
+        <ul class="list-unstyled">
+          
+          <li><a href="https://github.com/fy975713384" rel="noopener" target="_blank">GitHub</a></li>
+          
+          <li><a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&amp;email=NFVOQVgaUnRSW0xZVV1YGldbWQ" rel="noopener" target="_blank">联系我</a></li>
+          
+        </ul>
+        
+      </div>
+      <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3">
+        
+        <div class="footer-title">友链</div>
+        <ul class="list-unstyled">
+          
+          <li><a href="/" rel="noopener" target="_blank">关于我</a></li>
+          
+          <li><a href="https://www.jianshu.com/u/a479a910abe7" rel="noopener" target="_blank">简书主页</a></li>
+          
+        </ul>
+        
+      </div> 
+      <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+        <p class="pull-right text-right">
+          <small><em>Proudly powered by <a href="https://gohugo.io/" rel="noopener" target="_blank">Hugo</a></em></small><br/>
+          <small><em>Theme - <a href="https://github.com/shaform/hugo-theme-den" rel="noopener" target="_blank">Den</a></em></small><br/>
+          <small>
+            &copy; 
+            Pan Feng
+            
+              2017 -
+            2020
+          </small>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+  integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+  integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+  integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.5.2/mermaid.min.js"></script>
+<script>
+  window.onload = function () {
+    mermaid.initialize({ theme: 'neutral' })
+    mermaid.init(undefined, '.language-mermaid')
+  }
+</script>
+</body>
+</html>
