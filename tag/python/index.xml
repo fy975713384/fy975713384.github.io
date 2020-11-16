@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Python on Wing</title>
+    <link>/tag/python/</link>
+    <description>Recent content in Python on Wing</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 17 Jun 2020 12:39:01 +0800</lastBuildDate><atom:link href="/tag/python/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Python 魔法方法之自定义实例属性</title>
+      <link>/2020/06/17/python-%E9%AD%94%E6%B3%95%E6%96%B9%E6%B3%95%E4%B9%8B%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AE%9E%E4%BE%8B%E5%B1%9E%E6%80%A7/</link>
+      <pubDate>Wed, 17 Jun 2020 12:39:01 +0800</pubDate>
+      
+      <guid>/2020/06/17/python-%E9%AD%94%E6%B3%95%E6%96%B9%E6%B3%95%E4%B9%8B%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AE%9E%E4%BE%8B%E5%B1%9E%E6%80%A7/</guid>
+      <description>Python 魔法方法之自定义实例属性 Python 魔法方法系列 让你的代码更加 pythonic __getattribute__() object.__getattribute__(self, name) 方法用于自定义实例属性的访问，使用时需注意： 该魔法方法会在访问实例的任何属性时</description>
+    </item>
+    
+    <item>
+      <title>Python 魔法方法之自定义实例</title>
+      <link>/2020/06/17/python-%E9%AD%94%E6%B3%95%E6%96%B9%E6%B3%95%E4%B9%8B%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AE%9E%E4%BE%8B/</link>
+      <pubDate>Wed, 17 Jun 2020 12:38:01 +0800</pubDate>
+      
+      <guid>/2020/06/17/python-%E9%AD%94%E6%B3%95%E6%96%B9%E6%B3%95%E4%B9%8B%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AE%9E%E4%BE%8B/</guid>
+      <description>Python 魔法方法之自定义实例 Python 魔法方法系列 让你的代码更加 pythonic 构造函数 &amp;amp; 析构函数 学习 Python 的自定义实例魔法方法前需要先了解两个概念，构造函数 和 析构函数。 【</description>
+    </item>
+    
+    <item>
+      <title>Python 函数参数详解</title>
+      <link>/2019/10/06/python-%E5%87%BD%E6%95%B0%E5%8F%82%E6%95%B0%E8%AF%A6%E8%A7%A3/</link>
+      <pubDate>Sun, 06 Oct 2019 16:14:18 +0800</pubDate>
+      
+      <guid>/2019/10/06/python-%E5%87%BD%E6%95%B0%E5%8F%82%E6%95%B0%E8%AF%A6%E8%A7%A3/</guid>
+      <description>Python 函数参数详解 前言 最近在跟同事讨论一个方法的调用时涉及到了 Python 函数的位置参数和关键字参数的相关知识，发现之前学习 Python 时对函数参数研究的并不透彻，</description>
+    </item>
+    
+    <item>
+      <title>Python 面向对象</title>
+      <link>/2019/03/23/python-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/</link>
+      <pubDate>Sat, 23 Mar 2019 12:19:10 +0800</pubDate>
+      
+      <guid>/2019/03/23/python-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/</guid>
+      <description>封装 访问限制 Python 对属性权限的控制是通过属性名来实现的，如果一个属性由双下划线开头 ==__==，该属性就无法被外部访问。 但是，如果一个属性以 __xxx__ 的</description>
+    </item>
+    
+    <item>
+      <title>Python 处理时间与日期</title>
+      <link>/2019/03/23/python-%E5%A4%84%E7%90%86%E6%97%B6%E9%97%B4%E4%B8%8E%E6%97%A5%E6%9C%9F/</link>
+      <pubDate>Sat, 23 Mar 2019 11:46:24 +0800</pubDate>
+      
+      <guid>/2019/03/23/python-%E5%A4%84%E7%90%86%E6%97%B6%E9%97%B4%E4%B8%8E%E6%97%A5%E6%9C%9F/</guid>
+      <description>Python 时间与日期处理 内置库 time 模块 https://docs.python.org/3/library/time.html# class time.struct_time 实例 索引 实例属性 含义 值 0 tm_year 年 eg: 2020 1 tm_mon 月 range [1, 12] 2 tm_mday 日 range [1, 31] 3 tm_hour 小时 range [0, 23] 4 tm_min 分钟 range [0, 59] 5 tm_sec 秒 range [0, 61] 6 tm_wday 周 range [0,</description>
+    </item>
+    
+    <item>
+      <title>Python 处理系统文件</title>
+      <link>/2019/01/04/python-%E5%A4%84%E7%90%86%E7%B3%BB%E7%BB%9F%E6%96%87%E4%BB%B6/</link>
+      <pubDate>Fri, 04 Jan 2019 11:30:02 +0800</pubDate>
+      
+      <guid>/2019/01/04/python-%E5%A4%84%E7%90%86%E7%B3%BB%E7%BB%9F%E6%96%87%E4%BB%B6/</guid>
+      <description>Python 处理系统文件 内置方法 open() python open() 函数用于打开一个文件，创建一个 file 对象语法：open(name[, mode[, buffering]])name : 一个包含了你要访问的文件名称的字符串值mo</description>
+    </item>
+    
+    <item>
+      <title>Python 处理 json</title>
+      <link>/2018/12/23/python-%E5%A4%84%E7%90%86-json/</link>
+      <pubDate>Sun, 23 Dec 2018 19:14:18 +0800</pubDate>
+      
+      <guid>/2018/12/23/python-%E5%A4%84%E7%90%86-json/</guid>
+      <description>导入模块： import json 将 Python 对象编码成 JSON 字符串： json.dumps() &amp;gt;&amp;gt;&amp;gt; import json &amp;gt;&amp;gt;&amp;gt; json.dumps({&amp;#39;a&amp;#39;: &amp;#39;你好&amp;#39;, &amp;#39;b&amp;#39;: 7}, sort_keys=True, indent=4, separators=(&amp;#39;,&amp;#39;, &amp;#39;: &amp;#39;)) { &amp;#34;a&amp;#34;: &amp;#34;你好&amp;#34;, &amp;#34;b&amp;#34;: 7 } 将已编码的 JSON 字</description>
+    </item>
+    
+    <item>
+      <title>Python 排序算法实现</title>
+      <link>/2018/10/23/python-%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E5%AE%9E%E7%8E%B0/</link>
+      <pubDate>Tue, 23 Oct 2018 19:14:18 +0800</pubDate>
+      
+      <guid>/2018/10/23/python-%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E5%AE%9E%E7%8E%B0/</guid>
+      <description>稳定排序 冒泡排序 工作原理 它重复地走访过要排序的数列，一次比较两个元素，如果他们的顺序错误就把他们交换过来。走访数列的工作是重复地进行直到没有</description>
+    </item>
+    
+    <item>
+      <title>Python 字符串格式化总结</title>
+      <link>/2018/10/06/python-%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%A0%BC%E5%BC%8F%E5%8C%96%E6%80%BB%E7%BB%93/</link>
+      <pubDate>Sat, 06 Oct 2018 16:14:18 +0800</pubDate>
+      
+      <guid>/2018/10/06/python-%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%A0%BC%E5%BC%8F%E5%8C%96%E6%80%BB%E7%BB%93/</guid>
+      <description>推荐使用 f-Strings 字符串格式化之一：%-formatting 和 string.Template 转化说明符表达式：%[转换标记][宽度[.精确度]]转换类型 转换标记 解释 - 表示左对齐</description>
+    </item>
+    
+    <item>
+      <title>Python Launcher（for Windows）</title>
+      <link>/2018/09/09/python-launcherfor-windows/</link>
+      <pubDate>Sun, 09 Sep 2018 18:27:30 +0800</pubDate>
+      
+      <guid>/2018/09/09/python-launcherfor-windows/</guid>
+      <description>[TOC] Python Launcher（for Windows） 1. 什么是 Python Launcher 原文： New in version 3.3. The Python launcher for Windows is a utility which aids in locating and executing of different Python versions. It allows scripts (or the command-line) to indicate a preference for a specific Python version, and will</description>
+    </item>
+    
+  </channel>
+</rss>

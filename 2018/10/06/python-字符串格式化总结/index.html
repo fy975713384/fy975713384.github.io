@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+<head>
+  <meta name="google-site-verification" content="NqacV5tHWoxzRi2H7KcEVCWMuxSnch23EM-vzsEV3h8" />
+  <meta name="generator" content="Hugo 0.75.1" />
+  <meta charset="utf-8">
+  <title>Python 字符串格式化总结 · Wing</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="推荐使用 f-Strings 字符串格式化之一：%-formatting 和 string.Template 转化说明符表达式：%[转换标记][宽度[.精确度]]转换类型 转换标记 解释 - 表示左对齐" />
+
+
+<link rel="canonical" href="/2018/10/06/python-%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%A0%BC%E5%BC%8F%E5%8C%96%E6%80%BB%E7%BB%93/" />
+<link rel="icon" href="/images/wing_icon.png" />
+<link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+<link rel="stylesheet" href="/css/den.css">
+
+
+
+
+<meta property="og:title" content="Python 字符串格式化总结" />
+<meta property="og:description" content="推荐使用 f-Strings 字符串格式化之一：%-formatting 和 string.Template 转化说明符表达式：%[转换标记][宽度[.精确度]]转换类型 转换标记 解释 - 表示左对齐" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/2018/10/06/python-%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%A0%BC%E5%BC%8F%E5%8C%96%E6%80%BB%E7%BB%93/" />
+<meta property="article:published_time" content="2018-10-06T16:14:18+08:00" />
+<meta property="article:modified_time" content="2018-10-06T16:14:18+08:00" />
+<meta itemprop="name" content="Python 字符串格式化总结">
+<meta itemprop="description" content="推荐使用 f-Strings 字符串格式化之一：%-formatting 和 string.Template 转化说明符表达式：%[转换标记][宽度[.精确度]]转换类型 转换标记 解释 - 表示左对齐">
+<meta itemprop="datePublished" content="2018-10-06T16:14:18+08:00" />
+<meta itemprop="dateModified" content="2018-10-06T16:14:18+08:00" />
+<meta itemprop="wordCount" content="779">
+
+
+
+<meta itemprop="keywords" content="Python," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Python 字符串格式化总结"/>
+<meta name="twitter:description" content="推荐使用 f-Strings 字符串格式化之一：%-formatting 和 string.Template 转化说明符表达式：%[转换标记][宽度[.精确度]]转换类型 转换标记 解释 - 表示左对齐"/>
+</head>
+<body>
+  
+  <div class="header-container" style="background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('/images/background.jpg'); background-position: center; background-size: cover;">
+  <div class="container">
+  <nav class="header-nav navbar navbar-expand-md navbar-dark light-dark">
+    <div class="header-logo navbar-brand">
+      
+        <a class="float-left" href="/">
+      
+        
+        
+          Wing
+         
+      </a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="nav-menu collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        
+          <li class="nav-item">
+            
+              
+                <a class="nav-link" href="/category/notes/">笔记</a>
+              
+            
+          </li>
+        
+          <li class="nav-item">
+            
+              
+                <a class="nav-link" href="/category/travals/">游记</a>
+              
+            
+          </li>
+        
+        
+      </ul>
+    </div>
+  </nav>
+</div>
+
+<div class="container header-wrapper">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="header-content">
+        <h1 class="header-title">Python 字符串格式化总结</h1>
+        <p class="header-date">作者：
+          潘峰 /
+        
+        2018-10-06
+          / 分类：
+          <a href="/category/notes/">Notes</a>
+        </p>
+        
+        <div class="header-underline"></div>
+        
+          <div class="clearfix"></div>
+          <p class="float-right header-tags">
+              <i class="fas fa-tags" aria-hidden="true"></i>
+              <a href="/tag/python/">Python</a>
+          </p>
+        
+        
+
+      </div>
+    </div>
+  </div>
+</div>
+
+  </div>
+  <main>
+<div class="container content">
+  <article>
+  <blockquote>
+<p>推荐使用 f-Strings</p>
+</blockquote>
+<h2 id="字符串格式化之一-formatting-和-stringtemplate">字符串格式化之一：<code>%-formatting</code> 和 <code>string.Template</code></h2>
+<blockquote>
+<p>转化说明符表达式：<code>%[转换标记][宽度[.精确度]]转换类型</code></p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>转换标记</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-</td>
+<td>表示左对齐</td>
+</tr>
+<tr>
+<td>+</td>
+<td>在正数前面显示加号 (+)</td>
+</tr>
+<tr>
+<td>*</td>
+<td>定义宽度或者小数点精度</td>
+</tr>
+<tr>
+<td>#</td>
+<td>在八进制数前面显示零 (&lsquo;0&rsquo;)，在十六进制前面显示 &lsquo;0x&rsquo; 或者 &lsquo;0X&rsquo;</td>
+</tr>
+<tr>
+<td>%</td>
+<td>输出一个单一的 &lsquo;%&rsquo;</td>
+</tr>
+<tr>
+<td>0</td>
+<td>显示的数字前面填充 &lsquo;0&rsquo; 而不是默认的空格</td>
+</tr>
+<tr>
+<td><!-- raw HTML omitted --></td>
+<td>在正数前面显示空格</td>
+</tr>
+<tr>
+<td>(var)</td>
+<td>映射变量(字典参数)</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>转换类型</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>c</td>
+<td>转换为单个字符，对于数字将转换为该值所对应的 ASCII 码</td>
+</tr>
+<tr>
+<td>s</td>
+<td>转换为字符串，对于非字符串，将默认调用 str() 函数进行转换</td>
+</tr>
+<tr>
+<td>r</td>
+<td>用 repr() 函数进行字符串转换</td>
+</tr>
+<tr>
+<td>i d</td>
+<td>转换为带符号的十进制数</td>
+</tr>
+<tr>
+<td>u</td>
+<td>转换为不带符号的十进制数</td>
+</tr>
+<tr>
+<td>o</td>
+<td>转换为不带符号的八进制数</td>
+</tr>
+<tr>
+<td>x X</td>
+<td>转换为不带符号十六进制数</td>
+</tr>
+<tr>
+<td>e E</td>
+<td>转换为科学计数法表示的浮点数</td>
+</tr>
+<tr>
+<td>f F</td>
+<td>转换为浮点数（小数部分自然截断）</td>
+</tr>
+</tbody>
+</table>
+<h3 id="常见用法">常见用法：</h3>
+<h4 id="直接格式化字符或者数值">直接格式化字符或者数值</h4>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="s2">&#34;Your height is </span><span class="si">%.2f</span><span class="s2"> m&#34;</span> <span class="o">%</span> <span class="p">(</span><span class="mf">1.72</span><span class="p">))</span>
+<span class="n">your</span> <span class="n">height</span> <span class="ow">is</span> <span class="mf">1.72</span> <span class="n">m</span>
+</code></pre></div><h4 id="以元组的形式格式化">以元组的形式格式化</h4>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="o">&gt;&gt;&gt;</span> <span class="n">itemtuple</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;panfeng&#39;</span><span class="p">,</span> <span class="mi">24</span><span class="p">,</span> <span class="mf">1.72</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="s2">&#34;Name:</span><span class="si">%-13s</span><span class="s2"> Age:</span><span class="si">%-8d</span><span class="s2"> Height:</span><span class="si">%-3.2f</span><span class="s2">&#34;</span> <span class="o">%</span> <span class="n">itemtuple</span><span class="p">)</span>
+<span class="n">Name</span><span class="p">:</span><span class="n">panfeng</span>       <span class="n">Age</span><span class="p">:</span><span class="mi">24</span>       <span class="n">Height</span><span class="p">:</span><span class="mf">1.72</span>
+</code></pre></div><h4 id="以字典的形式格式化">以字典的形式格式化</h4>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="o">&gt;&gt;&gt;</span> <span class="n">itemdic</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&#34;name&#34;</span><span class="p">:</span> <span class="s2">&#34;panfeng&#34;</span><span class="p">,</span> <span class="s2">&#34;age&#34;</span><span class="p">:</span> <span class="mi">24</span><span class="p">,</span> <span class="s2">&#34;height&#34;</span><span class="p">:</span> <span class="mf">1.72</span><span class="p">}</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="s2">&#34;Name:</span><span class="si">%(name)-13s</span><span class="s2"> Age:</span><span class="si">%(age)-8d</span><span class="s2"> Height:</span><span class="si">%(height)-3.2f</span><span class="s2">&#34;</span> <span class="o">%</span> <span class="n">itemdic</span><span class="p">)</span>
+<span class="n">Name</span><span class="p">:</span><span class="n">panfeng</span>       <span class="n">Age</span><span class="p">:</span><span class="mi">24</span>       <span class="n">Height</span><span class="p">:</span><span class="mf">1.72</span>
+</code></pre></div><h3 id="stringtemplate">string.Template</h3>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">string</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">st</span> <span class="o">=</span> <span class="n">string</span><span class="o">.</span><span class="n">Template</span><span class="p">(</span><span class="s2">&#34;Name:$name   Age:$age   Height:$height&#34;</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">itemdict</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&#34;name&#34;</span><span class="p">:</span> <span class="s2">&#34;panfeng&#34;</span><span class="p">,</span> <span class="s2">&#34;age&#34;</span><span class="p">:</span> <span class="mi">24</span><span class="p">,</span> <span class="s2">&#34;height&#34;</span><span class="p">:</span> <span class="mf">1.72</span><span class="p">}</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">st</span><span class="o">.</span><span class="n">substitute</span><span class="p">(</span><span class="n">itemdict</span><span class="p">)</span>
+<span class="s1">&#39;Name:panfeng   Age:24   Height:1.72&#39;</span>
+</code></pre></div><h2 id="字符串格式化之二strformat">字符串格式化之二：<code>str.format()</code></h2>
+<blockquote>
+<p>表达式：<code>&quot;{[replacement_field]}&quot;.format()</code></p>
+</blockquote>
+<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text"># 替换字段的语法如下：
+replacement_field  ::=  &#34;{&#34; [field_name] [&#34;!&#34; conversion] [&#34;:&#34; format_spec] &#34;}&#34;
+field_name         ::=  arg_name (&#34;.&#34; attribute_name | &#34;[&#34; element_index &#34;]&#34;)*
+arg_name           ::=  [identifier | digit+]
+attribute_name     ::=  identifier
+element_index      ::=  digit+ | index_string
+index_string       ::=  &lt;any source character except &#34;]&#34;&gt; +
+conversion         ::=  &#34;r&#34; | &#34;s&#34; | &#34;a&#34;
+format_spec        ::=  &lt;described in the next section&gt;
+</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text"># 标准格式说明符的一般形式是：
+format_spec     ::=  [[fill]align][sign][#][0][width][grouping_option][.precision][type]
+fill            ::=  &lt;any character&gt;
+align           ::=  &#34;&lt;&#34; | &#34;&gt;&#34; | &#34;=&#34; | &#34;^&#34;
+sign            ::=  &#34;+&#34; | &#34;-&#34; | &#34; &#34;
+width           ::=  digit+
+grouping_option ::=  &#34;_&#34; | &#34;,&#34;
+precision       ::=  digit+
+type            ::=  &#34;b&#34; | &#34;c&#34; | &#34;d&#34; | &#34;e&#34; | &#34;E&#34; | &#34;f&#34; | &#34;F&#34; | &#34;g&#34; | &#34;G&#34; | &#34;n&#34; | &#34;o&#34; | &#34;s&#34; | &#34;x&#34; | &#34;X&#34; | &#34;%&#34;
+</code></pre></div><h3 id="常见用法-1">常见用法</h3>
+<h6 id="不指定位置按默认顺序">不指定位置，按默认顺序</h6>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="o">&gt;&gt;&gt;</span> <span class="s2">&#34;{}{}{}&#34;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s2">&#34;No1&#34;</span><span class="p">,</span> <span class="s2">&#34;No2&#34;</span><span class="p">,</span> <span class="s2">&#34;No3&#34;</span><span class="p">)</span>
+<span class="s1">&#39;No1No2No3&#39;</span>
+</code></pre></div><h6 id="设置指定位置">设置指定位置</h6>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="o">&gt;&gt;&gt;</span> <span class="s2">&#34;{0}{1}{0}&#34;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s2">&#34;No1&#34;</span><span class="p">,</span> <span class="s2">&#34;No2&#34;</span><span class="p">,</span> <span class="s2">&#34;No3&#34;</span><span class="p">)</span>
+<span class="s1">&#39;No1No2No1&#39;</span>
+</code></pre></div><h6 id="直接设置参数">直接设置参数</h6>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="o">&gt;&gt;&gt;</span> <span class="s2">&#34;{thi}{sec}{fir}&#34;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">fir</span><span class="o">=</span><span class="s2">&#34;No1&#34;</span><span class="p">,</span> <span class="n">sec</span><span class="o">=</span><span class="s2">&#34;No2&#34;</span><span class="p">,</span> <span class="n">thi</span><span class="o">=</span><span class="s2">&#34;No3&#34;</span><span class="p">)</span>
+<span class="s1">&#39;No3No2No1&#39;</span>
+</code></pre></div><h6 id="通过列表索引设置参数">通过列表索引设置参数</h6>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="o">&gt;&gt;&gt;</span> <span class="n">itemlist</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&#34;No1&#34;</span><span class="p">,</span> <span class="s2">&#34;No2&#34;</span><span class="p">,</span> <span class="s2">&#34;No3&#34;</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="s2">&#34;{0[0]}{0[1]}{0[2]}&#34;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">itemlist</span><span class="p">)</span>
+<span class="s1">&#39;No1No2No3&#39;</span>
+</code></pre></div><h6 id="通过字典设置参数">通过字典设置参数</h6>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="o">&gt;&gt;&gt;</span> <span class="n">itemdict</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&#34;fir&#34;</span><span class="p">:</span> <span class="s2">&#34;No1&#34;</span><span class="p">,</span> <span class="s2">&#34;sec&#34;</span><span class="p">:</span> <span class="s2">&#34;No2&#34;</span><span class="p">,</span> <span class="s2">&#34;thi&#34;</span><span class="p">:</span> <span class="s2">&#34;No3&#34;</span><span class="p">}</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="s2">&#34;{fir}{sec}{thi}&#34;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="o">**</span><span class="n">itemdict</span><span class="p">)</span>
+<span class="s1">&#39;No1No2No3&#39;</span>
+</code></pre></div><h2 id="字符串格式化之三f-strings">字符串格式化之三：<code>f-Strings</code></h2>
+<blockquote>
+<p>表达式：<code>f' &lt;text&gt; {&lt;expression&gt;&lt;optional !s, !r, or !a&gt;&lt;optional:format specifier&gt;} &lt;text&gt; ...'</code></p>
+</blockquote>
+<p>处理 f-string 中的花括号：</p>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="o">&gt;&gt;&gt;</span> <span class="n">fs</span> <span class="o">=</span> <span class="n">f</span><span class="s1">&#39;{{}}&#39;</span>
+<span class="s1">&#39;{}&#39;</span>
+</code></pre></div>
+  </article>
+
+  
+  
+    
+    
+    
+  
+  
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css" />
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<div id="gitalk-container"></div>
+<script>
+  const gitalk = new Gitalk({
+    id: 'Python字符串格式化总结', 
+    owner: 'fy975713384',
+    repo: 'fy975713384.github.io', 
+    clientID: '35afb85e4c521d6dbeb8',
+    clientSecret: '463c9ec266980fd7358a11479beda5284ecf9f71',
+    admin: ['fy975713384'],
+    distractionFreeMode: false, 
+  })
+  gitalk.render('gitalk-container')
+</script>
+
+
+
+
+
+
+
+</div>
+
+  </main><div class="footer gradient-2">
+  <div class="container footer-container ">
+    <div class="row">
+      <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3">
+        <div class="footer-title">网站地图</div>
+        <ul class="list-unstyled">
+            
+              
+                <li><a href="/tags/">标签</a></li>
+              
+              
+                <li><a href="/categories/">分类</a></li>
+              
+            
+            
+            
+            <li><a rel="alternate" type="application/rss&#43;xml" href="/index.xml"><i class="fas fa-rss-square"></i> RSS订阅</a></li>
+            
+            
+            
+        </ul>
+      </div>
+      <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3">
+        
+        <div class="footer-title">社群</div>
+        <ul class="list-unstyled">
+          
+          <li><a href="https://github.com/fy975713384" rel="noopener" target="_blank">GitHub</a></li>
+          
+          <li><a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&amp;email=NFVOQVgaUnRSW0xZVV1YGldbWQ" rel="noopener" target="_blank">联系我</a></li>
+          
+        </ul>
+        
+      </div>
+      <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3">
+        
+        <div class="footer-title">友链</div>
+        <ul class="list-unstyled">
+          
+          <li><a href="/" rel="noopener" target="_blank">关于我</a></li>
+          
+          <li><a href="https://www.jianshu.com/u/a479a910abe7" rel="noopener" target="_blank">简书主页</a></li>
+          
+        </ul>
+        
+      </div> 
+      <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+        <p class="pull-right text-right">
+          <small><em>Proudly powered by <a href="https://gohugo.io/" rel="noopener" target="_blank">Hugo</a></em></small><br/>
+          <small><em>Theme - <a href="https://github.com/shaform/hugo-theme-den" rel="noopener" target="_blank">Den</a></em></small><br/>
+          <small>
+            &copy; 
+            Pan Feng
+            
+              2017 -
+            2020
+          </small>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.3.1/jquery.slim.min.js"
+  integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+  integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js"
+  integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/mermaid/8.8.2/mermaid.min.js"></script>
+<script>
+  window.onload = function () {
+    mermaid.initialize({ theme: 'neutral' })
+    mermaid.init(undefined, '.language-mermaid')
+  }
+</script>
+</body>
+</html>
