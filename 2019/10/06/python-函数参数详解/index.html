@@ -15,6 +15,8 @@
 <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/5.2.0/css/all.css" integrity="sha384-DtgO3znmI27ZsBJLf6ASdUIQnb+d8RKb/z/fYL/E0f2NY/8nvfDQmQ6NkXmuoepn" crossorigin="anonymous">
 <link rel="stylesheet" href="/css/den.css">
 
+<link rel="stylesheet" href="/css/custom.css">
+
 
 
 
@@ -28,7 +30,7 @@
 <meta itemprop="description" content="Python 函数参数详解 前言 最近在跟同事讨论一个方法的调用时涉及到了 Python 函数的位置参数和关键字参数的相关知识，发现之前学习 Python 时对函数参数研究的并不透彻，">
 <meta itemprop="datePublished" content="2019-10-06T16:14:18+08:00" />
 <meta itemprop="dateModified" content="2019-10-06T16:14:18+08:00" />
-<meta itemprop="wordCount" content="1372">
+<meta itemprop="wordCount" content="1371">
 
 
 
@@ -179,24 +181,26 @@ Jack <span class="m">24</span> Beijing Engineer
 <h4 id="可变位置参数-var-positional">可变位置参数 [var-positional]</h4>
 <p>可变参数很简单，在 C/C++ 和 Java 等语言中都有，就是用 <code>*args</code> 号来表示，例如</p>
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">test_arg</span><span class="p">(</span><span class="o">*</span><span class="n">arg</span><span class="p">):</span> <span class="o">...</span>
-</code></pre></div><p><strong><code>*</code> 表示将函数调用时的多个参数打包成一个元组</strong></p>
+</code></pre></div><p><em><code>*</code> 表示将函数调用时的多个参数打包成一个元组</em></p>
 <p>你可以传入任意多个元素（包括 0）到参数中，在函数调用时会自动被认为是一个元组</p>
 <h4 id="可变关键字参数-var-keyword">可变关键字参数 [var-keyword]</h4>
 <p>可变关键字参数在 python 中习惯用 <code>**kwargs</code> 表示，可以传入 0 到任意多个“关键字-值”，参数在函数内部被当做一个字典</p>
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">test_arg</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">):</span> <span class="o">...</span>
 <span class="k">def</span> <span class="nf">test_arg</span><span class="p">(</span><span class="n">city</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span> <span class="o">...</span>
-</code></pre></div><p>**<code>**</code> 表示将函数调用时的多个关键字参数打包成一个字典**</p>
+</code></pre></div><p><em><code>**</code> 表示将函数调用时的多个关键字参数打包成一个字典</em></p>
 <p>可以这样调用它</p>
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">test_arg</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;John&#39;</span><span class="p">,</span> <span class="n">job</span><span class="o">=</span><span class="s1">&#39;hoker&#39;</span><span class="p">)</span>
-<span class="n">test_arg</span><span class="p">(</span><span class="s1">&#39;beijin&#39;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;john&#39;</span><span class="p">)</span>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">test_arg</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;John&#39;</span><span class="p">,</span> <span class="n">job</span><span class="o">=</span><span class="s1">&#39;hacker&#39;</span><span class="p">)</span>
+<span class="n">test_arg</span><span class="p">(</span><span class="s1">&#39;beijing&#39;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;john&#39;</span><span class="p">)</span>
 </code></pre></div><p>关键字参数可以用来后期扩充函数的功能，例如：先设定必要的参数，之后选择性的增加可选参数。</p>
 <h4 id="parameter-组合使用时的顺序">Parameter 组合使用时的顺序</h4>
-<p>位置或关键字参数-非默认参数 &gt; 位置或关键字参数-默认参数 &gt; 可变位置参数 &gt; 仅关键字参数 &gt; 可变关键字参数</p>
-<h2 id="参考来源">参考来源</h2>
-<p><a href="https://docs.python.org/3.6/glossary.html#term-parameter">https://docs.python.org/3.6/glossary.html#term-parameter</a></p>
-<p><a href="https://docs.python.org/3.6/glossary.html#term-argument">https://docs.python.org/3.6/glossary.html#term-argument</a></p>
-<p><a href="https://docs.python.org/3.6/faq/programming.html#faq-argument-vs-parameter">https://docs.python.org/3.6/faq/programming.html#faq-argument-vs-parameter</a></p>
-<p><a href="https://www.liaoxuefeng.com/wiki/1016959663602400/1017261630425888">https://www.liaoxuefeng.com/wiki/1016959663602400/1017261630425888</a></p>
+<p>位置或关键字参数-非默认参数 &raquo; 位置或关键字参数-默认参数 &raquo; 可变位置参数 &raquo; 仅关键字参数 &raquo; 可变关键字参数</p>
+<blockquote>
+<p><strong>参考来源</strong>：<br>
+<a href="https://docs.python.org/3.6/glossary.html#term-parameter">https://docs.python.org/3.6/glossary.html#term-parameter</a><br>
+<a href="https://docs.python.org/3.6/glossary.html#term-argument">https://docs.python.org/3.6/glossary.html#term-argument</a><br>
+<a href="https://docs.python.org/3.6/faq/programming.html#faq-argument-vs-parameter">https://docs.python.org/3.6/faq/programming.html#faq-argument-vs-parameter</a><br>
+<a href="https://www.liaoxuefeng.com/wiki/1016959663602400/1017261630425888">https://www.liaoxuefeng.com/wiki/1016959663602400/1017261630425888</a></p>
+</blockquote>
 
   </article>
 
