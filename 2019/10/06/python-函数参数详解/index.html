@@ -30,7 +30,7 @@
 <meta itemprop="description" content="Python 函数参数详解 前言 最近在跟同事讨论一个方法的调用时涉及到了 Python 函数的位置参数和关键字参数的相关知识，发现之前学习 Python 时对函数参数研究的并不透彻，">
 <meta itemprop="datePublished" content="2019-10-06T16:14:18+08:00" />
 <meta itemprop="dateModified" content="2019-10-06T16:14:18+08:00" />
-<meta itemprop="wordCount" content="1371">
+<meta itemprop="wordCount" content="2001">
 
 
 
@@ -117,7 +117,7 @@
   <h1 id="python-函数参数详解">Python 函数参数详解</h1>
 <h2 id="前言">前言</h2>
 <blockquote>
-<p>最近在跟同事讨论一个方法的调用时涉及到了 Python 函数的位置参数和关键字参数的相关知识，发现之前学习 Python 时对函数参数研究的并不透彻，且很多地方已经有些生疏了，故而查阅了一下 Python 官方文档和廖雪峰的官网中的相关知识，并记录总结如下。</p>
+<p>最近在跟同事讨论一个方法的调用时涉及到了 Python 函数的位置参数和关键字参数的相关知识，发现之前学习 Python 时对函数参数研究的并不透彻，且很多地方已经有些生疏了，故而查阅了一下 Python 官方文档和廖雪峰的官网中的相关知识，并总结记录如下。</p>
 </blockquote>
 <h2 id="argument-和-parameter">Argument 和 Parameter</h2>
 <p>Python 函数参数根据使用情况的不同需要分为 Parameter 和 Argument 两部分进行讨论。</p>
@@ -156,10 +156,10 @@ Python 中有两种 Argument，分别是「位置参数」和「关键字参数�
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">person</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="n">city</span><span class="p">,</span> <span class="n">job</span><span class="p">):</span>
     <span class="k">print</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">,</span> <span class="n">args</span><span class="p">,</span> <span class="n">city</span><span class="p">,</span> <span class="n">job</span><span class="p">)</span>
 </code></pre></div><p>可以这样调用 ta</p>
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">test_arg</span><span class="p">(</span><span class="s1">&#39;beijin&#39;</span><span class="p">,</span><span class="s1">&#39;wfp&#39;</span><span class="p">,</span><span class="n">age</span><span class="o">=</span><span class="s1">&#39;25&#39;</span><span class="p">,</span><span class="n">job</span><span class="o">=</span><span class="s1">&#39;hoker&#39;</span><span class="p">)</span>
-<span class="n">test_arg</span><span class="p">(</span><span class="s1">&#39;beijin&#39;</span><span class="p">,</span><span class="s1">&#39;wfp&#39;</span><span class="p">,</span><span class="n">addr</span><span class="o">=</span><span class="s1">&#39;shanghai&#39;</span><span class="p">,</span><span class="n">age</span><span class="o">=</span><span class="s1">&#39;25&#39;</span><span class="p">,</span><span class="n">job</span><span class="o">=</span><span class="s1">&#39;hoker&#39;</span><span class="p">)</span>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">test_arg</span><span class="p">(</span><span class="s1">&#39;beijing&#39;</span><span class="p">,</span><span class="s1">&#39;wfp&#39;</span><span class="p">,</span><span class="n">age</span><span class="o">=</span><span class="s1">&#39;25&#39;</span><span class="p">,</span><span class="n">job</span><span class="o">=</span><span class="s1">&#39;hacker&#39;</span><span class="p">)</span>
+<span class="n">test_arg</span><span class="p">(</span><span class="s1">&#39;beijing&#39;</span><span class="p">,</span><span class="s1">&#39;wfp&#39;</span><span class="p">,</span><span class="n">addr</span><span class="o">=</span><span class="s1">&#39;shanghai&#39;</span><span class="p">,</span><span class="n">age</span><span class="o">=</span><span class="s1">&#39;25&#39;</span><span class="p">,</span><span class="n">job</span><span class="o">=</span><span class="s1">&#39;hacker&#39;</span><span class="p">)</span>
 </code></pre></div><p>但是不能这样调用 ta</p>
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">test_arg</span><span class="p">(</span><span class="s1">&#39;beijin&#39;</span><span class="p">,</span><span class="s1">&#39;wfp&#39;</span><span class="p">,</span><span class="s1">&#39;25&#39;</span><span class="p">,</span><span class="n">job</span><span class="o">=</span><span class="s1">&#39;hoker&#39;</span><span class="p">)</span>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">test_arg</span><span class="p">(</span><span class="s1">&#39;beijing&#39;</span><span class="p">,</span><span class="s1">&#39;wfp&#39;</span><span class="p">,</span><span class="s1">&#39;25&#39;</span><span class="p">,</span><span class="n">job</span><span class="o">=</span><span class="s1">&#39;hacker&#39;</span><span class="p">)</span>
 </code></pre></div><blockquote>
 <p>会提示缺少一个参数，定义了命名关键字参数的话，必须要把全部的关键字参数传入进去</p>
 </blockquote>
@@ -194,6 +194,66 @@ Jack <span class="m">24</span> Beijing Engineer
 </code></pre></div><p>关键字参数可以用来后期扩充函数的功能，例如：先设定必要的参数，之后选择性的增加可选参数。</p>
 <h4 id="parameter-组合使用时的顺序">Parameter 组合使用时的顺序</h4>
 <p>位置或关键字参数-非默认参数 &raquo; 位置或关键字参数-默认参数 &raquo; 可变位置参数 &raquo; 仅关键字参数 &raquo; 可变关键字参数</p>
+<h2 id="函数参数传递">函数参数传递</h2>
+<blockquote>
+<p>在编程语言中常见的函数参数传递方式有以下两种：<br>
+值传递：调用函数时将实参的值拷贝一份传递给形参，在函数中如果对形参进行修改不会影响到实参。
+引用传递：调用函数时将实参的值的地址传递给形参，在函数中如果对形参进行修改将同时影响到实参。<br>
+<em>注：Python 中形参会作为局部变量存放在函数的 Local 命令空间中</em></p>
+</blockquote>
+<p><strong>先说结论：Python 函数传参使用的是引用传递。由于在 Python 中一切皆对象，实际传递的都是对象的引用。</strong></p>
+<h3 id="不可变对象传参">不可变对象传参</h3>
+<p>示例：</p>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">test</span><span class="p">(</span><span class="n">par</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&#34;par:&#34;</span><span class="p">,</span> <span class="nb">id</span><span class="p">(</span><span class="n">par</span><span class="p">))</span>
+
+
+<span class="n">arg</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&#34;arg:&#34;</span><span class="p">,</span> <span class="nb">id</span><span class="p">(</span><span class="n">arg</span><span class="p">))</span>
+<span class="n">test</span><span class="p">(</span><span class="n">arg</span><span class="p">)</span>
+
+
+<span class="c1"># 运行结果如下</span>
+<span class="n">arg</span><span class="p">:</span> <span class="mi">4331100528</span>
+<span class="n">par</span><span class="p">:</span> <span class="mi">4331100528</span>
+</code></pre></div><p>Python 中的内置函数 <code>id()</code> 可以查看对象的内存地址，从该示例中可以看出，调用 <code>test()</code> 方法时是将实参变量 <code>arg</code> 的引用传递给了形参变量 <code>par</code>，因此 <code>arg</code> 和 <code>par</code> 地址相同。<br>
+由于 <code>arg</code> 的值 1 是不可变对象，所以在函数内部也无法对其进行修改。</p>
+<h3 id="可变对象传参">可变对象传参</h3>
+<h4 id="修改形参引用的可变对象">修改形参引用的可变对象</h4>
+<p>示例：</p>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">test</span><span class="p">(</span><span class="n">par</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&#34;par:&#34;</span><span class="p">,</span> <span class="nb">id</span><span class="p">(</span><span class="n">par</span><span class="p">))</span>
+    <span class="n">par</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+
+<span class="n">arg</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&#34;[Before]&#34;</span><span class="p">,</span> <span class="n">f</span><span class="s2">&#34;arg: {id(arg)}&#34;</span><span class="p">,</span> <span class="n">arg</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">test</span><span class="p">(</span><span class="n">arg</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&#34;[After]&#34;</span><span class="p">,</span> <span class="n">f</span><span class="s2">&#34;arg: {id(arg)}&#34;</span><span class="p">,</span> <span class="n">arg</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+
+
+<span class="c1"># 运行结果如下：</span>
+<span class="p">[</span><span class="n">Before</span><span class="p">]</span>
+<span class="n">arg</span><span class="p">:</span> <span class="mi">4462379136</span>
+<span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">par</span><span class="p">:</span> <span class="mi">4462379136</span>
+<span class="p">[</span><span class="n">After</span><span class="p">]</span>
+<span class="n">arg</span><span class="p">:</span> <span class="mi">4462379136</span>
+<span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+</code></pre></div><p>从该示例中可以看出，对于可变对象，调用 <code>test()</code> 方法时仍是将实参变量 <code>arg</code> 的引用传递给了形参变量 <code>par</code>，因此 <code>arg</code> 和 <code>par</code> 地址相同，并且在函数内部修改 <code>par</code> 引用的对象时会同时修改 <code>arg</code> 引用的对象。</p>
+<h4 id="修改形参的引用">修改形参的引用</h4>
+<p>示例：</p>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">test</span><span class="p">(</span><span class="n">par</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&#34;par:&#34;</span><span class="p">,</span> <span class="nb">id</span><span class="p">(</span><span class="n">par</span><span class="p">))</span>
+    <span class="n">par</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+
+
+<span class="n">arg</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&#34;[Before]&#34;</span><span class="p">,</span> <span class="n">f</span><span class="s2">&#34;arg: {id(arg)}&#34;</span><span class="p">,</span> <span class="n">arg</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">test</span><span class="p">(</span><span class="n">arg</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&#34;[After]&#34;</span><span class="p">,</span> <span class="n">f</span><span class="s2">&#34;arg: {id(arg)}&#34;</span><span class="p">,</span> <span class="n">arg</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+</code></pre></div><p>从该示例中可以看出，当我们在函数内部修改形参变量 <code>par</code> 的引用时，并不会影响到实参变量 <code>arg</code> 引用的对象，这是因为我们只是将 <code>par</code> 引用的对象由 <code>[0]</code> 改为 <code>[1]</code>，并没有修改原对象 <code>[0]</code>，所以 <code>arg</code> 打印出来的值仍为 <code>[0]</code>。<br>
+<em>注：在 Python 中，赋值操作 <code>par = [1]</code> 本质上是建立了变量 <code>par</code> 与对象 <code>[1]</code> 的引用关系。</em></p>
 <blockquote>
 <p><strong>参考来源</strong>：<br>
 <a href="https://docs.python.org/3.6/glossary.html#term-parameter">https://docs.python.org/3.6/glossary.html#term-parameter</a><br>
