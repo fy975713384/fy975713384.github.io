@@ -10,35 +10,35 @@
   
   <url>
     <loc>/categories/</loc>
-    <lastmod>2020-10-26T11:30:02+08:00</lastmod>
+    <lastmod>2020-11-18T14:17:18+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>/category/notes/</loc>
-    <lastmod>2020-10-26T11:30:02+08:00</lastmod>
+    <lastmod>2020-11-18T14:17:18+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>/posts/</loc>
-    <lastmod>2020-10-26T11:30:02+08:00</lastmod>
+    <lastmod>2020-11-18T14:17:18+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>/tags/</loc>
-    <lastmod>2020-10-26T11:30:02+08:00</lastmod>
+    <lastmod>2020-11-18T14:17:18+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>/</loc>
-    <lastmod>2020-10-26T11:30:02+08:00</lastmod>
+    <lastmod>2020-11-18T14:17:18+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -87,7 +87,7 @@
   
   <url>
     <loc>/tag/python/</loc>
-    <lastmod>2020-10-26T11:30:02+08:00</lastmod>
+    <lastmod>2020-11-18T14:17:18+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -143,7 +143,7 @@
   
   <url>
     <loc>/2019/10/06/python-%E5%87%BD%E6%95%B0%E5%8F%82%E6%95%B0%E8%AF%A6%E8%A7%A3/</loc>
-    <lastmod>2019-10-06T16:14:18+08:00</lastmod>
+    <lastmod>2020-11-18T14:17:18+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
