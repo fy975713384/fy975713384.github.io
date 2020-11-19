@@ -2,7 +2,7 @@
   <channel>
     <title>Wing</title>
     <link>/</link>
-    <description>Recent content on Wing</description><webfeeds:icon>/images/wing_icon.png</webfeeds:icon>
+    <description>Recent content on Wing</description><webfeeds:icon>https://cdn.jsdelivr.net/gh/fy975713384/cloud-img@main/blog/wing_icon.png</webfeeds:icon>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Sun, 26 Jul 2020 14:43:51 +0800</lastBuildDate>
     
