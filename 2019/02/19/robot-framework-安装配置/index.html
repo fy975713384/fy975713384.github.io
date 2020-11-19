@@ -159,48 +159,48 @@ $ pip3 install robotframework-requests  <span class="c1"># 用于进行接口自
 $ pip3 install robotframework-autoitlibrary  <span class="c1"># 用于进行 Windows GUI 自动化测试（专用于 Windows 系统，安装时需要管理员权限）</span>
 </code></pre></div><h3 id="三robot-framework-ide-ride-编辑器的基本使用">三、Robot Framework IDE (RIDE) 编辑器的基本使用</h3>
 <p>RIDE 是官方开发并推荐使用的 RF 测试用例开发环境，完成 RobotFramework 的安装后，Windows 端在命令行中运行 <code>$ python &lt;python_path&gt;\Scripts\ride.py</code>，Mac 端直接输入 <code>$ ride.py</code> 即可打开 RIDE 编辑器，如图：</p>
-<p><img src="http://ww1.sinaimg.cn/large/ed19fa55gy1gfno1dzv97j20u60jagnc.jpg" alt="RIDE 编辑器启动界面"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/fy975713384/cloud-img@main/blog/20201119124706.png" alt="RIDE 编辑器启动界面"></p>
 <p>打开 顶部菜单栏 &raquo; Tools，单击 Create RIDE Desktop Shortcut 则可在桌面创建 RIDE 快捷方式，下次即可直接双击快捷方式打开 RIDE 编辑器。
 <em>注意：快捷方式仅支持 Windows 端，Mac 端目前暂不支持。</em>
-<img src="http://ww1.sinaimg.cn/large/ed19fa55gy1gfno1yzs1uj20f00ak75m.jpg" alt="创建快捷方式"></p>
+<img src="https://cdn.jsdelivr.net/gh/fy975713384/cloud-img@main/blog/20201119124725.png" alt="创建快捷方式"></p>
 <ul>
 <li>
 <p>创建测试项目 Project
 打开 菜单栏 &raquo; File &raquo; New Project，在弹出的弹窗中输入项目名称，选择 Directory 类型，点击 OK 确认创建；
-<img src="http://ww1.sinaimg.cn/large/ed19fa55gy1gfno2daycfj20sb0723zd.jpg" alt="创建测试项目"></p>
+<img src="https://cdn.jsdelivr.net/gh/fy975713384/cloud-img@main/blog/20201119124740.png" alt="创建测试项目"></p>
 </li>
 <li>
 <p>创建测试套件 Suite
 右键单击刚创建的测试项目，选择 New Suite，输入套件名称 , 选择 File 类型，点击 OK 确认创建；
-<img src="http://ww1.sinaimg.cn/large/ed19fa55gy1gfno40ruxmj20sc078aaw.jpg" alt="创建测试套件"></p>
+<img src="https://cdn.jsdelivr.net/gh/fy975713384/cloud-img@main/blog/20201119124801.png" alt="创建测试套件"></p>
 </li>
 <li>
 <p>创建测试用例 Case
 右键单击刚创建的测试套件，选择 New Test Case，输入用例名称，点击 OK 确认创建；
-<img src="http://ww1.sinaimg.cn/large/ed19fa55gy1gfno4ewzyej20sc05s74s.jpg" alt="创建测试用例"></p>
+<img src="https://cdn.jsdelivr.net/gh/fy975713384/cloud-img@main/blog/20201119124819.png" alt="创建测试用例"></p>
 </li>
 <li>
 <p>导入 RF 的第三方库（以 SeleniumLibrary 库为例）
 选择刚创建的测试套件，点击最右侧 Library 按钮，在弹出的弹窗中输入库名称，其余可不填，点击 OK 确认导入；
-<img src="http://ww1.sinaimg.cn/large/ed19fa55gy1gfno4unrfpj20tv0c7gmy.jpg" alt="导入 SeleniumLibrary 库"></p>
+<img src="https://cdn.jsdelivr.net/gh/fy975713384/cloud-img@main/blog/20201119124841.png" alt="导入 SeleniumLibrary 库"></p>
 </li>
 </ul>
 <p>导入后如果导入的库显示为红色，表示导入的库不存在（检查是否已安装相关的库，拼写是否正确，仍不行的话重启下 RIDE），如果是黑色则表示导入成功；
-<img src="http://ww1.sinaimg.cn/large/ed19fa55gy1gfno5flnboj20dy05jq2y.jpg" alt="导入成功"></p>
+<img src="https://cdn.jsdelivr.net/gh/fy975713384/cloud-img@main/blog/20201119124906.png" alt="导入成功"></p>
 <ul>
 <li>
 <p>编写测试脚本：（需要安装过 Chrome 和 对应版本的 chromedriver）
 选择刚创建的测试用例，在 Edit 页的表格中输入脚本；
-<img src="http://ww1.sinaimg.cn/large/ed19fa55gy1gfno665fd3j20qi06u0t5.jpg" alt="编写测试脚本"></p>
+<img src="https://cdn.jsdelivr.net/gh/fy975713384/cloud-img@main/blog/20201119124926.png" alt="编写测试脚本"></p>
 </li>
 <li>
 <p>执行测试：
 勾选测试用例，点击运行按钮执行测试；（会正常打开 chrome 并跳转到简书作者首页）
-<img src="http://ww1.sinaimg.cn/large/ed19fa55gy1gfno6xdbpfj20qo06sdgb.jpg" alt="执行测试用例"></p>
+<img src="https://cdn.jsdelivr.net/gh/fy975713384/cloud-img@main/blog/20201119124945.png" alt="执行测试用例"></p>
 </li>
 <li>
 <p>查看测试报告：
-<img src="http://ww1.sinaimg.cn/large/ed19fa55gy1gfno7ymgzjj20pt0h0taa.jpg" alt="查看测试报告"></p>
+<img src="https://cdn.jsdelivr.net/gh/fy975713384/cloud-img@main/blog/20201119125004.png" alt="查看测试报告"></p>
 </li>
 </ul>
 <blockquote>
