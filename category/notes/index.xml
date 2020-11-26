@@ -16,6 +16,15 @@
     </item>
     
     <item>
+      <title>🔝 浅谈软件质量</title>
+      <link>/2019/06/12/%E6%B5%85%E8%B0%88%E8%BD%AF%E4%BB%B6%E8%B4%A8%E9%87%8F/</link>
+      <pubDate>Wed, 12 Jun 2019 22:32:47 +0800</pubDate>
+      
+      <guid>/2019/06/12/%E6%B5%85%E8%B0%88%E8%BD%AF%E4%BB%B6%E8%B4%A8%E9%87%8F/</guid>
+      <description>一、软件质量是什么 GB T 25000.10-2016 标准（基于 ISO/IEC 25010:2011 标准）中将软件质量定义为： 在规定条件下使用时，软件满足用户明确和隐含要求的能力。满足程度越高，质量就越</description>
+    </item>
+    
+    <item>
       <title>搭建自己的静态资源服务器</title>
       <link>/2020/07/26/%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E6%9C%8D%E5%8A%A1%E5%99%A8/</link>
       <pubDate>Sun, 26 Jul 2020 14:43:51 +0800</pubDate>
@@ -112,15 +121,6 @@
       
       <guid>/2019/06/21/%E9%85%8D%E7%BD%AE%E8%87%AA%E5%B7%B1%E7%9A%84-linux-%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/</guid>
       <description>近期趁着 6.18 促销新采购了一台阿里云的 Linux 服务器，把配置过程记录如下 采购云服务器 采购平台：阿里云 腾讯云 百度云 Linux 系统：Ubuntu 配置云服务器 登录 Linux</description>
-    </item>
-    
-    <item>
-      <title>浅谈软件质量</title>
-      <link>/2019/06/12/%E6%B5%85%E8%B0%88%E8%BD%AF%E4%BB%B6%E8%B4%A8%E9%87%8F/</link>
-      <pubDate>Wed, 12 Jun 2019 22:32:47 +0800</pubDate>
-      
-      <guid>/2019/06/12/%E6%B5%85%E8%B0%88%E8%BD%AF%E4%BB%B6%E8%B4%A8%E9%87%8F/</guid>
-      <description>一、软件质量是什么 GB T 25000.10-2016 标准（基于 ISO/IEC 25010:2011 标准）中将软件质量定义为： 在规定条件下使用时，软件满足用户明确和隐含要求的能力。满足程度越高，质量就越</description>
     </item>
     
     <item>
