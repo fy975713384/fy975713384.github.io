@@ -217,7 +217,7 @@
 <li>重写该方法时需要返回一个属性值或是触发 <code>AttributeError</code> 异常。</li>
 <li>当定制类继承 <code>Object</code> 时，同时也会继承 <code>object.__getattribute__(self, name)</code>，但它没有执行任何操作。</li>
 </ul>
-<h2 id="__setattr__">__setattr__()</h2>
+<h2 id="__setattr__">__setattr__</h2>
 <p><code>object.__setattr__(self, name, value)</code> 方法用于自定义实例属性的赋值，使用时需注意：</p>
 <ul>
 <li>该魔法方法会在尝试给实例属性赋值时被调用。</li>
@@ -249,7 +249,7 @@
 <span class="n">assign</span> <span class="n">value</span> <span class="n">via</span> <span class="n">Object</span><span class="o">.</span><span class="fm">__setattr__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
 <span class="mi">30</span>
 <span class="n">Karen1</span>
-</code></pre></div><h2 id="__delattr__">__delattr__()</h2>
+</code></pre></div><h2 id="__delattr__">__delattr__</h2>
 <p><code>object.__delattr__(self, name)</code> 方法用于自定义实例属性的删除，使用时需注意：</p>
 <ul>
 <li>该魔法方法会在 <code>del obj.name</code> 或 <code>delattr(obj, name)</code> 时被调用。</li>
