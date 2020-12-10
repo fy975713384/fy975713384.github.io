@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+<head>
+  <meta name="google-site-verification" content="NqacV5tHWoxzRi2H7KcEVCWMuxSnch23EM-vzsEV3h8" />
+  <meta name="generator" content="Hugo 0.75.1" />
+  <meta charset="utf-8">
+  <title>书摘-Google的测试之道 · Wing</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="在 Google，软件测试团队归属于一个被成为“工程生产力”（译注：Engineering Productivity，也译为工程效率或工程生产率" />
+
+
+<link rel="canonical" href="/2019/01/12/%E4%B9%A6%E6%91%98-google%E7%9A%84%E6%B5%8B%E8%AF%95%E4%B9%8B%E9%81%93/" />
+<link rel="icon" href="https://cdn.jsdelivr.net/gh/fy975713384/cloud-img@main/blog/wing_icon.png" />
+<link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/5.2.0/css/all.css" integrity="sha384-DtgO3znmI27ZsBJLf6ASdUIQnb+d8RKb/z/fYL/E0f2NY/8nvfDQmQ6NkXmuoepn" crossorigin="anonymous">
+<link rel="stylesheet" href="/css/den.css">
+
+<link rel="stylesheet" href="/css/custom.css">
+
+
+
+
+<meta property="og:title" content="书摘-Google的测试之道" />
+<meta property="og:description" content="在 Google，软件测试团队归属于一个被成为“工程生产力”（译注：Engineering Productivity，也译为工程效率或工程生产率" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/2019/01/12/%E4%B9%A6%E6%91%98-google%E7%9A%84%E6%B5%8B%E8%AF%95%E4%B9%8B%E9%81%93/" />
+<meta property="article:published_time" content="2019-01-12T16:32:47+08:00" />
+<meta property="article:modified_time" content="2019-01-12T16:32:47+08:00" />
+<meta itemprop="name" content="书摘-Google的测试之道">
+<meta itemprop="description" content="在 Google，软件测试团队归属于一个被成为“工程生产力”（译注：Engineering Productivity，也译为工程效率或工程生产率">
+<meta itemprop="datePublished" content="2019-01-12T16:32:47+08:00" />
+<meta itemprop="dateModified" content="2019-01-12T16:32:47+08:00" />
+<meta itemprop="wordCount" content="4415">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="书摘-Google的测试之道"/>
+<meta name="twitter:description" content="在 Google，软件测试团队归属于一个被成为“工程生产力”（译注：Engineering Productivity，也译为工程效率或工程生产率"/>
+</head>
+<body>
+  
+  <div class="header-container" style="background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/fy975713384/cloud-img@main/blog/background.jpg'); background-position: center; background-size: cover;">
+  <div class="container">
+  <nav class="header-nav navbar navbar-expand-md navbar-dark light-dark">
+    <div class="header-logo navbar-brand">
+      
+        <a class="float-left" href="/">
+      
+        
+        
+          Wing
+         
+      </a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="nav-menu collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        
+          <li class="nav-item">
+            
+              
+                <a class="nav-link" href="/category/notes/">笔记</a>
+              
+            
+          </li>
+        
+          <li class="nav-item">
+            
+              
+                <a class="nav-link" href="/category/travals/">游记</a>
+              
+            
+          </li>
+        
+        
+      </ul>
+    </div>
+  </nav>
+</div>
+
+<div class="container header-wrapper">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="header-content">
+        <h1 class="header-title">书摘-Google的测试之道</h1>
+        <p class="header-date">作者：
+          潘峰 /
+        
+        2019-01-12
+          / 分类：
+          <a href="/category/notes/">Notes</a>
+        </p>
+        
+        <div class="header-underline"></div>
+        
+        
+
+      </div>
+    </div>
+  </div>
+</div>
+
+  </div>
+  <main>
+<div class="container content">
+  <article>
+  <ul>
+<li>
+<p>在 Google，软件测试团队归属于一个被成为“工程生产力”（译注：Engineering Productivity，也译为工程效率或工程生产率）的中心组织部门，这个部门的职责横跨开发测试人员使用的工具的研发、产品发布和各种级别的测试，从单元级别的测试到探索性级别的测试。</p>
+</li>
+<li>
+<p>Google 是一家以创新和速度为基础的公司，快速发布有用的代码（如果失败，也只有少数早期的用户会失望）、迭代地增加早期用户希望使用的功能（最大化用户反馈）。</p>
+</li>
+<li>
+<p>Google 的测试方法看起来有点违背常理&ndash;在整个公司，我们只有非常少的专职测试人员，在通往成功的道路上，Google 的测试团队并非百万雄兵，我们更像是小而精的特种部队。</p>
+</li>
+<li>
+<p>当有人来问我，Google 成功的关键是什么，我的第一个建议就是，不要招聘太多的测试人员。</p>
+</li>
+<li>
+<p>Google 在测试人员如此缺乏的情况下是如何应对的呢？简单地说，在 Google，写代码的开发人员也承担了开发的重任。质量从来就不仅仅是一些测试人员的问题。在 Google，每个写代码的开发者本身就是测试者，质量在名义上也由这样的开发测试组合共同承担。</p>
+</li>
+<li>
+<p>在 Google 谈论测试开发比就像讨论太阳表面的空气质量一样，这本身没有任何意义。如果你是一名开发工程师，那么你同时也是一名测试人员。如果你头衔上有测试的字样，你的任务就是怎样使那些头衔上没有测试的人可以更好地去进行测试。</p>
+</li>
+<li>
+<p>还有谁能比实际写代码的人更适合测试呢？还有谁能比实际写代码的人更适合去寻找 bug 呢？是谁会为了避免受更大的刺激而去想办法避免产生 bug 呢？</p>
+</li>
+<li>
+<p>Google 能用如此少的专职测试人员的原因，就是开发对质量的负责。如果产品出了问题，第一个跳出来的肯定是导致这个问题发生的开发人员，而不是遗漏这个 bug 的测试人员。</p>
+</li>
+<li>
+<p>测试人员的存在是为了让开发人员的工作更有效率，并且很大一部分体现在避免因马虎粗心而导致的返工。</p>
+</li>
+<li>
+<p>Chrome 发版策略：金丝雀版本 &ndash;&gt; 开发版本 &ndash;&gt; 测试版本 &ndash;&gt; beta 或发布版本</p>
+</li>
+<li>
+<p>Google 并没有使用代码测试、集成测试、系统测试等这些命名方式，而是使用小型测试、中型测试、大型测试这样的称谓，着重强调测试的范畴规模而非形式。</p>
+</li>
+<li>
+<p>Google 的测试流程可以非常简练地概括为：让每个工程师都注重质量。只要大家诚实认真地这么做，质量就会提高。</p>
+</li>
+</ul>
+<hr>
+<ul>
+<li>
+<p>Google 的研发团队组成：软件开发工程师（SWE）、软件测试开发工程师（SET）、测试工程师（TE）</p>
+</li>
+<li>
+<p>SET：负责可测试性和测试自动化体系的长期有效性。</p>
+</li>
+<li>
+<p>TE：重点在于评估对用户的影响以及软件产品整体目标上的风险。</p>
+</li>
+<li>
+<p>最好的 TE 不是那些基础算法、定理证明、功能实现上的牛人。TE 是稀缺个体，是技术人，关注用户，能在系统级别和端到端的视角上理解产品。他们是无情的、伟大的谈判专家，最重要的是，他们富有创造性、善于应对模糊性。这就是为什么 Google 或者任何一家公司要努力去招聘这种人才的原因。</p>
+</li>
+<li>
+<p>首先我们考察测试资质，我们的意图在于，弄清楚候选人是否不只是聪明和具有创造性，是否具有天生的测试才能。我们寻找的是对于事物结构、对于变量和配置的组合的各种可能性和意义的好奇心。我们寻找的是关于事物应该如何工作的强烈感觉，以及清晰表达的能力。我们还会试图寻找很强的人格魅力。面试时试图考察的另外一个关键特征，是 TE 所需要具备的处理模糊性、反驳糟糕想法的能力。我们通常会更改规格说明或者描述一个说不通的行为，只要候选人提出澄清性的问题就会发现这一点。他们如何处理这种模糊性，很大程度上反映了他们将来在工作上的表现。</p>
+</li>
+</ul>
+<hr>
+<h6 id="chrome-的漫游测试法">Chrome 的漫游测试法：</h6>
+<p><strong>1. 购物漫游</strong></p>
+<p><strong>描述：</strong>
+购物是很多人喜欢的消遣方式，到一处新的旅游地点，如果能发现一些可以购买的新奇商品也是一大乐事。对某些城市来说，奢华的购物几乎成为了其最吸引人的地方。香港就拥有一些世界上最豪华的购物中心，其中有超过 800 多家店铺。</p>
+<p>在软件领域，商业行为屡见不鲜。虽然不是所有软件应用都让人们掏钱，但还是有相当一部分应用会这么做。我们正进入一个充满了各种可供下载的时代，这种现象更是常态。</p>
+<blockquote>
+<p>购物漫游测试邀请用户使用被测软件，在各种可能的情况下进行消费，检验用户可以流畅地、有效地进行商业体验。</p>
+</blockquote>
+<p><strong>应用：</strong>
+Internet 上有近乎无尽的消费方式，而 Chrome 浏览器是 Internet 的入口。虽然不可能测试所有的商家，但是检验在 Google 商店里的大多数零售商可以被访问，这还不成问题。以下是根据访问流量统计的一系列常用在线销售网站。</p>
+<ul>
+<li>eBay (<a href="http://www.eBay.com">www.eBay.com</a>)</li>
+<li>Amazon (<a href="http://www.amazon.com">www.amazon.com</a>)</li>
+<li>Sears (<a href="http://www.sears.com">www.sears.com</a>)</li>
+<li>Staples (<a href="http://www.staples.com">www.staples.com</a>)</li>
+<li>OfficeMax (<a href="http://www.officemax.com">www.officemax.com</a>)</li>
+<li>Macy&rsquo;s (<a href="http://www.macys.com">www.macys.com</a>)</li>
+<li>NewEgg (<a href="http://www.newegg.com">www.newegg.com</a>)</li>
+<li>Best Buy (<a href="http://www.bestbuy.com">www.bestbuy.com</a>)</li>
+</ul>
+<p><strong>2. 学生漫游</strong></p>
+<p><strong>描述：</strong>
+很多学生把握机会出国学习，在新地点生活的同时，他们会利用当地的各种资源增进他们的专业知识。这包括了对外来人员开放的所有资源，比如图书馆、档案馆和博物馆。</p>
+<p>类似的，在软件领域，很多人尝试使用新技术进行研究，增进他们对某个特定领域的理解。</p>
+<blockquote>
+<p>这个漫游测试就是鼓励用户做这样的事，充分利用和测试软件的各种功能来帮助达到获取和组织信息的目的。</p>
+</blockquote>
+<p><strong>应用：</strong>
+测试 Chrome 浏览器能多好地从各种不同的信息源收集和组织数据。例如，用户能从多家站点获取信息并把它们存储在云端的文档上吗？离线内容能被成功的上传和使用吗？<!-- raw HTML omitted -->
+Chrome 的学生漫游测试包括：</p>
+<ul>
+<li>复制粘贴：各种不同类型的数据能通过剪贴板传递吗？</li>
+<li>把离线数据移动到云端：Web 页面、图像、文字，等等。</li>
+<li>容量：同时在不同窗口打开多份文档。</li>
+<li>传输：在标签页和窗口键移动数据，以及在不同类型的窗口间（正常的和匿名访问窗口）移动数据。</li>
+</ul>
+<p><strong>3. 国际长途电话漫游</strong></p>
+<p><strong>描述：</strong>
+旅行期间给家里打电话本身就是一种经历。与国际长途话务员打交道，处理货币、信用卡等问题的时候可能会遇到一些非常有趣的事情。</p>
+<p>在软件世界，用户可能希望使用某些相同的功能（家里人），但是要从不同的平台上使用，或者有不同的权限，不同的设置。</p>
+<blockquote>
+<p>这个漫游测试关注于保证用户无论从哪里操作，都能够获得流畅可靠的体验。</p>
+</blockquote>
+<p><strong>应用：</strong>
+在不同的平台（Windows、Mac、Linux）上，使用操作系统中不同的网络连接设置，通过 Chrome 去浏览常用的站点，使用常用的功能。<!-- raw HTML omitted -->
+Chrome 的国际长途电话漫游包括：</p>
+<ul>
+<li>操作系统：Windows，Mac 和 Linux</li>
+<li>权限级别：高可信度和低可信度</li>
+<li>语言：复杂的语言和从右到左书写的语言</li>
+<li>网络选项：代理服务器，无线网络，有线局域网，防火墙</li>
+</ul>
+<p><strong>4. 地标漫游</strong></p>
+<p><strong>描述：</strong>
+&ldquo;这个过程很简单。朝着你想去的方向，使用罗盘定位一个地标（一棵树、岩石、悬崖，等等），前进到那个地标，然后找到下一个地标，然后如此继续。只要这些地标都在一个方向上，你就能通过茂密的肯塔基森林。</p>
+<blockquote>
+<p>探索式测试人员的地标漫游测试是类似的，我们选取标志，然后顺着标志执行，我们将能穿过森林。&rdquo;</p>
+</blockquote>
+<p><strong>应用：</strong>
+在 Chrome 中，这个漫游测试要看看用户能不能从一个地标转移到另一个地标。验证用户可以到达各个地标，如不同的浏览器窗口，打开附件，设置，等等。<!-- raw HTML omitted -->
+Chrome 的地标漫游包括：</p>
+<ul>
+<li>浏览器窗口：这是用于浏览 Web 的浏览器主窗口。</li>
+<li>隐身浏览窗口：隐身窗口用于不被记录的浏览；窗口左上角标志性的间谍人形图标会提醒用户正处于隐身窗口。</li>
+<li>紧凑浏览工具条：这个浏览器窗口可以从菜单中获得；在窗口的标题栏中有一个搜索框。</li>
+<li>下载管理器：下载管理器列表显示用户下载的内容。</li>
+<li>书签管理器：书签管理器是一个完整的窗口，用于显示和启动用户的书签。</li>
+<li>开发者工具：这些工具包括任务管理器，JavaScript 控制台，等等。</li>
+<li>设置：这些设置在选择窗口右上角的菜单选项时触发。</li>
+<li>主题页：用户可以通过这个页面设置 Chrome OS 的个性化外观。</li>
+</ul>
+<p><strong>5. 通宵漫游</strong></p>
+<p><strong>描述：</strong>
+你能走多远？通宵漫游要求游客挑战自己的耐力，不间断地从一个景点转战另一个景点，中间没有或仅有极短暂的休息时间。&ldquo;这样的观光方式是对体格的考验。你能熬过整个通宵吗？&rdquo;</p>
+<p>在软件领域，这种漫游测试检验被测产品在长时间连续使用的情况下能支持多久。这个过程的关键是让用户持续长时间的使用而不试图关闭任何东西。</p>
+<blockquote>
+<p>这种漫游测试可以发现那些只有在使用了很长一段时间以后才会出现的问题。</p>
+</blockquote>
+<p><strong>应用：</strong>
+打开很多标签页，安装扩展程序，变更主题，在同一个会话中不断浏览网页，持续尽可能长的时间。即使是不再使用了，也不要关闭任何标签页或者浏览窗口；不断打开更多的内容。如果这个漫游测试持续几天，那就在夜间保持打开 Chrome，到第二天继续测试。<!-- raw HTML omitted -->
+Chrome 的通宵漫游测试包括：</p>
+<ul>
+<li>标签页和窗口：开启大量的标签页和窗口。</li>
+<li>扩展程序：安装大量的浏览器扩展程序并让它们保持运行。</li>
+<li>持续不断：长时间保持所有的东西在打开状态。</li>
+</ul>
+<p><strong>6. 公务漫游</strong></p>
+<p><strong>描述：</strong>
+有些人旅行是为了愉悦，而有些人则是为了工作。这种游览考察旅行者，在新目的地是否能方便地完成所需工作。有没有本地供应商？有哪些繁文缛节需要遵从？</p>
+<blockquote>
+<p>在软件领域，这种漫游测试考察用户是否能方便地利用被测软件提供的工具进行开发。与当地供应商和繁文缛节相对应，用户可以看看被测应用提供了多少工具，以及能够多方便地导入和导出内容。</p>
+</blockquote>
+<p><strong>应用：</strong>
+Chrome 提供了相当多的工具供 JavaScript 开发人员和 Web 开发人员使用，用以测试和运行他们的在线内容。使用这种漫游测试检验各种工具，生成示例脚本和测试在线内容。<!-- raw HTML omitted -->
+Chrome 里的工具<!-- raw HTML omitted -->
+Chrome 的公务漫游测试包括：</p>
+<ul>
+<li>开发人员工具：观察页面元素、资源、脚本，启用资源跟踪。</li>
+<li>JavaScript 控制台：JavaScript 控制台是否运行正常？</li>
+<li>查看源代码：通过代码彩色显示和其他帮助工具，是否便于阅读代码，是否便于找到相关代码的片段？</li>
+<li>任务管理器：进程是否被正确显示，是否能方便的看到网页占用了多少资源？</li>
+</ul>
+<p><strong>7. 危险地带漫游</strong></p>
+<p><strong>描述：</strong>
+&ldquo;每个城市都有一些危险地带，观光者都会谨慎地避开。软件中也存在危险地带&ndash;那些集中产生 Bug 的代码。&rdquo;
+<strong>应用：</strong>
+Chrome 的重点是提供快速、简洁的 Web 浏览体验，但是在富内容上可能会有问题。当 Chrome 初次发布的时候，有报告说连 YouTube 上的视频都不能正确播放。虽然现在对这些问题的处理已经有了明显的改善，但在富内容方面仍然有不小的挑战。<!-- raw HTML omitted -->
+Chrome OS 中的危险地带漫游测试<!-- raw HTML omitted -->
+Chrome 的危险地带漫游测试包括：</p>
+<ul>
+<li>在线视频：Hulu，YouTube，ABC，NBC，全屏模式，以及高分辨率。</li>
+<li>Flash 内容：游戏，广告，以及演讲稿。</li>
+<li>扩展程序：富内容的扩展程序。</li>
+<li>Java applet：验证 Java applet 能成功运行。 Yahoo！游戏就是一个 Java applet 还很流行的例子。</li>
+<li>O3D：验证用 Google 自己的 O3D 编写的内容；例如，Gmail 中的视频电话就使用 O3D。</li>
+<li>多实例：尝试在不同的标签页和浏览窗口中打开多个富内容实例。</li>
+</ul>
+<p><strong>8. 个性化漫游</strong></p>
+<p><strong>描述：</strong>
+个性化观光让游客在旅途中最大限度地获得独特的个人体验。这可能包括各个方面，从墨镜到租的车，雇的导游，甚至到光临的服装小店。</p>
+<p>软件领域里，这种漫游让用户探寻各种可能的方式来进行定制，把软件个性化，让用户体验到量身定做的感觉。</p>
+<p><strong>应用：</strong>
+尝试 Chrome 各种不同的定制方式，通过修改使用的主题、扩展程序、书签、设置、快捷键和用户概要等来获得特定的用户体验。
+定制 Chrome 的方式<!-- raw HTML omitted -->
+Chrome 中的个性化漫游测试包括：<!-- raw HTML omitted --></p>
+<ul>
+<li>主题：使用主题定制 Chrome OS 的外观。</li>
+<li>扩展程序：下载并安装一些 Chrome 的扩展程序，来扩展功能和改变外观。</li>
+<li>Chrome 设置：通过改变 Chrome 的设置，来获得不同的用户体验。</li>
+<li>用户概要隔离：验证一个用户概要中定义的偏好选项对其它帐号没有影响。</li>
+</ul>
+
+  </article>
+
+  
+  
+    
+    
+    
+  
+  
+<link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/gitalk/1.7.0/gitalk.css" />
+<script src="https://cdn.bootcdn.net/ajax/libs/gitalk/1.7.0/gitalk.min.js"></script>
+<div id="gitalk-container"></div>
+<script>
+  const gitalk = new Gitalk({
+    id: '书摘-Google的测试之道', 
+    owner: 'fy975713384',
+    repo: 'fy975713384.github.io', 
+    clientID: '35afb85e4c521d6dbeb8',
+    clientSecret: '463c9ec266980fd7358a11479beda5284ecf9f71',
+    admin: ['fy975713384'],
+    distractionFreeMode: false 
+  })
+  gitalk.render('gitalk-container')
+</script>
+
+
+
+
+
+
+
+</div>
+
+  </main><div class="footer gradient-2">
+  <div class="container footer-container ">
+    <div class="row">
+      <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3">
+        <div class="footer-title">网站地图</div>
+        <ul class="list-unstyled">
+            
+              
+                <li><a href="/tags/">标签</a></li>
+              
+              
+                <li><a href="/categories/">分类</a></li>
+              
+            
+            
+            
+            <li><a rel="alternate" type="application/rss&#43;xml" href="/index.xml"><i class="fas fa-rss-square"></i> RSS订阅</a></li>
+            
+            
+            
+        </ul>
+      </div>
+      <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3">
+        
+        <div class="footer-title">社群</div>
+        <ul class="list-unstyled">
+          
+          <li><a href="https://github.com/fy975713384" rel="noopener" target="_blank">GitHub</a></li>
+          
+          <li><a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&amp;email=NFVOQVgaUnRSW0xZVV1YGldbWQ" rel="noopener" target="_blank">联系我</a></li>
+          
+        </ul>
+        
+      </div>
+      <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3">
+        
+        <div class="footer-title">友链</div>
+        <ul class="list-unstyled">
+          
+          <li><a href="/" rel="noopener" target="_blank">关于我</a></li>
+          
+          <li><a href="https://www.jianshu.com/u/a479a910abe7" rel="noopener" target="_blank">简书主页</a></li>
+          
+        </ul>
+        
+      </div> 
+      <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+        <p class="pull-right text-right">
+          <small><em>Proudly powered by <a href="https://gohugo.io/" rel="noopener" target="_blank">Hugo</a></em></small><br/>
+          <small><em>Theme - <a href="https://github.com/shaform/hugo-theme-den" rel="noopener" target="_blank">Den</a></em></small><br/>
+          <small>
+            &copy; 
+            Pan Feng
+            
+              2017 -
+            2020
+          </small>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.3.1/jquery.slim.min.js"
+  integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+  integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js"
+  integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/mermaid/8.8.2/mermaid.min.js"></script>
+<script>
+  window.onload = function () {
+    mermaid.initialize({ theme: 'neutral' })
+    mermaid.init(undefined, '.language-mermaid')
+  }
+</script>
+</body>
+</html>
