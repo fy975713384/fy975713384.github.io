@@ -223,7 +223,6 @@ h4 {
   font-weight: 600;
   margin-top: 30px;
   margin-bottom: 30px;
-  text-transform: uppercase;
 }
 h4:after {
   display: block;
@@ -525,6 +524,34 @@ blockquote {
   margin-bottom: 15px;
   width: 50px;
   border-bottom: 3px solid #eb2344;
+}
+
+/* Table */
+
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  max-width: 100%;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+th,
+td {
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: rgba(0, 0, 0, 0.05);
+  padding: 0.3rem;
+}
+
+th {
+  text-align: left;
+  font-weight: bold;
+  vertical-align: bottom;
+}
+
+td {
+  vertical-align: inherit;
 }
 
 /* Comments */

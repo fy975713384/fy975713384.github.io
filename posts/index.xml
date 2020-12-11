@@ -5,7 +5,7 @@
     <link>/posts/</link>
     <description>Recent content in Posts on Wing</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 26 Jul 2020 14:43:51 +0800</lastBuildDate><atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 11 Dec 2020 19:17:00 +0800</lastBuildDate><atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>🔝 我的测试观</title>
       <link>/2018/08/24/%E6%88%91%E7%9A%84%E6%B5%8B%E8%AF%95%E8%A7%82/</link>
@@ -22,6 +22,15 @@
       
       <guid>/2019/06/12/%E6%B5%85%E8%B0%88%E8%BD%AF%E4%BB%B6%E8%B4%A8%E9%87%8F/</guid>
       <description>一、软件质量是什么 GB T 25000.10-2016 标准（基于 ISO/IEC 25010:2011 标准）中将软件质量定义为： 在规定条件下使用时，软件满足用户明确和隐含要求的能力。满足程度越高，质量就越</description>
+    </item>
+    
+    <item>
+      <title>博客优化-表格样式优化</title>
+      <link>/2020/12/11/%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96-%E8%A1%A8%E6%A0%BC%E6%A0%B7%E5%BC%8F%E4%BC%98%E5%8C%96/</link>
+      <pubDate>Fri, 11 Dec 2020 19:17:00 +0800</pubDate>
+      
+      <guid>/2020/12/11/%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96-%E8%A1%A8%E6%A0%BC%E6%A0%B7%E5%BC%8F%E4%BC%98%E5%8C%96/</guid>
+      <description>最近在更新之前写的文章《python-处理时间与日期》时，发现网页渲染出来的 Markdown Table 十分难看，故打算优化一下 Table 的渲染 检查 DOM 作为一个前端小白，由于</description>
     </item>
     
     <item>
@@ -165,7 +174,7 @@
       <pubDate>Sat, 23 Mar 2019 11:46:24 +0800</pubDate>
       
       <guid>/2019/03/23/python-%E5%A4%84%E7%90%86%E6%97%B6%E9%97%B4%E4%B8%8E%E6%97%A5%E6%9C%9F/</guid>
-      <description>Python 时间与日期处理 内置库 time 模块 https://docs.python.org/3/library/time.html# class time.struct_time 实例 索引 实例属性 含义 值 0 tm_year 年 eg: 2020 1 tm_mon 月 range [1, 12] 2 tm_mday 日 range [1, 31] 3 tm_hour 小时 range [0, 23] 4 tm_min 分钟 range [0, 59] 5 tm_sec 秒 range [0, 61] 6 tm_wday 周 range [0,</description>
+      <description>Python 时间与日期处理 在信贷项目中会频繁地对日期时间进行处理，尤其是账单平移工具会大量地进行时间计算，熟练掌握 Python 的日期时间操作将给这些测试工作带来</description>
     </item>
     
     <item>
@@ -175,15 +184,6 @@
       
       <guid>/2019/02/22/robot-framework-%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90%E6%B1%87%E6%80%BB/</guid>
       <description>学习网站 官网：http://robotframework.org/ 简书专栏：https://www.jianshu.com/c/483e8f</description>
-    </item>
-    
-    <item>
-      <title>Robot Framework 安装配置</title>
-      <link>/2019/02/19/robot-framework-%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/</link>
-      <pubDate>Tue, 19 Feb 2019 00:27:04 +0800</pubDate>
-      
-      <guid>/2019/02/19/robot-framework-%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/</guid>
-      <description>RF 是最强的自动化测试框架，没有之一！ Robot Framework 最新基于 Windows+Python3 的安装方式，是时候卸载掉 Python2 了！ Robot Framework 介绍 Robot Framework 是一款基于 Python 的功能自动化测试框架。它具备良好的可</description>
     </item>
     
   </channel>
