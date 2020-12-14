@@ -190,8 +190,7 @@ h2 {
   font-size: 20px;
   line-height: 1.285714285714286em;
   font-weight: 600;
-  margin-top: 40px;
-  margin-bottom: 40px;
+  margin: 2.5rem 0;
 }
 h2:after {
   display: block;
@@ -206,8 +205,7 @@ h3 {
   font-size: 16px;
   line-height: 1.285714285714286em;
   font-weight: 600;
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin: 1.7rem 0;
 }
 h3:after {
   display: block;
@@ -476,9 +474,13 @@ h4:after {
 /* Styling */
 
 blockquote {
-  font-size: 15px;
   opacity: 0.65;
+  color: #666;
+  padding: 1px 23px;
+  border-left: 4px solid #cbcbcb;
+  background-color: #f8f8f8;
 }
+
 /* Author Card */
 .container .author-card {
   text-align: center;
@@ -631,4 +633,8 @@ td {
 }
 .content figure figcaption a {
   position: static;
+}
+
+p {
+  margin: 0.5em 0em;
 }
