@@ -5,7 +5,7 @@
     <link>/posts/</link>
     <description>Recent content in Posts on Wing</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 11 Dec 2020 19:17:00 +0800</lastBuildDate><atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 24 Dec 2020 10:57:51 +0800</lastBuildDate><atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>🔝 我的测试观</title>
       <link>/2018/08/24/%E6%88%91%E7%9A%84%E6%B5%8B%E8%AF%95%E8%A7%82/</link>
@@ -22,6 +22,15 @@
       
       <guid>/2019/06/12/%E6%B5%85%E8%B0%88%E8%BD%AF%E4%BB%B6%E8%B4%A8%E9%87%8F/</guid>
       <description>一、软件质量是什么 GB T 25000.10-2016 标准（基于 ISO/IEC 25010:2011 标准）中将软件质量定义为： 在规定条件下使用时，软件满足用户明确和隐含要求的能力。满足程度越高，质量就越</description>
+    </item>
+    
+    <item>
+      <title>谨慎执行Python序列的重复操作</title>
+      <link>/2020/12/24/%E8%B0%A8%E6%85%8E%E6%89%A7%E8%A1%8Cpython%E5%BA%8F%E5%88%97%E7%9A%84%E9%87%8D%E5%A4%8D%E6%93%8D%E4%BD%9C/</link>
+      <pubDate>Thu, 24 Dec 2020 10:57:51 +0800</pubDate>
+      
+      <guid>/2020/12/24/%E8%B0%A8%E6%85%8E%E6%89%A7%E8%A1%8Cpython%E5%BA%8F%E5%88%97%E7%9A%84%E9%87%8D%E5%A4%8D%E6%93%8D%E4%BD%9C/</guid>
+      <description>序列是 Python 内置类型之一，常见的字符串、元组、列表都是序列类型的子类型。 Python 中序列支持重复 (*) 操作，可以便捷地生成包含 n 个重复元素的序列对象。 示例如</description>
     </item>
     
     <item>
@@ -175,15 +184,6 @@
       
       <guid>/2019/03/23/python-%E5%A4%84%E7%90%86%E6%97%B6%E9%97%B4%E4%B8%8E%E6%97%A5%E6%9C%9F/</guid>
       <description>Python 时间与日期处理 在信贷项目中会频繁地对日期时间进行处理，尤其是账单平移工具会大量地进行时间计算，熟练掌握 Python 的日期时间操作将给这些测试工作带来</description>
-    </item>
-    
-    <item>
-      <title>Robot Framework 学习资源汇总</title>
-      <link>/2019/02/22/robot-framework-%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90%E6%B1%87%E6%80%BB/</link>
-      <pubDate>Fri, 22 Feb 2019 19:12:04 +0800</pubDate>
-      
-      <guid>/2019/02/22/robot-framework-%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90%E6%B1%87%E6%80%BB/</guid>
-      <description>学习网站 官网：http://robotframework.org/ 简书专栏：https://www.jianshu.com/c/483e8f</description>
     </item>
     
   </channel>
