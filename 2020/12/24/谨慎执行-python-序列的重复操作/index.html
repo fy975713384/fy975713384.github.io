@@ -2,7 +2,7 @@
 <html lang="en" itemscope itemtype="http://schema.org/WebPage">
 <head>
   <meta name="google-site-verification" content="NqacV5tHWoxzRi2H7KcEVCWMuxSnch23EM-vzsEV3h8" />
-  <meta name="generator" content="Hugo 0.75.1" />
+  <meta name="generator" content="Hugo 0.79.1" />
   <meta charset="utf-8">
   <title>谨慎执行 Python 序列的重复操作 · Wing</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -30,7 +30,7 @@
 <meta itemprop="description" content="序列是 Python 内置类型之一，常见的字符串、元组、列表都是序列类型的子类型。 Python 中序列支持重复 (*) 操作，可以便捷地生成包含 n 个重复元素的序列对象。 示例如">
 <meta itemprop="datePublished" content="2020-12-24T10:57:51+08:00" />
 <meta itemprop="dateModified" content="2020-12-24T10:57:51+08:00" />
-<meta itemprop="wordCount" content="384">
+<meta itemprop="wordCount" content="386">
 
 
 
@@ -128,7 +128,7 @@ Python 中序列支持重复 (*) 操作，可以便捷地生成包含 n 个重�
 
 <span class="o">&gt;&gt;&gt;</span> <span class="s1">&#39;1&#39;</span> <span class="o">*</span> <span class="mi">0</span>
 <span class="s1">&#39;&#39;</span>
-</code></pre></div><p>但值得注意的是，重复操作实际上是在对元素进行浅拷贝操作，例如：</p>
+</code></pre></div><p>但值得注意的是，重复操作实际上是在对元素进行<strong>浅拷贝</strong>操作，例如：</p>
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;abc&#39;</span><span class="p">,)</span> <span class="o">*</span> <span class="mi">2</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="nb">id</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
 <span class="mi">4304340272</span>
@@ -147,7 +147,7 @@ Python 中序列支持重复 (*) 操作，可以便捷地生成包含 n 个重�
 <span class="o">&gt;&gt;&gt;</span> <span class="n">a</span>
 <span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
 </code></pre></div><p>如果我们明白什么是浅拷贝，自然会知道发生了什么。<br>
-因此当我们需要对序列进行重复 (*) 操作时，要特别注意重复的元素尽量是不可变对象。如果我们需要创建一个包含多个相同的可变对象的序列时（动态规划创建 dp 时），建议使用列表生成器的方式：</p>
+因此当我们需要对序列进行重复 (*) 操作时，要特别注意重复的元素尽量是不可变对象。如果我们需要创建一个包含多个相同的可变对象的序列时（比如动态规划创建 dp），建议使用列表生成器的方式：</p>
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">)]</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">a</span>
 <span class="p">[[</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">]]</span>
@@ -246,7 +246,7 @@ Python 中序列支持重复 (*) 操作，可以便捷地生成包含 n 个重�
             Pan Feng
             
               2017 -
-            2020
+            2021
           </small>
           
         </p>
