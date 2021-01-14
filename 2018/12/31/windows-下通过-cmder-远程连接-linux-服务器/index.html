@@ -30,7 +30,7 @@
 <meta itemprop="description" content="阅读引导 需要先在 Windows 系统中安装 cmder 文中用 &ldquo;&rdquo; 表示的字符均需替换为自己机器中真实的名称（注意去掉 &lt;&gt;） 以 &ldquo;$ &quot; 开头的命令代表需要在命令行工">
 <meta itemprop="datePublished" content="2018-12-31T01:16:23+08:00" />
 <meta itemprop="dateModified" content="2018-12-31T01:16:23+08:00" />
-<meta itemprop="wordCount" content="1000">
+<meta itemprop="wordCount" content="1165">
 
 
 
@@ -175,24 +175,41 @@ $ chmod <span class="m">700</span> ~/.ssh <span class="o">&amp;&amp;</span> chmo
 </code></pre></div></li>
 </ol>
 <h3 id="附另外附上-cmder-的一些初始化配置">附：另外附上 cmder 的一些初始化配置</h3>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">右键 cmder.exe 以管理员身份运行
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># 【初始化配置（必须）】</span>
 
-<span class="c1">##### 添加至环境变量</span>
+右键 cmder.exe 以管理员身份运行
+
+<span class="c1">### 添加至环境变量</span>
 命令行输入命令 <span class="sb">`</span>setx -m PATH <span class="s2">&#34;%PATH%&#34;</span><span class="p">;</span>&lt;your-cmder.exe-path&gt;<span class="sb">`</span>
 将 cmder.exe 存放的目录添加到系统环境变量 Path
 
-<span class="c1">##### 添加至右键菜单（需要管理员权限）</span>
+<span class="c1">### 添加至右键菜单（需要管理员权限）</span>
 命令行输入命令：<span class="sb">`</span>Cmder.exe /REGISTER ALL<span class="sb">`</span>
 
-<span class="c1">##### 运行 cmder</span>
+<span class="c1">### 运行 cmder</span>
 Win+R 打开运行，输入 cmder 按回车打开 cmder
 
-<span class="c1">##### 解决中文显示乱码问题</span>
-Settings --&gt; Startup --&gt; Environment 添加
-<span class="sb">`</span><span class="nb">set</span> <span class="nv">LANG</span><span class="o">=</span>zh_CN.UTF-8<span class="sb">`</span>
+<span class="c1">### 解决中文显示乱码问题</span>
+Settings --&gt; Startup --&gt; Environment 添加以下两行配置
+<span class="nb">set</span> <span class="nv">LANG</span><span class="o">=</span>zh_CN.UTF-8
+<span class="nb">set</span> <span class="nv">LC_ALL</span><span class="o">=</span>zh_CN.utf8
 
-<span class="c1">##### 修改默认的命令提示符λ改成$</span>
+<span class="c1"># 【外观优化（可选）】</span>
+
+<span class="c1">### 修改默认的命令提示符λ改成$</span>
 将 <span class="sb">`</span>cmder<span class="se">\v</span>endor<span class="se">\c</span>link.lua<span class="sb">`</span> 文件中第42行中 <span class="sb">`</span><span class="nb">local</span> <span class="nv">lambda</span> <span class="o">=</span> <span class="s2">&#34;λ&#34;</span><span class="sb">`</span> 修改为 <span class="sb">`</span><span class="nb">local</span> <span class="nv">lambda</span> <span class="o">=</span> <span class="s2">&#34;</span>$<span class="s2">&#34;</span><span class="sb">`</span>
+
+<span class="c1">### 更换主题</span>
+Settings --&gt; 最底部 Import... 按钮 --&gt; 选择主题.xml文件导入 --&gt; Save settings
+推荐主题 Dracula：https://draculatheme.com/cmder/
+
+<span class="c1">### 更换显示字体</span>
+Settings --&gt; General --&gt; Fonts --&gt; Main console font --&gt; 选择字体
+推荐使用等宽字体，如：JetBrains Mono 或 Roboto Mono
+
+
+<span class="c1">### 隐藏标题栏</span>
+Settings --&gt; General --&gt; Appearance --&gt; 勾选 Hide caption always
 </code></pre></div><blockquote>
 <p>参考来源：<br>
 <a href="https://github.com/cmderdev/cmder/blob/master/README.md">https://github.com/cmderdev/cmder/blob/master/README.md</a><br>
