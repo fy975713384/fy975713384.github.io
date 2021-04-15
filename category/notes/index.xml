@@ -43,6 +43,15 @@
     </item>
     
     <item>
+      <title>Pycharm 继承类过多时创建索引失败问题</title>
+      <link>/2020/08/21/pycharm-%E7%BB%A7%E6%89%BF%E7%B1%BB%E8%BF%87%E5%A4%9A%E6%97%B6%E5%88%9B%E5%BB%BA%E7%B4%A2%E5%BC%95%E5%A4%B1%E8%B4%A5%E9%97%AE%E9%A2%98/</link>
+      <pubDate>Fri, 21 Aug 2020 03:59:04 +0800</pubDate>
+      
+      <guid>/2020/08/21/pycharm-%E7%BB%A7%E6%89%BF%E7%B1%BB%E8%BF%87%E5%A4%9A%E6%97%B6%E5%88%9B%E5%BB%BA%E7%B4%A2%E5%BC%95%E5%A4%B1%E8%B4%A5%E9%97%AE%E9%A2%98/</guid>
+      <description>最近团队在使用 Pycharm 的过程中一直被一个问题所困扰，就是通过 Pycharm 打开自动化测试项目时，Pycharm 一直显示在 indexing，导致工具的相关功能无</description>
+    </item>
+    
+    <item>
       <title>搭建自己的静态资源服务器</title>
       <link>/2020/07/26/%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E6%9C%8D%E5%8A%A1%E5%99%A8/</link>
       <pubDate>Sun, 26 Jul 2020 14:43:51 +0800</pubDate>
@@ -175,15 +184,6 @@
       
       <guid>/2019/03/23/python-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/</guid>
       <description>面向对象(Object Oriented)是软件开发方法，一种编程范式。 &amp;ndash;百度百科 Python 中的对象 Python 中一切皆对象 对象 是对数据的抽象 对象 拥</description>
-    </item>
-    
-    <item>
-      <title>Python 处理时间与日期</title>
-      <link>/2019/03/23/python-%E5%A4%84%E7%90%86%E6%97%B6%E9%97%B4%E4%B8%8E%E6%97%A5%E6%9C%9F/</link>
-      <pubDate>Sat, 23 Mar 2019 11:46:24 +0800</pubDate>
-      
-      <guid>/2019/03/23/python-%E5%A4%84%E7%90%86%E6%97%B6%E9%97%B4%E4%B8%8E%E6%97%A5%E6%9C%9F/</guid>
-      <description>Python 时间与日期处理 在信贷项目中会频繁地对日期时间进行处理，尤其是账单平移工具会大量地进行时间计算，熟练掌握 Python 的日期时间操作将给这些测试工作带来</description>
     </item>
     
   </channel>
