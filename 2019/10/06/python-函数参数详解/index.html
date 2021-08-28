@@ -2,7 +2,7 @@
 <html lang="en" itemscope itemtype="http://schema.org/WebPage">
 <head>
   <meta name="google-site-verification" content="NqacV5tHWoxzRi2H7KcEVCWMuxSnch23EM-vzsEV3h8" />
-  <meta name="generator" content="Hugo 0.83.0" />
+  <meta name="generator" content="Hugo 0.85.0" />
   <meta charset="utf-8">
   <title>Python 函数参数详解 · Wing</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -24,12 +24,12 @@
 <meta property="og:description" content="Python 函数参数详解 前言 最近在跟同事讨论一个方法的调用时涉及到了 Python 函数的位置参数和关键字参数的相关知识，发现之前学习 Python 时对函数参数研究的并不透彻，" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/2019/10/06/python-%E5%87%BD%E6%95%B0%E5%8F%82%E6%95%B0%E8%AF%A6%E8%A7%A3/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2019-10-06T16:14:18&#43;08:00" />
-<meta property="article:modified_time" content="2020-11-18T14:17:18&#43;08:00" />
+<meta property="article:published_time" content="2019-10-06T16:14:18+08:00" />
+<meta property="article:modified_time" content="2020-11-18T14:17:18+08:00" />
 
 <meta itemprop="name" content="Python 函数参数详解">
-<meta itemprop="description" content="Python 函数参数详解 前言 最近在跟同事讨论一个方法的调用时涉及到了 Python 函数的位置参数和关键字参数的相关知识，发现之前学习 Python 时对函数参数研究的并不透彻，"><meta itemprop="datePublished" content="2019-10-06T16:14:18&#43;08:00" />
-<meta itemprop="dateModified" content="2020-11-18T14:17:18&#43;08:00" />
+<meta itemprop="description" content="Python 函数参数详解 前言 最近在跟同事讨论一个方法的调用时涉及到了 Python 函数的位置参数和关键字参数的相关知识，发现之前学习 Python 时对函数参数研究的并不透彻，"><meta itemprop="datePublished" content="2019-10-06T16:14:18+08:00" />
+<meta itemprop="dateModified" content="2020-11-18T14:17:18+08:00" />
 <meta itemprop="wordCount" content="2001">
 <meta itemprop="keywords" content="Python," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Python 函数参数详解"/>
@@ -138,7 +138,7 @@ Python 中有两种 Argument，分别是「位置参数」和「关键字参数�
 </blockquote>
 <h4 id="位置或关键字参数-positional-or-keyword">位置或关键字参数 [positional-or-keyword]</h4>
 <p>位置或关键字参数在函数调用时可以以位置参数 (positional argument) 或关键字参数 (keyword argument) 的形式提供。它是默认的参数类型。</p>
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">func</span><span class="p">(</span><span class="n">foo1</span><span class="p">,</span> <span class="n">foo2</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span> <span class="o">...</span>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">func</span><span class="p">(</span><span class="n">foo1</span><span class="p">,</span> <span class="n">foo2</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span> <span class="o">...</span>
 </code></pre></div><p>其中 foo1 也可称为非默认参数 [non-default parameter]；foo2 可称为默认参数 [default parameter]，默认参数带有默认值，可以简化函数调用。</p>
 <p>注意，在函数定义时非默认参数必须在默认参数之前。</p>
 <h4 id="仅位置参数-positional-only">仅位置参数 [positional-only]</h4>
@@ -150,7 +150,7 @@ Python 中有两种 Argument，分别是「位置参数」和「关键字参数�
 <li>含有可变位置参数时以可变位置参数为分割，可变位置参数后都是仅关键字参数</li>
 </ol>
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">person</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="n">city</span><span class="p">,</span> <span class="n">job</span><span class="p">):</span>
-    <span class="k">print</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">,</span> <span class="n">args</span><span class="p">,</span> <span class="n">city</span><span class="p">,</span> <span class="n">job</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">,</span> <span class="n">args</span><span class="p">,</span> <span class="n">city</span><span class="p">,</span> <span class="n">job</span><span class="p">)</span>
 </code></pre></div><p>可以这样调用 ta</p>
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">test_arg</span><span class="p">(</span><span class="s1">&#39;beijing&#39;</span><span class="p">,</span><span class="s1">&#39;wfp&#39;</span><span class="p">,</span><span class="n">age</span><span class="o">=</span><span class="s1">&#39;25&#39;</span><span class="p">,</span><span class="n">job</span><span class="o">=</span><span class="s1">&#39;hacker&#39;</span><span class="p">)</span>
 <span class="n">test_arg</span><span class="p">(</span><span class="s1">&#39;beijing&#39;</span><span class="p">,</span><span class="s1">&#39;wfp&#39;</span><span class="p">,</span><span class="n">addr</span><span class="o">=</span><span class="s1">&#39;shanghai&#39;</span><span class="p">,</span><span class="n">age</span><span class="o">=</span><span class="s1">&#39;25&#39;</span><span class="p">,</span><span class="n">job</span><span class="o">=</span><span class="s1">&#39;hacker&#39;</span><span class="p">)</span>
@@ -163,11 +163,11 @@ Python 中有两种 Argument，分别是「位置参数」和「关键字参数�
 <li>没有可变位置参数时，增加一个 <code>*</code> 作为特殊分隔符，<code>*</code> 后面的都是仅关键字参数</li>
 </ol>
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">test_arg</span><span class="p">(</span><span class="n">city</span><span class="p">,</span><span class="n">name</span><span class="p">,</span><span class="o">*</span><span class="p">,</span><span class="n">age</span><span class="p">,</span><span class="n">job</span><span class="p">):</span>
-    <span class="k">print</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">,</span> <span class="n">args</span><span class="p">,</span> <span class="n">city</span><span class="p">,</span> <span class="n">job</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">,</span> <span class="n">args</span><span class="p">,</span> <span class="n">city</span><span class="p">,</span> <span class="n">job</span><span class="p">)</span>
 </code></pre></div><p><em><code>*</code> 作为特殊分割符使用</em></p>
 <p>仅关键字参数可以设置默认值，从而简化调用：</p>
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">person</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">city</span><span class="o">=</span><span class="s1">&#39;Beijing&#39;</span><span class="p">,</span> <span class="n">job</span><span class="p">):</span>
-    <span class="k">print</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">,</span> <span class="n">city</span><span class="p">,</span> <span class="n">job</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">,</span> <span class="n">city</span><span class="p">,</span> <span class="n">job</span><span class="p">)</span>
 </code></pre></div><p>由于参数 city 具有默认值，调用时，可不传入 city 参数：</p>
 <div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">&gt;&gt;&gt; person<span class="o">(</span><span class="s1">&#39;Jack&#39;</span>, 24, <span class="nv">job</span><span class="o">=</span><span class="s1">&#39;Engineer&#39;</span><span class="o">)</span>
 Jack <span class="m">24</span> Beijing Engineer
@@ -201,11 +201,11 @@ Jack <span class="m">24</span> Beijing Engineer
 <h3 id="不可变对象传参">不可变对象传参</h3>
 <p>示例：</p>
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">test</span><span class="p">(</span><span class="n">par</span><span class="p">):</span>
-    <span class="k">print</span><span class="p">(</span><span class="s2">&#34;par:&#34;</span><span class="p">,</span> <span class="nb">id</span><span class="p">(</span><span class="n">par</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;par:&#34;</span><span class="p">,</span> <span class="nb">id</span><span class="p">(</span><span class="n">par</span><span class="p">))</span>
 
 
 <span class="n">arg</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="k">print</span><span class="p">(</span><span class="s2">&#34;arg:&#34;</span><span class="p">,</span> <span class="nb">id</span><span class="p">(</span><span class="n">arg</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&#34;arg:&#34;</span><span class="p">,</span> <span class="nb">id</span><span class="p">(</span><span class="n">arg</span><span class="p">))</span>
 <span class="n">test</span><span class="p">(</span><span class="n">arg</span><span class="p">)</span>
 
 
@@ -218,14 +218,14 @@ Jack <span class="m">24</span> Beijing Engineer
 <h4 id="修改形参引用的可变对象">修改形参引用的可变对象</h4>
 <p>示例：</p>
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">test</span><span class="p">(</span><span class="n">par</span><span class="p">):</span>
-    <span class="k">print</span><span class="p">(</span><span class="s2">&#34;par:&#34;</span><span class="p">,</span> <span class="nb">id</span><span class="p">(</span><span class="n">par</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;par:&#34;</span><span class="p">,</span> <span class="nb">id</span><span class="p">(</span><span class="n">par</span><span class="p">))</span>
     <span class="n">par</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 
 
 <span class="n">arg</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-<span class="k">print</span><span class="p">(</span><span class="s2">&#34;[Before]&#34;</span><span class="p">,</span> <span class="n">f</span><span class="s2">&#34;arg: {id(arg)}&#34;</span><span class="p">,</span> <span class="n">arg</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&#34;[Before]&#34;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&#34;arg: </span><span class="si">{</span><span class="nb">id</span><span class="p">(</span><span class="n">arg</span><span class="p">)</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">,</span> <span class="n">arg</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
 <span class="n">test</span><span class="p">(</span><span class="n">arg</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="s2">&#34;[After]&#34;</span><span class="p">,</span> <span class="n">f</span><span class="s2">&#34;arg: {id(arg)}&#34;</span><span class="p">,</span> <span class="n">arg</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&#34;[After]&#34;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&#34;arg: </span><span class="si">{</span><span class="nb">id</span><span class="p">(</span><span class="n">arg</span><span class="p">)</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">,</span> <span class="n">arg</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
 
 
 <span class="c1"># 运行结果如下：</span>
@@ -240,14 +240,14 @@ Jack <span class="m">24</span> Beijing Engineer
 <h4 id="修改形参的引用">修改形参的引用</h4>
 <p>示例：</p>
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">test</span><span class="p">(</span><span class="n">par</span><span class="p">):</span>
-    <span class="k">print</span><span class="p">(</span><span class="s2">&#34;par:&#34;</span><span class="p">,</span> <span class="nb">id</span><span class="p">(</span><span class="n">par</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;par:&#34;</span><span class="p">,</span> <span class="nb">id</span><span class="p">(</span><span class="n">par</span><span class="p">))</span>
     <span class="n">par</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span>
 
 
 <span class="n">arg</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-<span class="k">print</span><span class="p">(</span><span class="s2">&#34;[Before]&#34;</span><span class="p">,</span> <span class="n">f</span><span class="s2">&#34;arg: {id(arg)}&#34;</span><span class="p">,</span> <span class="n">arg</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&#34;[Before]&#34;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&#34;arg: </span><span class="si">{</span><span class="nb">id</span><span class="p">(</span><span class="n">arg</span><span class="p">)</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">,</span> <span class="n">arg</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
 <span class="n">test</span><span class="p">(</span><span class="n">arg</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="s2">&#34;[After]&#34;</span><span class="p">,</span> <span class="n">f</span><span class="s2">&#34;arg: {id(arg)}&#34;</span><span class="p">,</span> <span class="n">arg</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&#34;[After]&#34;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&#34;arg: </span><span class="si">{</span><span class="nb">id</span><span class="p">(</span><span class="n">arg</span><span class="p">)</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">,</span> <span class="n">arg</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
 </code></pre></div><p>从该示例中可以看出，当我们在函数内部修改形参变量 <code>par</code> 的引用时，并不会影响到实参变量 <code>arg</code> 引用的对象，这是因为我们只是将 <code>par</code> 引用的对象由 <code>[0]</code> 改为 <code>[1]</code>，并没有修改原对象 <code>[0]</code>，所以 <code>arg</code> 打印出来的值仍为 <code>[0]</code>。<br>
 <em>注：在 Python 中，赋值操作 <code>par = [1]</code> 本质上是建立了变量 <code>par</code> 与对象 <code>[1]</code> 的引用关系。</em></p>
 <blockquote>

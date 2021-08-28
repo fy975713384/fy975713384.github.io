@@ -5,7 +5,7 @@
     <link>/category/notes/</link>
     <description>Recent content in Notes on Wing</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 24 Dec 2020 10:57:51 +0800</lastBuildDate><atom:link href="/category/notes/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 28 Aug 2021 14:18:25 +0800</lastBuildDate><atom:link href="/category/notes/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>🔝 我的测试观</title>
       <link>/2018/08/24/%E6%88%91%E7%9A%84%E6%B5%8B%E8%AF%95%E8%A7%82/</link>
@@ -22,6 +22,15 @@
       
       <guid>/2019/06/12/%E6%B5%85%E8%B0%88%E8%BD%AF%E4%BB%B6%E8%B4%A8%E9%87%8F/</guid>
       <description>一、软件质量是什么 GB T 25000.10-2016 标准（基于 ISO/IEC 25010:2011 标准）中将软件质量定义为： 在规定条件下使用时，软件满足用户明确和隐含要求的能力。满足程度越高，质量就越</description>
+    </item>
+    
+    <item>
+      <title>Mysql日期时间操作</title>
+      <link>/2021/08/28/mysql%E6%97%A5%E6%9C%9F%E6%97%B6%E9%97%B4%E6%93%8D%E4%BD%9C/</link>
+      <pubDate>Sat, 28 Aug 2021 14:18:25 +0800</pubDate>
+      
+      <guid>/2021/08/28/mysql%E6%97%A5%E6%9C%9F%E6%97%B6%E9%97%B4%E6%93%8D%E4%BD%9C/</guid>
+      <description>Mysql 日期时间操作 时间戳 mysql&amp;gt;SELECTUNIX_TIMESTAMP(),FROM_UNIXTIME(UNIX_TIMESTAMP</description>
     </item>
     
     <item>
@@ -175,15 +184,6 @@
       
       <guid>/2019/04/14/%E5%85%BB%E7%8C%AB%E5%89%8D%E5%87%86%E5%A4%87/</guid>
       <description>猫粮 幼猫粮（1~12 个月）：K9 膳食调理大师 全猫粮（年龄不限）：天衡宝 Natural Balance 健乐系列 营养膏（必备）：红狗 RedDog 猫用营养膏 猫窝 猫吊床：挂式猫吊床 猫窝</description>
-    </item>
-    
-    <item>
-      <title>Python 面向对象</title>
-      <link>/2019/03/23/python-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/</link>
-      <pubDate>Sat, 23 Mar 2019 12:19:10 +0800</pubDate>
-      
-      <guid>/2019/03/23/python-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/</guid>
-      <description>面向对象(Object Oriented)是软件开发方法，一种编程范式。 &amp;ndash;百度百科 Python 中的对象 Python 中一切皆对象 对象 是对数据的抽象 对象 拥</description>
     </item>
     
   </channel>

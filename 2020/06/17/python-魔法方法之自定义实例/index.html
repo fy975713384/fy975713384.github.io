@@ -2,7 +2,7 @@
 <html lang="en" itemscope itemtype="http://schema.org/WebPage">
 <head>
   <meta name="google-site-verification" content="NqacV5tHWoxzRi2H7KcEVCWMuxSnch23EM-vzsEV3h8" />
-  <meta name="generator" content="Hugo 0.83.0" />
+  <meta name="generator" content="Hugo 0.85.0" />
   <meta charset="utf-8">
   <title>Python 魔法方法之自定义实例 · Wing</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -24,12 +24,12 @@
 <meta property="og:description" content="Python 魔法方法之自定义实例 Python 魔法方法系列 让你的代码更加 pythonic 构造函数 &amp; 析构函数 学习 Python 的自定义实例魔法方法前需要先了解两个概念，构造函数 和 析构函数。 【" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/2020/06/17/python-%E9%AD%94%E6%B3%95%E6%96%B9%E6%B3%95%E4%B9%8B%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AE%9E%E4%BE%8B/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2020-06-17T12:38:01&#43;08:00" />
-<meta property="article:modified_time" content="2020-08-11T19:04:14&#43;08:00" />
+<meta property="article:published_time" content="2020-06-17T12:38:01+08:00" />
+<meta property="article:modified_time" content="2020-08-11T19:04:14+08:00" />
 
 <meta itemprop="name" content="Python 魔法方法之自定义实例">
-<meta itemprop="description" content="Python 魔法方法之自定义实例 Python 魔法方法系列 让你的代码更加 pythonic 构造函数 &amp; 析构函数 学习 Python 的自定义实例魔法方法前需要先了解两个概念，构造函数 和 析构函数。 【"><meta itemprop="datePublished" content="2020-06-17T12:38:01&#43;08:00" />
-<meta itemprop="dateModified" content="2020-08-11T19:04:14&#43;08:00" />
+<meta itemprop="description" content="Python 魔法方法之自定义实例 Python 魔法方法系列 让你的代码更加 pythonic 构造函数 &amp; 析构函数 学习 Python 的自定义实例魔法方法前需要先了解两个概念，构造函数 和 析构函数。 【"><meta itemprop="datePublished" content="2020-06-17T12:38:01+08:00" />
+<meta itemprop="dateModified" content="2020-08-11T19:04:14+08:00" />
 <meta itemprop="wordCount" content="764">
 <meta itemprop="keywords" content="Python,Python魔法方法," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Python 魔法方法之自定义实例"/>
@@ -147,7 +147,7 @@
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># ，实例化时不会报错</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="k">class</span> <span class="nc">Demo</span><span class="p">():</span>
 <span class="o">...</span>     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="o">...</span>         <span class="k">return</span> <span class="bp">None</span>
+<span class="o">...</span>         <span class="k">return</span> <span class="kc">None</span>
 <span class="o">...</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">d</span> <span class="o">=</span> <span class="n">Demo</span><span class="p">()</span>  <span class="c1"># 可以返回 None 值，系统不报错</span>
 
@@ -164,7 +164,7 @@
 <span class="o">&gt;&gt;&gt;</span> <span class="n">d</span> <span class="o">=</span> <span class="n">Demo</span><span class="p">()</span>  <span class="c1"># 不能返回非 None 的值，系统报 TypeError</span>
 <span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
   <span class="n">File</span> <span class="s2">&#34;&lt;stdin&gt;&#34;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="ne">TypeError</span><span class="p">:</span> <span class="fm">__init__</span><span class="p">()</span> <span class="n">should</span> <span class="k">return</span> <span class="bp">None</span><span class="p">,</span> <span class="ow">not</span> <span class="s1">&#39;int&#39;</span>
+<span class="ne">TypeError</span><span class="p">:</span> <span class="fm">__init__</span><span class="p">()</span> <span class="n">should</span> <span class="k">return</span> <span class="kc">None</span><span class="p">,</span> <span class="ow">not</span> <span class="s1">&#39;int&#39;</span>
 </code></pre></div><h2 id="__del__">__del__</h2>
 <p><code>object.__del__(self)</code> 方法用于实例销毁前的清理工作，使用时需注意：</p>
 <ul>
