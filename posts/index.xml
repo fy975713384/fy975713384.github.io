@@ -25,12 +25,12 @@
     </item>
     
     <item>
-      <title>密码加密存储</title>
-      <link>/2021/09/04/%E5%AF%86%E7%A0%81%E5%8A%A0%E5%AF%86%E5%AD%98%E5%82%A8/</link>
+      <title>Python 用户密码加密存储</title>
+      <link>/2021/09/04/python-%E7%94%A8%E6%88%B7%E5%AF%86%E7%A0%81%E5%8A%A0%E5%AF%86%E5%AD%98%E5%82%A8/</link>
       <pubDate>Sat, 04 Sep 2021 01:15:12 +0800</pubDate>
       
-      <guid>/2021/09/04/%E5%AF%86%E7%A0%81%E5%8A%A0%E5%AF%86%E5%AD%98%E5%82%A8/</guid>
-      <description>密码加密存储 进行 Web 应用开发时，用户密码如何保存才足够安全是一个值得重视的问题，作为应用开发者，我们有责任保证用户的信息安全。对于金融行业来说</description>
+      <guid>/2021/09/04/python-%E7%94%A8%E6%88%B7%E5%AF%86%E7%A0%81%E5%8A%A0%E5%AF%86%E5%AD%98%E5%82%A8/</guid>
+      <description>Python 用户密码加密存储 进行 Web 应用开发时，用户密码如何保存才足够安全是一个值得重视的问题，作为应用开发者，我们有责任保证用户的信息安全。对于金融行</description>
     </item>
     
     <item>
@@ -120,7 +120,7 @@
       <pubDate>Mon, 28 Oct 2019 00:58:33 +0800</pubDate>
       
       <guid>/2019/10/28/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81%E8%AF%A6%E8%A7%A3/</guid>
-      <description>程序员如果不弄懂字符编码它就会像幽灵一般纠缠你整个职业生涯，各种灵异事件会接踵而来，挥之不去。 &amp;mdash; 刘志军 [知乎] 1 bit = 2 种两种可能性（0或1）</description>
+      <description>程序员如果不弄懂字符编码它就会像幽灵一般纠缠你整个职业生涯，各种灵异事件会接踵而来，挥之不去。 &amp;mdash; 刘志军 [知乎] 1 bit = 1 位 = 2 种两种可能性（0</description>
     </item>
     
     <item>
