@@ -5,7 +5,7 @@
     <link>/posts/</link>
     <description>Recent content in Posts on Wing</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 28 Aug 2021 14:18:25 +0800</lastBuildDate><atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 04 Sep 2021 01:15:12 +0800</lastBuildDate><atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>🔝 我的测试观</title>
       <link>/2018/08/24/%E6%88%91%E7%9A%84%E6%B5%8B%E8%AF%95%E8%A7%82/</link>
@@ -22,6 +22,15 @@
       
       <guid>/2019/06/12/%E6%B5%85%E8%B0%88%E8%BD%AF%E4%BB%B6%E8%B4%A8%E9%87%8F/</guid>
       <description>一、软件质量是什么 GB T 25000.10-2016 标准（基于 ISO/IEC 25010:2011 标准）中将软件质量定义为： 在规定条件下使用时，软件满足用户明确和隐含要求的能力。满足程度越高，质量就越</description>
+    </item>
+    
+    <item>
+      <title>密码加密存储</title>
+      <link>/2021/09/04/%E5%AF%86%E7%A0%81%E5%8A%A0%E5%AF%86%E5%AD%98%E5%82%A8/</link>
+      <pubDate>Sat, 04 Sep 2021 01:15:12 +0800</pubDate>
+      
+      <guid>/2021/09/04/%E5%AF%86%E7%A0%81%E5%8A%A0%E5%AF%86%E5%AD%98%E5%82%A8/</guid>
+      <description>密码加密存储 进行 Web 应用开发时，用户密码如何保存才足够安全是一个值得重视的问题，作为应用开发者，我们有责任保证用户的信息安全。对于金融行业来说</description>
     </item>
     
     <item>
@@ -175,15 +184,6 @@
       
       <guid>/2019/05/24/%E6%B5%8B%E8%AF%95%E7%82%B9%E5%BD%92%E7%BA%B3-%E6%8E%A5%E5%8F%A3%E5%8A%9F%E8%83%BD/</guid>
       <description>总结归纳是积累经验获得成长最有效的方式 单接口测试： 正常流程 验证响应码和响应报文格式正确 需考虑各种正确的传参组合，包括请求参数的长度、类型、值</description>
-    </item>
-    
-    <item>
-      <title>养猫前准备</title>
-      <link>/2019/04/14/%E5%85%BB%E7%8C%AB%E5%89%8D%E5%87%86%E5%A4%87/</link>
-      <pubDate>Sun, 14 Apr 2019 19:14:59 +0800</pubDate>
-      
-      <guid>/2019/04/14/%E5%85%BB%E7%8C%AB%E5%89%8D%E5%87%86%E5%A4%87/</guid>
-      <description>猫粮 幼猫粮（1~12 个月）：K9 膳食调理大师 全猫粮（年龄不限）：天衡宝 Natural Balance 健乐系列 营养膏（必备）：红狗 RedDog 猫用营养膏 猫窝 猫吊床：挂式猫吊床 猫窝</description>
     </item>
     
   </channel>
