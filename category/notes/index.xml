@@ -5,7 +5,7 @@
     <link>/category/notes/</link>
     <description>Recent content in Notes on Wing</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 04 Sep 2021 01:15:12 +0800</lastBuildDate><atom:link href="/category/notes/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 09 Sep 2021 13:32:19 +0800</lastBuildDate><atom:link href="/category/notes/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>🔝 我的测试观</title>
       <link>/2018/08/24/%E6%88%91%E7%9A%84%E6%B5%8B%E8%AF%95%E8%A7%82/</link>
@@ -22,6 +22,15 @@
       
       <guid>/2019/06/12/%E6%B5%85%E8%B0%88%E8%BD%AF%E4%BB%B6%E8%B4%A8%E9%87%8F/</guid>
       <description>一、软件质量是什么 GB T 25000.10-2016 标准（基于 ISO/IEC 25010:2011 标准）中将软件质量定义为： 在规定条件下使用时，软件满足用户明确和隐含要求的能力。满足程度越高，质量就越</description>
+    </item>
+    
+    <item>
+      <title>Nginx 配置之 X-Forwarded-For</title>
+      <link>/2021/09/09/nginx-%E9%85%8D%E7%BD%AE%E4%B9%8B-x-forwarded-for/</link>
+      <pubDate>Thu, 09 Sep 2021 13:32:19 +0800</pubDate>
+      
+      <guid>/2021/09/09/nginx-%E9%85%8D%E7%BD%AE%E4%B9%8B-x-forwarded-for/</guid>
+      <description>Nginx 配置之 X Forwarded For X-Forwarded-For X-Forwarded-For(XFF) 通常被当作 HTTP 请求头中的一个参数， 在客户端访问服务器的过程中如果需要经过 HTTP 代理或者负载均衡服务器（当前通常是 Nginx），可</description>
     </item>
     
     <item>
@@ -70,12 +79,12 @@
     </item>
     
     <item>
-      <title>搭建自己的静态资源服务器</title>
-      <link>/2020/07/26/%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E6%9C%8D%E5%8A%A1%E5%99%A8/</link>
+      <title>使用 Nginx 搭建私有静态资源服务器</title>
+      <link>/2020/07/26/%E4%BD%BF%E7%94%A8-nginx-%E6%90%AD%E5%BB%BA%E7%A7%81%E6%9C%89%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E6%9C%8D%E5%8A%A1%E5%99%A8/</link>
       <pubDate>Sun, 26 Jul 2020 14:43:51 +0800</pubDate>
       
-      <guid>/2020/07/26/%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E6%9C%8D%E5%8A%A1%E5%99%A8/</guid>
-      <description>最近在学习 Vue 框架，学习过程中需要一个静态资源服务器，故先自己搭建一个供学习使用。 通过 docker 搭建 nginx 服务器 安装 docker （以 HomeBrew 为例）： 安装命令： $ brew cask install docker 下</description>
+      <guid>/2020/07/26/%E4%BD%BF%E7%94%A8-nginx-%E6%90%AD%E5%BB%BA%E7%A7%81%E6%9C%89%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E6%9C%8D%E5%8A%A1%E5%99%A8/</guid>
+      <description>使用 Nginx 搭建自己的静态资源服务器 最近在学习 Vue 框架，学习过程中需要一个静态资源服务器，故先自己搭建一个供学习使用。 通过 docker 搭建 nginx 服务器 安装 docker （以 HomeBrew</description>
     </item>
     
     <item>
@@ -175,15 +184,6 @@
       
       <guid>/2019/06/09/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%B7%A5%E4%BD%9C%E8%BF%87%E7%A8%8B/</guid>
       <description>相似问题： 打开一个网址会发生什么？ 浏览器是怎样工作的？ 简述一次完整的 HTTP 请求过程 First Of All：在浏览器地址栏输入 URL 并回车 DNS 域名解析 搜索浏览器自身</description>
-    </item>
-    
-    <item>
-      <title>测试点归纳-接口功能</title>
-      <link>/2019/05/24/%E6%B5%8B%E8%AF%95%E7%82%B9%E5%BD%92%E7%BA%B3-%E6%8E%A5%E5%8F%A3%E5%8A%9F%E8%83%BD/</link>
-      <pubDate>Fri, 24 May 2019 13:13:07 +0800</pubDate>
-      
-      <guid>/2019/05/24/%E6%B5%8B%E8%AF%95%E7%82%B9%E5%BD%92%E7%BA%B3-%E6%8E%A5%E5%8F%A3%E5%8A%9F%E8%83%BD/</guid>
-      <description>总结归纳是积累经验获得成长最有效的方式 单接口测试： 正常流程 验证响应码和响应报文格式正确 需考虑各种正确的传参组合，包括请求参数的长度、类型、值</description>
     </item>
     
   </channel>

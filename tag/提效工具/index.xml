@@ -7,12 +7,12 @@
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Sun, 26 Jul 2020 14:43:51 +0800</lastBuildDate><atom:link href="/tag/%E6%8F%90%E6%95%88%E5%B7%A5%E5%85%B7/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>搭建自己的静态资源服务器</title>
-      <link>/2020/07/26/%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E6%9C%8D%E5%8A%A1%E5%99%A8/</link>
+      <title>使用 Nginx 搭建私有静态资源服务器</title>
+      <link>/2020/07/26/%E4%BD%BF%E7%94%A8-nginx-%E6%90%AD%E5%BB%BA%E7%A7%81%E6%9C%89%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E6%9C%8D%E5%8A%A1%E5%99%A8/</link>
       <pubDate>Sun, 26 Jul 2020 14:43:51 +0800</pubDate>
       
-      <guid>/2020/07/26/%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E6%9C%8D%E5%8A%A1%E5%99%A8/</guid>
-      <description>最近在学习 Vue 框架，学习过程中需要一个静态资源服务器，故先自己搭建一个供学习使用。 通过 docker 搭建 nginx 服务器 安装 docker （以 HomeBrew 为例）： 安装命令： $ brew cask install docker 下</description>
+      <guid>/2020/07/26/%E4%BD%BF%E7%94%A8-nginx-%E6%90%AD%E5%BB%BA%E7%A7%81%E6%9C%89%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E6%9C%8D%E5%8A%A1%E5%99%A8/</guid>
+      <description>使用 Nginx 搭建自己的静态资源服务器 最近在学习 Vue 框架，学习过程中需要一个静态资源服务器，故先自己搭建一个供学习使用。 通过 docker 搭建 nginx 服务器 安装 docker （以 HomeBrew</description>
     </item>
     
     <item>

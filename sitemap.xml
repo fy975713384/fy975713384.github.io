@@ -17,41 +17,55 @@
   
   <url>
     <loc>/categories/</loc>
-    <lastmod>2021-09-05T17:03:43+08:00</lastmod>
+    <lastmod>2021-09-09T13:32:19+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>/tag/nginx/</loc>
+    <lastmod>2021-09-09T13:32:19+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>/2021/09/09/nginx-%E9%85%8D%E7%BD%AE%E4%B9%8B-x-forwarded-for/</loc>
+    <lastmod>2021-09-09T13:32:19+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>/category/notes/</loc>
-    <lastmod>2021-09-05T17:03:43+08:00</lastmod>
+    <lastmod>2021-09-09T13:32:19+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>/posts/</loc>
-    <lastmod>2021-09-05T17:03:43+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>/2021/09/04/python-%E7%94%A8%E6%88%B7%E5%AF%86%E7%A0%81%E5%8A%A0%E5%AF%86%E5%AD%98%E5%82%A8/</loc>
-    <lastmod>2021-09-05T17:03:43+08:00</lastmod>
+    <lastmod>2021-09-09T13:32:19+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>/tags/</loc>
-    <lastmod>2021-09-05T17:03:43+08:00</lastmod>
+    <lastmod>2021-09-09T13:32:19+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>/</loc>
+    <lastmod>2021-09-09T13:32:19+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>/2021/09/04/python-%E7%94%A8%E6%88%B7%E5%AF%86%E7%A0%81%E5%8A%A0%E5%AF%86%E5%AD%98%E5%82%A8/</loc>
     <lastmod>2021-09-05T17:03:43+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -135,22 +149,15 @@
   </url>
   
   <url>
+    <loc>/2020/07/26/%E4%BD%BF%E7%94%A8-nginx-%E6%90%AD%E5%BB%BA%E7%A7%81%E6%9C%89%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E6%9C%8D%E5%8A%A1%E5%99%A8/</loc>
+    <lastmod>2020-07-26T14:43:51+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>/tag/%E6%8F%90%E6%95%88%E5%B7%A5%E5%85%B7/</loc>
     <lastmod>2021-04-15T10:04:52+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>/2020/07/26/%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E6%9C%8D%E5%8A%A1%E5%99%A8/</loc>
-    <lastmod>2020-07-26T14:43:51+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>/tag/%E6%9C%8D%E5%8A%A1%E9%85%8D%E7%BD%AE/</loc>
-    <lastmod>2020-07-26T14:43:51+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -284,6 +291,13 @@
   <url>
     <loc>/tag/%E6%B5%8B%E8%AF%95%E6%9D%82%E8%B0%88/</loc>
     <lastmod>2021-05-13T11:42:38+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>/tag/%E6%9C%8D%E5%8A%A1%E9%85%8D%E7%BD%AE/</loc>
+    <lastmod>2019-06-21T15:30:40+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
