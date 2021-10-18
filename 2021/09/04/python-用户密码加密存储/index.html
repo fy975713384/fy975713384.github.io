@@ -30,7 +30,7 @@
 <meta itemprop="name" content="Python 用户密码加密存储">
 <meta itemprop="description" content="Python 用户密码加密存储 进行 Web 应用开发时，用户密码如何保存才足够安全是一个值得重视的问题，作为应用开发者，我们有责任保证用户的信息安全。对于金融行"><meta itemprop="datePublished" content="2021-09-04T01:15:12+08:00" />
 <meta itemprop="dateModified" content="2021-09-05T17:03:43+08:00" />
-<meta itemprop="wordCount" content="1886">
+<meta itemprop="wordCount" content="1921">
 <meta itemprop="keywords" content="安全," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Python 用户密码加密存储"/>
 <meta name="twitter:description" content="Python 用户密码加密存储 进行 Web 应用开发时，用户密码如何保存才足够安全是一个值得重视的问题，作为应用开发者，我们有责任保证用户的信息安全。对于金融行"/>
@@ -118,6 +118,7 @@
 <p>对于密码加密存储的问题，行业内基本上都是基于哈希加密的方式来解决，说到哈希加密，首先需要了解下什么是哈希算法。</p>
 <p><a href="https://zh.wikipedia.org/wiki/%E6%95%A3%E5%88%97%E5%87%BD%E6%95%B8">维基百科-哈希算法</a><br>
 <a href="https://zhuanlan.zhihu.com/p/49435564">知乎：通俗地理解哈希函数</a></p>
+<p>哈希算法不可逆的性质可以在发生拖库后有效地阻止黑客对用户密码进行破解。</p>
 <p>虽然对用户密码做单向哈希后再存储会比明文存储稍微安全一些。但这种简单的加密方式仍能被黑客通过诸如查表法、<a href="https://zh.wikipedia.org/wiki/%E5%BD%A9%E8%99%B9%E8%A1%A8">彩虹表</a>的方式进行低成本的破解，因此这种方式也是不可取的。</p>
 <p>举例来说，<code>md5</code> 是一种应用广泛的哈希算法，速度很快。标准的 <code>md5</code> 输出是固定的 128bit，但通常截断为一个 32bit 的十六进制字符串来表示。但由于如今已经能很轻易攻破其碰撞抵抗，现在也仅被用于数据完整性校验等非数据安全领域。</p>
 <h3 id="python-哈希算法库">Python 哈希算法库</h3>
