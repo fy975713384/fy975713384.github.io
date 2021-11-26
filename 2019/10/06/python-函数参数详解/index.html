@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <title>Python 函数参数详解 · Wing</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Python 函数参数详解 一、前言 最近在跟同事讨论一个方法的调用时涉及到了 Python 函数的位置参数和关键字参数的相关知识，发现之前学习 Python 时对函数参数研究的并不透" />
+  <meta name="description" content="Python 函数参数详解 前言 最近在跟同事讨论一个方法的调用时涉及到了 Python 函数的位置参数和关键字参数的相关知识，发现之前学习 Python 时对函数参数研究的并不透彻，" />
 
 
 <link rel="canonical" href="/2019/10/06/python-%E5%87%BD%E6%95%B0%E5%8F%82%E6%95%B0%E8%AF%A6%E8%A7%A3/" />
@@ -21,19 +21,19 @@
 
 
 <meta property="og:title" content="Python 函数参数详解" />
-<meta property="og:description" content="Python 函数参数详解 一、前言 最近在跟同事讨论一个方法的调用时涉及到了 Python 函数的位置参数和关键字参数的相关知识，发现之前学习 Python 时对函数参数研究的并不透" />
+<meta property="og:description" content="Python 函数参数详解 前言 最近在跟同事讨论一个方法的调用时涉及到了 Python 函数的位置参数和关键字参数的相关知识，发现之前学习 Python 时对函数参数研究的并不透彻，" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/2019/10/06/python-%E5%87%BD%E6%95%B0%E5%8F%82%E6%95%B0%E8%AF%A6%E8%A7%A3/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2019-10-06T16:14:18+08:00" />
-<meta property="article:modified_time" content="2020-11-18T14:17:18+08:00" />
+<meta property="article:modified_time" content="2021-11-26T20:57:42+08:00" />
 
 <meta itemprop="name" content="Python 函数参数详解">
-<meta itemprop="description" content="Python 函数参数详解 一、前言 最近在跟同事讨论一个方法的调用时涉及到了 Python 函数的位置参数和关键字参数的相关知识，发现之前学习 Python 时对函数参数研究的并不透"><meta itemprop="datePublished" content="2019-10-06T16:14:18+08:00" />
-<meta itemprop="dateModified" content="2020-11-18T14:17:18+08:00" />
-<meta itemprop="wordCount" content="2294">
+<meta itemprop="description" content="Python 函数参数详解 前言 最近在跟同事讨论一个方法的调用时涉及到了 Python 函数的位置参数和关键字参数的相关知识，发现之前学习 Python 时对函数参数研究的并不透彻，"><meta itemprop="datePublished" content="2019-10-06T16:14:18+08:00" />
+<meta itemprop="dateModified" content="2021-11-26T20:57:42+08:00" />
+<meta itemprop="wordCount" content="2301">
 <meta itemprop="keywords" content="Python," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Python 函数参数详解"/>
-<meta name="twitter:description" content="Python 函数参数详解 一、前言 最近在跟同事讨论一个方法的调用时涉及到了 Python 函数的位置参数和关键字参数的相关知识，发现之前学习 Python 时对函数参数研究的并不透"/>
+<meta name="twitter:description" content="Python 函数参数详解 前言 最近在跟同事讨论一个方法的调用时涉及到了 Python 函数的位置参数和关键字参数的相关知识，发现之前学习 Python 时对函数参数研究的并不透彻，"/>
 </head>
 <body>
   
@@ -111,10 +111,10 @@
 <div class="container content">
   <article>
   <h1 id="python-函数参数详解">Python 函数参数详解</h1>
-<h2 id="一前言">一、前言</h2>
+<h2 id="前言">前言</h2>
 <p>最近在跟同事讨论一个方法的调用时涉及到了 Python 函数的位置参数和关键字参数的相关知识，发现之前学习 Python 时对函数参数研究的并不透彻，且很多地方已经有些生疏了，故而查阅了一下 Python 官方文档和廖雪峰的官网中的相关知识，并总结记录如下。</p>
 <p>另外，Python 中函数（Function）和方法（Method）虽是不同的概念，但区别不是很大，对本文所阐述的内容也没有影响，故统称为函数。</p>
-<h2 id="argument-和-parameter">Argument 和 Parameter</h2>
+<h2 id="一argument-和-parameter">一、Argument 和 Parameter</h2>
 <p>Python 函数参数根据使用情况的不同需要分为 Parameter 和 Argument 两部分进行讨论。</p>
 <h3 id="argument">Argument</h3>
 <blockquote>
