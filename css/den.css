@@ -190,7 +190,8 @@ h2 {
   font-size: 20px;
   line-height: 1.285714285714286em;
   font-weight: 600;
-  margin: 2.5rem 0;
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 h2:after {
   display: block;
@@ -205,7 +206,8 @@ h3 {
   font-size: 16px;
   line-height: 1.285714285714286em;
   font-weight: 600;
-  margin: 1.7rem 0;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 h3:after {
   display: block;
@@ -221,6 +223,7 @@ h4 {
   font-weight: 600;
   margin-top: 30px;
   margin-bottom: 30px;
+  text-transform: uppercase;
 }
 h4:after {
   display: block;
@@ -355,7 +358,10 @@ h4:after {
   display: block;
   width: 100%;
   height: auto;
-  margin: 1.5rem auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 45px;
+  margin-bottom: 45px;
 }
 
 .content.highlight pre {
@@ -471,13 +477,9 @@ h4:after {
 /* Styling */
 
 blockquote {
+  font-size: 15px;
   opacity: 0.65;
-  color: #666;
-  padding: 1px 23px;
-  border-left: 4px solid #cbcbcb;
-  background-color: #f8f8f8;
 }
-
 /* Author Card */
 .container .author-card {
   text-align: center;
@@ -523,34 +525,6 @@ blockquote {
   margin-bottom: 15px;
   width: 50px;
   border-bottom: 3px solid #eb2344;
-}
-
-/* Table */
-
-table {
-  border-collapse: separate;
-  border-spacing: 0;
-  max-width: 100%;
-  width: 100%;
-  margin-bottom: 2rem;
-}
-
-th,
-td {
-  border-bottom-width: 1px;
-  border-bottom-style: solid;
-  border-bottom-color: rgba(0, 0, 0, 0.05);
-  padding: 0.3rem;
-}
-
-th {
-  text-align: left;
-  font-weight: bold;
-  vertical-align: bottom;
-}
-
-td {
-  vertical-align: inherit;
 }
 
 /* Comments */
@@ -630,8 +604,4 @@ td {
 }
 .content figure figcaption a {
   position: static;
-}
-
-p {
-  margin: 0.5em 0em;
 }
