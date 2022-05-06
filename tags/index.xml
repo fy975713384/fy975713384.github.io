@@ -16,11 +16,11 @@
     </item>
     
     <item>
-      <title>前端开发</title>
-      <link>/tag/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/</link>
+      <title>前端技术</title>
+      <link>/tag/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/</link>
       <pubDate>Fri, 06 May 2022 18:19:59 +0800</pubDate>
       
-      <guid>/tag/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/</guid>
+      <guid>/tag/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/</guid>
       <description></description>
     </item>
     
@@ -66,15 +66,6 @@
       <pubDate>Thu, 24 Dec 2020 10:57:51 +0800</pubDate>
       
       <guid>/tag/python/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>前端技术</title>
-      <link>/tag/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/</link>
-      <pubDate>Fri, 11 Dec 2020 19:17:00 +0800</pubDate>
-      
-      <guid>/tag/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/</guid>
       <description></description>
     </item>
     
@@ -183,6 +174,15 @@
       <pubDate>Mon, 01 Jul 2019 11:58:28 +0800</pubDate>
       
       <guid>/tag/%E6%B5%8B%E8%AF%95%E6%9D%82%E8%B0%88/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>服务配置</title>
+      <link>/tag/%E6%9C%8D%E5%8A%A1%E9%85%8D%E7%BD%AE/</link>
+      <pubDate>Fri, 21 Jun 2019 15:30:40 +0800</pubDate>
+      
+      <guid>/tag/%E6%9C%8D%E5%8A%A1%E9%85%8D%E7%BD%AE/</guid>
       <description></description>
     </item>
     
