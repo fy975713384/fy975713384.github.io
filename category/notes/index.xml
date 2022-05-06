@@ -5,7 +5,7 @@
     <link>/category/notes/</link>
     <description>Recent content in Notes on Wing</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 09 Sep 2021 13:32:19 +0800</lastBuildDate><atom:link href="/category/notes/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 06 May 2022 18:19:59 +0800</lastBuildDate><atom:link href="/category/notes/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>🔝 我的测试观</title>
       <link>/2018/08/24/%E6%88%91%E7%9A%84%E6%B5%8B%E8%AF%95%E8%A7%82/</link>
@@ -22,6 +22,15 @@
       
       <guid>/2019/06/12/%E6%B5%85%E8%B0%88%E8%BD%AF%E4%BB%B6%E8%B4%A8%E9%87%8F/</guid>
       <description>一、软件质量是什么 GB T 25000.10-2016 标准（基于 ISO/IEC 25010:2011 标准）中将软件质量定义为： 在规定条件下使用时，软件满足用户明确和隐含要求的能力。满足程度越高，质量就越</description>
+    </item>
+    
+    <item>
+      <title>ElementUI 表格数据行内修改方式</title>
+      <link>/2022/05/06/elementui-%E8%A1%A8%E6%A0%BC%E6%95%B0%E6%8D%AE%E8%A1%8C%E5%86%85%E4%BF%AE%E6%94%B9%E6%96%B9%E5%BC%8F/</link>
+      <pubDate>Fri, 06 May 2022 18:19:59 +0800</pubDate>
+      
+      <guid>/2022/05/06/elementui-%E8%A1%A8%E6%A0%BC%E6%95%B0%E6%8D%AE%E8%A1%8C%E5%86%85%E4%BF%AE%E6%94%B9%E6%96%B9%E5%BC%8F/</guid>
+      <description>ElementUI 表格数据行内修改方式 单列修改 代码 &amp;lt;template&amp;gt; &amp;lt;div class=&amp;#34;app-container&amp;#34;&amp;gt; &amp;lt;el-table :data=&amp;#34;tableData&amp;#34; border style=&amp;#34;width: 60%&amp;#34;&amp;gt; &amp;lt;el-table-column v-for=&amp;#34;item of tableCol&amp;#34; :key=&amp;#34;item.key&amp;#34; :label=&amp;#34;item.label&amp;#34; :prop=&amp;#34;item.key&amp;#34; :width=&amp;#34;item.width&amp;#34; &amp;gt; &amp;lt;template #default=&amp;#34;{ row, $index }&amp;#34;&amp;gt; &amp;lt;div v-if=&amp;#34;item.key === &amp;#39;address&amp;#39;&amp;#34;&amp;gt; &amp;lt;div v-if=&amp;#34;addressEditIndex === $index&amp;#34;&amp;gt; &amp;lt;el-input ref=&amp;#34;addressInput&amp;#34; v-model=&amp;#34;row.address&amp;#34; placeholder=&amp;#34;请输入</description>
     </item>
     
     <item>
@@ -175,15 +184,6 @@
       
       <guid>/2019/06/21/%E9%85%8D%E7%BD%AE%E8%87%AA%E5%B7%B1%E7%9A%84-linux-%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/</guid>
       <description>近期趁着 6.18 促销新采购了一台阿里云的 Linux 服务器，把配置过程记录如下 采购云服务器 采购平台：阿里云 腾讯云 百度云 Linux 系统：Ubuntu 配置云服务器 登录 Linux</description>
-    </item>
-    
-    <item>
-      <title>浏览器工作过程</title>
-      <link>/2019/06/09/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%B7%A5%E4%BD%9C%E8%BF%87%E7%A8%8B/</link>
-      <pubDate>Sun, 09 Jun 2019 19:01:55 +0800</pubDate>
-      
-      <guid>/2019/06/09/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%B7%A5%E4%BD%9C%E8%BF%87%E7%A8%8B/</guid>
-      <description>相似问题： 打开一个网址会发生什么？ 浏览器是怎样工作的？ 简述一次完整的 HTTP 请求过程 First Of All：在浏览器地址栏输入 URL 并回车 DNS 域名解析 搜索浏览器自身</description>
     </item>
     
   </channel>
