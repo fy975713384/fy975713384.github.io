@@ -61,11 +61,11 @@
     </item>
     
     <item>
-      <title>Python并发编程</title>
-      <link>/2021/08/28/python%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/</link>
+      <title>Python 并发编程</title>
+      <link>/2021/08/28/python-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/</link>
       <pubDate>Sat, 28 Aug 2021 00:02:51 +0800</pubDate>
       
-      <guid>/2021/08/28/python%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/</guid>
+      <guid>/2021/08/28/python-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/</guid>
       <description>Python 并发编程 CPU 密集型 &amp;amp; IO 密集型 线程安全 守护线程 多线程的工作过程（仅限于 Python） Python 在使用多线程的时候，调用的是 c 语言的原生线程。 拿到公共资</description>
     </item>
     
