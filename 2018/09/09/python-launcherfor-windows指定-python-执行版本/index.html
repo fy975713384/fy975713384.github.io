@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+<head>
+  <meta name="google-site-verification" content="NqacV5tHWoxzRi2H7KcEVCWMuxSnch23EM-vzsEV3h8" />
+  <meta name="generator" content="Hugo 0.85.0" />
+  <meta charset="utf-8">
+  <title>Python Launcher（for Windows）指定 Python 执行版本 · Wing</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="一、什么是 Python Launcher 官网原文： New in version 3.3. The Python launcher for Windows is a utility which aids in locating and executing of different Python versions. It allows scripts (or the command-line) to indicate a preference for a specific Python version, and will locate and execute that version. Unlike the PATH variable, the launcher will correctly select the most appropriate version of" />
+
+
+<link rel="canonical" href="/2018/09/09/python-launcherfor-windows%E6%8C%87%E5%AE%9A-python-%E6%89%A7%E8%A1%8C%E7%89%88%E6%9C%AC/" />
+<link rel="icon" href="https://cdn.jsdelivr.net/gh/fy975713384/cloud-img@main/blog/wing_icon.png" />
+<link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/5.2.0/css/all.css" integrity="sha384-DtgO3znmI27ZsBJLf6ASdUIQnb+d8RKb/z/fYL/E0f2NY/8nvfDQmQ6NkXmuoepn" crossorigin="anonymous">
+<link rel="stylesheet" href="/css/den.css">
+
+<link rel="stylesheet" href="/css/custom.css">
+
+
+
+
+<meta property="og:title" content="Python Launcher（for Windows）指定 Python 执行版本" />
+<meta property="og:description" content="一、什么是 Python Launcher 官网原文： New in version 3.3. The Python launcher for Windows is a utility which aids in locating and executing of different Python versions. It allows scripts (or the command-line) to indicate a preference for a specific Python version, and will locate and execute that version. Unlike the PATH variable, the launcher will correctly select the most appropriate version of" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/2018/09/09/python-launcherfor-windows%E6%8C%87%E5%AE%9A-python-%E6%89%A7%E8%A1%8C%E7%89%88%E6%9C%AC/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2018-09-09T18:27:30+08:00" />
+<meta property="article:modified_time" content="2022-05-13T01:37:24+08:00" />
+
+<meta itemprop="name" content="Python Launcher（for Windows）指定 Python 执行版本">
+<meta itemprop="description" content="一、什么是 Python Launcher 官网原文： New in version 3.3. The Python launcher for Windows is a utility which aids in locating and executing of different Python versions. It allows scripts (or the command-line) to indicate a preference for a specific Python version, and will locate and execute that version. Unlike the PATH variable, the launcher will correctly select the most appropriate version of"><meta itemprop="datePublished" content="2018-09-09T18:27:30+08:00" />
+<meta itemprop="dateModified" content="2022-05-13T01:37:24+08:00" />
+<meta itemprop="wordCount" content="924">
+<meta itemprop="keywords" content="Python," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Python Launcher（for Windows）指定 Python 执行版本"/>
+<meta name="twitter:description" content="一、什么是 Python Launcher 官网原文： New in version 3.3. The Python launcher for Windows is a utility which aids in locating and executing of different Python versions. It allows scripts (or the command-line) to indicate a preference for a specific Python version, and will locate and execute that version. Unlike the PATH variable, the launcher will correctly select the most appropriate version of"/>
+</head>
+<body>
+  
+  <div class="header-container" style="background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/fy975713384/cloud-img@main/blog/background.jpg'); background-position: center; background-size: cover;">
+  <div class="container">
+  <nav class="header-nav navbar navbar-expand-md navbar-dark light-dark">
+    <div class="header-logo navbar-brand">
+      
+        <a class="float-left" href="/">
+      
+        
+        
+          Wing
+         
+      </a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="nav-menu collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        
+          <li class="nav-item">
+            
+              
+                <a class="nav-link" href="/category/notes/">笔记</a>
+              
+            
+          </li>
+        
+          <li class="nav-item">
+            
+              
+                <a class="nav-link" href="/category/travals/">游记</a>
+              
+            
+          </li>
+        
+        
+      </ul>
+    </div>
+  </nav>
+</div>
+
+<div class="container header-wrapper">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="header-content">
+        <h1 class="header-title">Python Launcher（for Windows）指定 Python 执行版本</h1>
+        <p class="header-date">作者：
+          潘峰 /
+        
+        2018-09-09
+          / 分类：
+          <a href="/category/notes/">Notes</a>
+        </p>
+        
+        <div class="header-underline"></div>
+        
+          <div class="clearfix"></div>
+          <p class="float-right header-tags">
+              <i class="fas fa-tags" aria-hidden="true"></i>
+              <a href="/tag/python/">Python</a>
+          </p>
+        
+        
+
+      </div>
+    </div>
+  </div>
+</div>
+
+  </div>
+  <main>
+<div class="container content">
+  <article>
+  <h2 id="一什么是-python-launcher">一、什么是 Python Launcher</h2>
+<p><strong><em>官网原文：</em></strong></p>
+<p><em>New in version 3.3.</em></p>
+<p><em>The Python launcher for Windows is a utility which aids in locating and executing of different Python versions. It allows scripts (or the command-line) to indicate a preference for a specific Python version, and will locate and execute that version.</em></p>
+<p><em>Unlike the PATH variable, the launcher will correctly select the most appropriate version of Python. It will prefer per-user installations over system-wide ones, and orders by language version rather than using the most recently installed version.</em></p>
+<p>&mdash;&ndash;来源于 python 官方文档</p>
+<p><strong>翻译：</strong></p>
+<p>3.3 版本新增功能</p>
+<p>适用于 Windows 的 Python Launcher 是一个实用组件，可帮助您定位和执行不同的 Python 版本。它允许脚本（或命令行）为特定的 Python 版本指示首选项，定位并执行该版本。</p>
+<p>与 PATH 变量不同，Python Launcher 将正确选择最合适的 Python 版本。它会优先考虑用户级别的安装，其次才是系统级别的安装，并按语言版本排序，而不是使用最近安装的版本。</p>
+<h2 id="二python-launcher-的位置">二、Python Launcher 的位置</h2>
+<p>在安装 Python 3.3 以上版本的 Python 时，我们可以看到下图中的一个选项，当我们勾选时，系统便会帮助我们自动安装 Python Launcher</p>
+<p><img src="https://cdn.jsdelivr.net/gh/fy975713384/cloud-img@main/blog/20201119122502.png" alt=""></p>
+<p>当点击 Customize installation 时，会显示如下界面：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/fy975713384/cloud-img@main/blog/20201119122709.png" alt=""></p>
+<p>图中标注的小字告诉我们，安装 Python Launcher 后可以通过全局命令 ‘py’ 来更方便地启动 Python。不勾选 launcher 项时，系统则不会安装 Python Launcher （但默认情况下该工具都是被勾选的）。</p>
+<p>安装好后，我们可以通过注册表和系统文件管理器中找到 py.exe 的位置:</p>
+<ul>
+<li>仅为当前用户安装时：</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/fy975713384/cloud-img@main/blog/20201119122927.png" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/fy975713384/cloud-img@main/blog/20201119122953.png" alt=""></p>
+<ul>
+<li>为所有用户安装时：</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/fy975713384/cloud-img@main/blog/20201119123033.png" alt="">
+<img src="https://cdn.jsdelivr.net/gh/fy975713384/cloud-img@main/blog/20201119123047.png" alt=""></p>
+<h2 id="三python-launcher-的环境变量">三、Python Launcher 的环境变量</h2>
+<p>为什么 Python Launcher 不需要手动配置环境变量呢？</p>
+<p>当为所有用户安装时，我们会发现 py.exe 被自动安装到 C:\Windows 下了，当我们检查系统默认设置的环境变量时，可以看到下图中的 windir 的值已经默认设置为 C:\Windows ，这第一点对于所有 Windows 系统都是相同的 ，系统安装的时候便会做这些工作。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/fy975713384/cloud-img@main/blog/20201119123132.png" alt=""></p>
+<p>当仅为当前用户安装时，我们会发现 py.exe 所在的路径会自动添加到系统的用户变量中：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/fy975713384/cloud-img@main/blog/20201119123150.png" alt=""></p>
+<p>因此，无论以哪种方式安装 Python Launcher 我们都不需要再手动配置环境变量了。</p>
+<h2 id="四python-launcher-的用法">四、Python Launcher 的用法</h2>
+<p>Python Launcher 的使用方法我们可以通过在命令行中输入 py -h 进行查看，如下图：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/fy975713384/cloud-img@main/blog/20201119123228.png" alt=""></p>
+<p>同样地，我们也可以通过查阅官方文档进行了解</p>
+<p><a href="https://docs.python.org/3/using/windows.html#launcher">https://docs.python.org/3/using/windows.html#launcher</a></p>
+<p><img src="https://cdn.jsdelivr.net/gh/fy975713384/cloud-img@main/blog/20201119123240.png" alt=""></p>
+<h2 id="五结语">五、结语</h2>
+<p>综上所述，py -version 启动 python 的方式其实应该是官方更为推崇的一种方式，无需手动设置环境变量，并且能指定启动 python 的版本，功能不要太强大！绝对是在多版本 Python 共存的环境下，启动不同版本 Python 的利器！</p>
+<p>当是需要注意的是，Python Launcher 是 Python3.3 以上版本中新增的组件，并且可以独立地安装和卸载，使用时一定要注意 Python Launcher 被正确地安装在系统中了，否则就会报 <em>&lsquo;py&rsquo; 不是内部或外部命令，也不是可运行的程序或批处理文件</em> 的错误，一定要注意哦！</p>
+
+  </article>
+
+  
+  
+    
+    
+    
+  
+  
+<link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/gitalk/1.7.0/gitalk.css" />
+<script src="https://cdn.bootcdn.net/ajax/libs/gitalk/1.7.0/gitalk.min.js"></script>
+<div id="gitalk-container"></div>
+<script>
+  const gitalk = new Gitalk({
+    id: 'PythonLauncher', 
+    owner: 'fy975713384',
+    repo: 'fy975713384.github.io', 
+    clientID: '35afb85e4c521d6dbeb8',
+    clientSecret: '463c9ec266980fd7358a11479beda5284ecf9f71',
+    admin: ['fy975713384'],
+    distractionFreeMode: false 
+  })
+  gitalk.render('gitalk-container')
+</script>
+
+
+
+
+
+
+
+</div>
+
+  </main><div class="footer gradient-2">
+  <div class="container footer-container ">
+    <div class="row">
+      <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3">
+        <div class="footer-title">网站地图</div>
+        <ul class="list-unstyled">
+            
+              
+                <li><a href="/tags/">标签</a></li>
+              
+              
+                <li><a href="/categories/">分类</a></li>
+              
+            
+            
+            
+            <li><a rel="alternate" type="application/rss&#43;xml" href="/index.xml"><i class="fas fa-rss-square"></i> RSS订阅</a></li>
+            
+            
+            
+        </ul>
+      </div>
+      <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3">
+        
+        <div class="footer-title">社群</div>
+        <ul class="list-unstyled">
+          
+          <li><a href="https://github.com/fy975713384" rel="noopener" target="_blank">GitHub</a></li>
+          
+          <li><a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&amp;email=NFVOQVgaUnRSW0xZVV1YGldbWQ" rel="noopener" target="_blank">联系我</a></li>
+          
+        </ul>
+        
+      </div>
+      <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3">
+        
+        <div class="footer-title">友链</div>
+        <ul class="list-unstyled">
+          
+          <li><a href="/" rel="noopener" target="_blank">关于我</a></li>
+          
+          <li><a href="https://juejin.cn/user/3315782800904263" rel="noopener" target="_blank">掘金主页</a></li>
+          
+        </ul>
+        
+      </div> 
+      <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+        <p class="pull-right text-right">
+          <small><em>Proudly powered by <a href="https://gohugo.io/" rel="noopener" target="_blank">Hugo</a></em></small><br/>
+          <small><em>Theme - <a href="https://github.com/shaform/hugo-theme-den" rel="noopener" target="_blank">Den</a></em></small><br/>
+          <small>
+            &copy; 
+            Pan Feng
+            
+              2017 -
+            2022
+          </small>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.3.1/jquery.slim.min.js"
+  integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+  integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js"
+  integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/mermaid/8.8.2/mermaid.min.js"></script>
+<script>
+  window.onload = function () {
+    mermaid.initialize({ theme: 'neutral' })
+    mermaid.init(undefined, '.language-mermaid')
+  }
+</script>
+</body>
+</html>

@@ -106,12 +106,12 @@
     </item>
     
     <item>
-      <title>Python Launcher（for Windows）</title>
-      <link>/2018/09/09/python-launcherfor-windows/</link>
+      <title>Python Launcher（for Windows）指定 Python 执行版本</title>
+      <link>/2018/09/09/python-launcherfor-windows%E6%8C%87%E5%AE%9A-python-%E6%89%A7%E8%A1%8C%E7%89%88%E6%9C%AC/</link>
       <pubDate>Sun, 09 Sep 2018 18:27:30 +0800</pubDate>
       
-      <guid>/2018/09/09/python-launcherfor-windows/</guid>
-      <description>[TOC] Python Launcher（for Windows） 1. 什么是 Python Launcher 原文： New in version 3.3. The Python launcher for Windows is a utility which aids in locating and executing of different Python versions. It allows scripts (or the command-line) to indicate a preference for a specific Python version, and will</description>
+      <guid>/2018/09/09/python-launcherfor-windows%E6%8C%87%E5%AE%9A-python-%E6%89%A7%E8%A1%8C%E7%89%88%E6%9C%AC/</guid>
+      <description>一、什么是 Python Launcher 官网原文： New in version 3.3. The Python launcher for Windows is a utility which aids in locating and executing of different Python versions. It allows scripts (or the command-line) to indicate a preference for a specific Python version, and will locate and execute that version. Unlike the PATH variable, the launcher will correctly select the most appropriate version of</description>
     </item>
     
   </channel>
