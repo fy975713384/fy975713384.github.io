@@ -57,7 +57,7 @@
       <pubDate>Sat, 28 Aug 2021 14:18:25 +0800</pubDate>
       
       <guid>/2021/08/28/mysql%E6%97%A5%E6%9C%9F%E6%97%B6%E9%97%B4%E6%93%8D%E4%BD%9C/</guid>
-      <description>Mysql 日期时间操作 时间戳 mysql&amp;gt;SELECTUNIX_TIMESTAMP(),FROM_UNIXTIME(UNIX_TIMESTAMP</description>
+      <description>时间戳 mysql&amp;gt;SELECTUNIX_TIMESTAMP(),FROM_UNIXTIME(UNIX_TIMESTAMP());UNI</description>
     </item>
     
     <item>
