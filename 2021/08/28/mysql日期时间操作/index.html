@@ -30,7 +30,7 @@
 <meta itemprop="name" content="Mysql日期时间操作">
 <meta itemprop="description" content="时间戳 mysql&gt;SELECTUNIX_TIMESTAMP(),FROM_UNIXTIME(UNIX_TIMESTAMP());UNI"><meta itemprop="datePublished" content="2021-08-28T14:18:25+08:00" />
 <meta itemprop="dateModified" content="2021-08-28T16:09:58+08:00" />
-<meta itemprop="wordCount" content="3747">
+<meta itemprop="wordCount" content="3670">
 <meta itemprop="keywords" content="数据库,Mysql," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Mysql日期时间操作"/>
 <meta name="twitter:description" content="时间戳 mysql&gt;SELECTUNIX_TIMESTAMP(),FROM_UNIXTIME(UNIX_TIMESTAMP());UNI"/>
@@ -117,11 +117,6 @@
 </span><span class="w"></span><span class="nf">UNIX_TIMESTAMP</span><span class="p">()</span><span class="o">|</span><span class="nf">FROM_UNIXTIME</span><span class="p">(</span><span class="nf">UNIX_TIMESTAMP</span><span class="p">())</span><span class="o">|</span><span class="w">
 </span><span class="w"></span><span class="o">----------------+-------------------------------+</span><span class="w">
 </span><span class="w"></span><span class="mi">1630134918</span><span class="w">      </span><span class="o">|</span><span class="mi">2021</span><span class="o">-</span><span class="mi">08</span><span class="o">-</span><span class="mi">28</span><span class="w"> </span><span class="mi">07</span><span class="p">:</span><span class="mi">15</span><span class="p">:</span><span class="mi">18</span><span class="p">.</span><span class="mi">0</span><span class="w">          </span><span class="o">|</span><span class="w">
-</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-mysql" data-lang="mysql"><span class="n">mysql</span><span class="o">&gt;</span><span class="w"> </span><span class="k">SELECT</span><span class="w"> </span><span class="nf">UNIX_TIMESTAMP</span><span class="p">();</span><span class="w">
-</span><span class="w">
-</span><span class="w"></span><span class="nf">UNIX_TIMESTAMP</span><span class="p">()</span><span class="o">|</span><span class="w">
-</span><span class="w"></span><span class="o">----------------+</span><span class="w">
-</span><span class="w"></span><span class="mi">1630134264</span><span class="w">      </span><span class="o">|</span><span class="w">
 </span></code></pre></div><h2 id="日期时间查询">日期时间查询</h2>
 <h3 id="当前日期时间查询">当前日期时间查询</h3>
 <div class="highlight"><pre class="chroma"><code class="language-mysql" data-lang="mysql"><span class="n">mysql</span><span class="o">&gt;</span><span class="w"> </span><span class="k">SELECT</span><span class="w"> </span><span class="k">CURRENT_TIMESTAMP</span><span class="p">,</span><span class="w"> </span><span class="nf">NOW</span><span class="p">(),</span><span class="w"> </span><span class="k">LOCALTIME</span><span class="p">,</span><span class="w"> </span><span class="k">LOCALTIMESTAMP</span><span class="p">,</span><span class="w"> </span><span class="nf">SYSDATE</span><span class="p">();</span><span class="w">

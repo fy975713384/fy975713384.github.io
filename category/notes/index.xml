@@ -21,7 +21,7 @@
       <pubDate>Wed, 12 Jun 2019 22:32:47 +0800</pubDate>
       
       <guid>/2019/06/12/%E6%B5%85%E8%B0%88%E8%BD%AF%E4%BB%B6%E8%B4%A8%E9%87%8F/</guid>
-      <description>一、软件质量是什么 GB T 25000.10-2016 标准（基于 ISO/IEC 25010:2011 标准）中将软件质量定义为： 在规定条件下使用时，软件满足用户明确和隐含要求的能力。满足程度越高，质量就越</description>
+      <description>一、软件质量是什么 GB/T 25000.10-2016 标准（基于 ISO/IEC 25010:2011 标准）中将软件质量定义为： 在规定条件下使用时，软件满足用户明确和隐含要求的能力。满足程度越高，质量就越好</description>
     </item>
     
     <item>
@@ -48,7 +48,7 @@
       <pubDate>Sat, 04 Sep 2021 01:15:12 +0800</pubDate>
       
       <guid>/2021/09/04/python-%E7%94%A8%E6%88%B7%E5%AF%86%E7%A0%81%E5%8A%A0%E5%AF%86%E5%AD%98%E5%82%A8/</guid>
-      <description>Python 用户密码加密存储 进行 Web 应用开发时，用户密码如何保存才足够安全是一个值得重视的问题，作为应用开发者，我们有责任保证用户的信息安全。对于金融行</description>
+      <description>进行 Web 应用开发时，用户密码如何保存才足够安全是一个值得重视的问题，作为应用开发者，我们有责任保证用户的信息安全。对于金融行业来说，更是如此。</description>
     </item>
     
     <item>
@@ -156,7 +156,7 @@
       <pubDate>Sun, 06 Oct 2019 16:14:18 +0800</pubDate>
       
       <guid>/2019/10/06/python-%E5%87%BD%E6%95%B0%E5%8F%82%E6%95%B0%E8%AF%A6%E8%A7%A3/</guid>
-      <description>Python 函数参数详解 前言 最近在跟同事讨论一个方法的调用时涉及到了 Python 函数的位置参数和关键字参数的相关知识，发现之前学习 Python 时对函数参数研究的并不透彻，</description>
+      <description>前言 最近在跟同事讨论一个方法的调用时涉及到了 Python 函数的位置参数和关键字参数的相关知识，发现之前学习 Python 时对函数参数研究的并不透彻，且很多地方已经</description>
     </item>
     
     <item>
