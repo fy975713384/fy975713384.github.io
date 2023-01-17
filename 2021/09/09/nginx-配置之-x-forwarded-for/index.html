@@ -2,7 +2,7 @@
 <html lang="en" itemscope itemtype="http://schema.org/WebPage">
 <head>
   <meta name="google-site-verification" content="NqacV5tHWoxzRi2H7KcEVCWMuxSnch23EM-vzsEV3h8" />
-  <meta name="generator" content="Hugo 0.85.0" />
+  <meta name="generator" content="Hugo 0.103.0" />
   <meta charset="utf-8">
   <title>Nginx 配置之 X-Forwarded-For · Wing</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -114,11 +114,11 @@
 <h2 id="x-forwarded-for">X-Forwarded-For</h2>
 <p><code>X-Forwarded-For</code>(XFF) 通常被当作 HTTP 请求头中的一个参数， 在客户端访问服务器的过程中如果需要经过 HTTP 代理或者负载均衡服务器（当前通常是 Nginx），可以被用来获取最初发起请求的客户端的 IP 地址，这个请求头现已成为事实上的标准（其标准版本是 Forwarded）。</p>
 <p>其语法为：</p>
-<div class="highlight"><pre class="chroma"><code class="language-http" data-lang="http"><span class="err">X-Forwarded-For: &lt;client&gt;, &lt;proxy1&gt;, &lt;proxy2&gt;
-</span></code></pre></div><h2 id="nginx-反向代理中的-x-forwarded-for">Nginx 反向代理中的 X-Forwarded-For</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-http" data-lang="http"><span class="line"><span class="cl"><span class="err">X-Forwarded-For: &lt;client&gt;, &lt;proxy1&gt;, &lt;proxy2&gt;
+</span></span></span></code></pre></div><h2 id="nginx-反向代理中的-x-forwarded-for">Nginx 反向代理中的 X-Forwarded-For</h2>
 <p><code>X-Forwarded-For</code> 在 nginx 配置中的格式一般为：</p>
-<div class="highlight"><pre class="chroma"><code class="language-nginx" data-lang="nginx"><span class="k">proxy_set_header</span> <span class="s">X-Forwarded-For</span> <span class="nv">$proxy_add_x_forwarded_for</span><span class="p">;</span>
-</code></pre></div><h3 id="proxy_add_x_forwarded_for">$proxy_add_x_forwarded_for</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-nginx" data-lang="nginx"><span class="line"><span class="cl"><span class="k">proxy_set_header</span> <span class="s">X-Forwarded-For</span> <span class="nv">$proxy_add_x_forwarded_for</span><span class="p">;</span>
+</span></span></code></pre></div><h3 id="proxy_add_x_forwarded_for">$proxy_add_x_forwarded_for</h3>
 <p><code>$proxy_add_x_forwarded_for</code> 是最常用的配置变量，该变量可以在多层代理的情况下，<strong>依次</strong>获取整条链路所经过的客户端 IP 及所有代理服务器 IP（含当前代理服务器 IP）。</p>
 <h3 id="http_x_forwarded_for">$http_x_forwarded_for</h3>
 <p><code>$http_x_forwarded_for</code> 变量仅会直接获取上一层代理服务器中设置的 <code>X-Forwarded-For</code> 的值，并不会添加当前代理服务器 IP</p>
@@ -217,7 +217,7 @@
             Pan Feng
             
               2017 -
-            2022
+            2023
           </small>
           
         </p>

@@ -2,7 +2,7 @@
 <html lang="en" itemscope itemtype="http://schema.org/WebPage">
 <head>
   <meta name="google-site-verification" content="NqacV5tHWoxzRi2H7KcEVCWMuxSnch23EM-vzsEV3h8" />
-  <meta name="generator" content="Hugo 0.85.0" />
+  <meta name="generator" content="Hugo 0.103.0" />
   <meta charset="utf-8">
   <title>配置自己的 Linux 云服务器 · Wing</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -96,8 +96,8 @@
           <div class="clearfix"></div>
           <p class="float-right header-tags">
               <i class="fas fa-tags" aria-hidden="true"></i>
-              <a href="/tag/%E6%8F%90%E6%95%88%E5%B7%A5%E5%85%B7/">提效工具</a>, 
-                <a href="/tag/%E6%9C%8D%E5%8A%A1%E9%85%8D%E7%BD%AE/">服务配置</a>
+              <a href="/tag/%E6%9C%8D%E5%8A%A1%E9%85%8D%E7%BD%AE/">服务配置</a>, 
+                <a href="/tag/%E6%8F%90%E6%95%88%E5%B7%A5%E5%85%B7/">提效工具</a>
           </p>
         
         
@@ -120,100 +120,97 @@ Linux 系统：Ubuntu</p>
 <h2 id="配置云服务器">配置云服务器</h2>
 <h3 id="登录-linux-远程服务器">登录 Linux 远程服务器</h3>
 <p>在本地终端使用 <code>ssh</code> 命令连接服务器并输入密码登录（以下使用 <!-- raw HTML omitted --> 代指服务器 ip）</p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ ssh root@&lt;hostname&gt;
-</code></pre></div><h3 id="配置个性化警告语">配置个性化警告语</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ ssh root@&lt;hostname&gt;
+</span></span></code></pre></div><h3 id="配置个性化警告语">配置个性化警告语</h3>
 <p>修改 Linux 系统远程登录欢迎语（<code>/etc/motd</code> 文件记录了用户登录后警告信息，并且不区分本地和远程）</p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># vim /etc/motd</span>
-</code></pre></div><p>复制以下内容，或使用其它更加<a href="https://blog.csdn.net/ydk888888/article/details/81563608">有趣的代码注释</a></p>
-<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">
-
-
-                  ___====-_  _-====___
-            _--^^^#####//      \\#####^^^--_
-        _-^##########// (    ) \\##########^-_
-        -############//  |\^^/|  \\############-
-      _/############//   (@::@)   \\############\_
-    /#############((     \\//     ))#############\
-    -###############\\    (oo)    //###############-
-  -#################\\  / VV \  //#################-
-  -###################\\/      \//###################-
-_#/|##########/\######(   /\   )######/\##########|\#_
-|/ |#/\#/\#/\/  \#/\##\  |  |  /##/\#/  \/\#/\#/\#| \|
-`  |/  V  V  `   V  \#\| |  | |/#/  V   &#39;  V  V  \|  &#39;
-    `   `  `      `   / | |  | | \   &#39;      &#39;  &#39;   &#39;
-                    (  | |  | |  )
-                    __\ | |  | | /__
-                  (vvv(VVV)(VVV)vvv)
-                      如未被授权
-                      请您即刻退出！
-
-
-
-</code></pre></div><p>修改 Ubuntu 系统的默认欢迎语
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># vim /etc/motd</span>
+</span></span></code></pre></div><p>复制以下内容，或使用其它更加<a href="https://blog.csdn.net/ydk888888/article/details/81563608">有趣的代码注释</a></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">                  ___====-_  _-====___
+</span></span><span class="line"><span class="cl">            _--^^^#####//      \\#####^^^--_
+</span></span><span class="line"><span class="cl">        _-^##########// (    ) \\##########^-_
+</span></span><span class="line"><span class="cl">        -############//  |\^^/|  \\############-
+</span></span><span class="line"><span class="cl">      _/############//   (@::@)   \\############\_
+</span></span><span class="line"><span class="cl">    /#############((     \\//     ))#############\
+</span></span><span class="line"><span class="cl">    -###############\\    (oo)    //###############-
+</span></span><span class="line"><span class="cl">  -#################\\  / VV \  //#################-
+</span></span><span class="line"><span class="cl">  -###################\\/      \//###################-
+</span></span><span class="line"><span class="cl">_#/|##########/\######(   /\   )######/\##########|\#_
+</span></span><span class="line"><span class="cl">|/ |#/\#/\#/\/  \#/\##\  |  |  /##/\#/  \/\#/\#/\#| \|
+</span></span><span class="line"><span class="cl">`  |/  V  V  `   V  \#\| |  | |/#/  V   &#39;  V  V  \|  &#39;
+</span></span><span class="line"><span class="cl">    `   `  `      `   / | |  | | \   &#39;      &#39;  &#39;   &#39;
+</span></span><span class="line"><span class="cl">                    (  | |  | |  )
+</span></span><span class="line"><span class="cl">                    __\ | |  | | /__
+</span></span><span class="line"><span class="cl">                  (vvv(VVV)(VVV)vvv)
+</span></span><span class="line"><span class="cl">                      如未被授权
+</span></span><span class="line"><span class="cl">                      请您即刻退出！
+</span></span></code></pre></div><p>修改 Ubuntu 系统的默认欢迎语
 注释掉 <code>10-help-text</code> 文件中的相关信息（如果有）</p>
-<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell"><span class="c1"># vim /etc/update-motd.d/10-help-text</span>
-</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1">#printf &#34;\n&#34;</span>
-<span class="c1">#printf &#34; * Documentation:  https://help.ubuntu.com\n&#34;</span>
-<span class="c1">#printf &#34; * Management:     https://landscape.canonical.com\n&#34;</span>
-<span class="c1">#printf &#34; * Support:        https://ubuntu.com/advantage\n&#34;</span>
-</code></pre></div><p>注释掉 <code>80-livepatch</code> 文件中的相关信息（如果有）</p>
-<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell"><span class="c1"># vim /etc/update-motd.d/80-livepatch</span>
-</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1">#case &#34;$livepatch_status&#34; in</span>
-<span class="c1">#    &#34;disabled (not available)&#34;)</span>
-<span class="c1">#        # do nothing</span>
-<span class="c1">#        ;;</span>
-<span class="c1">#    &#34;enabled&#34;)</span>
-<span class="c1">#        echo</span>
-<span class="c1">#        echo &#34; * Canonical Livepatch is enabled.&#34;</span>
-<span class="c1">#        print_status &#34;${check_state}&#34; &#34;${patch_state}&#34;</span>
-<span class="c1">#        ;;</span>
-<span class="c1">#    &#34;disabled&#34;)</span>
-<span class="c1">#        echo</span>
-<span class="c1">#        echo &#34; * Canonical Livepatch is available for installation.&#34;</span>
-<span class="c1">#        echo &#34;   - Reduce system reboots and improve kernel security. Activate at:&#34;</span>
-<span class="c1">#        echo &#34;     https://ubuntu.com/livepatch&#34;</span>
-<span class="c1">#        ;;</span>
-<span class="c1">#    *)</span>
-<span class="c1">#        echo</span>
-<span class="c1">#        echo &#34; * Canonical Livepatch is in an unknown state.&#34;</span>
-<span class="c1">#        echo &#34;   - Please see /var/log/syslog for more information.&#34;</span>
-<span class="c1">#        echo &#34;     Status: \&#34;$livepatch_status\&#34;&#34;</span>
-<span class="c1">#        ;;</span>
-<span class="c1">#esac</span>
-</code></pre></div><h3 id="配置用户">配置用户</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="c1"># vim /etc/update-motd.d/10-help-text</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1">#printf &#34;\n&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#printf &#34; * Documentation:  https://help.ubuntu.com\n&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#printf &#34; * Management:     https://landscape.canonical.com\n&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#printf &#34; * Support:        https://ubuntu.com/advantage\n&#34;</span>
+</span></span></code></pre></div><p>注释掉 <code>80-livepatch</code> 文件中的相关信息（如果有）</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="c1"># vim /etc/update-motd.d/80-livepatch</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1">#case &#34;$livepatch_status&#34; in</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#    &#34;disabled (not available)&#34;)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#        # do nothing</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#        ;;</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#    &#34;enabled&#34;)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#        echo</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#        echo &#34; * Canonical Livepatch is enabled.&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#        print_status &#34;${check_state}&#34; &#34;${patch_state}&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#        ;;</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#    &#34;disabled&#34;)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#        echo</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#        echo &#34; * Canonical Livepatch is available for installation.&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#        echo &#34;   - Reduce system reboots and improve kernel security. Activate at:&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#        echo &#34;     https://ubuntu.com/livepatch&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#        ;;</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#    *)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#        echo</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#        echo &#34; * Canonical Livepatch is in an unknown state.&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#        echo &#34;   - Please see /var/log/syslog for more information.&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#        echo &#34;     Status: \&#34;$livepatch_status\&#34;&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#        ;;</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#esac</span>
+</span></span></code></pre></div><h3 id="配置用户">配置用户</h3>
 <p>新建用户（以下使用 <!-- raw HTML omitted --> 代指实际用户名）</p>
-<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell"><span class="c1"># useradd -r -m -s /bin/bash &lt;username&gt;</span>
-</code></pre></div><p>设置用户密码</p>
-<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell"><span class="c1"># passwd &lt;username&gt;</span>
-</code></pre></div><p>检查用户是否创建成功</p>
-<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell"><span class="c1"># cat /etc/passwd</span>
-</code></pre></div><p>给用户配置免密码 <code>sudo</code> 权限</p>
-<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell"><span class="c1"># vim /etc/sudoers</span>
-</code></pre></div><p>将文件中下面的这一段</p>
-<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text"># Allow members of group sudo to execute any command
-%sudo   ALL=(ALL:ALL) ALL
-</code></pre></div><p>修改为：</p>
-<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text"># Allow members of group sudo to execute any command
-%sudo   ALL=(ALL) NOPASSWD:ALL
-</code></pre></div><p>然后将新建的 <!-- raw HTML omitted --> 用户加入 sudo 用户组</p>
-<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell"><span class="c1"># usermod -a -G sudo &lt;username&gt;</span>
-</code></pre></div><p>配置命令提示符 hostname 的显示</p>
-<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell"><span class="c1"># vim /etc/hostname</span>
-</code></pre></div><p>将内容改成自己想要的如 ali-ecs
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="c1"># useradd -r -m -s /bin/bash &lt;username&gt;</span>
+</span></span></code></pre></div><p>设置用户密码</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="c1"># passwd &lt;username&gt;</span>
+</span></span></code></pre></div><p>检查用户是否创建成功</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="c1"># cat /etc/passwd</span>
+</span></span></code></pre></div><p>给用户配置免密码 <code>sudo</code> 权限</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="c1"># vim /etc/sudoers</span>
+</span></span></code></pre></div><p>将文件中下面的这一段</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl"># Allow members of group sudo to execute any command
+</span></span><span class="line"><span class="cl">%sudo   ALL=(ALL:ALL) ALL
+</span></span></code></pre></div><p>修改为：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl"># Allow members of group sudo to execute any command
+</span></span><span class="line"><span class="cl">%sudo   ALL=(ALL) NOPASSWD:ALL
+</span></span></code></pre></div><p>然后将新建的 <!-- raw HTML omitted --> 用户加入 sudo 用户组</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="c1"># usermod -a -G sudo &lt;username&gt;</span>
+</span></span></code></pre></div><p>配置命令提示符 hostname 的显示</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="c1"># vim /etc/hostname</span>
+</span></span></code></pre></div><p>将内容改成自己想要的如 ali-ecs
 重启服务器</p>
-<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell"><span class="c1"># reboot</span>
-</code></pre></div><h3 id="配置-ssh-key-方式登录-linux-远程服务器">配置 SSH Key 方式登录 Linux 远程服务器</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="c1"># reboot</span>
+</span></span></code></pre></div><h3 id="配置-ssh-key-方式登录-linux-远程服务器">配置 SSH Key 方式登录 Linux 远程服务器</h3>
 <p>登录新建的 <!-- raw HTML omitted --> 用户</p>
-<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell"><span class="c1"># ssh &lt;username&gt;@&lt;hostname&gt;</span>
-</code></pre></div><p>输入之前设置的密码进行登录
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="c1"># ssh &lt;username&gt;@&lt;hostname&gt;</span>
+</span></span></code></pre></div><p>输入之前设置的密码进行登录
 创建 <code>.ssh</code> 文件夹和 <code>authorized_keys</code> 并授予权限</p>
-<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">$ mkdir ~/.ssh <span class="o">&amp;&amp;</span> touch ~/.ssh/authorized_keys
-$ chmod <span class="m">700</span> ~/.ssh <span class="o">&amp;&amp;</span> chmod <span class="m">600</span> ~/.ssh/authorized_keys
-</code></pre></div><p>然后将本地机器 <code>id_rsa.pub</code> 中的文本复制添加到服务器的 <code>authorized_keys</code> 文件里
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ mkdir ~/.ssh <span class="o">&amp;&amp;</span> touch ~/.ssh/authorized_keys
+</span></span><span class="line"><span class="cl">$ chmod <span class="m">700</span> ~/.ssh <span class="o">&amp;&amp;</span> chmod <span class="m">600</span> ~/.ssh/authorized_keys
+</span></span></code></pre></div><p>然后将本地机器 <code>id_rsa.pub</code> 中的文本复制添加到服务器的 <code>authorized_keys</code> 文件里
 下次登录则无需输入密码
 另外还可通过在本地设置 .ssh 目录下配置 config 文件，通过以下命令直接登录</p>
-<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">$ ssh &lt;username&gt;
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ ssh &lt;username&gt;
+</span></span></code></pre></div>
   </article>
 
   
@@ -302,7 +299,7 @@ $ chmod <span class="m">700</span> ~/.ssh <span class="o">&amp;&amp;</span> chmo
             Pan Feng
             
               2017 -
-            2022
+            2023
           </small>
           
         </p>

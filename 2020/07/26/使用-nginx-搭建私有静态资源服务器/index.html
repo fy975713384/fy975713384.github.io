@@ -2,7 +2,7 @@
 <html lang="en" itemscope itemtype="http://schema.org/WebPage">
 <head>
   <meta name="google-site-verification" content="NqacV5tHWoxzRi2H7KcEVCWMuxSnch23EM-vzsEV3h8" />
-  <meta name="generator" content="Hugo 0.85.0" />
+  <meta name="generator" content="Hugo 0.103.0" />
   <meta charset="utf-8">
   <title>使用 Nginx 搭建私有静态资源服务器 · Wing</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -118,25 +118,25 @@
 <h2 id="通过-docker-搭建-nginx-服务器">通过 docker 搭建 nginx 服务器</h2>
 <h3 id="安装-docker-以-homebrew-为例">安装 docker （以 HomeBrew 为例）：</h3>
 <p>安装命令：</p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ brew cask install docker
-</code></pre></div><h3 id="下载-nginx-镜像">下载 nginx 镜像</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ brew cask install docker
+</span></span></code></pre></div><h3 id="下载-nginx-镜像">下载 nginx 镜像</h3>
 <p><a href="https://hub.docker.com/_/nginx">dockerhub nginx 主页地址</a></p>
 <p>下载命令：</p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ docker image pull nginx
-</code></pre></div><h3 id="导出-nginx-默认配置">导出 nginx 默认配置</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ docker image pull nginx
+</span></span></code></pre></div><h3 id="导出-nginx-默认配置">导出 nginx 默认配置</h3>
 <p>为了保持环境和目录的干净，先在自己期望的位置下创建一个 docker 目录，<br>
 然后在 docker 目录下再创建一个 docker_nginx 目录。<br>
 之后我们通过命令行进入到 docker_nginx 目录下。</p>
 <p>参考官方文档，导出命令如下：</p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ docker run --name tmp-nginx-container -d nginx
-$ docker cp tmp-nginx-container:/etc/nginx/ conf/
-$ docker rm -f tmp-nginx-container
-</code></pre></div><p>此时我们可以看到当前所在 docker_nginx 目录下多出了一个 conf 文件夹，该文件夹下包含的就是 nginx 的相关配置文件。<br>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ docker run --name tmp-nginx-container -d nginx
+</span></span><span class="line"><span class="cl">$ docker cp tmp-nginx-container:/etc/nginx/ conf/
+</span></span><span class="line"><span class="cl">$ docker rm -f tmp-nginx-container
+</span></span></code></pre></div><p>此时我们可以看到当前所在 docker_nginx 目录下多出了一个 conf 文件夹，该文件夹下包含的就是 nginx 的相关配置文件。<br>
 其中 nginx.conf 是默认配置文件我们通常不需要修改，conf.d 目录下以 <code>.conf</code> 结尾的都是自定义配置文件，我们可以根据需要创建或修改。</p>
 <p>为了可以直接在浏览器中看到资源文件目录，我们需要在本地拷贝下来的 docker_nginx/conf/conf.d/default.conf 配置文件中进行一个小修改，<br>
 即在配置文件的 server {&hellip;} 中新增一个配置：</p>
-<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">autoindex    on;
-</code></pre></div><p>注意，为了安全在线上时不要开启上述配置。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">autoindex    on;
+</span></span></code></pre></div><p>注意，为了安全在线上时不要开启上述配置。</p>
 <h3 id="添加资源文件">添加资源文件</h3>
 <p>在 docker_nginx 下我们先创建一个 content 目录，然后将存放资源文件的文件夹放在 content 目录下，<br>
 练习时可在 content 目录下随意创建一些文件夹和文件。</p>
@@ -144,24 +144,24 @@ $ docker rm -f tmp-nginx-container
 <p>我们有两种方式创建此次要用到的 nginx 容器</p>
 <h4 id="方式一">方式一：</h4>
 <p>我们可以通过 <code>docker run</code> 命令直接创建并启动容器：</p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ docker run -d <span class="se">\
-</span><span class="se"></span>    -p 80:80 <span class="se">\
-</span><span class="se"></span>    -v <span class="nv">$PWD</span>/content:/usr/share/nginx/html:ro <span class="se">\
-</span><span class="se"></span>    -v <span class="nv">$PWD</span>/conf:/etc/nginx:ro <span class="se">\
-</span><span class="se"></span>    --name my-nginx <span class="se">\
-</span><span class="se"></span>    nginx
-</code></pre></div><p>命令执行成功后通过 <code>docker container ls</code> 命令可以看到创建成功的 my-nginx 容器。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ docker run -d <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>    -p 80:80 <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>    -v <span class="nv">$PWD</span>/content:/usr/share/nginx/html:ro <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>    -v <span class="nv">$PWD</span>/conf:/etc/nginx:ro <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>    --name my-nginx <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>    nginx
+</span></span></code></pre></div><p>命令执行成功后通过 <code>docker container ls</code> 命令可以看到创建成功的 my-nginx 容器。</p>
 <h4 id="方式二dockerfile-方式">方式二：（Dockerfile 方式）</h4>
 <p>我们先在 docker_nginx 目录下新建 Dockerfile 文件，再在 Dockerfile 文件中添加如下内容：</p>
-<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">FROM nginx
-COPY content/ /usr/share/nginx/html/
-COPY conf/ /etc/nginx/
-</code></pre></div><p>然后我们可以使用创建好的 Dockerfile 构建一个自定义 nginx 镜像，命令行切换到 docker_nginx 目录，构建命令如下：</p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ docker build -t nginx-custom .
-</code></pre></div><p>命令执行成功后通过 <code>docker image ls</code> 命令可以看到创建成功的 nginx-custom 镜像。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">FROM nginx
+</span></span><span class="line"><span class="cl">COPY content/ /usr/share/nginx/html/
+</span></span><span class="line"><span class="cl">COPY conf/ /etc/nginx/
+</span></span></code></pre></div><p>然后我们可以使用创建好的 Dockerfile 构建一个自定义 nginx 镜像，命令行切换到 docker_nginx 目录，构建命令如下：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ docker build -t nginx-custom .
+</span></span></code></pre></div><p>命令执行成功后通过 <code>docker image ls</code> 命令可以看到创建成功的 nginx-custom 镜像。</p>
 <p>最后我们可以通过更简洁的 <code>docker run</code> 命令创建并启动容器：</p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ docker run -d -p 80:80 --name my-nginx nginx-custom
-</code></pre></div><h3 id="通过访问-nginx-服务器查看资源">通过访问 nginx 服务器查看资源</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ docker run -d -p 80:80 --name my-nginx nginx-custom
+</span></span></code></pre></div><h3 id="通过访问-nginx-服务器查看资源">通过访问 nginx 服务器查看资源</h3>
 <p>现在，通过在浏览器地址栏输入 http://localhost/ 我们可以直接看到资源文件目录:
 <img src="https://cdn.jsdelivr.net/gh/fy975713384/cloud-img@main/blog/20201119121348.png" alt=""></p>
 <h3 id="添加-https-支持">添加 HTTPS 支持</h3>
@@ -255,7 +255,7 @@ COPY conf/ /etc/nginx/
             Pan Feng
             
               2017 -
-            2022
+            2023
           </small>
           
         </p>

@@ -2,7 +2,7 @@
 <html lang="en" itemscope itemtype="http://schema.org/WebPage">
 <head>
   <meta name="google-site-verification" content="NqacV5tHWoxzRi2H7KcEVCWMuxSnch23EM-vzsEV3h8" />
-  <meta name="generator" content="Hugo 0.85.0" />
+  <meta name="generator" content="Hugo 0.103.0" />
   <meta charset="utf-8">
   <title>Python 魔法方法之自定义实例属性 · Wing</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -123,82 +123,82 @@
 <li>当定制类继承 <code>Object</code> 时，同时也会继承该魔法方法，但它没有执行任何操作。</li>
 </ul>
 <p>示例代码：</p>
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">class</span> <span class="nc">Karen</span><span class="p">:</span>
-    <span class="n">age</span> <span class="o">=</span> <span class="s1">&#39;30&#39;</span>
-
-    <span class="k">def</span> <span class="fm">__getattribute__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;__getattribute__&#39;</span><span class="p">)</span>
-        <span class="k">return</span> <span class="kc">None</span>
-
-    <span class="k">def</span> <span class="nf">holdon</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;I am protector&#39;</span><span class="p">)</span>
-
-
-<span class="n">p</span> <span class="o">=</span> <span class="n">Karen</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">age</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">sex</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">holdon</span><span class="p">)</span>
-</code></pre></div><p>执行结果：</p>
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="fm">__getattribute__</span>
-<span class="kc">None</span>
-<span class="fm">__getattribute__</span>
-<span class="kc">None</span>
-<span class="fm">__getattribute__</span>
-<span class="kc">None</span>
-</code></pre></div><p>可以看出，无论是访问 <code>Karen</code> 已有的属性 <code>age</code> 和方法 <code>holdon</code>，还是没有的属性 <code>sex</code>，都会执行 <code>__getattribute__</code> 方法，并返回该方法的返回值。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Karen</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">age</span> <span class="o">=</span> <span class="s1">&#39;30&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="fm">__getattribute__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;__getattribute__&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="kc">None</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">holdon</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;I am protector&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">p</span> <span class="o">=</span> <span class="n">Karen</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">age</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">sex</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">holdon</span><span class="p">)</span>
+</span></span></code></pre></div><p>执行结果：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="fm">__getattribute__</span>
+</span></span><span class="line"><span class="cl"><span class="kc">None</span>
+</span></span><span class="line"><span class="cl"><span class="fm">__getattribute__</span>
+</span></span><span class="line"><span class="cl"><span class="kc">None</span>
+</span></span><span class="line"><span class="cl"><span class="fm">__getattribute__</span>
+</span></span><span class="line"><span class="cl"><span class="kc">None</span>
+</span></span></code></pre></div><p>可以看出，无论是访问 <code>Karen</code> 已有的属性 <code>age</code> 和方法 <code>holdon</code>，还是没有的属性 <code>sex</code>，都会执行 <code>__getattribute__</code> 方法，并返回该方法的返回值。</p>
 <p>当需要其返回属性原有的值的时候，可以返回基类 (Object) 的 <code>__getattribute__</code> 方法并传递相同的 <code>name</code> 参数：</p>
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="o">...</span>
-    <span class="k">def</span> <span class="fm">__getattribute__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;__getattribute__&#39;</span><span class="p">)</span>
-        <span class="k">return</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__getattribute__</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
-<span class="o">...</span>
-
-
-<span class="n">p</span> <span class="o">=</span> <span class="n">Karen</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">age</span><span class="p">)</span>
-<span class="n">p</span><span class="o">.</span><span class="n">holdon</span><span class="p">()</span>
-</code></pre></div><p>执行结果：</p>
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="fm">__getattribute__</span>
-<span class="mi">30</span>
-<span class="fm">__getattribute__</span>
-<span class="n">I</span> <span class="n">am</span> <span class="n">protector</span>
-</code></pre></div><p>另外要注意避免自定义该方法时可能产生的无限递归：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">...</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="fm">__getattribute__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;__getattribute__&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__getattribute__</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="o">...</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">p</span> <span class="o">=</span> <span class="n">Karen</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">age</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">p</span><span class="o">.</span><span class="n">holdon</span><span class="p">()</span>
+</span></span></code></pre></div><p>执行结果：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="fm">__getattribute__</span>
+</span></span><span class="line"><span class="cl"><span class="mi">30</span>
+</span></span><span class="line"><span class="cl"><span class="fm">__getattribute__</span>
+</span></span><span class="line"><span class="cl"><span class="n">I</span> <span class="n">am</span> <span class="n">protector</span>
+</span></span></code></pre></div><p>另外要注意避免自定义该方法时可能产生的无限递归：</p>
 <ul>
 <li>
 <p>示例一</p>
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="o">...</span>
-    <span class="k">def</span> <span class="fm">__getattribute__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;__getattribute__&#39;</span><span class="p">)</span>
-        <span class="k">if</span> <span class="n">name</span> <span class="o">==</span> <span class="s2">&#34;sex&#34;</span><span class="p">:</span>
-            <span class="k">return</span> <span class="s1">&#39;w&#39;</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">holdon</span><span class="p">()</span>
-<span class="o">...</span>
-
-<span class="n">p</span> <span class="o">=</span> <span class="n">Karen</span><span class="p">()</span>
-<span class="n">p</span><span class="o">.</span><span class="n">protector</span>
-</code></pre></div><p>执行结果：</p>
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="ne">RecursionError</span><span class="p">:</span> <span class="n">maximum</span> <span class="n">recursion</span> <span class="n">depth</span> <span class="n">exceeded</span> <span class="k">while</span> <span class="n">calling</span> <span class="n">a</span> <span class="n">Python</span> <span class="nb">object</span>
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">...</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="fm">__getattribute__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;__getattribute__&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">name</span> <span class="o">==</span> <span class="s2">&#34;sex&#34;</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="s1">&#39;w&#39;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">holdon</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="o">...</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">p</span> <span class="o">=</span> <span class="n">Karen</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">p</span><span class="o">.</span><span class="n">protector</span>
+</span></span></code></pre></div><p>执行结果：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="ne">RecursionError</span><span class="p">:</span> <span class="n">maximum</span> <span class="n">recursion</span> <span class="n">depth</span> <span class="n">exceeded</span> <span class="k">while</span> <span class="n">calling</span> <span class="n">a</span> <span class="n">Python</span> <span class="nb">object</span>
+</span></span></code></pre></div></li>
 <li>
 <p>示例二</p>
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="o">...</span>
-    <span class="k">def</span> <span class="fm">__getattribute__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;__getattribute__&#39;</span><span class="p">)</span>
-        <span class="k">if</span> <span class="n">name</span> <span class="o">==</span> <span class="s2">&#34;holdon&#34;</span><span class="p">:</span>
-            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">holdon</span><span class="p">()</span>
-        <span class="k">return</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__getattribute__</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
-<span class="o">...</span>
-
-<span class="n">p</span> <span class="o">=</span> <span class="n">Karen</span><span class="p">()</span>
-<span class="n">p</span><span class="o">.</span><span class="n">holdon</span>
-</code></pre></div><p>执行结果：</p>
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="fm">__getattribute__</span>
-<span class="mi">30</span>
-<span class="fm">__getattribute__</span>
-<span class="o">...</span>
-<span class="ne">RecursionError</span><span class="p">:</span> <span class="n">maximum</span> <span class="n">recursion</span> <span class="n">depth</span> <span class="n">exceeded</span> <span class="k">while</span> <span class="n">calling</span> <span class="n">a</span> <span class="n">Python</span> <span class="nb">object</span>
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">...</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="fm">__getattribute__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;__getattribute__&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">name</span> <span class="o">==</span> <span class="s2">&#34;holdon&#34;</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">holdon</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__getattribute__</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="o">...</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">p</span> <span class="o">=</span> <span class="n">Karen</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">p</span><span class="o">.</span><span class="n">holdon</span>
+</span></span></code></pre></div><p>执行结果：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="fm">__getattribute__</span>
+</span></span><span class="line"><span class="cl"><span class="mi">30</span>
+</span></span><span class="line"><span class="cl"><span class="fm">__getattribute__</span>
+</span></span><span class="line"><span class="cl"><span class="o">...</span>
+</span></span><span class="line"><span class="cl"><span class="ne">RecursionError</span><span class="p">:</span> <span class="n">maximum</span> <span class="n">recursion</span> <span class="n">depth</span> <span class="n">exceeded</span> <span class="k">while</span> <span class="n">calling</span> <span class="n">a</span> <span class="n">Python</span> <span class="nb">object</span>
+</span></span></code></pre></div></li>
 </ul>
 <h2 id="__getattr__">__getattr__</h2>
 <p><code>object.__getattr__(self, name)</code> 方法同样用于自定义实例属性的访问，使用时需注意：</p>
@@ -220,54 +220,54 @@
 <li>如果需要给实例属性赋值，则还需要调用基类的同名方法。</li>
 </ul>
 <p>示例代码：</p>
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">class</span> <span class="nc">Karen</span><span class="p">:</span>
-    <span class="n">age</span> <span class="o">=</span> <span class="mi">30</span>
-    <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;Karen&#39;</span>
-
-    <span class="k">def</span> <span class="fm">__setattr__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;__setattr__&#39;</span><span class="p">)</span>
-        <span class="k">if</span> <span class="n">key</span> <span class="o">==</span> <span class="s1">&#39;age&#39;</span><span class="p">:</span>
-            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;age cannot be modified&#39;</span><span class="p">)</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;assign value via Object.__setattr__(self, key, value)&#39;</span><span class="p">)</span>
-            <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__setattr__</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
-
-
-<span class="n">p</span> <span class="o">=</span> <span class="n">Karen</span><span class="p">()</span>
-<span class="n">p</span><span class="o">.</span><span class="n">age</span> <span class="o">=</span> <span class="s1">&#39;Any&#39;</span>
-<span class="n">p</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;Karen1&#39;</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">age</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
-</code></pre></div><p>执行结果：</p>
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="fm">__setattr__</span>
-<span class="n">age</span> <span class="n">cannot</span> <span class="n">be</span> <span class="n">modified</span>
-<span class="fm">__setattr__</span>
-<span class="n">assign</span> <span class="n">value</span> <span class="n">via</span> <span class="n">Object</span><span class="o">.</span><span class="fm">__setattr__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
-<span class="mi">30</span>
-<span class="n">Karen1</span>
-</code></pre></div><h2 id="__delattr__">__delattr__</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Karen</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">age</span> <span class="o">=</span> <span class="mi">30</span>
+</span></span><span class="line"><span class="cl">    <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;Karen&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="fm">__setattr__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;__setattr__&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">key</span> <span class="o">==</span> <span class="s1">&#39;age&#39;</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;age cannot be modified&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;assign value via Object.__setattr__(self, key, value)&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__setattr__</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">p</span> <span class="o">=</span> <span class="n">Karen</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">p</span><span class="o">.</span><span class="n">age</span> <span class="o">=</span> <span class="s1">&#39;Any&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="n">p</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;Karen1&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">age</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+</span></span></code></pre></div><p>执行结果：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="fm">__setattr__</span>
+</span></span><span class="line"><span class="cl"><span class="n">age</span> <span class="n">cannot</span> <span class="n">be</span> <span class="n">modified</span>
+</span></span><span class="line"><span class="cl"><span class="fm">__setattr__</span>
+</span></span><span class="line"><span class="cl"><span class="n">assign</span> <span class="n">value</span> <span class="n">via</span> <span class="n">Object</span><span class="o">.</span><span class="fm">__setattr__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="mi">30</span>
+</span></span><span class="line"><span class="cl"><span class="n">Karen1</span>
+</span></span></code></pre></div><h2 id="__delattr__">__delattr__</h2>
 <p><code>object.__delattr__(self, name)</code> 方法用于自定义实例属性的删除，使用时需注意：</p>
 <ul>
 <li>该魔法方法会在 <code>del obj.name</code> 或 <code>delattr(obj, name)</code> 时被调用。</li>
 <li>该方法仅当上述动作有意义时才应被实现。</li>
 </ul>
 <p>示例代码：</p>
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">class</span> <span class="nc">Karen</span><span class="p">:</span>
-    <span class="n">Katherine</span> <span class="o">=</span> <span class="kc">True</span>
-    <span class="n">Holdon</span> <span class="o">=</span> <span class="kc">True</span>
-    <span class="n">Karen</span> <span class="o">=</span> <span class="kc">True</span>
-
-    <span class="k">def</span> <span class="fm">__delattr__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;__delattr__&#39;</span><span class="p">)</span>
-
-
-<span class="n">p</span> <span class="o">=</span> <span class="n">Karen</span><span class="p">()</span>
-<span class="k">del</span> <span class="n">p</span><span class="o">.</span><span class="n">Katherine</span>
-<span class="nb">delattr</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="s1">&#39;Katherine&#39;</span><span class="p">)</span>
-</code></pre></div><p>执行结果：</p>
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="fm">__delattr__</span>
-<span class="fm">__delattr__</span>
-</code></pre></div><h2 id="__dir__">__dir__</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Karen</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Katherine</span> <span class="o">=</span> <span class="kc">True</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Holdon</span> <span class="o">=</span> <span class="kc">True</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Karen</span> <span class="o">=</span> <span class="kc">True</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="fm">__delattr__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;__delattr__&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">p</span> <span class="o">=</span> <span class="n">Karen</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="k">del</span> <span class="n">p</span><span class="o">.</span><span class="n">Katherine</span>
+</span></span><span class="line"><span class="cl"><span class="nb">delattr</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="s1">&#39;Katherine&#39;</span><span class="p">)</span>
+</span></span></code></pre></div><p>执行结果：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="fm">__delattr__</span>
+</span></span><span class="line"><span class="cl"><span class="fm">__delattr__</span>
+</span></span></code></pre></div><h2 id="__dir__">__dir__</h2>
 <p><code>object.__dir__(self)</code> 在对实例调用 <code>dir()</code> 时被调用。该魔法方法必须返回一个 <code>sequence</code>。<code>dir()</code> 会将该 <code>sequence</code> 转换成列表并进行排序。</p>
 <blockquote>
 <p>参考来源：<br>
@@ -362,7 +362,7 @@
             Pan Feng
             
               2017 -
-            2022
+            2023
           </small>
           
         </p>

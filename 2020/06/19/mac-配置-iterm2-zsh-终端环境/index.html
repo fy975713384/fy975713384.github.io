@@ -2,7 +2,7 @@
 <html lang="en" itemscope itemtype="http://schema.org/WebPage">
 <head>
   <meta name="google-site-verification" content="NqacV5tHWoxzRi2H7KcEVCWMuxSnch23EM-vzsEV3h8" />
-  <meta name="generator" content="Hugo 0.85.0" />
+  <meta name="generator" content="Hugo 0.103.0" />
   <meta charset="utf-8">
   <title>Mac 配置 iTerm2 &amp; zsh 终端环境 · Wing</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -30,7 +30,7 @@
 <meta itemprop="name" content="Mac 配置 iTerm2 &amp; zsh 终端环境">
 <meta itemprop="description" content="最近很悲催，工作用的 2019 款 13“ MacBookPro 主板坏了（据网管说已经坏了好几个了），而且一时大意没有用 Time Machine 做备份（非工作用的倒是做了 🤪🤪🤪），所以趁机水一"><meta itemprop="datePublished" content="2020-06-19T23:01:23+08:00" />
 <meta itemprop="dateModified" content="2021-04-15T10:04:52+08:00" />
-<meta itemprop="wordCount" content="1402">
+<meta itemprop="wordCount" content="1336">
 <meta itemprop="keywords" content="提效工具,iterm2,zsh," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Mac 配置 iTerm2 &amp; zsh 终端环境"/>
 <meta name="twitter:description" content="最近很悲催，工作用的 2019 款 13“ MacBookPro 主板坏了（据网管说已经坏了好几个了），而且一时大意没有用 Time Machine 做备份（非工作用的倒是做了 🤪🤪🤪），所以趁机水一"/>
@@ -128,8 +128,8 @@
 <h2 id="first-使用-mac-自带终端安装-homebrew">First. 使用 Mac 自带终端安装 Homebrew</h2>
 <p><a href="https://brew.sh/">Homebrew 官网</a> 【<em>The Missing Package Manager for macOS (or Linux)</em>】</p>
 <p>安装命令（老规矩 <code>$</code> 是命令行提示符，执行时不需要输入）：</p>
-<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">$ /bin/bash -c <span class="s2">&#34;</span><span class="k">$(</span>curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh<span class="k">)</span><span class="s2">&#34;</span>
-</code></pre></div><blockquote>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ /bin/bash -c <span class="s2">&#34;</span><span class="k">$(</span>curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh<span class="k">)</span><span class="s2">&#34;</span>
+</span></span></code></pre></div><blockquote>
 <p>githubusercontent.com 域名我曾一度即使有梯子也因为没有配置终端代理导致命令执行不成功，索性直接通过浏览器打开网址将其作为文件下载下来然后通过执行 <code>/bin/bash -c 文件名</code> 来完成了安装<br>
 直接下载下来的 install.sh 文件可能没有执行权限，需要执行 <code>chmod +x 文件名</code> 命令增加执行权限</p>
 </blockquote>
@@ -138,8 +138,8 @@
 <ol>
 <li>
 <p>安装</p>
-<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">$ brew install iterm2 --cask
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ brew install iterm2 --cask
+</span></span></code></pre></div></li>
 <li>
 <p>配置 iTerm2 基础设置</p>
 <p>设置 iTerm2 为默认终端<br>
@@ -176,27 +176,27 @@
 </blockquote>
 <p><a href="https://ohmyz.sh/">Oh My Zsh</a> 【<em>Your terminal never felt this good before</em>】</p>
 <p>安装命令：</p>
-<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">$ sh -c <span class="s2">&#34;</span><span class="k">$(</span>curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh<span class="k">)</span><span class="s2">&#34;</span>
-</code></pre></div><h2 id="fifth-个性化配置-zsh-让你的终端更加美观">Fifth. 个性化配置 zsh 让你的终端更加美观</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ sh -c <span class="s2">&#34;</span><span class="k">$(</span>curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh<span class="k">)</span><span class="s2">&#34;</span>
+</span></span></code></pre></div><h2 id="fifth-个性化配置-zsh-让你的终端更加美观">Fifth. 个性化配置 zsh 让你的终端更加美观</h2>
 <p>使用 iTerm2 打开 zsh 的配置文件 .zsh：</p>
-<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">$ vim ~/.zsh
-</code></pre></div><p>然后找到 <code>ZSH_THEME</code> 这个配置项然后将其修改为我最喜欢的一个主题 <code>ZSH_THEME=&quot;ys&quot;</code>，也可自行知乎安装并设置为其它自己喜欢的主题（仅需要把 <code>ys</code> 换成喜欢的那个主题名即可，无需任何下载安装）。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ vim ~/.zsh
+</span></span></code></pre></div><p>然后找到 <code>ZSH_THEME</code> 这个配置项然后将其修改为我最喜欢的一个主题 <code>ZSH_THEME=&quot;ys&quot;</code>，也可自行知乎安装并设置为其它自己喜欢的主题（仅需要把 <code>ys</code> 换成喜欢的那个主题名即可，无需任何下载安装）。</p>
 <h2 id="sixth-使用-homebrew-安装-zsh-插件">Sixth. 使用 Homebrew 安装 zsh 插件</h2>
 <p>推荐安装两个插件：<code>zsh-autosuggestions</code> 和 <code>zsh-syntax-highlighting</code></p>
-<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">$ brew install zsh-autosuggestions zsh-syntax-highlighting
-</code></pre></div><p>安装完成后在 .zshrc 中添加以下两行</p>
-<div class="highlight"><pre class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">source</span> <span class="sr">/usr/</span><span class="nx">local</span><span class="sr">/share/</span><span class="nx">zsh</span><span class="p">-</span><span class="nx">autosuggestions</span>/<span class="nx">zsh</span><span class="p">-</span><span class="nx">autosuggestions</span>.<span class="nx">zsh</span><span class="err">
-</span><span class="err"></span><span class="nx">source</span> <span class="sr">/usr/</span><span class="nx">local</span><span class="sr">/share/</span><span class="nx">zsh</span><span class="p">-</span><span class="nx">syntax</span><span class="p">-</span><span class="nx">highlighting</span>/<span class="nx">zsh</span><span class="p">-</span><span class="nx">syntax</span><span class="p">-</span><span class="nx">highlighting</span>.<span class="nx">zsh</span><span class="err">
-</span></code></pre></div><p>修改完成后执行</p>
-<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">$ <span class="nb">source</span> ~/.zshrc
-</code></pre></div><p>同时配置 vim 语法高亮</p>
-<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">$ vim ~/.vimrc  <span class="c1"># 没有该文件的话会同时创建</span>
-</code></pre></div><p>然后添加一行</p>
-<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">syntax on
-</code></pre></div><p>保存便完成了 vim 语法高亮显示</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ brew install zsh-autosuggestions zsh-syntax-highlighting
+</span></span></code></pre></div><p>安装完成后在 .zshrc 中添加以下两行</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="nx">source</span> <span class="sr">/usr/</span><span class="nx">local</span><span class="sr">/share/</span><span class="nx">zsh</span><span class="p">-</span><span class="nx">autosuggestions</span>/<span class="nx">zsh</span><span class="p">-</span><span class="nx">autosuggestions</span>.<span class="nx">zsh</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">source</span> <span class="sr">/usr/</span><span class="nx">local</span><span class="sr">/share/</span><span class="nx">zsh</span><span class="p">-</span><span class="nx">syntax</span><span class="p">-</span><span class="nx">highlighting</span>/<span class="nx">zsh</span><span class="p">-</span><span class="nx">syntax</span><span class="p">-</span><span class="nx">highlighting</span>.<span class="nx">zsh</span><span class="err">
+</span></span></span></code></pre></div><p>修改完成后执行</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ <span class="nb">source</span> ~/.zshrc
+</span></span></code></pre></div><p>同时配置 vim 语法高亮</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ vim ~/.vimrc  <span class="c1"># 没有该文件的话会同时创建</span>
+</span></span></code></pre></div><p>然后添加一行</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">syntax on
+</span></span></code></pre></div><p>保存便完成了 vim 语法高亮显示</p>
 <p>对其它插件感兴趣的话可以用 Homebrew 搜索一下</p>
-<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">$ brew search zsh-
-</code></pre></div><h2 id="additional-配置终端网络代理加速你的-homebrew">Additional. 配置终端网络代理加速你的 Homebrew</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ brew search zsh-
+</span></span></code></pre></div><h2 id="additional-配置终端网络代理加速你的-homebrew">Additional. 配置终端网络代理加速你的 Homebrew</h2>
 <blockquote>
 <p>由于某些原因 Homebrew 在国内下载速度十分慢，试过很多方法都不太理想（如配置各种国内源），只有配置终端网络代理体验极佳（仅仅需要有梯子）</p>
 </blockquote>
@@ -206,13 +206,13 @@
 </li>
 <li>
 <p>使用 iTerm2 打开 zsh 的配置文件 .zsh</p>
-<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">$ vim ~/.zsh
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ vim ~/.zsh
+</span></span></code></pre></div></li>
 <li>
 <p>在文件最底部添加如下两行并保存</p>
-<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell"><span class="nb">alias</span> <span class="nv">proxy</span><span class="o">=</span><span class="s2">&#34;export ALL_PROXY=&#39;http://127.0.0.1:xxxx&#39;&#34;</span>
-<span class="nb">alias</span> <span class="nv">proxyreset</span><span class="o">=</span><span class="s2">&#34;unset ALL_PROXY&#34;</span>
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="nb">alias</span> <span class="nv">proxy</span><span class="o">=</span><span class="s2">&#34;export ALL_PROXY=&#39;http://127.0.0.1:xxxx&#39;&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">alias</span> <span class="nv">proxyreset</span><span class="o">=</span><span class="s2">&#34;unset ALL_PROXY&#34;</span>
+</span></span></code></pre></div></li>
 <li>
 <p>在 iTerm2 中执行 <code>proxy</code> 命令启动代理，执行 <code>proxyreset</code> 则可关闭代理</p>
 </li>
@@ -321,7 +321,7 @@
             Pan Feng
             
               2017 -
-            2022
+            2023
           </small>
           
         </p>

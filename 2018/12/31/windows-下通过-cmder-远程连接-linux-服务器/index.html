@@ -2,7 +2,7 @@
 <html lang="en" itemscope itemtype="http://schema.org/WebPage">
 <head>
   <meta name="google-site-verification" content="NqacV5tHWoxzRi2H7KcEVCWMuxSnch23EM-vzsEV3h8" />
-  <meta name="generator" content="Hugo 0.85.0" />
+  <meta name="generator" content="Hugo 0.103.0" />
   <meta charset="utf-8">
   <title>Windows 下通过 cmder 远程连接 Linux 服务器 · Wing</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -30,7 +30,7 @@
 <meta itemprop="name" content="Windows 下通过 cmder 远程连接 Linux 服务器">
 <meta itemprop="description" content="阅读引导 需要先在 Windows 系统中安装 cmder 文中用 &ldquo;&rdquo; 表示的字符均需替换为自己机器中真实的名称（注意去掉 &lt;&gt;） 以 &ldquo;$ &quot; 开头的命令代表需要在命令行工"><meta itemprop="datePublished" content="2018-12-31T01:16:23+08:00" />
 <meta itemprop="dateModified" content="2021-01-15T12:00:38+08:00" />
-<meta itemprop="wordCount" content="1192">
+<meta itemprop="wordCount" content="1193">
 <meta itemprop="keywords" content="提效工具,cmder," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Windows 下通过 cmder 远程连接 Linux 服务器"/>
 <meta name="twitter:description" content="阅读引导 需要先在 Windows 系统中安装 cmder 文中用 &ldquo;&rdquo; 表示的字符均需替换为自己机器中真实的名称（注意去掉 &lt;&gt;） 以 &ldquo;$ &quot; 开头的命令代表需要在命令行工"/>
@@ -131,8 +131,8 @@
 <li>打开 cmder</li>
 <li>输入以下命令按回车确认</li>
 </ol>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ ssh &lt;username&gt;@&lt;server-ip-address&gt;
-</code></pre></div><ol start="3">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ ssh &lt;username&gt;@&lt;server-ip-address&gt;
+</span></span></code></pre></div><ol start="3">
 <li>根据给出的提示输入用户密码，按回车确认</li>
 <li>登录成功</li>
 </ol>
@@ -142,74 +142,73 @@
 <li>在本机生成 SSH 密钥对
 1.1 打开 cmder
 1.2 输入以下命令按回车确认
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ ssh-keygen -t rsa
-</code></pre></div><p>1.3 弹出密钥保存位置提示后，继续按回车（密钥对将生成到默认位置 <code>C:\Users\&lt;用户名&gt;\.ssh\</code>）
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ ssh-keygen -t rsa
+</span></span></code></pre></div>1.3 弹出密钥保存位置提示后，继续按回车（密钥对将生成到默认位置 <code>C:\Users\&lt;用户名&gt;\.ssh\</code>）
 1.4 弹出输入密码提示后，继续按回车（此时不设置密钥对验证密码）
 1.5 弹出确认密码提示后，继续按回车
 1.6 检查本机目录 <code>C:\Users\&lt;用户名&gt;\.ssh\</code> 下存在 <code>id_rsa</code> 和 <code>id_rsa.pub</code> 两个文件
-1.7 密钥对生成完毕</p>
-</li>
+1.7 密钥对生成完毕</li>
 <li>上传公钥到 Linux 服务器
 2.1 通过方式一连接到 Linux 服务器
 2.2 在远程服务器上输入以下命令
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ mkdir ~/.ssh <span class="o">&amp;&amp;</span> touch ~/.ssh/authorized_keys
-$ chmod <span class="m">700</span> ~/.ssh <span class="o">&amp;&amp;</span> chmod <span class="m">600</span> ~/.ssh/authorized_keys
-</code></pre></div><p>2.3 在本机输入命令</p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ scp C:<span class="se">\U</span>sers<span class="se">\&lt;</span>用户名&gt;<span class="se">\.</span>ssh<span class="se">\i</span>d_rsa.pub &lt;username&gt;@&lt;server-ip-address&gt;:~/.ssh/authorized_keys
-</code></pre></div><p>2.4 输入密码后，按回车确认
-2.5 上传成功后输入以下命令即可成功连接服务器</p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ ssh &lt;username&gt;@&lt;server-ip-address&gt;
-</code></pre></div><p>2.6 配置 <code>config</code> 文件简化登录输入</p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ vim C:<span class="se">\U</span>sers<span class="se">\&lt;</span>用户名&gt;<span class="se">\.</span>ssh<span class="se">\c</span>onfig
-</code></pre></div><p>输入以下内容：</p>
-<div class="highlight"><pre class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">Host</span> <span class="p">&lt;</span><span class="nx">name</span><span class="p">-</span><span class="nx">you</span><span class="p">-</span><span class="nx">want</span><span class="p">&gt;</span><span class="err">
-</span><span class="err"></span>  <span class="nx">HostName</span> <span class="p">&lt;</span><span class="nx">server</span><span class="p">-</span><span class="nx">ip</span><span class="p">-</span><span class="nx">address</span><span class="p">&gt;</span><span class="err">
-</span><span class="err"></span>  <span class="nx">User</span> <span class="p">&lt;</span><span class="nx">username</span><span class="p">&gt;</span><span class="err">
-</span><span class="err"></span>  <span class="nx">PubkeyAuthentication</span> <span class="nx">yes</span><span class="err">
-</span></code></pre></div><p><code>config</code> 文件创建好后，直接输入以下命令登录服务器</p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ ssh &lt;name-you-want&gt;
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ mkdir ~/.ssh <span class="o">&amp;&amp;</span> touch ~/.ssh/authorized_keys
+</span></span><span class="line"><span class="cl">$ chmod <span class="m">700</span> ~/.ssh <span class="o">&amp;&amp;</span> chmod <span class="m">600</span> ~/.ssh/authorized_keys
+</span></span></code></pre></div>2.3 在本机输入命令
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ scp C:<span class="se">\U</span>sers<span class="se">\&lt;</span>用户名&gt;<span class="se">\.</span>ssh<span class="se">\i</span>d_rsa.pub &lt;username&gt;@&lt;server-ip-address&gt;:~/.ssh/authorized_keys
+</span></span></code></pre></div>2.4 输入密码后，按回车确认
+2.5 上传成功后输入以下命令即可成功连接服务器
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ ssh &lt;username&gt;@&lt;server-ip-address&gt;
+</span></span></code></pre></div>2.6 配置 <code>config</code> 文件简化登录输入
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ vim C:<span class="se">\U</span>sers<span class="se">\&lt;</span>用户名&gt;<span class="se">\.</span>ssh<span class="se">\c</span>onfig
+</span></span></code></pre></div>输入以下内容：
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="nx">Host</span> <span class="p">&lt;</span><span class="nx">name</span><span class="p">-</span><span class="nx">you</span><span class="p">-</span><span class="nx">want</span><span class="p">&gt;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">HostName</span> <span class="p">&lt;</span><span class="nx">server</span><span class="p">-</span><span class="nx">ip</span><span class="p">-</span><span class="nx">address</span><span class="p">&gt;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">User</span> <span class="p">&lt;</span><span class="nx">username</span><span class="p">&gt;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">PubkeyAuthentication</span> <span class="nx">yes</span><span class="err">
+</span></span></span></code></pre></div><code>config</code> 文件创建好后，直接输入以下命令登录服务器
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ ssh &lt;name-you-want&gt;
+</span></span></code></pre></div></li>
 </ol>
 <h3 id="附另外附上-cmder-的一些初始化配置">附：另外附上 cmder 的一些初始化配置</h3>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># 【初始化配置（必须）】</span>
-
-右键 cmder.exe 以管理员身份运行
-
-<span class="c1">### 添加至环境变量</span>
-命令行输入命令 <span class="sb">`</span>setx -m PATH <span class="s2">&#34;%PATH%&#34;</span><span class="p">;</span>&lt;your-cmder.exe-path&gt;<span class="sb">`</span>
-将 cmder.exe 存放的目录添加到系统环境变量 Path
-
-<span class="c1">### 添加至右键菜单（需要管理员权限）</span>
-命令行输入命令：<span class="sb">`</span>Cmder.exe /REGISTER ALL<span class="sb">`</span>
-
-<span class="c1">### 运行 cmder</span>
-Win+R 打开运行，输入 cmder 按回车打开 cmder
-
-<span class="c1">### 解决中文显示乱码问题</span>
-Settings --&gt; Startup --&gt; Environment 添加以下两行配置
-<span class="nb">set</span> <span class="nv">LANG</span><span class="o">=</span>zh_CN.UTF-8
-<span class="nb">set</span> <span class="nv">LC_ALL</span><span class="o">=</span>zh_CN.utf8
-
-<span class="c1">### 解决中文显示重叠问题</span>
-Settings --&gt; General --&gt; Fonts --&gt; 取消勾选 Compress long string to fit space
-
-<span class="c1"># 【外观优化（可选）】</span>
-
-<span class="c1">### 修改默认的命令提示符λ改成$</span>
-将 <span class="sb">`</span>cmder<span class="se">\v</span>endor<span class="se">\c</span>link.lua<span class="sb">`</span> 文件中第42行中 <span class="sb">`</span><span class="nb">local</span> <span class="nv">lambda</span> <span class="o">=</span> <span class="s2">&#34;λ&#34;</span><span class="sb">`</span> 修改为 <span class="sb">`</span><span class="nb">local</span> <span class="nv">lambda</span> <span class="o">=</span> <span class="s2">&#34;</span>$<span class="s2">&#34;</span><span class="sb">`</span>
-
-<span class="c1">### 更换主题</span>
-Settings --&gt; 最底部 Import... 按钮 --&gt; 选择主题.xml文件导入 --&gt; Save settings
-推荐主题 Dracula：https://draculatheme.com/cmder/
-
-<span class="c1">### 更换显示字体</span>
-Settings --&gt; General --&gt; Fonts --&gt; Main console font --&gt; 选择字体
-推荐使用等宽字体，如：JetBrains Mono 或 Roboto Mono
-
-
-<span class="c1">### 隐藏标题栏</span>
-Settings --&gt; General --&gt; Appearance --&gt; 勾选 Hide caption always
-</code></pre></div><blockquote>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 【初始化配置（必须）】</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">右键 cmder.exe 以管理员身份运行
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">### 添加至环境变量</span>
+</span></span><span class="line"><span class="cl">命令行输入命令 <span class="sb">`</span>setx -m PATH <span class="s2">&#34;%PATH%&#34;</span><span class="p">;</span>&lt;your-cmder.exe-path&gt;<span class="sb">`</span>
+</span></span><span class="line"><span class="cl">将 cmder.exe 存放的目录添加到系统环境变量 Path
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">### 添加至右键菜单（需要管理员权限）</span>
+</span></span><span class="line"><span class="cl">命令行输入命令：<span class="sb">`</span>Cmder.exe /REGISTER ALL<span class="sb">`</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">### 运行 cmder</span>
+</span></span><span class="line"><span class="cl">Win+R 打开运行，输入 cmder 按回车打开 cmder
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">### 解决中文显示乱码问题</span>
+</span></span><span class="line"><span class="cl">Settings --&gt; Startup --&gt; Environment 添加以下两行配置
+</span></span><span class="line"><span class="cl"><span class="nb">set</span> <span class="nv">LANG</span><span class="o">=</span>zh_CN.UTF-8
+</span></span><span class="line"><span class="cl"><span class="nb">set</span> <span class="nv">LC_ALL</span><span class="o">=</span>zh_CN.utf8
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">### 解决中文显示重叠问题</span>
+</span></span><span class="line"><span class="cl">Settings --&gt; General --&gt; Fonts --&gt; 取消勾选 Compress long string to fit space
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 【外观优化（可选）】</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">### 修改默认的命令提示符λ改成$</span>
+</span></span><span class="line"><span class="cl">将 <span class="sb">`</span>cmder<span class="se">\v</span>endor<span class="se">\c</span>link.lua<span class="sb">`</span> 文件中第42行中 <span class="sb">`</span><span class="nb">local</span> <span class="nv">lambda</span> <span class="o">=</span> <span class="s2">&#34;λ&#34;</span><span class="sb">`</span> 修改为 <span class="sb">`</span><span class="nb">local</span> <span class="nv">lambda</span> <span class="o">=</span> <span class="s2">&#34;</span>$<span class="s2">&#34;</span><span class="sb">`</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">### 更换主题</span>
+</span></span><span class="line"><span class="cl">Settings --&gt; 最底部 Import... 按钮 --&gt; 选择主题.xml文件导入 --&gt; Save settings
+</span></span><span class="line"><span class="cl">推荐主题 Dracula：https://draculatheme.com/cmder/
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">### 更换显示字体</span>
+</span></span><span class="line"><span class="cl">Settings --&gt; General --&gt; Fonts --&gt; Main console font --&gt; 选择字体
+</span></span><span class="line"><span class="cl">推荐使用等宽字体，如：JetBrains Mono 或 Roboto Mono
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">### 隐藏标题栏</span>
+</span></span><span class="line"><span class="cl">Settings --&gt; General --&gt; Appearance --&gt; 勾选 Hide caption always
+</span></span></code></pre></div><blockquote>
 <p>参考来源：<br>
 <a href="https://github.com/cmderdev/cmder/blob/master/README.md">https://github.com/cmderdev/cmder/blob/master/README.md</a><br>
 <a href="https://www.linode.com/docs/security/authentication/use-public-key-authentication-with-ssh/">https://www.linode.com/docs/security/authentication/use-public-key-authentication-with-ssh/</a></p>
@@ -303,7 +302,7 @@ Settings --&gt; General --&gt; Appearance --&gt; 勾选 Hide caption always
             Pan Feng
             
               2017 -
-            2022
+            2023
           </small>
           
         </p>

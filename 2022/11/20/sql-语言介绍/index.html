@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+<head>
+  <meta name="google-site-verification" content="NqacV5tHWoxzRi2H7KcEVCWMuxSnch23EM-vzsEV3h8" />
+  <meta name="generator" content="Hugo 0.103.0" />
+  <meta charset="utf-8">
+  <title>SQL 语言介绍 · Wing</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="SQL 语言介绍 一、 SQL 语言背景 SQL(Structure Query Language) 语言是数据库的核心语言。 SQL 的发展是从 1974 年开始的，其发展过程如下： 1974 年 &amp;mdash;&amp;ndash; 由 Boyce 和 Chamberlin 提出，当时称 SEQUEL 1976 年 &amp;mdash;&amp;ndash; IBM 公司的 Sanjase 研" />
+
+
+<link rel="canonical" href="/2022/11/20/sql-%E8%AF%AD%E8%A8%80%E4%BB%8B%E7%BB%8D/" />
+<link rel="icon" href="https://cdn.jsdelivr.net/gh/fy975713384/cloud-img@main/blog/wing_icon.png" />
+<link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/5.2.0/css/all.css" integrity="sha384-DtgO3znmI27ZsBJLf6ASdUIQnb+d8RKb/z/fYL/E0f2NY/8nvfDQmQ6NkXmuoepn" crossorigin="anonymous">
+<link rel="stylesheet" href="/css/den.css">
+
+<link rel="stylesheet" href="/css/custom.css">
+
+
+
+
+<meta property="og:title" content="SQL 语言介绍" />
+<meta property="og:description" content="SQL 语言介绍 一、 SQL 语言背景 SQL(Structure Query Language) 语言是数据库的核心语言。 SQL 的发展是从 1974 年开始的，其发展过程如下： 1974 年 &mdash;&ndash; 由 Boyce 和 Chamberlin 提出，当时称 SEQUEL 1976 年 &mdash;&ndash; IBM 公司的 Sanjase 研" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/2022/11/20/sql-%E8%AF%AD%E8%A8%80%E4%BB%8B%E7%BB%8D/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-11-20T14:56:58+08:00" />
+<meta property="article:modified_time" content="2022-11-20T14:56:58+08:00" />
+
+<meta itemprop="name" content="SQL 语言介绍">
+<meta itemprop="description" content="SQL 语言介绍 一、 SQL 语言背景 SQL(Structure Query Language) 语言是数据库的核心语言。 SQL 的发展是从 1974 年开始的，其发展过程如下： 1974 年 &mdash;&ndash; 由 Boyce 和 Chamberlin 提出，当时称 SEQUEL 1976 年 &mdash;&ndash; IBM 公司的 Sanjase 研"><meta itemprop="datePublished" content="2022-11-20T14:56:58+08:00" />
+<meta itemprop="dateModified" content="2022-11-20T14:56:58+08:00" />
+<meta itemprop="wordCount" content="1096">
+<meta itemprop="keywords" content="数据库," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="SQL 语言介绍"/>
+<meta name="twitter:description" content="SQL 语言介绍 一、 SQL 语言背景 SQL(Structure Query Language) 语言是数据库的核心语言。 SQL 的发展是从 1974 年开始的，其发展过程如下： 1974 年 &mdash;&ndash; 由 Boyce 和 Chamberlin 提出，当时称 SEQUEL 1976 年 &mdash;&ndash; IBM 公司的 Sanjase 研"/>
+</head>
+<body>
+  
+  <div class="header-container" style="background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/fy975713384/cloud-img@main/blog/background.jpg'); background-position: center; background-size: cover;">
+  <div class="container">
+  <nav class="header-nav navbar navbar-expand-md navbar-dark light-dark">
+    <div class="header-logo navbar-brand">
+      
+        <a class="float-left" href="/">
+      
+        
+        
+          Wing
+         
+      </a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="nav-menu collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        
+          <li class="nav-item">
+            
+              
+                <a class="nav-link" href="/category/notes/">笔记</a>
+              
+            
+          </li>
+        
+          <li class="nav-item">
+            
+              
+                <a class="nav-link" href="/category/travals/">游记</a>
+              
+            
+          </li>
+        
+        
+      </ul>
+    </div>
+  </nav>
+</div>
+
+<div class="container header-wrapper">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="header-content">
+        <h1 class="header-title">SQL 语言介绍</h1>
+        <p class="header-date">作者：
+          潘峰 /
+        
+        2022-11-20
+          / 分类：
+          <a href="/category/notes/">Notes</a>
+        </p>
+        
+        <div class="header-underline"></div>
+        
+          <div class="clearfix"></div>
+          <p class="float-right header-tags">
+              <i class="fas fa-tags" aria-hidden="true"></i>
+              <a href="/tag/%E6%95%B0%E6%8D%AE%E5%BA%93/">数据库</a>
+          </p>
+        
+        
+
+      </div>
+    </div>
+  </div>
+</div>
+
+  </div>
+  <main>
+<div class="container content">
+  <article>
+  <h1 id="sql-语言介绍">SQL 语言介绍</h1>
+<h2 id="一-sql-语言背景">一、 SQL 语言背景</h2>
+<p>SQL(Structure Query Language) 语言是数据库的核心语言。</p>
+<p>SQL 的发展是从 1974 年开始的，其发展过程如下：</p>
+<ul>
+<li>1974 年 &mdash;&ndash; 由 Boyce 和 Chamberlin 提出，当时称 SEQUEL</li>
+<li>1976 年 &mdash;&ndash; IBM 公司的 Sanjase 研究所在研制 RDBMS SYSTEM R 时改为 SQL</li>
+<li>1979 年 &mdash;&ndash; ORACLE 公司发表第一个基于 SQL 的商业化 RDBMS 产品</li>
+<li>1982 年 &mdash;&ndash; IBM 公司出版第一个 RDBMS 语言 SQL/DS</li>
+<li>1985 年 &mdash;&ndash; IBM 公司出版第一个 RDBMS 语言 DB2</li>
+<li>1986 年 &mdash;&ndash; 美国国家标准化组织 ANSI 宣布 SQL 作为数据库工业标准</li>
+</ul>
+<p>SQL 是一个标准的数据库语言，是面向集合的描述性非过程化语言。它功能强，效率高，简单易学易维护（迄今为止，我还没见过比它还好学的语言）。</p>
+<p>然而 SQL 语言由于以上优点，同时也出现了这样一个问题：它是非过程性语言，即大多数语句都是独立执行的，与上下文无关，而绝大部分应用都是一个完整的过程，显然用 SQL 完全实现这些功能是很困难的。所以大多数数据库公司为了解决此问题，作了如下两方面的工作：</p>
+<ol>
+<li>扩充 SQL，在 SQL 中引入过程性结构</li>
+<li>把 SQL 嵌入到高级语言中，以便一起完成一个完整的应用。</li>
+</ol>
+<h2 id="二-sql-语言的分类">二、 SQL 语言的分类</h2>
+<p>SQL 语言共分为四大类：</p>
+<ul>
+<li>数据查询语言 DQL</li>
+<li>数据操纵语言 DML</li>
+<li>数据定义语言 DDL</li>
+<li>数据控制语言 DCL。</li>
+</ul>
+<h3 id="1-数据查询语言-dql">1. 数据查询语言 DQL</h3>
+<p>数据查询语言 DQL 基本结构是由 SELECT 子句，FROM 子句，WHERE
+子句组成的查询块：
+SELECT &lt;字段名表&gt;
+FROM &lt;表或视图名&gt;
+WHERE &lt;查询条件&gt;</p>
+<h3 id="2-数据操纵语言-dml">2 .数据操纵语言 DML</h3>
+<p>数据操纵语言 DML 主要有三种形式：</p>
+<ol>
+<li>插入：INSERT</li>
+<li>更新：UPDATE</li>
+<li>删除：DELETE</li>
+</ol>
+<h3 id="3-数据定义语言-ddl">3. 数据定义语言 DDL</h3>
+<p>数据定义语言 DDL 用来创建数据库中的各种对象&mdash;&ndash;表、视图、索引、同义词、聚簇等如：</p>
+<table>
+<thead>
+<tr>
+<th>CREATE TABLE</th>
+<th>VIEW</th>
+<th>INDEX</th>
+<th>SYN</th>
+<th>CLUSTER</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>表</td>
+<td>视图</td>
+<td>索引</td>
+<td>同义词</td>
+<td>簇</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>注：DDL 操作是隐性提交的！不能 rollback</p>
+</blockquote>
+<h3 id="4-数据控制语言-dcl">4. 数据控制语言 DCL</h3>
+<p>数据控制语言 DCL 用来授予或回收访问数据库的某种特权，并控制数据库操纵事务发生的时间及效果，对数据库实行监视等。如：</p>
+<ol>
+<li>GRANT：授权</li>
+<li>ROLLBACK：回滚</li>
+<li>COMMIT：提交<br>
+在数据库的插入、删除和修改操作时，只有当事务在提交到数据库时才算完成。在事务提交前，只有操作数据库的这个人才能有权看到所做的事情，别人只有在最后提交完成后才可以看到。<br>
+提交数据有三种类型：显式提交、隐式提交及自动提交。<br>
+下面分别说明这三种类型：<br>
+a. 显式提交<br>
+用 COMMIT 命令直接完成的提交为显式提交。其格式为：<code>SQL&gt;COMMIT</code>；<br>
+b. 隐式提交<br>
+用 SQL 命令间接完成的提交为隐式提交。这些命令是：ALTER，AUDIT，COMMENT，CONNECT，CREATE，DISCONNECT，DROP，EXIT，GRANT，NOAUDIT，QUIT，REVOKE，RENAME。<br>
+c. 自动提交<br>
+若把 AUTOCOMMIT 设置为 ON，则在插入、修改、删除语句执行后，系统将自动进行提交，这就是自动提交。其格式为：<code>SQL&gt;SET AUTOCOMMIT ON</code></li>
+</ol>
+
+  </article>
+
+  
+  
+    
+    
+    
+  
+  
+<link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/gitalk/1.7.0/gitalk.css" />
+<script src="https://cdn.bootcdn.net/ajax/libs/gitalk/1.7.0/gitalk.min.js"></script>
+<div id="gitalk-container"></div>
+<script>
+  const gitalk = new Gitalk({
+    id: 'SQL语言介绍', 
+    owner: 'fy975713384',
+    repo: 'fy975713384.github.io', 
+    clientID: '35afb85e4c521d6dbeb8',
+    clientSecret: '463c9ec266980fd7358a11479beda5284ecf9f71',
+    admin: ['fy975713384'],
+    distractionFreeMode: false 
+  })
+  gitalk.render('gitalk-container')
+</script>
+
+
+
+
+
+
+
+</div>
+
+  </main><div class="footer gradient-2">
+  <div class="container footer-container ">
+    <div class="row">
+      <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3">
+        <div class="footer-title">网站地图</div>
+        <ul class="list-unstyled">
+            
+              
+                <li><a href="/tags/">标签</a></li>
+              
+              
+                <li><a href="/categories/">分类</a></li>
+              
+            
+            
+            
+            <li><a rel="alternate" type="application/rss&#43;xml" href="/index.xml"><i class="fas fa-rss-square"></i> RSS订阅</a></li>
+            
+            
+            
+        </ul>
+      </div>
+      <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3">
+        
+        <div class="footer-title">社群</div>
+        <ul class="list-unstyled">
+          
+          <li><a href="https://github.com/fy975713384" rel="noopener" target="_blank">GitHub</a></li>
+          
+          <li><a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&amp;email=NFVOQVgaUnRSW0xZVV1YGldbWQ" rel="noopener" target="_blank">联系我</a></li>
+          
+        </ul>
+        
+      </div>
+      <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3">
+        
+        <div class="footer-title">友链</div>
+        <ul class="list-unstyled">
+          
+          <li><a href="/" rel="noopener" target="_blank">关于我</a></li>
+          
+          <li><a href="https://juejin.cn/user/3315782800904263" rel="noopener" target="_blank">掘金主页</a></li>
+          
+        </ul>
+        
+      </div> 
+      <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+        <p class="pull-right text-right">
+          <small><em>Proudly powered by <a href="https://gohugo.io/" rel="noopener" target="_blank">Hugo</a></em></small><br/>
+          <small><em>Theme - <a href="https://github.com/shaform/hugo-theme-den" rel="noopener" target="_blank">Den</a></em></small><br/>
+          <small>
+            &copy; 
+            Pan Feng
+            
+              2017 -
+            2023
+          </small>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.3.1/jquery.slim.min.js"
+  integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+  integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js"
+  integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/mermaid/8.8.2/mermaid.min.js"></script>
+<script>
+  window.onload = function () {
+    mermaid.initialize({ theme: 'neutral' })
+    mermaid.init(undefined, '.language-mermaid')
+  }
+</script>
+</body>
+</html>

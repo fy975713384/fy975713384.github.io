@@ -2,7 +2,7 @@
 <html lang="en" itemscope itemtype="http://schema.org/WebPage">
 <head>
   <meta name="google-site-verification" content="NqacV5tHWoxzRi2H7KcEVCWMuxSnch23EM-vzsEV3h8" />
-  <meta name="generator" content="Hugo 0.85.0" />
+  <meta name="generator" content="Hugo 0.103.0" />
   <meta charset="utf-8">
   <title>ElementUI 表格数据行内修改方式 · Wing</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -113,133 +113,133 @@
   <article>
   <h2 id="单列修改">单列修改</h2>
 <p>代码</p>
-<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;app-container&#34;</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">el-table</span> <span class="na">:data</span><span class="o">=</span><span class="s">&#34;tableData&#34;</span> <span class="na">border</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;width: 60%&#34;</span><span class="p">&gt;</span>
-      <span class="p">&lt;</span><span class="nt">el-table-column</span>
-        <span class="na">v-for</span><span class="o">=</span><span class="s">&#34;item of tableCol&#34;</span>
-        <span class="na">:key</span><span class="o">=</span><span class="s">&#34;item.key&#34;</span>
-        <span class="na">:label</span><span class="o">=</span><span class="s">&#34;item.label&#34;</span>
-        <span class="na">:prop</span><span class="o">=</span><span class="s">&#34;item.key&#34;</span>
-        <span class="na">:width</span><span class="o">=</span><span class="s">&#34;item.width&#34;</span>
-      <span class="p">&gt;</span>
-        <span class="p">&lt;</span><span class="nt">template</span> <span class="err">#</span><span class="na">default</span><span class="o">=</span><span class="s">&#34;{ row, $index }&#34;</span><span class="p">&gt;</span>
-          <span class="p">&lt;</span><span class="nt">div</span> <span class="na">v-if</span><span class="o">=</span><span class="s">&#34;item.key === &#39;address&#39;&#34;</span><span class="p">&gt;</span>
-            <span class="p">&lt;</span><span class="nt">div</span> <span class="na">v-if</span><span class="o">=</span><span class="s">&#34;addressEditIndex === $index&#34;</span><span class="p">&gt;</span>
-              <span class="p">&lt;</span><span class="nt">el-input</span>
-                <span class="na">ref</span><span class="o">=</span><span class="s">&#34;addressInput&#34;</span>
-                <span class="na">v-model</span><span class="o">=</span><span class="s">&#34;row.address&#34;</span>
-                <span class="na">placeholder</span><span class="o">=</span><span class="s">&#34;请输入地址&#34;</span>
-                <span class="err">@</span><span class="na">blur</span><span class="o">=</span><span class="s">&#34;addressEditIndex = undefined&#34;</span>
-                <span class="err">@</span><span class="na">change</span><span class="o">=</span><span class="s">&#34;handleAddressUpdate(row)&#34;</span>
-              <span class="p">/&gt;</span>
-            <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-            <span class="p">&lt;</span><span class="nt">div</span> <span class="na">v-else</span> <span class="err">@</span><span class="na">click</span><span class="o">=</span><span class="s">&#34;handleAddressEdit($index)&#34;</span><span class="p">&gt;</span>{{ row.address || &#39;无&#39; }}<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-          <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-          <span class="p">&lt;</span><span class="nt">div</span> <span class="na">v-else</span><span class="p">&gt;</span>{{ row[item.key] }}<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-        <span class="p">&lt;/</span><span class="nt">template</span><span class="p">&gt;</span>
-      <span class="p">&lt;/</span><span class="nt">el-table-column</span><span class="p">&gt;</span>
-    <span class="p">&lt;/</span><span class="nt">el-table</span><span class="p">&gt;</span>
-  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">template</span><span class="p">&gt;</span>
-
-<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
-  <span class="kr">export</span> <span class="k">default</span> <span class="p">{</span>
-    <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;Dashboard&#39;</span><span class="p">,</span>
-    <span class="nx">data</span><span class="p">()</span> <span class="p">{</span>
-      <span class="k">return</span> <span class="p">{</span>
-        <span class="nx">tableCol</span><span class="o">:</span> <span class="p">[</span>
-          <span class="p">{</span> <span class="nx">label</span><span class="o">:</span> <span class="s1">&#39;姓名&#39;</span><span class="p">,</span> <span class="nx">key</span><span class="o">:</span> <span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="nx">width</span><span class="o">:</span> <span class="mi">180</span> <span class="p">},</span>
-          <span class="p">{</span> <span class="nx">label</span><span class="o">:</span> <span class="s1">&#39;日期&#39;</span><span class="p">,</span> <span class="nx">key</span><span class="o">:</span> <span class="s1">&#39;date&#39;</span><span class="p">,</span> <span class="nx">width</span><span class="o">:</span> <span class="mi">180</span> <span class="p">},</span>
-          <span class="p">{</span> <span class="nx">label</span><span class="o">:</span> <span class="s1">&#39;地址&#39;</span><span class="p">,</span> <span class="nx">key</span><span class="o">:</span> <span class="s1">&#39;address&#39;</span> <span class="p">}</span>
-        <span class="p">],</span>
-        <span class="nx">tableData</span><span class="o">:</span> <span class="p">[</span>
-          <span class="p">{</span> <span class="nx">date</span><span class="o">:</span> <span class="s1">&#39;2016-05-02&#39;</span><span class="p">,</span> <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;张三&#39;</span><span class="p">,</span> <span class="nx">address</span><span class="o">:</span> <span class="s1">&#39;上海市普陀区金沙江路 1518 弄&#39;</span> <span class="p">},</span>
-          <span class="p">{</span> <span class="nx">date</span><span class="o">:</span> <span class="s1">&#39;2016-05-04&#39;</span><span class="p">,</span> <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;李四&#39;</span><span class="p">,</span> <span class="nx">address</span><span class="o">:</span> <span class="s1">&#39;上海市普陀区金沙江路 1517 弄&#39;</span> <span class="p">},</span>
-          <span class="p">{</span> <span class="nx">date</span><span class="o">:</span> <span class="s1">&#39;2016-05-01&#39;</span><span class="p">,</span> <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;王五&#39;</span><span class="p">,</span> <span class="nx">address</span><span class="o">:</span> <span class="s1">&#39;上海市普陀区金沙江路 1519 弄&#39;</span> <span class="p">}</span>
-        <span class="p">],</span>
-        <span class="nx">addressEditIndex</span><span class="o">:</span> <span class="kc">undefined</span>
-      <span class="p">}</span>
-    <span class="p">},</span>
-    <span class="nx">methods</span><span class="o">:</span> <span class="p">{</span>
-      <span class="nx">handleAddressUpdate</span><span class="p">(</span><span class="nx">row</span><span class="p">)</span> <span class="p">{</span>
-        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`更新行：</span><span class="si">${</span><span class="nx">row</span><span class="si">}</span><span class="sb">`</span><span class="p">)</span>
-      <span class="p">},</span>
-      <span class="nx">handleAddressEdit</span><span class="p">(</span><span class="nx">index</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">this</span><span class="p">.</span><span class="nx">addressEditIndex</span> <span class="o">=</span> <span class="nx">index</span>
-        <span class="c1">// 设置点击时自动获得焦点
-</span><span class="c1"></span>        <span class="k">this</span><span class="p">.</span><span class="nx">$nextTick</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>
-          <span class="k">this</span><span class="p">.</span><span class="nx">$refs</span><span class="p">.</span><span class="nx">addressInput</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">focus</span><span class="p">()</span>
-        <span class="p">})</span>
-      <span class="p">}</span>
-    <span class="p">}</span>
-  <span class="p">}</span>
-<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-</code></pre></div><p>效果</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;app-container&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">el-table</span> <span class="na">:data</span><span class="o">=</span><span class="s">&#34;tableData&#34;</span> <span class="na">border</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;width: 60%&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">el-table-column</span>
+</span></span><span class="line"><span class="cl">        <span class="na">v-for</span><span class="o">=</span><span class="s">&#34;item of tableCol&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="na">:key</span><span class="o">=</span><span class="s">&#34;item.key&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="na">:label</span><span class="o">=</span><span class="s">&#34;item.label&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="na">:prop</span><span class="o">=</span><span class="s">&#34;item.key&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="na">:width</span><span class="o">=</span><span class="s">&#34;item.width&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">template</span> <span class="err">#</span><span class="na">default</span><span class="o">=</span><span class="s">&#34;{ row, $index }&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">          <span class="p">&lt;</span><span class="nt">div</span> <span class="na">v-if</span><span class="o">=</span><span class="s">&#34;item.key === &#39;address&#39;&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">&lt;</span><span class="nt">div</span> <span class="na">v-if</span><span class="o">=</span><span class="s">&#34;addressEditIndex === $index&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">              <span class="p">&lt;</span><span class="nt">el-input</span>
+</span></span><span class="line"><span class="cl">                <span class="na">ref</span><span class="o">=</span><span class="s">&#34;addressInput&#34;</span>
+</span></span><span class="line"><span class="cl">                <span class="na">v-model</span><span class="o">=</span><span class="s">&#34;row.address&#34;</span>
+</span></span><span class="line"><span class="cl">                <span class="na">placeholder</span><span class="o">=</span><span class="s">&#34;请输入地址&#34;</span>
+</span></span><span class="line"><span class="cl">                <span class="err">@</span><span class="na">blur</span><span class="o">=</span><span class="s">&#34;addressEditIndex = undefined&#34;</span>
+</span></span><span class="line"><span class="cl">                <span class="err">@</span><span class="na">change</span><span class="o">=</span><span class="s">&#34;handleAddressUpdate(row)&#34;</span>
+</span></span><span class="line"><span class="cl">              <span class="p">/&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">&lt;</span><span class="nt">div</span> <span class="na">v-else</span> <span class="err">@</span><span class="na">click</span><span class="o">=</span><span class="s">&#34;handleAddressEdit($index)&#34;</span><span class="p">&gt;</span>{{ row.address || &#39;无&#39; }}<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">          <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">          <span class="p">&lt;</span><span class="nt">div</span> <span class="na">v-else</span><span class="p">&gt;</span>{{ row[item.key] }}<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;/</span><span class="nt">template</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;/</span><span class="nt">el-table-column</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">el-table</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">template</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">export</span> <span class="k">default</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;Dashboard&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">data</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="k">return</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">tableCol</span><span class="o">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">          <span class="p">{</span> <span class="nx">label</span><span class="o">:</span> <span class="s1">&#39;姓名&#39;</span><span class="p">,</span> <span class="nx">key</span><span class="o">:</span> <span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="nx">width</span><span class="o">:</span> <span class="mi">180</span> <span class="p">},</span>
+</span></span><span class="line"><span class="cl">          <span class="p">{</span> <span class="nx">label</span><span class="o">:</span> <span class="s1">&#39;日期&#39;</span><span class="p">,</span> <span class="nx">key</span><span class="o">:</span> <span class="s1">&#39;date&#39;</span><span class="p">,</span> <span class="nx">width</span><span class="o">:</span> <span class="mi">180</span> <span class="p">},</span>
+</span></span><span class="line"><span class="cl">          <span class="p">{</span> <span class="nx">label</span><span class="o">:</span> <span class="s1">&#39;地址&#39;</span><span class="p">,</span> <span class="nx">key</span><span class="o">:</span> <span class="s1">&#39;address&#39;</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="p">],</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">tableData</span><span class="o">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">          <span class="p">{</span> <span class="nx">date</span><span class="o">:</span> <span class="s1">&#39;2016-05-02&#39;</span><span class="p">,</span> <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;张三&#39;</span><span class="p">,</span> <span class="nx">address</span><span class="o">:</span> <span class="s1">&#39;上海市普陀区金沙江路 1518 弄&#39;</span> <span class="p">},</span>
+</span></span><span class="line"><span class="cl">          <span class="p">{</span> <span class="nx">date</span><span class="o">:</span> <span class="s1">&#39;2016-05-04&#39;</span><span class="p">,</span> <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;李四&#39;</span><span class="p">,</span> <span class="nx">address</span><span class="o">:</span> <span class="s1">&#39;上海市普陀区金沙江路 1517 弄&#39;</span> <span class="p">},</span>
+</span></span><span class="line"><span class="cl">          <span class="p">{</span> <span class="nx">date</span><span class="o">:</span> <span class="s1">&#39;2016-05-01&#39;</span><span class="p">,</span> <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;王五&#39;</span><span class="p">,</span> <span class="nx">address</span><span class="o">:</span> <span class="s1">&#39;上海市普陀区金沙江路 1519 弄&#39;</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="p">],</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">addressEditIndex</span><span class="o">:</span> <span class="kc">undefined</span>
+</span></span><span class="line"><span class="cl">      <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">},</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">methods</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">handleAddressUpdate</span><span class="p">(</span><span class="nx">row</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`更新行：</span><span class="si">${</span><span class="nx">row</span><span class="si">}</span><span class="sb">`</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">      <span class="p">},</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">handleAddressEdit</span><span class="p">(</span><span class="nx">index</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">this</span><span class="p">.</span><span class="nx">addressEditIndex</span> <span class="o">=</span> <span class="nx">index</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// 设置点击时自动获得焦点
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="k">this</span><span class="p">.</span><span class="nx">$nextTick</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">          <span class="k">this</span><span class="p">.</span><span class="nx">$refs</span><span class="p">.</span><span class="nx">addressInput</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">focus</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="p">})</span>
+</span></span><span class="line"><span class="cl">      <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span></code></pre></div><p>效果</p>
 <p><img src="https://cdn.jsdelivr.net/gh/fy975713384/cloud-img/blog/20220506182232.gif" alt=""></p>
 <h2 id="多列修改">多列修改</h2>
 <p>代码</p>
-<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;app-container&#34;</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">el-table</span> <span class="na">:data</span><span class="o">=</span><span class="s">&#34;tableData&#34;</span> <span class="na">border</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;width: 60%&#34;</span><span class="p">&gt;</span>
-      <span class="p">&lt;</span><span class="nt">el-table-column</span>
-        <span class="na">v-for</span><span class="o">=</span><span class="s">&#34;item of tableCol&#34;</span>
-        <span class="na">:key</span><span class="o">=</span><span class="s">&#34;item.key&#34;</span>
-        <span class="na">:label</span><span class="o">=</span><span class="s">&#34;item.label&#34;</span>
-        <span class="na">:prop</span><span class="o">=</span><span class="s">&#34;item.key&#34;</span>
-        <span class="na">:width</span><span class="o">=</span><span class="s">&#34;item.width&#34;</span>
-      <span class="p">&gt;</span>
-        <span class="p">&lt;</span><span class="nt">template</span> <span class="err">#</span><span class="na">default</span><span class="o">=</span><span class="s">&#34;{ row, $index }&#34;</span><span class="p">&gt;</span>
-          <span class="p">&lt;</span><span class="nt">div</span> <span class="na">v-if</span><span class="o">=</span><span class="s">&#34;editCell &amp;&amp; item.key === editCell[0] &amp;&amp; $index === editCell[1]&#34;</span><span class="p">&gt;</span>
-            <span class="p">&lt;</span><span class="nt">el-input</span>
-              <span class="na">ref</span><span class="o">=</span><span class="s">&#34;cellInput&#34;</span>
-              <span class="na">v-model</span><span class="o">=</span><span class="s">&#34;row[item.key]&#34;</span>
-              <span class="na">:placeholder</span><span class="o">=</span><span class="s">&#34;`请输入${item.label}`&#34;</span>
-              <span class="err">@</span><span class="na">blur</span><span class="o">=</span><span class="s">&#34;editCell = undefined&#34;</span>
-              <span class="err">@</span><span class="na">change</span><span class="o">=</span><span class="s">&#34;handleAddressUpdate(editCell)&#34;</span>
-            <span class="p">/&gt;</span>
-          <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-          <span class="p">&lt;</span><span class="nt">div</span> <span class="na">v-else</span> <span class="err">@</span><span class="na">click</span><span class="o">=</span><span class="s">&#34;handleCellEdit(item.key, $index)&#34;</span><span class="p">&gt;</span>{{ row[item.key] || &#39;无&#39; }}<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-        <span class="p">&lt;/</span><span class="nt">template</span><span class="p">&gt;</span>
-      <span class="p">&lt;/</span><span class="nt">el-table-column</span><span class="p">&gt;</span>
-    <span class="p">&lt;/</span><span class="nt">el-table</span><span class="p">&gt;</span>
-  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">template</span><span class="p">&gt;</span>
-
-<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
-  <span class="kr">export</span> <span class="k">default</span> <span class="p">{</span>
-    <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;Dashboard&#39;</span><span class="p">,</span>
-    <span class="nx">data</span><span class="p">()</span> <span class="p">{</span>
-      <span class="k">return</span> <span class="p">{</span>
-        <span class="nx">tableCol</span><span class="o">:</span> <span class="p">[</span>
-          <span class="p">{</span> <span class="nx">label</span><span class="o">:</span> <span class="s1">&#39;姓名&#39;</span><span class="p">,</span> <span class="nx">key</span><span class="o">:</span> <span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="nx">width</span><span class="o">:</span> <span class="mi">180</span> <span class="p">},</span>
-          <span class="p">{</span> <span class="nx">label</span><span class="o">:</span> <span class="s1">&#39;日期&#39;</span><span class="p">,</span> <span class="nx">key</span><span class="o">:</span> <span class="s1">&#39;date&#39;</span><span class="p">,</span> <span class="nx">width</span><span class="o">:</span> <span class="mi">180</span> <span class="p">},</span>
-          <span class="p">{</span> <span class="nx">label</span><span class="o">:</span> <span class="s1">&#39;地址&#39;</span><span class="p">,</span> <span class="nx">key</span><span class="o">:</span> <span class="s1">&#39;address&#39;</span> <span class="p">}</span>
-        <span class="p">],</span>
-        <span class="nx">tableData</span><span class="o">:</span> <span class="p">[</span>
-          <span class="p">{</span> <span class="nx">date</span><span class="o">:</span> <span class="s1">&#39;2016-05-02&#39;</span><span class="p">,</span> <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;张三&#39;</span><span class="p">,</span> <span class="nx">address</span><span class="o">:</span> <span class="s1">&#39;上海市普陀区金沙江路 1518 弄&#39;</span> <span class="p">},</span>
-          <span class="p">{</span> <span class="nx">date</span><span class="o">:</span> <span class="s1">&#39;2016-05-04&#39;</span><span class="p">,</span> <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;李四&#39;</span><span class="p">,</span> <span class="nx">address</span><span class="o">:</span> <span class="s1">&#39;上海市普陀区金沙江路 1517 弄&#39;</span> <span class="p">},</span>
-          <span class="p">{</span> <span class="nx">date</span><span class="o">:</span> <span class="s1">&#39;2016-05-01&#39;</span><span class="p">,</span> <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;王五&#39;</span><span class="p">,</span> <span class="nx">address</span><span class="o">:</span> <span class="s1">&#39;上海市普陀区金沙江路 1519 弄&#39;</span> <span class="p">}</span>
-        <span class="p">],</span>
-        <span class="nx">editCell</span><span class="o">:</span> <span class="kc">undefined</span>
-      <span class="p">}</span>
-    <span class="p">},</span>
-    <span class="nx">methods</span><span class="o">:</span> <span class="p">{</span>
-      <span class="nx">handleAddressUpdate</span><span class="p">(</span><span class="nx">editCell</span><span class="p">)</span> <span class="p">{</span>
-        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`更新单元格：</span><span class="si">${</span><span class="nx">editCell</span><span class="si">}</span><span class="sb">`</span><span class="p">)</span>
-      <span class="p">},</span>
-      <span class="nx">handleCellEdit</span><span class="p">(</span><span class="nx">colKey</span><span class="p">,</span> <span class="nx">rowIndex</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">this</span><span class="p">.</span><span class="nx">editCell</span> <span class="o">=</span> <span class="p">[</span><span class="nx">colKey</span><span class="p">,</span> <span class="nx">rowIndex</span><span class="p">]</span>
-        <span class="c1">// 设置点击时自动获得焦点
-</span><span class="c1"></span>        <span class="k">this</span><span class="p">.</span><span class="nx">$nextTick</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>
-          <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">$refs</span><span class="p">)</span>
-          <span class="k">this</span><span class="p">.</span><span class="nx">$refs</span><span class="p">.</span><span class="nx">cellInput</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">focus</span><span class="p">()</span>
-        <span class="p">})</span>
-      <span class="p">}</span>
-    <span class="p">}</span>
-  <span class="p">}</span>
-<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-</code></pre></div><p>效果</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;app-container&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">el-table</span> <span class="na">:data</span><span class="o">=</span><span class="s">&#34;tableData&#34;</span> <span class="na">border</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;width: 60%&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">el-table-column</span>
+</span></span><span class="line"><span class="cl">        <span class="na">v-for</span><span class="o">=</span><span class="s">&#34;item of tableCol&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="na">:key</span><span class="o">=</span><span class="s">&#34;item.key&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="na">:label</span><span class="o">=</span><span class="s">&#34;item.label&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="na">:prop</span><span class="o">=</span><span class="s">&#34;item.key&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="na">:width</span><span class="o">=</span><span class="s">&#34;item.width&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">template</span> <span class="err">#</span><span class="na">default</span><span class="o">=</span><span class="s">&#34;{ row, $index }&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">          <span class="p">&lt;</span><span class="nt">div</span> <span class="na">v-if</span><span class="o">=</span><span class="s">&#34;editCell &amp;&amp; item.key === editCell[0] &amp;&amp; $index === editCell[1]&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">&lt;</span><span class="nt">el-input</span>
+</span></span><span class="line"><span class="cl">              <span class="na">ref</span><span class="o">=</span><span class="s">&#34;cellInput&#34;</span>
+</span></span><span class="line"><span class="cl">              <span class="na">v-model</span><span class="o">=</span><span class="s">&#34;row[item.key]&#34;</span>
+</span></span><span class="line"><span class="cl">              <span class="na">:placeholder</span><span class="o">=</span><span class="s">&#34;`请输入${item.label}`&#34;</span>
+</span></span><span class="line"><span class="cl">              <span class="err">@</span><span class="na">blur</span><span class="o">=</span><span class="s">&#34;editCell = undefined&#34;</span>
+</span></span><span class="line"><span class="cl">              <span class="err">@</span><span class="na">change</span><span class="o">=</span><span class="s">&#34;handleAddressUpdate(editCell)&#34;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">/&gt;</span>
+</span></span><span class="line"><span class="cl">          <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">          <span class="p">&lt;</span><span class="nt">div</span> <span class="na">v-else</span> <span class="err">@</span><span class="na">click</span><span class="o">=</span><span class="s">&#34;handleCellEdit(item.key, $index)&#34;</span><span class="p">&gt;</span>{{ row[item.key] || &#39;无&#39; }}<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;/</span><span class="nt">template</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;/</span><span class="nt">el-table-column</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">el-table</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">template</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">export</span> <span class="k">default</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;Dashboard&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">data</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="k">return</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">tableCol</span><span class="o">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">          <span class="p">{</span> <span class="nx">label</span><span class="o">:</span> <span class="s1">&#39;姓名&#39;</span><span class="p">,</span> <span class="nx">key</span><span class="o">:</span> <span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="nx">width</span><span class="o">:</span> <span class="mi">180</span> <span class="p">},</span>
+</span></span><span class="line"><span class="cl">          <span class="p">{</span> <span class="nx">label</span><span class="o">:</span> <span class="s1">&#39;日期&#39;</span><span class="p">,</span> <span class="nx">key</span><span class="o">:</span> <span class="s1">&#39;date&#39;</span><span class="p">,</span> <span class="nx">width</span><span class="o">:</span> <span class="mi">180</span> <span class="p">},</span>
+</span></span><span class="line"><span class="cl">          <span class="p">{</span> <span class="nx">label</span><span class="o">:</span> <span class="s1">&#39;地址&#39;</span><span class="p">,</span> <span class="nx">key</span><span class="o">:</span> <span class="s1">&#39;address&#39;</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="p">],</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">tableData</span><span class="o">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">          <span class="p">{</span> <span class="nx">date</span><span class="o">:</span> <span class="s1">&#39;2016-05-02&#39;</span><span class="p">,</span> <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;张三&#39;</span><span class="p">,</span> <span class="nx">address</span><span class="o">:</span> <span class="s1">&#39;上海市普陀区金沙江路 1518 弄&#39;</span> <span class="p">},</span>
+</span></span><span class="line"><span class="cl">          <span class="p">{</span> <span class="nx">date</span><span class="o">:</span> <span class="s1">&#39;2016-05-04&#39;</span><span class="p">,</span> <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;李四&#39;</span><span class="p">,</span> <span class="nx">address</span><span class="o">:</span> <span class="s1">&#39;上海市普陀区金沙江路 1517 弄&#39;</span> <span class="p">},</span>
+</span></span><span class="line"><span class="cl">          <span class="p">{</span> <span class="nx">date</span><span class="o">:</span> <span class="s1">&#39;2016-05-01&#39;</span><span class="p">,</span> <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;王五&#39;</span><span class="p">,</span> <span class="nx">address</span><span class="o">:</span> <span class="s1">&#39;上海市普陀区金沙江路 1519 弄&#39;</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="p">],</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">editCell</span><span class="o">:</span> <span class="kc">undefined</span>
+</span></span><span class="line"><span class="cl">      <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">},</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">methods</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">handleAddressUpdate</span><span class="p">(</span><span class="nx">editCell</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`更新单元格：</span><span class="si">${</span><span class="nx">editCell</span><span class="si">}</span><span class="sb">`</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">      <span class="p">},</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">handleCellEdit</span><span class="p">(</span><span class="nx">colKey</span><span class="p">,</span> <span class="nx">rowIndex</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">this</span><span class="p">.</span><span class="nx">editCell</span> <span class="o">=</span> <span class="p">[</span><span class="nx">colKey</span><span class="p">,</span> <span class="nx">rowIndex</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// 设置点击时自动获得焦点
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="k">this</span><span class="p">.</span><span class="nx">$nextTick</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">          <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">$refs</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">          <span class="k">this</span><span class="p">.</span><span class="nx">$refs</span><span class="p">.</span><span class="nx">cellInput</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">focus</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="p">})</span>
+</span></span><span class="line"><span class="cl">      <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span></code></pre></div><p>效果</p>
 <p><img src="https://cdn.jsdelivr.net/gh/fy975713384/cloud-img/blog/20220506195307.gif" alt=""></p>
 
   </article>
@@ -330,7 +330,7 @@
             Pan Feng
             
               2017 -
-            2022
+            2023
           </small>
           
         </p>

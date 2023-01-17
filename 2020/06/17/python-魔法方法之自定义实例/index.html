@@ -2,7 +2,7 @@
 <html lang="en" itemscope itemtype="http://schema.org/WebPage">
 <head>
   <meta name="google-site-verification" content="NqacV5tHWoxzRi2H7KcEVCWMuxSnch23EM-vzsEV3h8" />
-  <meta name="generator" content="Hugo 0.85.0" />
+  <meta name="generator" content="Hugo 0.103.0" />
   <meta charset="utf-8">
   <title>Python 魔法方法之自定义实例 · Wing</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -130,13 +130,13 @@
 <li>该魔法方法需要返回一个新的对象（通常是 cls）实例，否则 <code>__init__()</code> 方法将不会被调用</li>
 <li>该魔法方法主要目的是给不可变类型的子类提供自定义实例的创建，以及用于自定义元类（用于创建自定义类）</li>
 </ul>
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># 通过 __new__() 函数实现单例模式</span>
-<span class="k">class</span> <span class="nc">Singleton</span><span class="p">:</span>
-    <span class="k">def</span> <span class="fm">__new__</span><span class="p">(</span><span class="bp">cls</span><span class="p">):</span>
-        <span class="k">if</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="s1">&#39;instance&#39;</span><span class="p">):</span>
-            <span class="bp">cls</span><span class="o">.</span><span class="n">instance</span> <span class="o">=</span> <span class="nb">super</span><span class="p">(</span><span class="n">Singleton</span><span class="p">,</span> <span class="bp">cls</span><span class="p">)</span><span class="o">.</span><span class="fm">__new__</span><span class="p">(</span><span class="bp">cls</span><span class="p">)</span>
-        <span class="k">return</span> <span class="bp">cls</span><span class="o">.</span><span class="n">instance</span>
-</code></pre></div><h2 id="__init__">__init__</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># 通过 __new__() 函数实现单例模式</span>
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Singleton</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="fm">__new__</span><span class="p">(</span><span class="bp">cls</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="s1">&#39;instance&#39;</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">            <span class="bp">cls</span><span class="o">.</span><span class="n">instance</span> <span class="o">=</span> <span class="nb">super</span><span class="p">(</span><span class="n">Singleton</span><span class="p">,</span> <span class="bp">cls</span><span class="p">)</span><span class="o">.</span><span class="fm">__new__</span><span class="p">(</span><span class="bp">cls</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="bp">cls</span><span class="o">.</span><span class="n">instance</span>
+</span></span></code></pre></div><h2 id="__init__">__init__</h2>
 <p><code>object.__init__(self[, ...])</code> 方法用于实例的初始化，使用时需注意：</p>
 <ul>
 <li>该魔法方法会在实例被创建后调用</li>
@@ -144,28 +144,28 @@
 <li>该魔法方法不能返回任何非 None 的值</li>
 <li>如果父类含有该魔法方法，则子类的该魔法方法中必须显式地调用父类的该魔法方法（以确保实例的父类部分被正确地初始化）</li>
 </ul>
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># ，实例化时不会报错</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="k">class</span> <span class="nc">Demo</span><span class="p">():</span>
-<span class="o">...</span>     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="o">...</span>         <span class="k">return</span> <span class="kc">None</span>
-<span class="o">...</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">d</span> <span class="o">=</span> <span class="n">Demo</span><span class="p">()</span>  <span class="c1"># 可以返回 None 值，系统不报错</span>
-
-<span class="o">&gt;&gt;&gt;</span> <span class="k">class</span> <span class="nc">Demo</span><span class="p">():</span>
-<span class="o">...</span>     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="o">...</span>         <span class="k">return</span>
-<span class="o">...</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">d</span> <span class="o">=</span> <span class="n">Demo</span><span class="p">()</span>  <span class="c1"># 可以直接 return，系统不报错</span>
-
-<span class="o">&gt;&gt;&gt;</span> <span class="k">class</span> <span class="nc">Demo</span><span class="p">():</span>
-<span class="o">...</span>     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="o">...</span>         <span class="k">return</span> <span class="mi">0</span>
-<span class="o">...</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">d</span> <span class="o">=</span> <span class="n">Demo</span><span class="p">()</span>  <span class="c1"># 不能返回非 None 的值，系统报 TypeError</span>
-<span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
-  <span class="n">File</span> <span class="s2">&#34;&lt;stdin&gt;&#34;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="ne">TypeError</span><span class="p">:</span> <span class="fm">__init__</span><span class="p">()</span> <span class="n">should</span> <span class="k">return</span> <span class="kc">None</span><span class="p">,</span> <span class="ow">not</span> <span class="s1">&#39;int&#39;</span>
-</code></pre></div><h2 id="__del__">__del__</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># ，实例化时不会报错</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="k">class</span> <span class="nc">Demo</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl"><span class="o">...</span>     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl"><span class="o">...</span>         <span class="k">return</span> <span class="kc">None</span>
+</span></span><span class="line"><span class="cl"><span class="o">...</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">d</span> <span class="o">=</span> <span class="n">Demo</span><span class="p">()</span>  <span class="c1"># 可以返回 None 值，系统不报错</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="k">class</span> <span class="nc">Demo</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl"><span class="o">...</span>     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl"><span class="o">...</span>         <span class="k">return</span>
+</span></span><span class="line"><span class="cl"><span class="o">...</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">d</span> <span class="o">=</span> <span class="n">Demo</span><span class="p">()</span>  <span class="c1"># 可以直接 return，系统不报错</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="k">class</span> <span class="nc">Demo</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl"><span class="o">...</span>     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl"><span class="o">...</span>         <span class="k">return</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl"><span class="o">...</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">d</span> <span class="o">=</span> <span class="n">Demo</span><span class="p">()</span>  <span class="c1"># 不能返回非 None 的值，系统报 TypeError</span>
+</span></span><span class="line"><span class="cl"><span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">  <span class="n">File</span> <span class="s2">&#34;&lt;stdin&gt;&#34;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="ne">TypeError</span><span class="p">:</span> <span class="fm">__init__</span><span class="p">()</span> <span class="n">should</span> <span class="k">return</span> <span class="kc">None</span><span class="p">,</span> <span class="ow">not</span> <span class="s1">&#39;int&#39;</span>
+</span></span></code></pre></div><h2 id="__del__">__del__</h2>
 <p><code>object.__del__(self)</code> 方法用于实例销毁前的清理工作，使用时需注意：</p>
 <ul>
 <li>该魔法方法会在实例被销毁时调用</li>
@@ -264,7 +264,7 @@
             Pan Feng
             
               2017 -
-            2022
+            2023
           </small>
           
         </p>

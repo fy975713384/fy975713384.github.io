@@ -2,7 +2,7 @@
 <html lang="en" itemscope itemtype="http://schema.org/WebPage">
 <head>
   <meta name="google-site-verification" content="NqacV5tHWoxzRi2H7KcEVCWMuxSnch23EM-vzsEV3h8" />
-  <meta name="generator" content="Hugo 0.85.0" />
+  <meta name="generator" content="Hugo 0.103.0" />
   <meta charset="utf-8">
   <title>浏览器工作过程 · Wing</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -123,34 +123,34 @@
 <ol>
 <li>搜索浏览器自身缓存的 DNS 记录</li>
 </ol>
-<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">浏览器自身也带有一层 DNS 缓存。Chrome 缓存 1000 条 DNS 解析结果，缓存时间大概在一分钟左右。
-（Chrome 浏览器通过输入：chrome://net-internals/#dns 打开 DNS 缓存页面）
-</code></pre></div><ol start="2">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">浏览器自身也带有一层 DNS 缓存。Chrome 缓存 1000 条 DNS 解析结果，缓存时间大概在一分钟左右。
+</span></span><span class="line"><span class="cl">（Chrome 浏览器通过输入：chrome://net-internals/#dns 打开 DNS 缓存页面）
+</span></span></code></pre></div><ol start="2">
 <li>搜索操作系统缓存和 hosts 文件</li>
 </ol>
-<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">发生在浏览器缓存中没有找到需要的记录或记录已经过期的时候。
-在 Windows 操作系统中，可以通过 `ipconfig /displaydns` 命令查看本机当前的缓存。
-通过 hosts 文件，你可以手动指定一个域名和其对应的 IP 解析结果，并且该结果一旦被使用，同样会被缓存到操作系统缓存中。
-Windows 系统的 hosts 文件在 `%systemroot%\system32\drivers\etc` 下，linux 系统的 hosts 文件在 `/etc/hosts` 下。
-</code></pre></div><ol start="3">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">发生在浏览器缓存中没有找到需要的记录或记录已经过期的时候。
+</span></span><span class="line"><span class="cl">在 Windows 操作系统中，可以通过 `ipconfig /displaydns` 命令查看本机当前的缓存。
+</span></span><span class="line"><span class="cl">通过 hosts 文件，你可以手动指定一个域名和其对应的 IP 解析结果，并且该结果一旦被使用，同样会被缓存到操作系统缓存中。
+</span></span><span class="line"><span class="cl">Windows 系统的 hosts 文件在 `%systemroot%\system32\drivers\etc` 下，linux 系统的 hosts 文件在 `/etc/hosts` 下。
+</span></span></code></pre></div><ol start="3">
 <li>向域名解析服务器发送解析请求</li>
 </ol>
-<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">发生在 hosts 文件和操作系统缓存中没有找到需要的记录或记录已经过期。
-第一台被访问的域名解析服务器就是我们平时在设置中填写的 DNS 服务器一项。
-一般一台域名解析服务器会被地理位置临近的大量用户使用（特别是 ISP 的 DNS），一般常见的网站域名解析都能在这里命中。
-</code></pre></div><ol start="4">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">发生在 hosts 文件和操作系统缓存中没有找到需要的记录或记录已经过期。
+</span></span><span class="line"><span class="cl">第一台被访问的域名解析服务器就是我们平时在设置中填写的 DNS 服务器一项。
+</span></span><span class="line"><span class="cl">一般一台域名解析服务器会被地理位置临近的大量用户使用（特别是 ISP 的 DNS），一般常见的网站域名解析都能在这里命中。
+</span></span></code></pre></div><ol start="4">
 <li>递归+迭代解析 DNS</li>
 </ol>
-<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">发生在域名解析服务器也没有该域名的记录时。
-从根域服务器（IPv4 只有 13 台）-&gt;
-</code></pre></div><ol start="5">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">发生在域名解析服务器也没有该域名的记录时。
+</span></span><span class="line"><span class="cl">从根域服务器（IPv4 只有 13 台）-&gt;
+</span></span></code></pre></div><ol start="5">
 <li>得到 IP 地址，返回给浏览器</li>
 </ol>
-<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">浏览器缓存 -&gt; 浏览器
-host 文件/本地缓存 -&gt; 浏览器
-域名解析服务器 -&gt; 浏览器
-（xxx.xxx 域服务器 -&gt; .xxx 域服务器 -&gt; 根域服务器）
-</code></pre></div><h3 id="tcp-连接">TCP 连接</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">浏览器缓存 -&gt; 浏览器
+</span></span><span class="line"><span class="cl">host 文件/本地缓存 -&gt; 浏览器
+</span></span><span class="line"><span class="cl">域名解析服务器 -&gt; 浏览器
+</span></span><span class="line"><span class="cl">（xxx.xxx 域服务器 -&gt; .xxx 域服务器 -&gt; 根域服务器）
+</span></span></code></pre></div><h3 id="tcp-连接">TCP 连接</h3>
 <h3 id="发起-http-请求">发起 HTTP 请求</h3>
 <h3 id="服务器处理请求">服务器处理请求</h3>
 <h3 id="服务器响应请求">服务器响应请求</h3>
@@ -250,7 +250,7 @@ host 文件/本地缓存 -&gt; 浏览器
             Pan Feng
             
               2017 -
-            2022
+            2023
           </small>
           
         </p>

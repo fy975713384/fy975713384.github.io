@@ -5,7 +5,25 @@
     <link>/tag/python/</link>
     <description>Recent content in Python on Wing</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 28 Aug 2021 00:02:51 +0800</lastBuildDate><atom:link href="/tag/python/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 09 Aug 2022 20:09:33 +0800</lastBuildDate><atom:link href="/tag/python/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Python元类介绍及实践</title>
+      <link>/2022/08/09/python%E5%85%83%E7%B1%BB%E4%BB%8B%E7%BB%8D%E5%8F%8A%E5%AE%9E%E8%B7%B5/</link>
+      <pubDate>Tue, 09 Aug 2022 20:09:33 +0800</pubDate>
+      
+      <guid>/2022/08/09/python%E5%85%83%E7%B1%BB%E4%BB%8B%E7%BB%8D%E5%8F%8A%E5%AE%9E%E8%B7%B5/</guid>
+      <description>Python 元类介绍及实践 一、 元编程和元类 1. 元编程技术简介 元编程 (Metaprogramming) 是一种计算机编程技术，这种技术可以使计算机程序将其它程序当做其数据进行处理。这意味着</description>
+    </item>
+    
+    <item>
+      <title>Python 用户密码加密存储</title>
+      <link>/2021/09/04/python-%E7%94%A8%E6%88%B7%E5%AF%86%E7%A0%81%E5%8A%A0%E5%AF%86%E5%AD%98%E5%82%A8/</link>
+      <pubDate>Sat, 04 Sep 2021 01:15:12 +0800</pubDate>
+      
+      <guid>/2021/09/04/python-%E7%94%A8%E6%88%B7%E5%AF%86%E7%A0%81%E5%8A%A0%E5%AF%86%E5%AD%98%E5%82%A8/</guid>
+      <description>进行 Web 应用开发时，用户密码如何保存才足够安全是一个值得重视的问题，作为应用开发者，我们有责任保证用户的信息安全。对于金融行业来说，更是如此。</description>
+    </item>
+    
     <item>
       <title>Python 并发编程</title>
       <link>/2021/08/28/python-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/</link>
@@ -75,7 +93,7 @@
       <pubDate>Fri, 04 Jan 2019 11:30:02 +0800</pubDate>
       
       <guid>/2019/01/04/python-%E5%A4%84%E7%90%86%E7%B3%BB%E7%BB%9F%E6%96%87%E4%BB%B6/</guid>
-      <description>Python 处理系统文件 内置方法 open() python open() 函数用于打开一个文件，创建一个 file 对象语法：open(name[, mode[, buffering]])name : 一个包含了你要访问的文件名称的字符串值mo</description>
+      <description>Python 处理系统文件 内置方法 open() python open() 函数用于打开一个文件，创建一个 file 对象 语法：open(name[, mode[, buffering]]) name : 一个包含了你要访问的文件名称的字符串值 mode</description>
     </item>
     
     <item>

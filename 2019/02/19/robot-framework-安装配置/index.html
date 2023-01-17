@@ -2,7 +2,7 @@
 <html lang="en" itemscope itemtype="http://schema.org/WebPage">
 <head>
   <meta name="google-site-verification" content="NqacV5tHWoxzRi2H7KcEVCWMuxSnch23EM-vzsEV3h8" />
-  <meta name="generator" content="Hugo 0.85.0" />
+  <meta name="generator" content="Hugo 0.103.0" />
   <meta charset="utf-8">
   <title>Robot Framework 安装配置 · Wing</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -124,28 +124,28 @@
 <h3 id="2-安装-robotframework-及其所需要的第三方库">2. 安装 RobotFramework 及其所需要的第三方库</h3>
 <p><em>RF 安装及运行所依赖的第三方库均可通过 Python 的包管理器 pip 进行安装。</em></p>
 <p>2.1 安装 Robot Framework：</p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ pip3 install robotframework
-</code></pre></div><p>2.2 安装 wxPython：（不安装则无法运行 RIDE 编辑器）</p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ pip3 install wxpython
-</code></pre></div><p>2.3 安装 RIDE 编辑器：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ pip3 install robotframework
+</span></span></code></pre></div><p>2.2 安装 wxPython：（不安装则无法运行 RIDE 编辑器）</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ pip3 install wxpython
+</span></span></code></pre></div><p>2.3 安装 RIDE 编辑器：</p>
 <ul>
 <li>Windows 端可直接使用 pip 安装：</li>
 </ul>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ pip3 install robotframework-ride
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ pip3 install robotframework-ride
+</span></span></code></pre></div><ul>
 <li>Mac 端目前需要使用 easy_install 进行安装：</li>
 </ul>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ pip3 install -U -r https://raw.githubusercontent.com/robotframework/RIDE/master/requirements.txt
-$ git clone https://github.com/robotframework/RIDE.git
-$ <span class="nb">cd</span> RIDE
-$ python3 setup.py build
-$ python3 setup.py install
-</code></pre></div><p>2.4 其它常用第三方库：</p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ pip3 install robotframework-seleniumlibrary  <span class="c1"># 用于进行 Web 自动化测试</span>
-$ pip3 install robotframework-appiumlibrary  <span class="c1"># 用于进行 app 自动化测试</span>
-$ pip3 install robotframework-requests  <span class="c1"># 用于进行接口自动化测试</span>
-$ pip3 install robotframework-autoitlibrary  <span class="c1"># 用于进行 Windows GUI 自动化测试（专用于 Windows 系统，安装时需要管理员权限）</span>
-</code></pre></div><h3 id="3-robot-framework-ide-ride-编辑器的基本使用">3. Robot Framework IDE (RIDE) 编辑器的基本使用</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ pip3 install -U -r https://raw.githubusercontent.com/robotframework/RIDE/master/requirements.txt
+</span></span><span class="line"><span class="cl">$ git clone https://github.com/robotframework/RIDE.git
+</span></span><span class="line"><span class="cl">$ <span class="nb">cd</span> RIDE
+</span></span><span class="line"><span class="cl">$ python3 setup.py build
+</span></span><span class="line"><span class="cl">$ python3 setup.py install
+</span></span></code></pre></div><p>2.4 其它常用第三方库：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ pip3 install robotframework-seleniumlibrary  <span class="c1"># 用于进行 Web 自动化测试</span>
+</span></span><span class="line"><span class="cl">$ pip3 install robotframework-appiumlibrary  <span class="c1"># 用于进行 app 自动化测试</span>
+</span></span><span class="line"><span class="cl">$ pip3 install robotframework-requests  <span class="c1"># 用于进行接口自动化测试</span>
+</span></span><span class="line"><span class="cl">$ pip3 install robotframework-autoitlibrary  <span class="c1"># 用于进行 Windows GUI 自动化测试（专用于 Windows 系统，安装时需要管理员权限）</span>
+</span></span></code></pre></div><h3 id="3-robot-framework-ide-ride-编辑器的基本使用">3. Robot Framework IDE (RIDE) 编辑器的基本使用</h3>
 <p><em>建议使用 VSCode 进行 Robot Framework 开发 🫤</em></p>
 <p>RIDE 是官方开发并推荐使用的 RF 测试用例开发环境，完成 RobotFramework 的安装后，Windows 端在命令行中运行 <code>$ python &lt;python_path&gt;\Scripts\ride.py</code>，Mac 端直接输入 <code>$ ride.py</code> 即可打开 RIDE 编辑器，如图：</p>
 <p><img src="https://cdn.jsdelivr.net/gh/fy975713384/cloud-img@main/blog/20201119124706.png" alt="RIDE 编辑器启动界面"></p>
@@ -289,7 +289,7 @@ $ pip3 install robotframework-autoitlibrary  <span class="c1"># 用于进行 Win
             Pan Feng
             
               2017 -
-            2022
+            2023
           </small>
           
         </p>

@@ -2,7 +2,7 @@
 <html lang="en" itemscope itemtype="http://schema.org/WebPage">
 <head>
   <meta name="google-site-verification" content="NqacV5tHWoxzRi2H7KcEVCWMuxSnch23EM-vzsEV3h8" />
-  <meta name="generator" content="Hugo 0.85.0" />
+  <meta name="generator" content="Hugo 0.103.0" />
   <meta charset="utf-8">
   <title>Python 用户密码加密存储 · Wing</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -31,7 +31,7 @@
 <meta itemprop="description" content="进行 Web 应用开发时，用户密码如何保存才足够安全是一个值得重视的问题，作为应用开发者，我们有责任保证用户的信息安全。对于金融行业来说，更是如此。"><meta itemprop="datePublished" content="2021-09-04T01:15:12+08:00" />
 <meta itemprop="dateModified" content="2021-09-05T17:03:43+08:00" />
 <meta itemprop="wordCount" content="1912">
-<meta itemprop="keywords" content="安全," /><meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="Python,安全," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Python 用户密码加密存储"/>
 <meta name="twitter:description" content="进行 Web 应用开发时，用户密码如何保存才足够安全是一个值得重视的问题，作为应用开发者，我们有责任保证用户的信息安全。对于金融行业来说，更是如此。"/>
 </head>
@@ -96,7 +96,8 @@
           <div class="clearfix"></div>
           <p class="float-right header-tags">
               <i class="fas fa-tags" aria-hidden="true"></i>
-              <a href="/tag/%E5%AE%89%E5%85%A8/">安全</a>
+              <a href="/tag/python/">Python</a>, 
+                <a href="/tag/%E5%AE%89%E5%85%A8/">安全</a>
           </p>
         
         
@@ -123,17 +124,17 @@
 <h3 id="python-哈希算法库">Python 哈希算法库</h3>
 <h4 id="hashlib-简介">hashlib 简介</h4>
 <p><a href="https://docs.python.org/zh-cn/3/library/hashlib.html">hashlib</a> 是 Python 内置的哈希算法标准库，针对不同的哈希算法实现了一个通用的接口。</p>
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">hashlib</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">hashlib</span><span class="o">.</span><span class="n">md5</span><span class="p">(</span><span class="s2">&#34;test&#34;</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s2">&#34;utf-8&#34;</span><span class="p">))</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">()</span>
-<span class="s1">&#39;098f6bcd4621d373cade4e832627b4f6&#39;</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">hashlib</span><span class="o">.</span><span class="n">sha256</span><span class="p">(</span><span class="s2">&#34;test&#34;</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s2">&#34;utf-8&#34;</span><span class="p">))</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">()</span>
-<span class="s1">&#39;9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08&#39;</span>
-
-<span class="o">&gt;&gt;&gt;</span> <span class="n">md5</span> <span class="o">=</span> <span class="n">hashlib</span><span class="o">.</span><span class="n">md5</span><span class="p">()</span>
-<span class="n">md5</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="s2">&#34;test&#34;</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s2">&#34;utf-8&#34;</span><span class="p">))</span>
-<span class="n">md5</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">()</span>
-<span class="s1">&#39;3dd0cd797a7399b56c470612887108eb&#39;</span>
-</code></pre></div><h2 id="二加盐哈希">二、加盐哈希</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">hashlib</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">hashlib</span><span class="o">.</span><span class="n">md5</span><span class="p">(</span><span class="s2">&#34;test&#34;</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s2">&#34;utf-8&#34;</span><span class="p">))</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="s1">&#39;098f6bcd4621d373cade4e832627b4f6&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">hashlib</span><span class="o">.</span><span class="n">sha256</span><span class="p">(</span><span class="s2">&#34;test&#34;</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s2">&#34;utf-8&#34;</span><span class="p">))</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="s1">&#39;9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">md5</span> <span class="o">=</span> <span class="n">hashlib</span><span class="o">.</span><span class="n">md5</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">md5</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="s2">&#34;test&#34;</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s2">&#34;utf-8&#34;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="n">md5</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="s1">&#39;3dd0cd797a7399b56c470612887108eb&#39;</span>
+</span></span></code></pre></div><h2 id="二加盐哈希">二、加盐哈希</h2>
 <p>加盐哈希是指在明文密码中混入随机字符串（即：密码 + 盐值）后再进行哈希加密。</p>
 <p>这种“加盐”技术可以使彩虹表等攻击变得难以实现。不过值得注意的是，虽然盐值无需进行加密，但是必须避免盐值复用，或使用短盐值。</p>
 <p>正确的方式是，在实现时应该对每一个用户都使用加密的安全伪随机数生成器来生成一个足够长的唯一盐值，在密码改变时也按相同方式重新生成盐值，并使用更为安全的哈希算法如 SHA-256 进行哈希加密，再将盐值和对应的哈希值（摘要）一起存入用户数据表中。</p>
@@ -148,42 +149,42 @@
 <p><a href="https://passlib.readthedocs.io/en/stable/index.html">Passlib</a> 是一个方便易用的基于 Python 的密码哈希算法第三方库，它提供数十种密码哈希算法的跨平台实现。并且也可作为一种管理现有密码哈希的框架。</p>
 <h4 id="passlib-安装">Passlib 安装</h4>
 <p><code>Passlib</code> 自身集成了一些算法，但对于 <code>Argon2</code> <code>Scrypt</code> <code>Bcrypt</code> 等算法，还需要按需安装实现这些算法的基础库，以 <code>Argon2</code> 为例，安装命令如下：</p>
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="err">$</span> <span class="n">pip3</span> <span class="n">install</span> <span class="s1">&#39;passlib[argon2]&#39;</span>
-</code></pre></div><h4 id="passlibhash-模块">passlib.hash 模块</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="err">$</span> <span class="n">pip3</span> <span class="n">install</span> <span class="s1">&#39;passlib[argon2]&#39;</span>
+</span></span></code></pre></div><h4 id="passlibhash-模块">passlib.hash 模块</h4>
 <p><code>Passlib</code> 所支持的算法都可以从 <code>passlib.hash</code> 模块中导入，它们都继承于 <code>passlib.ifc.PasswordHash</code> 类，并定义了一些通用接口，用于生成和校验哈希值、管理算法配置及其辅助功能。</p>
 <blockquote>
 <p>注：实际项目开发时通常不会用到该模块</p>
 </blockquote>
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># 哈希值生成</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">passlib.hash</span> <span class="kn">import</span> <span class="n">argon2</span>
-
-<span class="o">&gt;&gt;&gt;</span> <span class="p">(</span><span class="n">h1</span> <span class="o">:=</span> <span class="n">argon2</span><span class="o">.</span><span class="n">hash</span><span class="p">(</span><span class="s2">&#34;test&#34;</span><span class="p">))</span>
-<span class="s1">&#39;$argon2id$v=19$m=102400,t=2,p=8$/F9rDUHovTcm5Fwr5fw/Bw$u/d80J3HSbr0khtF78YRag&#39;</span>
-<span class="c1"># ^^^^^^^^ ^^^^ ^^^^^^^^ ^^^ ^^^ ^^^^^^^^^^^^^^^^^^^^^^ ^^^^^^^^^^^^^^^^^^^^^^</span>
-<span class="c1"># 类型      版本 内存占用   迭代 并行 随机盐值（每次都重新生成） 哈希值</span>
-
-<span class="o">&gt;&gt;&gt;</span> <span class="n">argon2</span><span class="o">.</span><span class="n">setting_kwds</span>  <span class="c1"># 查看可以修改的算法配置</span>
-<span class="p">(</span><span class="s1">&#39;salt&#39;</span><span class="p">,</span> <span class="s1">&#39;salt_size&#39;</span><span class="p">,</span> <span class="s1">&#39;salt_len&#39;</span><span class="p">,</span> <span class="s1">&#39;rounds&#39;</span><span class="p">,</span> <span class="s1">&#39;time_cost&#39;</span><span class="p">,</span> <span class="s1">&#39;memory_cost&#39;</span><span class="p">,</span> <span class="s1">&#39;parallelism&#39;</span><span class="p">,</span> <span class="s1">&#39;digest_size&#39;</span><span class="p">,</span> <span class="s1">&#39;hash_len&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">)</span>
-
-<span class="o">&gt;&gt;&gt;</span> <span class="p">(</span><span class="n">h2</span> <span class="o">:=</span> <span class="n">argon2</span><span class="o">.</span><span class="n">using</span><span class="p">(</span><span class="n">salt_size</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span><span class="o">.</span><span class="n">hash</span><span class="p">(</span><span class="s2">&#34;test&#34;</span><span class="p">))</span>
-<span class="s1">&#39;$argon2id$v=19$m=102400,t=2,p=8$+b+Xcm4txdjbO6dUihGCEEKotZY$R7NHoTNIcrykCWcb22CIsA&#39;</span>
-<span class="c1">#                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^</span>
-<span class="c1">#                                使用 using() 可以修改随机盐值长度</span>
-</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># 哈希值校验</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">argon2</span><span class="o">.</span><span class="n">verify</span><span class="p">(</span><span class="s2">&#34;test&#34;</span><span class="p">,</span> <span class="n">h1</span><span class="p">)</span>
-<span class="kc">True</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">argon2</span><span class="o">.</span><span class="n">verify</span><span class="p">(</span><span class="s2">&#34;test&#34;</span><span class="p">,</span> <span class="n">h2</span><span class="p">)</span>
-<span class="kc">True</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">argon2</span><span class="o">.</span><span class="n">verify</span><span class="p">(</span><span class="s2">&#34;other&#34;</span><span class="p">,</span> <span class="n">h2</span><span class="p">)</span>
-<span class="kc">False</span>
-</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># 哈希值类型校验</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">argon2</span><span class="o">.</span><span class="n">identify</span><span class="p">(</span><span class="n">h1</span><span class="p">)</span>
-<span class="kc">True</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="p">(</span><span class="n">h3</span> <span class="o">:=</span> <span class="n">passlib</span><span class="o">.</span><span class="n">hash</span><span class="o">.</span><span class="n">pbkdf2_sha256</span><span class="o">.</span><span class="n">hash</span><span class="p">(</span><span class="s2">&#34;test&#34;</span><span class="p">))</span>
-<span class="s1">&#39;$pbkdf2-sha256$29000$.38v5ZyzlnKOkXJujTGGEA$AzO7BQjDULT35w1d9aQDAShE7j/0/yOhUrgN1cD0KfI&#39;</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">argon2</span><span class="o">.</span><span class="n">identify</span><span class="p">(</span><span class="n">h3</span><span class="p">)</span>
-<span class="kc">False</span>
-</code></pre></div><h4 id="passlibcontextcryptcontext-类">passlib.context.CryptContext 类</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># 哈希值生成</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">passlib.hash</span> <span class="kn">import</span> <span class="n">argon2</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="p">(</span><span class="n">h1</span> <span class="o">:=</span> <span class="n">argon2</span><span class="o">.</span><span class="n">hash</span><span class="p">(</span><span class="s2">&#34;test&#34;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="s1">&#39;$argon2id$v=19$m=102400,t=2,p=8$/F9rDUHovTcm5Fwr5fw/Bw$u/d80J3HSbr0khtF78YRag&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># ^^^^^^^^ ^^^^ ^^^^^^^^ ^^^ ^^^ ^^^^^^^^^^^^^^^^^^^^^^ ^^^^^^^^^^^^^^^^^^^^^^</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 类型      版本 内存占用   迭代 并行 随机盐值（每次都重新生成） 哈希值</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">argon2</span><span class="o">.</span><span class="n">setting_kwds</span>  <span class="c1"># 查看可以修改的算法配置</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="s1">&#39;salt&#39;</span><span class="p">,</span> <span class="s1">&#39;salt_size&#39;</span><span class="p">,</span> <span class="s1">&#39;salt_len&#39;</span><span class="p">,</span> <span class="s1">&#39;rounds&#39;</span><span class="p">,</span> <span class="s1">&#39;time_cost&#39;</span><span class="p">,</span> <span class="s1">&#39;memory_cost&#39;</span><span class="p">,</span> <span class="s1">&#39;parallelism&#39;</span><span class="p">,</span> <span class="s1">&#39;digest_size&#39;</span><span class="p">,</span> <span class="s1">&#39;hash_len&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="p">(</span><span class="n">h2</span> <span class="o">:=</span> <span class="n">argon2</span><span class="o">.</span><span class="n">using</span><span class="p">(</span><span class="n">salt_size</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span><span class="o">.</span><span class="n">hash</span><span class="p">(</span><span class="s2">&#34;test&#34;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="s1">&#39;$argon2id$v=19$m=102400,t=2,p=8$+b+Xcm4txdjbO6dUihGCEEKotZY$R7NHoTNIcrykCWcb22CIsA&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#                                使用 using() 可以修改随机盐值长度</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># 哈希值校验</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">argon2</span><span class="o">.</span><span class="n">verify</span><span class="p">(</span><span class="s2">&#34;test&#34;</span><span class="p">,</span> <span class="n">h1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="kc">True</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">argon2</span><span class="o">.</span><span class="n">verify</span><span class="p">(</span><span class="s2">&#34;test&#34;</span><span class="p">,</span> <span class="n">h2</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="kc">True</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">argon2</span><span class="o">.</span><span class="n">verify</span><span class="p">(</span><span class="s2">&#34;other&#34;</span><span class="p">,</span> <span class="n">h2</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="kc">False</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># 哈希值类型校验</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">argon2</span><span class="o">.</span><span class="n">identify</span><span class="p">(</span><span class="n">h1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="kc">True</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="p">(</span><span class="n">h3</span> <span class="o">:=</span> <span class="n">passlib</span><span class="o">.</span><span class="n">hash</span><span class="o">.</span><span class="n">pbkdf2_sha256</span><span class="o">.</span><span class="n">hash</span><span class="p">(</span><span class="s2">&#34;test&#34;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="s1">&#39;$pbkdf2-sha256$29000$.38v5ZyzlnKOkXJujTGGEA$AzO7BQjDULT35w1d9aQDAShE7j/0/yOhUrgN1cD0KfI&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">argon2</span><span class="o">.</span><span class="n">identify</span><span class="p">(</span><span class="n">h3</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="kc">False</span>
+</span></span></code></pre></div><h4 id="passlibcontextcryptcontext-类">passlib.context.CryptContext 类</h4>
 <p><code>CryptContext</code> 类是我们<strong>在项目开发中主要用到的类</strong>，它主要提供了以下能力：</p>
 <ul>
 <li>生成哈希值，以及识别哈希值所用到的算法，并验证哈希值是否正确</li>
@@ -191,83 +192,83 @@
 <li>配置默认算法及其参数以及进行配置管理</li>
 </ul>
 <h5 id="常规用法">常规用法</h5>
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">passlib.context</span> <span class="kn">import</span> <span class="n">CryptContext</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">ctx</span> <span class="o">=</span> <span class="n">CryptContext</span><span class="p">(</span><span class="n">schemes</span><span class="o">=</span><span class="p">[</span><span class="s2">&#34;argon2&#34;</span><span class="p">,</span> <span class="s2">&#34;pbkdf2_sha256&#34;</span><span class="p">])</span>
-
-<span class="c1"># 默认会取列表中的第一个算法</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="p">(</span><span class="n">h1</span> <span class="o">:=</span> <span class="n">ctx</span><span class="o">.</span><span class="n">hash</span><span class="p">(</span><span class="s2">&#34;test&#34;</span><span class="p">))</span>
-<span class="s1">&#39;$argon2id$v=19$m=102400,t=2,p=8$mDOGEAKgNMaYM2asFaK0Vg$baidGEZd9ptoUVEv3IXAAA&#39;</span>
-
-<span class="c1"># 使用 scheme 参数指定需要使用的算法</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="p">(</span><span class="n">h2</span> <span class="o">:=</span> <span class="n">ctx</span><span class="o">.</span><span class="n">hash</span><span class="p">(</span><span class="s2">&#34;test&#34;</span><span class="p">,</span> <span class="n">scheme</span><span class="o">=</span><span class="s2">&#34;pbkdf2_sha256&#34;</span><span class="p">))</span>
-<span class="s1">&#39;$pbkdf2-sha256$29000$9F6LEcKY05pzbq1Vaq2Vsg$D30QsgdFfC.Ydngyutl2gvxYruHKvoV6hfPb7A2Tu50&#39;</span>
-
-<span class="c1"># 使用 default 参数修改默认算法</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">ctx</span> <span class="o">=</span> <span class="n">CryptContext</span><span class="p">(</span><span class="n">schemes</span><span class="o">=</span><span class="p">[</span><span class="s2">&#34;argon2&#34;</span><span class="p">,</span> <span class="s2">&#34;pbkdf2_sha256&#34;</span><span class="p">],</span> <span class="n">default</span><span class="o">=</span><span class="s2">&#34;pbkdf2_sha256&#34;</span><span class="p">)</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="p">(</span><span class="n">h3</span> <span class="o">:=</span> <span class="n">ctx</span><span class="o">.</span><span class="n">hash</span><span class="p">(</span><span class="s2">&#34;test&#34;</span><span class="p">))</span>
-<span class="s1">&#39;$pbkdf2-sha256$29000$oTSGMAYghHAuxdi7V2rNuQ$hVzhFx47C5ndVtkLkdYPK1358Cch/FCs5Fc6nabv5qQ&#39;</span>
-
-<span class="c1"># 验证</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="p">[</span><span class="n">ctx</span><span class="o">.</span><span class="n">identify</span><span class="p">(</span><span class="n">h</span><span class="p">)</span> <span class="k">for</span> <span class="n">h</span> <span class="ow">in</span> <span class="p">(</span><span class="n">h1</span><span class="p">,</span> <span class="n">h2</span><span class="p">,</span> <span class="n">h3</span><span class="p">)]</span>
-<span class="p">[</span><span class="s1">&#39;argon2&#39;</span><span class="p">,</span> <span class="s1">&#39;pbkdf2_sha256&#39;</span><span class="p">,</span> <span class="s1">&#39;pbkdf2_sha256&#39;</span><span class="p">]</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="nb">any</span><span class="p">([</span><span class="n">ctx</span><span class="o">.</span><span class="n">verify</span><span class="p">(</span><span class="s2">&#34;test&#34;</span><span class="p">,</span> <span class="n">h</span><span class="p">)</span> <span class="k">for</span> <span class="n">h</span> <span class="ow">in</span> <span class="p">(</span><span class="n">h1</span><span class="p">,</span> <span class="n">h2</span><span class="p">,</span> <span class="n">h3</span><span class="p">)])</span>
-<span class="kc">True</span>
-</code></pre></div><h5 id="算法新增弃用哈希值迁移">算法新增/弃用&amp;哈希值迁移</h5>
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">passlib.context</span> <span class="kn">import</span> <span class="n">CryptContext</span>
-
-<span class="c1"># 通过 deprecated 参数定义弃用的算法</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">ctx</span> <span class="o">=</span> <span class="n">CryptContext</span><span class="p">(</span><span class="n">schemes</span><span class="o">=</span><span class="p">[</span><span class="s2">&#34;argon2&#34;</span><span class="p">,</span> <span class="s2">&#34;pbkdf2_sha256&#34;</span><span class="p">],</span> <span class="n">deprecated</span><span class="o">=</span><span class="p">[</span><span class="s2">&#34;pbkdf2_sha256&#34;</span><span class="p">])</span>
-
-<span class="c1"># 使用 needs_update() 方法可以判断哈希值是否需要迁移</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">ctx</span><span class="o">.</span><span class="n">needs_update</span><span class="p">(</span><span class="s1">&#39;$argon2id$v=19$m=102400,t=2,p=8$mDOGEAKgNMaYM2asFaK0Vg$baidGEZd9ptoUVEv3IXAAA&#39;</span><span class="p">)</span>
-<span class="kc">False</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">ctx</span><span class="o">.</span><span class="n">needs_update</span><span class="p">(</span><span class="s1">&#39;$pbkdf2-sha256$29000$9F6LEcKY05pzbq1Vaq2Vsg$D30QsgdFfC.Ydngyutl2gvxYruHKvoV6hfPb7A2Tu50&#39;</span><span class="p">)</span>
-<span class="kc">True</span>
-
-<span class="c1"># 使用 verify_and_update() 方法在哈希值需要迁移时可以重新生成哈希值</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">ctx</span><span class="o">.</span><span class="n">verify_and_update</span><span class="p">(</span><span class="s2">&#34;test&#34;</span><span class="p">,</span> <span class="s1">&#39;$argon2id$v=19$m=102400,t=2,p=8$mDOGEAKgNMaYM2asFaK0Vg$baidGEZd9ptoUVEv3IXAAA&#39;</span><span class="p">)</span>
-<span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">ctx</span><span class="o">.</span><span class="n">verify_and_update</span><span class="p">(</span><span class="s2">&#34;test&#34;</span><span class="p">,</span> <span class="s1">&#39;$pbkdf2-sha256$29000$9F6LEcKY05pzbq1Vaq2Vsg$D30QsgdFfC.Ydngyutl2gvxYruHKvoV6hfPb7A2Tu50&#39;</span><span class="p">)</span>
-<span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="s1">&#39;$argon2id$v=19$m=102400,t=2,p=8$qVUqJUTI+b93TmmNsZby3g$JXrotTH2hg+MXypb46wmVQ&#39;</span><span class="p">)</span>
-</code></pre></div><h5 id="配置管理">配置管理</h5>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">passlib.context</span> <span class="kn">import</span> <span class="n">CryptContext</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">ctx</span> <span class="o">=</span> <span class="n">CryptContext</span><span class="p">(</span><span class="n">schemes</span><span class="o">=</span><span class="p">[</span><span class="s2">&#34;argon2&#34;</span><span class="p">,</span> <span class="s2">&#34;pbkdf2_sha256&#34;</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 默认会取列表中的第一个算法</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="p">(</span><span class="n">h1</span> <span class="o">:=</span> <span class="n">ctx</span><span class="o">.</span><span class="n">hash</span><span class="p">(</span><span class="s2">&#34;test&#34;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="s1">&#39;$argon2id$v=19$m=102400,t=2,p=8$mDOGEAKgNMaYM2asFaK0Vg$baidGEZd9ptoUVEv3IXAAA&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 使用 scheme 参数指定需要使用的算法</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="p">(</span><span class="n">h2</span> <span class="o">:=</span> <span class="n">ctx</span><span class="o">.</span><span class="n">hash</span><span class="p">(</span><span class="s2">&#34;test&#34;</span><span class="p">,</span> <span class="n">scheme</span><span class="o">=</span><span class="s2">&#34;pbkdf2_sha256&#34;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="s1">&#39;$pbkdf2-sha256$29000$9F6LEcKY05pzbq1Vaq2Vsg$D30QsgdFfC.Ydngyutl2gvxYruHKvoV6hfPb7A2Tu50&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 使用 default 参数修改默认算法</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">ctx</span> <span class="o">=</span> <span class="n">CryptContext</span><span class="p">(</span><span class="n">schemes</span><span class="o">=</span><span class="p">[</span><span class="s2">&#34;argon2&#34;</span><span class="p">,</span> <span class="s2">&#34;pbkdf2_sha256&#34;</span><span class="p">],</span> <span class="n">default</span><span class="o">=</span><span class="s2">&#34;pbkdf2_sha256&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="p">(</span><span class="n">h3</span> <span class="o">:=</span> <span class="n">ctx</span><span class="o">.</span><span class="n">hash</span><span class="p">(</span><span class="s2">&#34;test&#34;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="s1">&#39;$pbkdf2-sha256$29000$oTSGMAYghHAuxdi7V2rNuQ$hVzhFx47C5ndVtkLkdYPK1358Cch/FCs5Fc6nabv5qQ&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 验证</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="p">[</span><span class="n">ctx</span><span class="o">.</span><span class="n">identify</span><span class="p">(</span><span class="n">h</span><span class="p">)</span> <span class="k">for</span> <span class="n">h</span> <span class="ow">in</span> <span class="p">(</span><span class="n">h1</span><span class="p">,</span> <span class="n">h2</span><span class="p">,</span> <span class="n">h3</span><span class="p">)]</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="s1">&#39;argon2&#39;</span><span class="p">,</span> <span class="s1">&#39;pbkdf2_sha256&#39;</span><span class="p">,</span> <span class="s1">&#39;pbkdf2_sha256&#39;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="nb">any</span><span class="p">([</span><span class="n">ctx</span><span class="o">.</span><span class="n">verify</span><span class="p">(</span><span class="s2">&#34;test&#34;</span><span class="p">,</span> <span class="n">h</span><span class="p">)</span> <span class="k">for</span> <span class="n">h</span> <span class="ow">in</span> <span class="p">(</span><span class="n">h1</span><span class="p">,</span> <span class="n">h2</span><span class="p">,</span> <span class="n">h3</span><span class="p">)])</span>
+</span></span><span class="line"><span class="cl"><span class="kc">True</span>
+</span></span></code></pre></div><h5 id="算法新增弃用哈希值迁移">算法新增/弃用&amp;哈希值迁移</h5>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">passlib.context</span> <span class="kn">import</span> <span class="n">CryptContext</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 通过 deprecated 参数定义弃用的算法</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">ctx</span> <span class="o">=</span> <span class="n">CryptContext</span><span class="p">(</span><span class="n">schemes</span><span class="o">=</span><span class="p">[</span><span class="s2">&#34;argon2&#34;</span><span class="p">,</span> <span class="s2">&#34;pbkdf2_sha256&#34;</span><span class="p">],</span> <span class="n">deprecated</span><span class="o">=</span><span class="p">[</span><span class="s2">&#34;pbkdf2_sha256&#34;</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 使用 needs_update() 方法可以判断哈希值是否需要迁移</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">ctx</span><span class="o">.</span><span class="n">needs_update</span><span class="p">(</span><span class="s1">&#39;$argon2id$v=19$m=102400,t=2,p=8$mDOGEAKgNMaYM2asFaK0Vg$baidGEZd9ptoUVEv3IXAAA&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="kc">False</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">ctx</span><span class="o">.</span><span class="n">needs_update</span><span class="p">(</span><span class="s1">&#39;$pbkdf2-sha256$29000$9F6LEcKY05pzbq1Vaq2Vsg$D30QsgdFfC.Ydngyutl2gvxYruHKvoV6hfPb7A2Tu50&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="kc">True</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 使用 verify_and_update() 方法在哈希值需要迁移时可以重新生成哈希值</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">ctx</span><span class="o">.</span><span class="n">verify_and_update</span><span class="p">(</span><span class="s2">&#34;test&#34;</span><span class="p">,</span> <span class="s1">&#39;$argon2id$v=19$m=102400,t=2,p=8$mDOGEAKgNMaYM2asFaK0Vg$baidGEZd9ptoUVEv3IXAAA&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">ctx</span><span class="o">.</span><span class="n">verify_and_update</span><span class="p">(</span><span class="s2">&#34;test&#34;</span><span class="p">,</span> <span class="s1">&#39;$pbkdf2-sha256$29000$9F6LEcKY05pzbq1Vaq2Vsg$D30QsgdFfC.Ydngyutl2gvxYruHKvoV6hfPb7A2Tu50&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="s1">&#39;$argon2id$v=19$m=102400,t=2,p=8$qVUqJUTI+b93TmmNsZby3g$JXrotTH2hg+MXypb46wmVQ&#39;</span><span class="p">)</span>
+</span></span></code></pre></div><h5 id="配置管理">配置管理</h5>
 <blockquote>
 <p>注：需要遵循 <code>scheme__setting</code> 格式</p>
 </blockquote>
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">passlib.context</span> <span class="kn">import</span> <span class="n">CryptContext</span>
-
-<span class="c1"># 定义类时通过硬编码设置</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">ctx</span> <span class="o">=</span> <span class="n">CryptContext</span><span class="p">(</span><span class="n">schemes</span><span class="o">=</span><span class="s2">&#34;argon2&#34;</span><span class="p">,</span> <span class="n">argon2__salt_size</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>
-
-<span class="c1"># 使用 update() 硬编码修改配置</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">ctx</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">argon2__memory_cost</span><span class="o">=</span><span class="mi">10240</span><span class="p">,</span> <span class="n">argon2__rounds</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
-
-<span class="c1"># 查看当前自定义的配置</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">ctx</span><span class="o">.</span><span class="n">to_dict</span><span class="p">()</span>
-<span class="p">{</span><span class="s1">&#39;schemes&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;argon2&#39;</span><span class="p">],</span> <span class="s1">&#39;argon2__memory_cost&#39;</span><span class="p">:</span> <span class="mi">10240</span><span class="p">,</span> <span class="s1">&#39;argon2__rounds&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;argon2__salt_size&#39;</span><span class="p">:</span> <span class="mi">8</span><span class="p">}</span>
-
-<span class="o">&gt;&gt;&gt;</span> <span class="n">ctx</span><span class="o">.</span><span class="n">hash</span><span class="p">(</span><span class="s2">&#34;test&#34;</span><span class="p">)</span>
-<span class="s1">&#39;$argon2id$v=19$m=10240,t=3,p=8$/38vhXAO4dw$YH5Tl8IbPc3ix6t/58X6Qg&#39;</span>
-
-<span class="c1"># 自定义配置输出成 INI 格式的文本内容</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">ctx</span> <span class="o">=</span> <span class="n">CryptContext</span><span class="p">(</span><span class="n">schemes</span><span class="o">=</span><span class="p">[</span><span class="s2">&#34;argon2&#34;</span><span class="p">,</span> <span class="s2">&#34;pbkdf2_sha256&#34;</span><span class="p">],</span> <span class="n">default</span><span class="o">=</span><span class="s2">&#34;argon2&#34;</span><span class="p">,</span> <span class="n">deprecated</span><span class="o">=</span><span class="s2">&#34;pbkdf2_sha256&#34;</span><span class="p">,</span> <span class="n">argon2__salt_size</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">argon2__rounds</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">to_string</span><span class="p">())</span>
-<span class="p">[</span><span class="n">passlib</span><span class="p">]</span>
-<span class="n">schemes</span> <span class="o">=</span> <span class="n">argon2</span><span class="p">,</span> <span class="n">pbkdf2_sha256</span>
-<span class="n">default</span> <span class="o">=</span> <span class="n">argon2</span>
-<span class="n">deprecated</span> <span class="o">=</span> <span class="n">pbkdf2_sha256</span>
-<span class="n">argon2__rounds</span> <span class="o">=</span> <span class="mi">3</span>
-<span class="n">argon2__salt_size</span> <span class="o">=</span> <span class="mi">8</span>
-</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># 配置加载</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">myctx2</span> <span class="o">=</span> <span class="n">CryptContext</span><span class="o">.</span><span class="n">from_string</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">to_string</span><span class="p">())</span>  <span class="c1"># 直接从字符串加载</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">myctx3</span> <span class="o">=</span> <span class="n">CryptContext</span><span class="o">.</span><span class="n">from_path</span><span class="p">(</span><span class="s2">&#34;/some/path/on/local/system&#34;</span><span class="p">)</span>  <span class="c1"># 从 INI 配置文件加载</span>
-</code></pre></div><p>另外，当我们更新限制性的配置后，也可以通过哈希值迁移方式进行哈希值的重新生成。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">passlib.context</span> <span class="kn">import</span> <span class="n">CryptContext</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 定义类时通过硬编码设置</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">ctx</span> <span class="o">=</span> <span class="n">CryptContext</span><span class="p">(</span><span class="n">schemes</span><span class="o">=</span><span class="s2">&#34;argon2&#34;</span><span class="p">,</span> <span class="n">argon2__salt_size</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 使用 update() 硬编码修改配置</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">ctx</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">argon2__memory_cost</span><span class="o">=</span><span class="mi">10240</span><span class="p">,</span> <span class="n">argon2__rounds</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 查看当前自定义的配置</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">ctx</span><span class="o">.</span><span class="n">to_dict</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span><span class="s1">&#39;schemes&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;argon2&#39;</span><span class="p">],</span> <span class="s1">&#39;argon2__memory_cost&#39;</span><span class="p">:</span> <span class="mi">10240</span><span class="p">,</span> <span class="s1">&#39;argon2__rounds&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;argon2__salt_size&#39;</span><span class="p">:</span> <span class="mi">8</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">ctx</span><span class="o">.</span><span class="n">hash</span><span class="p">(</span><span class="s2">&#34;test&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="s1">&#39;$argon2id$v=19$m=10240,t=3,p=8$/38vhXAO4dw$YH5Tl8IbPc3ix6t/58X6Qg&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 自定义配置输出成 INI 格式的文本内容</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">ctx</span> <span class="o">=</span> <span class="n">CryptContext</span><span class="p">(</span><span class="n">schemes</span><span class="o">=</span><span class="p">[</span><span class="s2">&#34;argon2&#34;</span><span class="p">,</span> <span class="s2">&#34;pbkdf2_sha256&#34;</span><span class="p">],</span> <span class="n">default</span><span class="o">=</span><span class="s2">&#34;argon2&#34;</span><span class="p">,</span> <span class="n">deprecated</span><span class="o">=</span><span class="s2">&#34;pbkdf2_sha256&#34;</span><span class="p">,</span> <span class="n">argon2__salt_size</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">argon2__rounds</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">to_string</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="n">passlib</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="n">schemes</span> <span class="o">=</span> <span class="n">argon2</span><span class="p">,</span> <span class="n">pbkdf2_sha256</span>
+</span></span><span class="line"><span class="cl"><span class="n">default</span> <span class="o">=</span> <span class="n">argon2</span>
+</span></span><span class="line"><span class="cl"><span class="n">deprecated</span> <span class="o">=</span> <span class="n">pbkdf2_sha256</span>
+</span></span><span class="line"><span class="cl"><span class="n">argon2__rounds</span> <span class="o">=</span> <span class="mi">3</span>
+</span></span><span class="line"><span class="cl"><span class="n">argon2__salt_size</span> <span class="o">=</span> <span class="mi">8</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># 配置加载</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">myctx2</span> <span class="o">=</span> <span class="n">CryptContext</span><span class="o">.</span><span class="n">from_string</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">to_string</span><span class="p">())</span>  <span class="c1"># 直接从字符串加载</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">myctx3</span> <span class="o">=</span> <span class="n">CryptContext</span><span class="o">.</span><span class="n">from_path</span><span class="p">(</span><span class="s2">&#34;/some/path/on/local/system&#34;</span><span class="p">)</span>  <span class="c1"># 从 INI 配置文件加载</span>
+</span></span></code></pre></div><p>另外，当我们更新限制性的配置后，也可以通过哈希值迁移方式进行哈希值的重新生成。</p>
 <blockquote>
 <p>注：限制性配置指的是以 <code>max_</code> 或 <code>min_</code> 开头的配置</p>
 </blockquote>
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="o">&gt;&gt;&gt;</span> <span class="n">ctx</span> <span class="o">=</span> <span class="n">CryptContext</span><span class="p">(</span><span class="s2">&#34;argon2&#34;</span><span class="p">,</span> <span class="n">argon2__min_rounds</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">ctx</span><span class="o">.</span><span class="n">needs_update</span><span class="p">(</span><span class="s2">&#34;$argon2id$v=19$m=102400,t=2,p=8$Sun9HwPgfC9lTMl5T8nZew$vpB18D2PGY8M+gPpnL39LA&#34;</span><span class="p">)</span>
-<span class="kc">True</span>
-</code></pre></div><blockquote>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">ctx</span> <span class="o">=</span> <span class="n">CryptContext</span><span class="p">(</span><span class="s2">&#34;argon2&#34;</span><span class="p">,</span> <span class="n">argon2__min_rounds</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">ctx</span><span class="o">.</span><span class="n">needs_update</span><span class="p">(</span><span class="s2">&#34;$argon2id$v=19$m=102400,t=2,p=8$Sun9HwPgfC9lTMl5T8nZew$vpB18D2PGY8M+gPpnL39LA&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="kc">True</span>
+</span></span></code></pre></div><blockquote>
 <p>参考来源：<br>
 <a href="https://www.infoq.cn/article/how-to-encrypt-the-user-password-correctly">https://www.infoq.cn/article/how-to-encrypt-the-user-password-correctly</a><br>
 <a href="https://www.zhihu.com/question/20479856">https://www.zhihu.com/question/20479856</a><br>
@@ -364,7 +365,7 @@
             Pan Feng
             
               2017 -
-            2022
+            2023
           </small>
           
         </p>
