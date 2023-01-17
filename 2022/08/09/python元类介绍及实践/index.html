@@ -30,7 +30,7 @@
 <meta itemprop="name" content="Python元类介绍及实践">
 <meta itemprop="description" content="Python 元类介绍及实践 一、 元编程和元类 1. 元编程技术简介 元编程 (Metaprogramming) 是一种计算机编程技术，这种技术可以使计算机程序将其它程序当做其数据进行处理。这意味着"><meta itemprop="datePublished" content="2022-08-09T20:09:33+08:00" />
 <meta itemprop="dateModified" content="2023-01-17T17:09:36+08:00" />
-<meta itemprop="wordCount" content="1726">
+<meta itemprop="wordCount" content="1728">
 <meta itemprop="keywords" content="Python," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Python元类介绍及实践"/>
 <meta name="twitter:description" content="Python 元类介绍及实践 一、 元编程和元类 1. 元编程技术简介 元编程 (Metaprogramming) 是一种计算机编程技术，这种技术可以使计算机程序将其它程序当做其数据进行处理。这意味着"/>
@@ -187,8 +187,8 @@ and don’t need an explanation about why).”<br>
 </span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="nb">type</span><span class="o">.</span><span class="fm">__new__</span><span class="p">(</span><span class="n">mcs</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">bases</span><span class="p">,</span> <span class="n">attrs</span><span class="p">)</span>
 </span></span></code></pre></div><p>稍作分析，不难看出在通过 <code>type()</code> 进行字段类创建时，主要对字段类继承的类（即：<code>type</code> 的 <code>bases</code> 参数）进行了处理。
 当字段类继承于 <code>Field</code> 和其它类且 <code>MRO</code> 顺序中 <code>Field</code> 位于首位时，设置当前字段类的字段类型 <code>field_type</code> 为继承的其它类的类型，如：<code>str</code> <code>int</code> 等。</p>
-<h3 id="2-we-x">2. we-x</h3>
-<p>在 <code>we-x</code> 测试框架中，所有用于定义一个关键字库的关键字类最终都必须继承于一个关键字基类，在这个基类中，定义了用于控制关键字方法的元类 <code>KeywordMeta</code>，其具体实现如下：</p>
+<h3 id="2-test-x">2. test-x</h3>
+<p>在自研 <code>test-x</code> 测试框架中，所有用于定义一个关键字库的关键字类最终都必须继承于一个关键字基类，在这个基类中，定义了用于控制关键字方法的元类 <code>KeywordMeta</code>，其具体实现如下：</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">KeywordMeta</span><span class="p">(</span><span class="nb">type</span><span class="p">):</span>
 </span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="fm">__new__</span><span class="p">(</span><span class="n">mcs</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">bases</span><span class="p">,</span> <span class="n">attrs</span><span class="p">):</span>
 </span></span><span class="line"><span class="cl">        <span class="n">ori</span> <span class="o">=</span> <span class="nb">type</span><span class="o">.</span><span class="fm">__new__</span><span class="p">(</span><span class="n">mcs</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">bases</span><span class="p">,</span> <span class="n">attrs</span><span class="p">)</span>
