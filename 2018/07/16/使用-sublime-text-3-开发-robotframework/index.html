@@ -131,13 +131,13 @@
 <p>说明文档：<a href="https://packagecontrol.io/packages/RobotFrameworkAssistant">https://packagecontrol.io/packages/RobotFrameworkAssistant</a><br>
 GitHub 地址：<a href="https://github.com/andriyko/sublime-robot-framework-assistant">https://github.com/andriyko/sublime-robot-framework-assistant</a></p>
 <h3 id="1-安装-robotframeworkassistant">1. 安装 RobotFrameworkAssistant</h3>
-<p>安装过程图示：
+<p>安装过程图示：<br>
 <img src="https://cdn.jsdelivr.net/gh/fy975713384/cloud-img@main/blog/ed19fa55gy1gfphy1v1zeg212w0n9jyd.gif" alt="安装 RobotFrameworkAssistant.gif"></p>
 <h3 id="2-配置-robotframeworkassistant">2. 配置 RobotFrameworkAssistant</h3>
-<p>2.1 打开 <code>Robot.sublime-settings</code> 文件，注意选择 <code>Setting - User</code>：
+<p>2.1 打开 <code>Robot.sublime-settings</code> 文件，注意选择 <code>Setting - User</code>：<br>
 <img src="https://cdn.jsdelivr.net/gh/fy975713384/cloud-img@main/blog/20201119124135.png" alt="打开 Robot.sublime-settings.png"></p>
-<p>2.2 修改 <code>Robot.sublime-settings</code> 文件并保存：
-<img src="https://cdn.jsdelivr.net/gh/fy975713384/cloud-img@main/blog/20201119124200.png" alt="image.png">
+<p>2.2 修改 <code>Robot.sublime-settings</code> 文件并保存：<br>
+<img src="https://cdn.jsdelivr.net/gh/fy975713384/cloud-img@main/blog/20201119124200.png" alt="image.png"><br>
 示例代码如下：（代码中的相关路径需要修改为自己机器中的实际路径）</p>
 <ul>
 <li>Windows</li>
@@ -162,12 +162,12 @@ GitHub 地址：<a href="https://github.com/andriyko/sublime-robot-framework-ass
 </span></span><span class="line"><span class="cl">  <span class="nt">&#34;robot_framework_keyword_argument_format&#34;</span><span class="p">:</span> <span class="kc">true</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></div><p>注意：和 Python 有关的路径需要设置为 Python 2.x 版本，截止到目前 2018.07.16， Robot Framework Assistant 的 Python3 版本兼容性不是很好。</p>
-<p>2.3 安装配置完成后大致效果如下：（主题和字体可能不一样）
+<p>2.3 安装配置完成后大致效果如下：（主题和字体可能不一样）<br>
 <img src="https://cdn.jsdelivr.net/gh/fy975713384/cloud-img@main/blog/20201119124258.png" alt=""></p>
-<p>2.4 打开 <code>Robot.sublime-build</code> 配置文件：
+<p>2.4 打开 <code>Robot.sublime-build</code> 配置文件：<br>
 <img src="https://cdn.jsdelivr.net/gh/fy975713384/cloud-img@main/blog/20201119124314.png" alt="打开 Robot.sublime-build.png"></p>
-<p>2.5 修改 <code>Robot.sublime-build</code> 配置文件并保存：
-<img src="https://cdn.jsdelivr.net/gh/fy975713384/cloud-img@main/blog/20201119124337.png" alt="修改 Robot.sublime-build.png">
+<p>2.5 修改 <code>Robot.sublime-build</code> 配置文件并保存：<br>
+<img src="https://cdn.jsdelivr.net/gh/fy975713384/cloud-img@main/blog/20201119124337.png" alt="修改 Robot.sublime-build.png"><br>
 示例代码如下：</p>
 <ul>
 <li>Windows</li>
@@ -205,20 +205,20 @@ GitHub 地址：<a href="https://github.com/andriyko/sublime-robot-framework-ass
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl">  <span class="p">]</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></div><p>2.6 配置完成后即可通过 Sublime 的构建系统执行脚本
+</span></span></code></pre></div><p>2.6 配置完成后即可通过 Sublime 的构建系统执行脚本<br>
 <img src="https://cdn.jsdelivr.net/gh/fy975713384/cloud-img@main/blog/ed19fa55gy1gfpi36dqzug215w0psjy9.gif" alt="使用构建系统执行脚本.gif"></p>
 <p>完成上述操作后，Sublime Text 3 便可以高亮显示 RF 语法，并进行相关层次的构建操作。但还不具备关键字自动补全的功能，想要让 Sublime Text 3 可以进行关键字自动补全，还需要进行 Database 的创建。</p>
 <h3 id="3-创建-database">3. 创建 Database</h3>
-<p>创建 Database 的操作十分简单，只需要通过 <code>导航栏 Preference --&gt; Package Setting --&gt; Robot Framework Assistant --&gt; Create Datebase</code> 或 <code>右键打开的 RF 文件 --&gt; Robot Framework --&gt; Datebase --&gt; Create Datebase</code> 进行创建即可。
-<img src="https://cdn.jsdelivr.net/gh/fy975713384/cloud-img@main/blog/20201119124441.png" alt="创建 Database 1.png">
-<img src="https://cdn.jsdelivr.net/gh/fy975713384/cloud-img@main/blog/20201119124508.png" alt="创建 Database 2.png">
-创建成功后，左下角应该会显示 <code>Indexing done with rc: 0</code> ，也可以通过打开 RobotFrameworkAssistant 插件目录（默认在 <code>C:\Users\用户名\AppData\Roaming\Sublime Text 3\Packages\RobotFrameworkAssistant\database</code>）下的 database 查看是否创建成功，如果创建成功则会生成 index 和 scanner 两个文件夹。
+<p>创建 Database 的操作十分简单，只需要通过 <code>导航栏 Preference --&gt; Package Setting --&gt; Robot Framework Assistant --&gt; Create Datebase</code> 或 <code>右键打开的 RF 文件 --&gt; Robot Framework --&gt; Datebase --&gt; Create Datebase</code> 进行创建即可。<br>
+<img src="https://cdn.jsdelivr.net/gh/fy975713384/cloud-img@main/blog/20201119124441.png" alt="创建 Database 1.png"><br>
+<img src="https://cdn.jsdelivr.net/gh/fy975713384/cloud-img@main/blog/20201119124508.png" alt="创建 Database 2.png"><br>
+创建成功后，左下角应该会显示 <code>Indexing done with rc: 0</code> ，也可以通过打开 RobotFrameworkAssistant 插件目录（默认在 <code>C:\Users\用户名\AppData\Roaming\Sublime Text 3\Packages\RobotFrameworkAssistant\database</code>）下的 database 查看是否创建成功，如果创建成功则会生成 index 和 scanner 两个文件夹。<br>
 <img src="https://cdn.jsdelivr.net/gh/fy975713384/cloud-img@main/blog/20201119124539.png" alt=""></p>
 <p>最终效果：</p>
 <p><img src="https://cdn.jsdelivr.net/gh/fy975713384/cloud-img@main/blog/20201119124626.png" alt="关键字自动补全效果.gif"></p>
 <h2 id="三个性化-sublime-text-3-配置让-sublime-更加美观可选">三、个性化 Sublime Text 3 配置，让 Sublime 更加美观（可选）</h2>
 <p>主题：<a href="https://github.com/dempfi/ayu">ayu</a><br>
-字体：<a href="https://fonts.google.com/specimen/Roboto+Mono">Roboto Mono Medium</a>
+字体：<a href="https://fonts.google.com/specimen/Roboto+Mono">Roboto Mono Medium</a><br>
 <em>（谷歌字体下载需要 fq）</em></p>
 
   </article>

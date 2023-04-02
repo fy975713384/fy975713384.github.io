@@ -112,10 +112,10 @@
   <h1 id="python-处理系统文件">Python 处理系统文件</h1>
 <h2 id="内置方法">内置方法</h2>
 <h3 id="open">open()</h3>
-<p>python open() 函数用于打开一个文件，创建一个 file 对象<!-- raw HTML omitted -->
-语法：<code>open(name[, mode[, buffering]])</code><!-- raw HTML omitted -->
-name : 一个包含了你要访问的文件名称的字符串值<!-- raw HTML omitted -->
-mode : mode 决定了打开文件的模式，这个参数是非强制的，默认文件访问模式为只读(r)<!-- raw HTML omitted -->
+<p>python open() 函数用于打开一个文件，创建一个 file 对象<!-- raw HTML omitted --><br>
+语法：<code>open(name[, mode[, buffering]])</code><!-- raw HTML omitted --><br>
+name : 一个包含了你要访问的文件名称的字符串值<!-- raw HTML omitted --><br>
+mode : mode 决定了打开文件的模式，这个参数是非强制的，默认文件访问模式为只读(r)<!-- raw HTML omitted --><br>
 不同模式打开文件的完全列表：http://www.runoob.com/python/python-func-open.html</p>
 <hr>
 <h2 id="os-库-----操作系统接口模块">os 库 &mdash; 操作系统接口模块</h2>
@@ -134,7 +134,7 @@ mode : mode 决定了打开文件的模式，这个参数是非强制的，默�
 <h3 id="osremovedirsname">os.removedirs(name)</h3>
 <p>递归删除空目录</p>
 <h3 id="ossystemcommand">os.system(command)</h3>
-<p>运行 shell 命令，并返回脚本的退出状态码（会等待命令执行完成）
+<p>运行 shell 命令，并返回脚本的退出状态码（会等待命令执行完成）<br>
 执行成功返回 0</p>
 <h3 id="ospopencommand">os.popen(command)</h3>
 <p>运行 shell 命令，并返回脚本执行过程中的输出内容（不等待命令执行完成）</p>
@@ -143,9 +143,9 @@ mode : mode 决定了打开文件的模式，这个参数是非强制的，默�
 <h3 id="oswalktop-topdowntrue-onerrornone-followlinksfalse">os.walk(top[, topdown=True[, onerror=None[, followlinks=False]]])</h3>
 <ol>
 <li>top 表示需要遍历的目录树的路径<!-- raw HTML omitted --></li>
-<li>topdown 的默认值是 &ldquo;True&rdquo;,表示首先返回目录树下的文件，然后在遍历目录树的子目录 .Topdown 的值为 &ldquo;False&rdquo; 时，
+<li>topdown 的默认值是 &ldquo;True&rdquo;,表示首先返回目录树下的文件，然后在遍历目录树的子目录 .Topdown 的值为 &ldquo;False&rdquo; 时，<br>
 则表示先遍历目录树的子目录，返回子目录下的文件，最后返回根目录下的文件<!-- raw HTML omitted --></li>
-<li>onerror 的默认值是 &ldquo;None&rdquo;，表示忽略文件遍历时产生的错误.如果不为空，则提供一个自定义函数提示错误信息后继续遍历或抛出异常中止遍历<!-- raw HTML omitted -->
+<li>onerror 的默认值是 &ldquo;None&rdquo;，表示忽略文件遍历时产生的错误.如果不为空，则提供一个自定义函数提示错误信息后继续遍历或抛出异常中止遍历<!-- raw HTML omitted --><br>
 该函数返回一个元组，该元组有 3 个元素，这 3 个元素分别表示当前遍历的目录，当前遍历的目录列表，当前遍历的目录的文件列表</li>
 </ol>
 <h2 id="ospath-----常见路径操作">os.path &mdash; 常见路径操作</h2>

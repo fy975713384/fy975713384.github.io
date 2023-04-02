@@ -145,7 +145,7 @@ Linux 系统：Ubuntu</p>
 </span></span><span class="line"><span class="cl">                  (vvv(VVV)(VVV)vvv)
 </span></span><span class="line"><span class="cl">                      如未被授权
 </span></span><span class="line"><span class="cl">                      请您即刻退出！
-</span></span></code></pre></div><p>修改 Ubuntu 系统的默认欢迎语
+</span></span></code></pre></div><p>修改 Ubuntu 系统的默认欢迎语<br>
 注释掉 <code>10-help-text</code> 文件中的相关信息（如果有）</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="c1"># vim /etc/update-motd.d/10-help-text</span>
 </span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1">#printf &#34;\n&#34;</span>
@@ -195,18 +195,18 @@ Linux 系统：Ubuntu</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="c1"># usermod -a -G sudo &lt;username&gt;</span>
 </span></span></code></pre></div><p>配置命令提示符 hostname 的显示</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="c1"># vim /etc/hostname</span>
-</span></span></code></pre></div><p>将内容改成自己想要的如 ali-ecs
+</span></span></code></pre></div><p>将内容改成自己想要的如 ali-ecs<br>
 重启服务器</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="c1"># reboot</span>
 </span></span></code></pre></div><h3 id="配置-ssh-key-方式登录-linux-远程服务器">配置 SSH Key 方式登录 Linux 远程服务器</h3>
 <p>登录新建的 <!-- raw HTML omitted --> 用户</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="c1"># ssh &lt;username&gt;@&lt;hostname&gt;</span>
-</span></span></code></pre></div><p>输入之前设置的密码进行登录
+</span></span></code></pre></div><p>输入之前设置的密码进行登录<br>
 创建 <code>.ssh</code> 文件夹和 <code>authorized_keys</code> 并授予权限</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ mkdir ~/.ssh <span class="o">&amp;&amp;</span> touch ~/.ssh/authorized_keys
 </span></span><span class="line"><span class="cl">$ chmod <span class="m">700</span> ~/.ssh <span class="o">&amp;&amp;</span> chmod <span class="m">600</span> ~/.ssh/authorized_keys
-</span></span></code></pre></div><p>然后将本地机器 <code>id_rsa.pub</code> 中的文本复制添加到服务器的 <code>authorized_keys</code> 文件里
-下次登录则无需输入密码
+</span></span></code></pre></div><p>然后将本地机器 <code>id_rsa.pub</code> 中的文本复制添加到服务器的 <code>authorized_keys</code> 文件里<br>
+下次登录则无需输入密码<br>
 另外还可通过在本地设置 .ssh 目录下配置 config 文件，通过以下命令直接登录</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ ssh &lt;username&gt;
 </span></span></code></pre></div>

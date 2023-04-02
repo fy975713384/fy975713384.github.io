@@ -5,7 +5,16 @@
     <link>/tags/</link>
     <description>Recent content in Tags on Wing</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 20 Nov 2022 14:56:58 +0800</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 02 Apr 2023 19:30:00 +0800</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>博客优化</title>
+      <link>/tag/%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96/</link>
+      <pubDate>Sun, 02 Apr 2023 19:30:00 +0800</pubDate>
+      
+      <guid>/tag/%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>数据库</title>
       <link>/tag/%E6%95%B0%E6%8D%AE%E5%BA%93/</link>
@@ -66,15 +75,6 @@
       <pubDate>Sat, 28 Aug 2021 14:18:25 +0800</pubDate>
       
       <guid>/tag/mysql/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>博客优化</title>
-      <link>/tag/%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96/</link>
-      <pubDate>Fri, 11 Dec 2020 19:17:00 +0800</pubDate>
-      
-      <guid>/tag/%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96/</guid>
       <description></description>
     </item>
     

@@ -126,9 +126,9 @@
 <p>通俗地理解就是，<strong>普通的类用来定义一般对象的属性和行为，元类用来定义普通的类及其实例对象的属性和行为</strong>。</p>
 <h2 id="二-python-元类介绍">二、 Python 元类介绍</h2>
 <blockquote>
-<p>“Metaclasses are deeper magic than 99% of users should ever worry about.
-If you wonder whether you need them, you don’t
-(the people who actually need them know with certainty that they need them,
+<p>“Metaclasses are deeper magic than 99% of users should ever worry about.<br>
+If you wonder whether you need them, you don’t<br>
+(the people who actually need them know with certainty that they need them,<br>
 and don’t need an explanation about why).”<br>
 — Tim Peters (Author of <em>Zen of Python</em>)</p>
 </blockquote>
@@ -184,7 +184,7 @@ and don’t need an explanation about why).”<br>
 </span></span><span class="line"><span class="cl">            <span class="bp">cls</span><span class="o">.</span><span class="n">field_type</span> <span class="o">=</span> <span class="n">bases</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">bases</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span> <span class="k">else</span> <span class="n">Union</span><span class="p">[</span><span class="n">bases</span><span class="p">[</span><span class="mi">1</span><span class="p">:]]</span>  <span class="c1"># type: ignore</span>
 </span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="bp">cls</span>
 </span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="nb">type</span><span class="o">.</span><span class="fm">__new__</span><span class="p">(</span><span class="n">mcs</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">bases</span><span class="p">,</span> <span class="n">attrs</span><span class="p">)</span>
-</span></span></code></pre></div><p>稍作分析，不难看出在通过 <code>type()</code> 进行字段类创建时，主要对字段类继承的类（即：<code>type</code> 的 <code>bases</code> 参数）进行了处理。
+</span></span></code></pre></div><p>稍作分析，不难看出在通过 <code>type()</code> 进行字段类创建时，主要对字段类继承的类（即：<code>type</code> 的 <code>bases</code> 参数）进行了处理。<br>
 当字段类继承于 <code>Field</code> 和其它类且 <code>MRO</code> 顺序中 <code>Field</code> 位于首位时，设置当前字段类的字段类型 <code>field_type</code> 为继承的其它类的类型，如：<code>str</code> <code>int</code> 等。</p>
 <h3 id="2-test-x">2. test-x</h3>
 <p>在自研 <code>test-x</code> 测试框架中，所有用于定义一个关键字库的关键字类最终都必须继承于一个关键字基类，在这个基类中，定义了用于控制关键字方法的元类 <code>KeywordMeta</code>，其具体实现如下：</p>
@@ -210,8 +210,8 @@ and don’t need an explanation about why).”<br>
 </span></span><span class="line"><span class="cl">                    <span class="c1"># 解析实参中包含的上下文变量</span>
 </span></span><span class="line"><span class="cl">                    <span class="nb">setattr</span><span class="p">(</span><span class="n">ori</span><span class="p">,</span> <span class="n">func_name</span><span class="p">,</span> <span class="n">reset_func_attribute</span><span class="p">(</span><span class="n">func</span><span class="p">))</span>
 </span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">ori</span>
-</span></span></code></pre></div><p>其作用是，在通过 <code>type()</code> 进行关键字类的创建时，获取到关键字类的创建数据（即：<code>type</code> 的 <code>name</code> <code>bases</code> <code>dict</code> 参数）。
-当关键字类名称 <code>name</code> 不等于基类 <code>KeywordBase</code> 名称，则认为是普通关键字类，进入处理逻辑。
+</span></span></code></pre></div><p>其作用是，在通过 <code>type()</code> 进行关键字类的创建时，获取到关键字类的创建数据（即：<code>type</code> 的 <code>name</code> <code>bases</code> <code>dict</code> 参数）。<br>
+当关键字类名称 <code>name</code> 不等于基类 <code>KeywordBase</code> 名称，则认为是普通关键字类，进入处理逻辑。<br>
 在元类处理逻辑中，通过对类的成员数据 <code>dict</code> 进行解析和判断，这里做了两件简单的事情：</p>
 <ol>
 <li>控制关键字方法必须编写文档</li>
