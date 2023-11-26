@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on Wing</title>
+    <link>/categories/</link>
+    <description>Recent content in Categories on Wing</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <managingEditor>fy975713384@gmail.com (Pan, Feng)</managingEditor>
+    <webMaster>fy975713384@gmail.com (Pan, Feng)</webMaster>
+    <lastBuildDate>Sun, 02 Apr 2023 19:30:00 +0800</lastBuildDate>
+    <atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Work</title>
+      <link>/category/work/</link>
+      <pubDate>Sun, 02 Apr 2023 19:30:00 +0800</pubDate><author>fy975713384@gmail.com (Pan, Feng)</author>
+      <guid>/category/work/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Lifelapse</title>
+      <link>/category/lifelapse/</link>
+      <pubDate>Sun, 14 Apr 2019 19:14:59 +0800</pubDate><author>fy975713384@gmail.com (Pan, Feng)</author>
+      <guid>/category/lifelapse/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

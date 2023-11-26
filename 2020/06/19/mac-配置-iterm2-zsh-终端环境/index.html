@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="zh-cn" itemscope itemtype="http://schema.org/WebPage">
+<head>
+  <meta name="google-site-verification" content="NqacV5tHWoxzRi2H7KcEVCWMuxSnch23EM-vzsEV3h8" />
+  <meta name="generator" content="Hugo 0.120.4" />
+  <meta charset="utf-8">
+  <title>Mac 配置 iTerm2 &amp; zsh 终端环境 · Wing</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="最近很悲催，工作用的 2019 款 13“ MacBookPro 主板坏了（据网管说已经坏了好几个了），而且一时大意没有用 Time Machine 做备份（非工作用的倒是做了 🤪🤪🤪），所以趁机水一" />
+
+
+<link rel="canonical" href="/2020/06/19/mac-%E9%85%8D%E7%BD%AE-iterm2-zsh-%E7%BB%88%E7%AB%AF%E7%8E%AF%E5%A2%83/" />
+<link rel="icon" href="https://cdn.jsdelivr.net/gh/fy975713384/cloud-img@main/blog/wing_icon.png" />
+<link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/5.2.0/css/all.css" integrity="sha384-DtgO3znmI27ZsBJLf6ASdUIQnb+d8RKb/z/fYL/E0f2NY/8nvfDQmQ6NkXmuoepn" crossorigin="anonymous">
+<link rel="stylesheet" href="/css/den.css">
+
+<link rel="stylesheet" href="/css/custom.css">
+
+
+
+
+<meta property="og:title" content="Mac 配置 iTerm2 &amp; zsh 终端环境" />
+<meta property="og:description" content="最近很悲催，工作用的 2019 款 13“ MacBookPro 主板坏了（据网管说已经坏了好几个了），而且一时大意没有用 Time Machine 做备份（非工作用的倒是做了 🤪🤪🤪），所以趁机水一" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/2020/06/19/mac-%E9%85%8D%E7%BD%AE-iterm2-zsh-%E7%BB%88%E7%AB%AF%E7%8E%AF%E5%A2%83/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2020-06-19T23:01:23+08:00" />
+<meta property="article:modified_time" content="2021-04-15T10:04:52+08:00" />
+
+<meta itemprop="name" content="Mac 配置 iTerm2 &amp; zsh 终端环境">
+<meta itemprop="description" content="最近很悲催，工作用的 2019 款 13“ MacBookPro 主板坏了（据网管说已经坏了好几个了），而且一时大意没有用 Time Machine 做备份（非工作用的倒是做了 🤪🤪🤪），所以趁机水一"><meta itemprop="datePublished" content="2020-06-19T23:01:23+08:00" />
+<meta itemprop="dateModified" content="2021-04-15T10:04:52+08:00" />
+<meta itemprop="wordCount" content="1336">
+<meta itemprop="keywords" content="提效工具,iterm2,zsh," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Mac 配置 iTerm2 &amp; zsh 终端环境"/>
+<meta name="twitter:description" content="最近很悲催，工作用的 2019 款 13“ MacBookPro 主板坏了（据网管说已经坏了好几个了），而且一时大意没有用 Time Machine 做备份（非工作用的倒是做了 🤪🤪🤪），所以趁机水一"/>
+</head>
+<body>
+  
+  <div class="header-container" style="background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/fy975713384/cloud-img@main/blog/background.jpg'); background-position: center; background-size: cover;">
+  <div class="container">
+  <nav class="header-nav navbar navbar-expand-md navbar-dark light-dark">
+    <div class="header-logo navbar-brand">
+      
+        <a class="float-left" href="/">
+      
+        
+        
+          Wing
+         
+      </a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="nav-menu collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        
+          <li class="nav-item">
+            
+              
+                <a class="nav-link" href="/category/work/">工作</a>
+              
+            
+          </li>
+        
+          <li class="nav-item">
+            
+              
+                <a class="nav-link" href="/category/travels/">游记</a>
+              
+            
+          </li>
+        
+          <li class="nav-item">
+            
+              
+                <a class="nav-link" href="/category/lifelapse/">生活</a>
+              
+            
+          </li>
+        
+        
+      </ul>
+    </div>
+  </nav>
+</div>
+
+<div class="container header-wrapper">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="header-content">
+        <h1 class="header-title">Mac 配置 iTerm2 &amp; zsh 终端环境</h1>
+        <p class="header-date">作者：
+          潘峰 /
+        
+        2020-06-19
+          / 分类：
+          <a href="/category/work/">Work</a>
+        </p>
+        
+        <div class="header-underline"></div>
+        
+          <div class="clearfix"></div>
+          <p class="float-right header-tags">
+              <i class="fas fa-tags" aria-hidden="true"></i>
+              <a href="/tag/iterm2/">iterm2</a>, 
+                <a href="/tag/zsh/">zsh</a>, 
+                <a href="/tag/%E6%8F%90%E6%95%88%E5%B7%A5%E5%85%B7/">提效工具</a>
+          </p>
+        
+        
+
+      </div>
+    </div>
+  </div>
+</div>
+
+  </div>
+  <main>
+<div class="container content">
+  <article>
+  <blockquote>
+<p>最近很悲催，工作用的 2019 款 13“ MacBookPro 主板坏了（据网管说已经坏了好几个了），而且一时大意没有用 Time Machine 做备份（非工作用的倒是做了 🤪🤪🤪），所以趁机水一篇吧。。<br>
+所幸的是重要的文件都用 iCloud 进行了同步（下载好慢 🤪🤪🤪），JetBrains 全家桶和 VSCode 都通过 GitHub gist 进行了同步，所以仅需要手动配置终端环境就 OK 了。</p>
+</blockquote>
+<blockquote>
+<p>注：本文大部分配置过程可能需要自行准备梯子，否则遇到连接失败的问题时请自行百度相关工具的国内安装方法</p>
+</blockquote>
+<ul>
+<li><strong>Homebrew</strong>: <em>Mac 下最好用的包管理器</em></li>
+<li><strong>iTerm2</strong>: <em>Mac 下最好用的终端工具</em></li>
+<li><strong>zsh</strong>: <em>Mac 下最好用的终端</em></li>
+<li><strong>Oh My Zsh</strong>: <em>最好用的 zsh 配置管理工具</em></li>
+</ul>
+<h2 id="first-使用-mac-自带终端安装-homebrew">First. 使用 Mac 自带终端安装 Homebrew</h2>
+<p><a href="https://brew.sh/">Homebrew 官网</a> 【<em>The Missing Package Manager for macOS (or Linux)</em>】</p>
+<p>安装命令（老规矩 <code>$</code> 是命令行提示符，执行时不需要输入）：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ /bin/bash -c <span class="s2">&#34;</span><span class="k">$(</span>curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh<span class="k">)</span><span class="s2">&#34;</span>
+</span></span></code></pre></div><blockquote>
+<p>githubusercontent.com 域名我曾一度即使有梯子也因为没有配置终端代理导致命令执行不成功，索性直接通过浏览器打开网址将其作为文件下载下来然后通过执行 <code>/bin/bash -c 文件名</code> 来完成了安装<br>
+直接下载下来的 install.sh 文件可能没有执行权限，需要执行 <code>chmod +x 文件名</code> 命令增加执行权限</p>
+</blockquote>
+<h2 id="second-使用-homebrew-安装-iterm2-并进行基础配置">Second. 使用 Homebrew 安装 iTerm2 并进行基础配置</h2>
+<p><a href="https://www.iterm2.com/">iterm2 官网</a> 【<em>iTerm2 - macOS Terminal Replacement</em>】</p>
+<ol>
+<li>
+<p>安装</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ brew install iterm2 --cask
+</span></span></code></pre></div></li>
+<li>
+<p>配置 iTerm2 基础设置</p>
+<p>设置 iTerm2 为默认终端<br>
+打开并切换到 iTerm2 &raquo; (Mac 左上角菜单栏）iTerm2 &raquo; Make iTerm2 Default Term</p>
+<p>设置 iTerm2 全局热键<br>
+切换到 iTerm2 &raquo; 打开 Preferences（快捷键为 <code>Command + ,</code>） &raquo; Keys &raquo; Hotkey &raquo; 勾选 Show/hide iTerm2 with a system-wide hotkey &raquo; 设置 Hotkey 为 <code>Command + .</code><br>
+<em>这样便可通过全局热键 <code>Command + .</code> 来打开或关闭 iTerm2 窗口</em></p>
+</li>
+</ol>
+<h2 id="third-个性化配置-iterm2-让你的终端工具更加动人">Third. 个性化配置 iTerm2 让你的终端工具更加动人</h2>
+<ol>
+<li>
+<p>下载我最喜欢的 Ayu 主题：<a href="https://github.com/michelegera/iterm2-ayu-mirage">Ayu Mirage</a>，如何在 iTerm2 进行配置链接中也有说明不再赘述。<br>
+喜欢其他主题的如 <a href="https://ethanschoonover.com/solarized/">Solarized</a>，也可按同样的方法自行配置。</p>
+</li>
+<li>
+<p>根据自己的喜好配置 Preferences &raquo; Appearance</p>
+</li>
+<li>
+<p>更换字体</p>
+<p>Preferences &raquo; Profiles &raquo; Text &raquo; Font &raquo; 选择一个自己喜欢的字体<br>
+这里我用的是我最喜欢的 <a href="https://fonts.google.com/specimen/Roboto+Mono">Roboto Mono</a>，粗细为 <code>Bold</code>，大小为 <code>12</code><br>
+【<em>强烈建议选用任意一种 <a href="https://baike.baidu.com/item/%E7%AD%89%E5%AE%BD%E5%AD%97%E4%BD%93">等宽字体</a></em>】</p>
+</li>
+<li>
+<p>Profils 配置完成后导出备份</p>
+<p>Profiles 页左下角 Other Actions&hellip; &raquo; Save Profile As Json&hellip;<br>
+建议保存在 iCloud 中进行同步</p>
+</li>
+</ol>
+<h2 id="fourth-使用-iterm2-安装-oh-my-zsh">Fourth. 使用 iTerm2 安装 Oh My Zsh</h2>
+<blockquote>
+<p>zsh 是 Mac 自带，无需安装，仅安装其配置工具 Oh My Zsh 即可</p>
+</blockquote>
+<p><a href="https://ohmyz.sh/">Oh My Zsh</a> 【<em>Your terminal never felt this good before</em>】</p>
+<p>安装命令：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ sh -c <span class="s2">&#34;</span><span class="k">$(</span>curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh<span class="k">)</span><span class="s2">&#34;</span>
+</span></span></code></pre></div><h2 id="fifth-个性化配置-zsh-让你的终端更加美观">Fifth. 个性化配置 zsh 让你的终端更加美观</h2>
+<p>使用 iTerm2 打开 zsh 的配置文件 .zsh：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ vim ~/.zsh
+</span></span></code></pre></div><p>然后找到 <code>ZSH_THEME</code> 这个配置项然后将其修改为我最喜欢的一个主题 <code>ZSH_THEME=&quot;ys&quot;</code>，也可自行知乎安装并设置为其它自己喜欢的主题（仅需要把 <code>ys</code> 换成喜欢的那个主题名即可，无需任何下载安装）。</p>
+<h2 id="sixth-使用-homebrew-安装-zsh-插件">Sixth. 使用 Homebrew 安装 zsh 插件</h2>
+<p>推荐安装两个插件：<code>zsh-autosuggestions</code> 和 <code>zsh-syntax-highlighting</code></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ brew install zsh-autosuggestions zsh-syntax-highlighting
+</span></span></code></pre></div><p>安装完成后在 .zshrc 中添加以下两行</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="nx">source</span> <span class="sr">/usr/</span><span class="nx">local</span><span class="sr">/share/</span><span class="nx">zsh</span><span class="p">-</span><span class="nx">autosuggestions</span>/<span class="nx">zsh</span><span class="p">-</span><span class="nx">autosuggestions</span>.<span class="nx">zsh</span>
+</span></span><span class="line"><span class="cl"><span class="nx">source</span> <span class="sr">/usr/</span><span class="nx">local</span><span class="sr">/share/</span><span class="nx">zsh</span><span class="p">-</span><span class="k">syntax</span><span class="p">-</span><span class="nx">highlighting</span>/<span class="nx">zsh</span><span class="p">-</span><span class="k">syntax</span><span class="p">-</span><span class="nx">highlighting</span>.<span class="nx">zsh</span>
+</span></span></code></pre></div><p>修改完成后执行</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ <span class="nb">source</span> ~/.zshrc
+</span></span></code></pre></div><p>同时配置 vim 语法高亮</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ vim ~/.vimrc  <span class="c1"># 没有该文件的话会同时创建</span>
+</span></span></code></pre></div><p>然后添加一行</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">syntax on
+</span></span></code></pre></div><p>保存便完成了 vim 语法高亮显示</p>
+<p>对其它插件感兴趣的话可以用 Homebrew 搜索一下</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ brew search zsh-
+</span></span></code></pre></div><h2 id="additional-配置终端网络代理加速你的-homebrew">Additional. 配置终端网络代理加速你的 Homebrew</h2>
+<blockquote>
+<p>由于某些原因 Homebrew 在国内下载速度十分慢，试过很多方法都不太理想（如配置各种国内源），只有配置终端网络代理体验极佳（仅仅需要有梯子）</p>
+</blockquote>
+<ol>
+<li>
+<p>打开代理工具，查看代理服务器设置中的 HTTP 端口号</p>
+</li>
+<li>
+<p>使用 iTerm2 打开 zsh 的配置文件 .zsh</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ vim ~/.zsh
+</span></span></code></pre></div></li>
+<li>
+<p>在文件最底部添加如下两行并保存</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="nb">alias</span> <span class="nv">proxy</span><span class="o">=</span><span class="s2">&#34;export ALL_PROXY=&#39;http://127.0.0.1:xxxx&#39;&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">alias</span> <span class="nv">proxyreset</span><span class="o">=</span><span class="s2">&#34;unset ALL_PROXY&#34;</span>
+</span></span></code></pre></div></li>
+<li>
+<p>在 iTerm2 中执行 <code>proxy</code> 命令启动代理，执行 <code>proxyreset</code> 则可关闭代理</p>
+</li>
+</ol>
+<h2 id="final-命令行工具推荐">Final. 命令行工具推荐</h2>
+<ul>
+<li>
+<p><a href="https://github.com/wting/autojump">autojump</a></p>
+<p>可以很方便地在文件夹之间进行跳转，支持通过 Homebrew 安装</p>
+</li>
+<li>
+<p><a href="https://hisham.hm/htop/">htop</a></p>
+<p>可以很清晰地查看系统进程，支持通过 Homebrew 安装</p>
+</li>
+</ul>
+<blockquote>
+<p>参考来源：<br>
+<a href="https://www.cnblogs.com/weixuqin/p/7029177.html">https://www.cnblogs.com/weixuqin/p/7029177.html</a></p>
+</blockquote>
+
+  </article>
+
+  
+  
+    
+    
+    
+  
+  
+<link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/gitalk/1.7.0/gitalk.css" />
+<script src="https://cdn.bootcdn.net/ajax/libs/gitalk/1.7.0/gitalk.min.js"></script>
+<div id="gitalk-container"></div>
+<script>
+  const gitalk = new Gitalk({
+    id: 'Mac配置iTerm2\u0026zsh终端环境', 
+    owner: 'fy975713384',
+    repo: 'fy975713384.github.io', 
+    clientID: '35afb85e4c521d6dbeb8',
+    clientSecret: '463c9ec266980fd7358a11479beda5284ecf9f71',
+    admin: ['fy975713384'],
+    distractionFreeMode: false 
+  })
+  gitalk.render('gitalk-container')
+</script>
+
+
+
+
+
+
+
+</div>
+
+  </main><div class="footer gradient-2">
+  <div class="container footer-container ">
+    <div class="row">
+      <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3">
+        <div class="footer-title">网站地图</div>
+        <ul class="list-unstyled">
+            
+              
+                <li><a href="/tags/">标签</a></li>
+              
+              
+                <li><a href="/categories/">分类</a></li>
+              
+            
+            
+            
+            <li><a rel="alternate" type="application/rss&#43;xml" href="/index.xml"><i class="fas fa-rss-square"></i> RSS订阅</a></li>
+            
+            
+            
+        </ul>
+      </div>
+      <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3">
+        
+        <div class="footer-title">社群</div>
+        <ul class="list-unstyled">
+          
+          <li><a href="https://github.com/fy975713384" rel="noopener" target="_blank">GitHub</a></li>
+          
+          <li><a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&amp;email=NFVOQVgaUnRSW0xZVV1YGldbWQ" rel="noopener" target="_blank">联系我</a></li>
+          
+        </ul>
+        
+      </div>
+      <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3">
+        
+        <div class="footer-title">友链</div>
+        <ul class="list-unstyled">
+          
+          <li><a href="/" rel="noopener" target="_blank">关于我</a></li>
+          
+          <li><a href="https://juejin.cn/user/3315782800904263" rel="noopener" target="_blank">掘金主页</a></li>
+          
+        </ul>
+        
+      </div> 
+      <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+        <p class="pull-right text-right">
+          <small><em>Proudly powered by <a href="https://gohugo.io/" rel="noopener" target="_blank">Hugo</a></em></small><br/>
+          <small><em>Theme - <a href="https://github.com/shaform/hugo-theme-den" rel="noopener" target="_blank">Den</a></em></small><br/>
+          <small>
+            &copy; 
+            
+            
+              2017 -
+            2023
+          </small>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.3.1/jquery.slim.min.js"
+  integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+  integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js"
+  integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/mermaid/8.8.2/mermaid.min.js"></script>
+<script>
+  window.onload = function () {
+    mermaid.initialize({ theme: 'neutral' })
+    mermaid.init(undefined, '.language-mermaid')
+  }
+</script>
+</body>
+</html>

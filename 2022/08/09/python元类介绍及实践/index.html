@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="zh-cn" itemscope itemtype="http://schema.org/WebPage">
+<head>
+  <meta name="google-site-verification" content="NqacV5tHWoxzRi2H7KcEVCWMuxSnch23EM-vzsEV3h8" />
+  <meta name="generator" content="Hugo 0.120.4" />
+  <meta charset="utf-8">
+  <title>Python元类介绍及实践 · Wing</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Python 元类介绍及实践 一、 元编程和元类 1. 元编程技术简介 元编程 (Metaprogramming) 是一种计算机编程技术，这种技术可以使计算机程序将其它程序当做其数据进行处理。这意味着" />
+
+
+<link rel="canonical" href="/2022/08/09/python%E5%85%83%E7%B1%BB%E4%BB%8B%E7%BB%8D%E5%8F%8A%E5%AE%9E%E8%B7%B5/" />
+<link rel="icon" href="https://cdn.jsdelivr.net/gh/fy975713384/cloud-img@main/blog/wing_icon.png" />
+<link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/5.2.0/css/all.css" integrity="sha384-DtgO3znmI27ZsBJLf6ASdUIQnb+d8RKb/z/fYL/E0f2NY/8nvfDQmQ6NkXmuoepn" crossorigin="anonymous">
+<link rel="stylesheet" href="/css/den.css">
+
+<link rel="stylesheet" href="/css/custom.css">
+
+
+
+
+<meta property="og:title" content="Python元类介绍及实践" />
+<meta property="og:description" content="Python 元类介绍及实践 一、 元编程和元类 1. 元编程技术简介 元编程 (Metaprogramming) 是一种计算机编程技术，这种技术可以使计算机程序将其它程序当做其数据进行处理。这意味着" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/2022/08/09/python%E5%85%83%E7%B1%BB%E4%BB%8B%E7%BB%8D%E5%8F%8A%E5%AE%9E%E8%B7%B5/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-08-09T20:09:33+08:00" />
+<meta property="article:modified_time" content="2023-01-17T17:09:36+08:00" />
+
+<meta itemprop="name" content="Python元类介绍及实践">
+<meta itemprop="description" content="Python 元类介绍及实践 一、 元编程和元类 1. 元编程技术简介 元编程 (Metaprogramming) 是一种计算机编程技术，这种技术可以使计算机程序将其它程序当做其数据进行处理。这意味着"><meta itemprop="datePublished" content="2022-08-09T20:09:33+08:00" />
+<meta itemprop="dateModified" content="2023-01-17T17:09:36+08:00" />
+<meta itemprop="wordCount" content="1728">
+<meta itemprop="keywords" content="Python," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Python元类介绍及实践"/>
+<meta name="twitter:description" content="Python 元类介绍及实践 一、 元编程和元类 1. 元编程技术简介 元编程 (Metaprogramming) 是一种计算机编程技术，这种技术可以使计算机程序将其它程序当做其数据进行处理。这意味着"/>
+</head>
+<body>
+  
+  <div class="header-container" style="background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/fy975713384/cloud-img@main/blog/background.jpg'); background-position: center; background-size: cover;">
+  <div class="container">
+  <nav class="header-nav navbar navbar-expand-md navbar-dark light-dark">
+    <div class="header-logo navbar-brand">
+      
+        <a class="float-left" href="/">
+      
+        
+        
+          Wing
+         
+      </a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="nav-menu collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        
+          <li class="nav-item">
+            
+              
+                <a class="nav-link" href="/category/notes/">笔记</a>
+              
+            
+          </li>
+        
+          <li class="nav-item">
+            
+              
+                <a class="nav-link" href="/category/travals/">游记</a>
+              
+            
+          </li>
+        
+        
+      </ul>
+    </div>
+  </nav>
+</div>
+
+<div class="container header-wrapper">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="header-content">
+        <h1 class="header-title">Python元类介绍及实践</h1>
+        <p class="header-date">作者：
+          潘峰 /
+        
+        2022-08-09
+          / 分类：
+          <a href="/category/notes/">Notes</a>
+        </p>
+        
+        <div class="header-underline"></div>
+        
+          <div class="clearfix"></div>
+          <p class="float-right header-tags">
+              <i class="fas fa-tags" aria-hidden="true"></i>
+              <a href="/tag/python/">Python</a>
+          </p>
+        
+        
+
+      </div>
+    </div>
+  </div>
+</div>
+
+  </div>
+  <main>
+<div class="container content">
+  <article>
+  <h1 id="python-元类介绍及实践">Python 元类介绍及实践</h1>
+<h2 id="一-元编程和元类">一、 元编程和元类</h2>
+<h3 id="1-元编程技术简介">1. 元编程技术简介</h3>
+<p>元编程 (Metaprogramming) 是一种计算机编程技术，这种技术可以使计算机程序将其它程序当做其数据进行处理。这意味着一个程序可以对另外一个程序进行读取、分析、生成、替换等操作，甚至是在程序运行时修改自身。</p>
+<p>通俗地理解就是，<strong>普通的代码程序操作一般数据，元程序操作普通代码程序</strong>。</p>
+<h3 id="2-元编程技术价值">2. 元编程技术价值</h3>
+<ul>
+<li>可以最大限度减少计算机程序的代码量，尤其是模板代码，从而节约开发时间</li>
+<li>将某些计算从运行时前置到编译时，通过编译时程序生成一些代码并启用这些代码。</li>
+</ul>
+<h3 id="3-元编程和反射">3. 元编程和反射</h3>
+<p>一门语言同时也可以作为自身的元语言的特性称为反射 (Reflection)。</p>
+<h3 id="4-元类简介">4. 元类简介</h3>
+<p>元类 (Metaclass) 是面向对象编程语言中特有的概念，元类是一种实例对象是类的类。</p>
+<p>通俗地理解就是，<strong>普通的类用来定义一般对象的属性和行为，元类用来定义普通的类及其实例对象的属性和行为</strong>。</p>
+<h2 id="二-python-元类介绍">二、 Python 元类介绍</h2>
+<blockquote>
+<p>“Metaclasses are deeper magic than 99% of users should ever worry about.<br>
+If you wonder whether you need them, you don’t<br>
+(the people who actually need them know with certainty that they need them,<br>
+and don’t need an explanation about why).”<br>
+— Tim Peters (Author of <em>Zen of Python</em>)</p>
+</blockquote>
+<p>话虽如此，对于一个 Python 开发者来说，了解这样一种强大的黑魔法还是很有必要的。</p>
+<h3 id="1-默认元类-type">1. 默认元类 type</h3>
+<p><code>type</code> 即 <code>class type(name, bases, dict, **kwds)</code> 是 Python 中默认的元类，Python 作为一种动态语言，默认情况下，其所有的类对象均是由 <code>type</code> 在运行时动态创建的。</p>
+<p>以下两种写法最终会生成相同的类（即 <code>type</code> 的实例对象）。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Foo</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">  <span class="n">foo</span> <span class="o">=</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">def</span> <span class="nf">func_foo</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">    <span class="k">pass</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">Foo</span> <span class="o">=</span> <span class="nb">type</span><span class="p">(</span><span class="s1">&#39;Foo&#39;</span><span class="p">,</span> <span class="p">(</span><span class="nb">object</span><span class="p">,),</span> <span class="nb">dict</span><span class="p">(</span><span class="n">foo</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">func_foo</span><span class="o">=&lt;</span><span class="n">function</span> <span class="n">FooClass</span><span class="o">.</span><span class="n">func_foo</span> <span class="n">at</span> <span class="mh">0x3924f342f</span><span class="o">&gt;</span><span class="p">))</span>
+</span></span></code></pre></div><p>参数说明：</p>
+<ul>
+<li><code>name</code>: 字符串类型，类名，会作为类的 <code>__name__</code> 属性的值</li>
+<li><code>bases</code>: 元组类型，包含需要被继承的基类，会作为类的 <code>__bases__</code> 属性的值</li>
+<li><code>dict</code>: 字典类型，包含类的属性和方法定义，会作为类的 <code>__dict__</code> 属性的值，当在这之前可能会被拷贝或包装</li>
+</ul>
+<h3 id="2-自定义元类">2. 自定义元类</h3>
+<p>自定义元类主要是指，通过定义一个继承于 <code>type</code> 的元类，并重写 <code>__new__</code> 方法来对类的创建过程实现定制。</p>
+<p>其具体步骤分为：</p>
+<ul>
+<li>定义阶段：定义一个继承于 <code>type</code> 的元类，并编写 <code>__new__</code> 方法</li>
+<li>使用阶段：在需要被定制的类中添加 <code>metaclass=&lt;your metaclass&gt;</code> 关键字参数</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">FooMeta</span><span class="p">(</span><span class="nb">type</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">  <span class="k">def</span> <span class="fm">__new__</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">bases</span><span class="p">,</span> <span class="n">attrs</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="o">...</span> <span class="c1"># 类创建过程中需要进行定制化处理逻辑</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nb">type</span><span class="o">.</span><span class="fm">__new__</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">bases</span><span class="p">,</span> <span class="n">attrs</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">FooClass</span><span class="p">(</span><span class="n">metaclass</span><span class="o">=</span><span class="n">FooMeta</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">  <span class="o">...</span>
+</span></span></code></pre></div><p>另外，通过继承上面这个 <code>FooClass</code> 的类，也同样会执行元类中增加的定制化处理逻辑。</p>
+<h3 id="3-类定义被执行时的步骤">3. 类定义被执行时的步骤</h3>
+<ul>
+<li>解析 MRO 条目</li>
+<li>确定类适当的元类</li>
+<li>执行元类中的代码程序</li>
+<li>准备类的命名空间</li>
+<li>执行类中的语句</li>
+<li>完成类的创建</li>
+</ul>
+<h2 id="三-python-元类实践">三、 Python 元类实践</h2>
+<h3 id="1-tortoise-orm">1. tortoise-orm</h3>
+<p>在 <code>tortoise-orm</code> 库中，所有的用于定义 DB 字段的 <code>XXField</code> 类均继承于 <code>Field</code>，在 <code>Field</code> 类中设置了 <code>metaclass=_FieldMeta</code>，其实现代码如下：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">_FieldMeta</span><span class="p">(</span><span class="nb">type</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="fm">__new__</span><span class="p">(</span><span class="n">mcs</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">bases</span><span class="p">:</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">Type</span><span class="p">,</span> <span class="o">...</span><span class="p">],</span> <span class="n">attrs</span><span class="p">:</span> <span class="nb">dict</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">bases</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span> <span class="ow">and</span> <span class="n">bases</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="ow">is</span> <span class="n">Field</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="c1"># Instantiate class with only the 1st base class (should be Field)</span>
+</span></span><span class="line"><span class="cl">            <span class="bp">cls</span> <span class="o">=</span> <span class="nb">type</span><span class="o">.</span><span class="fm">__new__</span><span class="p">(</span><span class="n">mcs</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="p">(</span><span class="n">bases</span><span class="p">[</span><span class="mi">0</span><span class="p">],),</span> <span class="n">attrs</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="c1"># All other base classes are our meta types, we store them in class attributes</span>
+</span></span><span class="line"><span class="cl">            <span class="bp">cls</span><span class="o">.</span><span class="n">field_type</span> <span class="o">=</span> <span class="n">bases</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">bases</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span> <span class="k">else</span> <span class="n">Union</span><span class="p">[</span><span class="n">bases</span><span class="p">[</span><span class="mi">1</span><span class="p">:]]</span>  <span class="c1"># type: ignore</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="bp">cls</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="nb">type</span><span class="o">.</span><span class="fm">__new__</span><span class="p">(</span><span class="n">mcs</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">bases</span><span class="p">,</span> <span class="n">attrs</span><span class="p">)</span>
+</span></span></code></pre></div><p>稍作分析，不难看出在通过 <code>type()</code> 进行字段类创建时，主要对字段类继承的类（即：<code>type</code> 的 <code>bases</code> 参数）进行了处理。<br>
+当字段类继承于 <code>Field</code> 和其它类且 <code>MRO</code> 顺序中 <code>Field</code> 位于首位时，设置当前字段类的字段类型 <code>field_type</code> 为继承的其它类的类型，如：<code>str</code> <code>int</code> 等。</p>
+<h3 id="2-test-x">2. test-x</h3>
+<p>在自研 <code>test-x</code> 测试框架中，所有用于定义一个关键字库的关键字类最终都必须继承于一个关键字基类，在这个基类中，定义了用于控制关键字方法的元类 <code>KeywordMeta</code>，其具体实现如下：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">KeywordMeta</span><span class="p">(</span><span class="nb">type</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="fm">__new__</span><span class="p">(</span><span class="n">mcs</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">bases</span><span class="p">,</span> <span class="n">attrs</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="n">ori</span> <span class="o">=</span> <span class="nb">type</span><span class="o">.</span><span class="fm">__new__</span><span class="p">(</span><span class="n">mcs</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">bases</span><span class="p">,</span> <span class="n">attrs</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">name</span> <span class="o">!=</span> <span class="s2">&#34;KeywordBase&#34;</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="k">for</span> <span class="n">func_name</span><span class="p">,</span> <span class="n">func</span> <span class="ow">in</span> <span class="n">attrs</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">                <span class="c1"># 判断方法是否为关键字方法</span>
+</span></span><span class="line"><span class="cl">                <span class="k">if</span> <span class="n">inspect</span><span class="o">.</span><span class="n">isroutine</span><span class="p">(</span><span class="n">func</span><span class="p">)</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">func_name</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;_&#39;</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">                    <span class="c1"># 控制关键字方法必须编写文档</span>
+</span></span><span class="line"><span class="cl">                    <span class="k">if</span> <span class="n">settings</span><span class="o">.</span><span class="n">KW_CHECK_DOC</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">func</span><span class="o">.</span><span class="vm">__doc__</span> <span class="ow">and</span> \
+</span></span><span class="line"><span class="cl">                            <span class="ow">not</span> <span class="nb">any</span><span class="p">(</span><span class="n">func_name</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="n">_</span><span class="p">)</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="n">settings</span><span class="o">.</span><span class="n">KW_NOT_STARTS</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">                        <span class="k">raise</span> <span class="n">KeywordNoDocError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;关键字方法 &lt;</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">.</span><span class="si">{</span><span class="n">func_name</span><span class="si">}</span><span class="s2">&gt; 必须编写文档，请补充！&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">                    <span class="c1"># 控制业务关键字上下文变量参数必须默认为 None</span>
+</span></span><span class="line"><span class="cl">                    <span class="k">if</span> <span class="n">sign</span> <span class="o">:=</span> <span class="n">inspect</span><span class="o">.</span><span class="n">signature</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">                        <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">sign</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">                            <span class="k">if</span> <span class="n">k</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="n">settings</span><span class="o">.</span><span class="n">CTX_VAR_PREFIX</span><span class="p">)</span> <span class="ow">and</span> <span class="n">v</span><span class="o">.</span><span class="n">default</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                                <span class="k">raise</span> <span class="n">KeywordValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;关键字方法 &lt;</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">.</span><span class="si">{</span><span class="n">func_name</span><span class="si">}</span><span class="s2">&gt; 的上下文变量 &lt;</span><span class="si">{</span><span class="n">k</span><span class="si">}</span><span class="s2">&gt; 默认值必须设置为 None ！&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">                    <span class="c1"># 解析实参中包含的上下文变量</span>
+</span></span><span class="line"><span class="cl">                    <span class="nb">setattr</span><span class="p">(</span><span class="n">ori</span><span class="p">,</span> <span class="n">func_name</span><span class="p">,</span> <span class="n">reset_func_attribute</span><span class="p">(</span><span class="n">func</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">ori</span>
+</span></span></code></pre></div><p>其作用是，在通过 <code>type()</code> 进行关键字类的创建时，获取到关键字类的创建数据（即：<code>type</code> 的 <code>name</code> <code>bases</code> <code>dict</code> 参数）。<br>
+当关键字类名称 <code>name</code> 不等于基类 <code>KeywordBase</code> 名称，则认为是普通关键字类，进入处理逻辑。<br>
+在元类处理逻辑中，通过对类的成员数据 <code>dict</code> 进行解析和判断，这里做了两件简单的事情：</p>
+<ol>
+<li>控制关键字方法必须编写文档</li>
+<li>控制关键字上下文变量形参默认值必须设置为 <code>None</code></li>
+</ol>
+<blockquote>
+<p><strong>参考来源</strong>：<br>
+<a href="https://en.wikipedia.org/wiki/Metaprogramming">https://en.wikipedia.org/wiki/Metaprogramming</a> 《Wiki-Metaprogramming》<br>
+<a href="https://www.zhihu.com/question/23856985">https://www.zhihu.com/question/23856985</a> 《知乎：怎么理解元编程》<br>
+<a href="https://en.wikipedia.org/wiki/Metaclass">https://en.wikipedia.org/wiki/Metaclass</a> 《Wiki-Metaclass》<br>
+<a href="https://docs.python.org/3/reference/datamodel.html#metaclasses">https://docs.python.org/3/reference/datamodel.html#metaclasses</a> 《Python-metaclasses》<br>
+<a href="https://peps.python.org/pep-3115/">https://peps.python.org/pep-3115/</a> 《PEP 3115 – Metaclasses in Python 3000》<br>
+<a href="http://c.biancheng.net/view/2293.html">http://c.biancheng.net/view/2293.html</a> 《Python MetaClass 元类详解》</p>
+</blockquote>
+
+  </article>
+
+  
+  
+    
+    
+    
+  
+  
+<link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/gitalk/1.7.0/gitalk.css" />
+<script src="https://cdn.bootcdn.net/ajax/libs/gitalk/1.7.0/gitalk.min.js"></script>
+<div id="gitalk-container"></div>
+<script>
+  const gitalk = new Gitalk({
+    id: 'Python元类介绍及实践', 
+    owner: 'fy975713384',
+    repo: 'fy975713384.github.io', 
+    clientID: '35afb85e4c521d6dbeb8',
+    clientSecret: '463c9ec266980fd7358a11479beda5284ecf9f71',
+    admin: ['fy975713384'],
+    distractionFreeMode: false 
+  })
+  gitalk.render('gitalk-container')
+</script>
+
+
+
+
+
+
+
+</div>
+
+  </main><div class="footer gradient-2">
+  <div class="container footer-container ">
+    <div class="row">
+      <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3">
+        <div class="footer-title">网站地图</div>
+        <ul class="list-unstyled">
+            
+              
+                <li><a href="/tags/">标签</a></li>
+              
+              
+                <li><a href="/categories/">分类</a></li>
+              
+            
+            
+            
+            <li><a rel="alternate" type="application/rss&#43;xml" href="/index.xml"><i class="fas fa-rss-square"></i> RSS订阅</a></li>
+            
+            
+            
+        </ul>
+      </div>
+      <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3">
+        
+        <div class="footer-title">社群</div>
+        <ul class="list-unstyled">
+          
+          <li><a href="https://github.com/fy975713384" rel="noopener" target="_blank">GitHub</a></li>
+          
+          <li><a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&amp;email=NFVOQVgaUnRSW0xZVV1YGldbWQ" rel="noopener" target="_blank">联系我</a></li>
+          
+        </ul>
+        
+      </div>
+      <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3">
+        
+        <div class="footer-title">友链</div>
+        <ul class="list-unstyled">
+          
+          <li><a href="/" rel="noopener" target="_blank">关于我</a></li>
+          
+          <li><a href="https://juejin.cn/user/3315782800904263" rel="noopener" target="_blank">掘金主页</a></li>
+          
+        </ul>
+        
+      </div> 
+      <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+        <p class="pull-right text-right">
+          <small><em>Proudly powered by <a href="https://gohugo.io/" rel="noopener" target="_blank">Hugo</a></em></small><br/>
+          <small><em>Theme - <a href="https://github.com/shaform/hugo-theme-den" rel="noopener" target="_blank">Den</a></em></small><br/>
+          <small>
+            &copy; 
+            
+            
+              2017 -
+            2023
+          </small>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.3.1/jquery.slim.min.js"
+  integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+  integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js"
+  integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/mermaid/8.8.2/mermaid.min.js"></script>
+<script>
+  window.onload = function () {
+    mermaid.initialize({ theme: 'neutral' })
+    mermaid.init(undefined, '.language-mermaid')
+  }
+</script>
+</body>
+</html>

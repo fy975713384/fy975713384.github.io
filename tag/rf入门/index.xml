@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>RF入门 on Wing</title>
+    <link>/tag/rf%E5%85%A5%E9%97%A8/</link>
+    <description>Recent content in RF入门 on Wing</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <managingEditor>fy975713384@gmail.com (Pan, Feng)</managingEditor>
+    <webMaster>fy975713384@gmail.com (Pan, Feng)</webMaster>
+    <lastBuildDate>Fri, 22 Feb 2019 19:12:04 +0800</lastBuildDate>
+    <atom:link href="/tag/rf%E5%85%A5%E9%97%A8/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Robot Framework 学习资源汇总</title>
+      <link>/2019/02/22/robot-framework-%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90%E6%B1%87%E6%80%BB/</link>
+      <pubDate>Fri, 22 Feb 2019 19:12:04 +0800</pubDate><author>fy975713384@gmail.com (Pan, Feng)</author>
+      <guid>/2019/02/22/robot-framework-%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90%E6%B1%87%E6%80%BB/</guid>
+      <description>学习网站 官网：http://robotframework.org/ 用户手册 原版：http://robotframework.org/robo</description>
+    </item>
+    <item>
+      <title>Robot Framework 安装配置</title>
+      <link>/2019/02/19/robot-framework-%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/</link>
+      <pubDate>Tue, 19 Feb 2019 00:27:04 +0800</pubDate><author>fy975713384@gmail.com (Pan, Feng)</author>
+      <guid>/2019/02/19/robot-framework-%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/</guid>
+      <description>RF 是最强的自动化测试框架，没有之一！ Robot Framework 最新基于 Windows/Mac+Python3 的安装方式，是时候卸载掉 Python2 了！ 一、Robot Framework 介绍 Robot Framework 是一款基于 Python 的功能自动化测试框架。它</description>
+    </item>
+  </channel>
+</rss>

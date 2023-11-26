@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>安全 on Wing</title>
+    <link>/tag/%E5%AE%89%E5%85%A8/</link>
+    <description>Recent content in 安全 on Wing</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <managingEditor>fy975713384@gmail.com (Pan, Feng)</managingEditor>
+    <webMaster>fy975713384@gmail.com (Pan, Feng)</webMaster>
+    <lastBuildDate>Sat, 04 Sep 2021 01:15:12 +0800</lastBuildDate>
+    <atom:link href="/tag/%E5%AE%89%E5%85%A8/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Python 用户密码加密存储</title>
+      <link>/2021/09/04/python-%E7%94%A8%E6%88%B7%E5%AF%86%E7%A0%81%E5%8A%A0%E5%AF%86%E5%AD%98%E5%82%A8/</link>
+      <pubDate>Sat, 04 Sep 2021 01:15:12 +0800</pubDate><author>fy975713384@gmail.com (Pan, Feng)</author>
+      <guid>/2021/09/04/python-%E7%94%A8%E6%88%B7%E5%AF%86%E7%A0%81%E5%8A%A0%E5%AF%86%E5%AD%98%E5%82%A8/</guid>
+      <description>进行 Web 应用开发时，用户密码如何保存才足够安全是一个值得重视的问题，作为应用开发者，我们有责任保证用户的信息安全。对于金融行业来说，更是如此。</description>
+    </item>
+  </channel>
+</rss>
