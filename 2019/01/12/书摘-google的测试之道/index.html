@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+<html lang="zh-cn" itemscope itemtype="http://schema.org/WebPage">
 <head>
   <meta name="google-site-verification" content="NqacV5tHWoxzRi2H7KcEVCWMuxSnch23EM-vzsEV3h8" />
-  <meta name="generator" content="Hugo 0.111.3" />
+  <meta name="generator" content="Hugo 0.120.4" />
   <meta charset="utf-8">
   <title>书摘-Google的测试之道 · Wing</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -26,11 +26,12 @@
 <meta property="og:url" content="/2019/01/12/%E4%B9%A6%E6%91%98-google%E7%9A%84%E6%B5%8B%E8%AF%95%E4%B9%8B%E9%81%93/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2019-01-12T16:32:47+08:00" />
 <meta property="article:modified_time" content="2019-01-12T16:32:47+08:00" />
+
 <meta itemprop="name" content="书摘-Google的测试之道">
 <meta itemprop="description" content="在 Google，软件测试团队归属于一个被成为“工程生产力”（译注：Engineering Productivity，也译为工程效率或工程生产率"><meta itemprop="datePublished" content="2019-01-12T16:32:47+08:00" />
 <meta itemprop="dateModified" content="2019-01-12T16:32:47+08:00" />
-<meta itemprop="wordCount" content="4370">
-<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta itemprop="wordCount" content="4450">
+<meta itemprop="keywords" content="书摘," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="书摘-Google的测试之道"/>
 <meta name="twitter:description" content="在 Google，软件测试团队归属于一个被成为“工程生产力”（译注：Engineering Productivity，也译为工程效率或工程生产率"/>
 </head>
@@ -58,7 +59,7 @@
           <li class="nav-item">
             
               
-                <a class="nav-link" href="/category/notes/">笔记</a>
+                <a class="nav-link" href="/category/work/">工作</a>
               
             
           </li>
@@ -66,7 +67,15 @@
           <li class="nav-item">
             
               
-                <a class="nav-link" href="/category/travals/">游记</a>
+                <a class="nav-link" href="/category/travels/">游记</a>
+              
+            
+          </li>
+        
+          <li class="nav-item">
+            
+              
+                <a class="nav-link" href="/category/lifelapse/">生活</a>
               
             
           </li>
@@ -87,10 +96,16 @@
         
         2019-01-12
           / 分类：
-          <a href="/category/notes/">Notes</a>
+          <a href="/category/work/">Work</a>
         </p>
         
         <div class="header-underline"></div>
+        
+          <div class="clearfix"></div>
+          <p class="float-right header-tags">
+              <i class="fas fa-tags" aria-hidden="true"></i>
+              <a href="/tag/%E4%B9%A6%E6%91%98/">书摘</a>
+          </p>
         
         
 
@@ -104,60 +119,26 @@
 <div class="container content">
   <article>
   <ul>
-<li>
-<p>在 Google，软件测试团队归属于一个被成为“工程生产力”（译注：Engineering Productivity，也译为工程效率或工程生产率）的中心组织部门，这个部门的职责横跨开发测试人员使用的工具的研发、产品发布和各种级别的测试，从单元级别的测试到探索性级别的测试。</p>
-</li>
-<li>
-<p>Google 是一家以创新和速度为基础的公司，快速发布有用的代码（如果失败，也只有少数早期的用户会失望）、迭代地增加早期用户希望使用的功能（最大化用户反馈）。</p>
-</li>
-<li>
-<p>Google 的测试方法看起来有点违背常理&ndash;在整个公司，我们只有非常少的专职测试人员，在通往成功的道路上，Google 的测试团队并非百万雄兵，我们更像是小而精的特种部队。</p>
-</li>
-<li>
-<p>当有人来问我，Google 成功的关键是什么，我的第一个建议就是，不要招聘太多的测试人员。</p>
-</li>
-<li>
-<p>Google 在测试人员如此缺乏的情况下是如何应对的呢？简单地说，在 Google，写代码的开发人员也承担了开发的重任。质量从来就不仅仅是一些测试人员的问题。在 Google，每个写代码的开发者本身就是测试者，质量在名义上也由这样的开发测试组合共同承担。</p>
-</li>
-<li>
-<p>在 Google 谈论测试开发比就像讨论太阳表面的空气质量一样，这本身没有任何意义。如果你是一名开发工程师，那么你同时也是一名测试人员。如果你头衔上有测试的字样，你的任务就是怎样使那些头衔上没有测试的人可以更好地去进行测试。</p>
-</li>
-<li>
-<p>还有谁能比实际写代码的人更适合测试呢？还有谁能比实际写代码的人更适合去寻找 bug 呢？是谁会为了避免受更大的刺激而去想办法避免产生 bug 呢？</p>
-</li>
-<li>
-<p>Google 能用如此少的专职测试人员的原因，就是开发对质量的负责。如果产品出了问题，第一个跳出来的肯定是导致这个问题发生的开发人员，而不是遗漏这个 bug 的测试人员。</p>
-</li>
-<li>
-<p>测试人员的存在是为了让开发人员的工作更有效率，并且很大一部分体现在避免因马虎粗心而导致的返工。</p>
-</li>
-<li>
-<p>Chrome 发版策略：金丝雀版本 &ndash;&gt; 开发版本 &ndash;&gt; 测试版本 &ndash;&gt; beta 或发布版本</p>
-</li>
-<li>
-<p>Google 并没有使用代码测试、集成测试、系统测试等这些命名方式，而是使用小型测试、中型测试、大型测试这样的称谓，着重强调测试的范畴规模而非形式。</p>
-</li>
-<li>
-<p>Google 的测试流程可以非常简练地概括为：让每个工程师都注重质量。只要大家诚实认真地这么做，质量就会提高。</p>
-</li>
+<li>在 Google，软件测试团队归属于一个被成为“工程生产力”（译注：Engineering Productivity，也译为工程效率或工程生产率）的中心组织部门，这个部门的职责横跨开发测试人员使用的工具的研发、产品发布和各种级别的测试，从单元级别的测试到探索性级别的测试。</li>
+<li>Google 是一家以创新和速度为基础的公司，快速发布有用的代码（如果失败，也只有少数早期的用户会失望）、迭代地增加早期用户希望使用的功能（最大化用户反馈）。</li>
+<li>Google 的测试方法看起来有点违背常理&ndash;在整个公司，我们只有非常少的专职测试人员，在通往成功的道路上，Google 的测试团队并非百万雄兵，我们更像是小而精的特种部队。</li>
+<li>当有人来问我，Google 成功的关键是什么，我的第一个建议就是，不要招聘太多的测试人员。</li>
+<li>Google 在测试人员如此缺乏的情况下是如何应对的呢？简单地说，在 Google，写代码的开发人员也承担了开发的重任。质量从来就不仅仅是一些测试人员的问题。在 Google，每个写代码的开发者本身就是测试者，质量在名义上也由这样的开发测试组合共同承担。</li>
+<li>在 Google 谈论测试开发比就像讨论太阳表面的空气质量一样，这本身没有任何意义。如果你是一名开发工程师，那么你同时也是一名测试人员。如果你头衔上有测试的字样，你的任务就是怎样使那些头衔上没有测试的人可以更好地去进行测试。</li>
+<li>还有谁能比实际写代码的人更适合测试呢？还有谁能比实际写代码的人更适合去寻找 bug 呢？是谁会为了避免受更大的刺激而去想办法避免产生 bug 呢？</li>
+<li>Google 能用如此少的专职测试人员的原因，就是开发对质量的负责。如果产品出了问题，第一个跳出来的肯定是导致这个问题发生的开发人员，而不是遗漏这个 bug 的测试人员。</li>
+<li>测试人员的存在是为了让开发人员的工作更有效率，并且很大一部分体现在避免因马虎粗心而导致的返工。</li>
+<li>Chrome 发版策略：金丝雀版本 &ndash;&gt; 开发版本 &ndash;&gt; 测试版本 &ndash;&gt; beta 或发布版本</li>
+<li>Google 并没有使用代码测试、集成测试、系统测试等这些命名方式，而是使用小型测试、中型测试、大型测试这样的称谓，着重强调测试的范畴规模而非形式。</li>
+<li>Google 的测试流程可以非常简练地概括为：让每个工程师都注重质量。只要大家诚实认真地这么做，质量就会提高。</li>
 </ul>
 <hr>
 <ul>
-<li>
-<p>Google 的研发团队组成：软件开发工程师（SWE）、软件测试开发工程师（SET）、测试工程师（TE）</p>
-</li>
-<li>
-<p>SET：负责可测试性和测试自动化体系的长期有效性。</p>
-</li>
-<li>
-<p>TE：重点在于评估对用户的影响以及软件产品整体目标上的风险。</p>
-</li>
-<li>
-<p>最好的 TE 不是那些基础算法、定理证明、功能实现上的牛人。TE 是稀缺个体，是技术人，关注用户，能在系统级别和端到端的视角上理解产品。他们是无情的、伟大的谈判专家，最重要的是，他们富有创造性、善于应对模糊性。这就是为什么 Google 或者任何一家公司要努力去招聘这种人才的原因。</p>
-</li>
-<li>
-<p>首先我们考察测试资质，我们的意图在于，弄清楚候选人是否不只是聪明和具有创造性，是否具有天生的测试才能。我们寻找的是对于事物结构、对于变量和配置的组合的各种可能性和意义的好奇心。我们寻找的是关于事物应该如何工作的强烈感觉，以及清晰表达的能力。我们还会试图寻找很强的人格魅力。面试时试图考察的另外一个关键特征，是 TE 所需要具备的处理模糊性、反驳糟糕想法的能力。我们通常会更改规格说明或者描述一个说不通的行为，只要候选人提出澄清性的问题就会发现这一点。他们如何处理这种模糊性，很大程度上反映了他们将来在工作上的表现。</p>
-</li>
+<li>Google 的研发团队组成：软件开发工程师（SWE）、软件测试开发工程师（SET）、测试工程师（TE）</li>
+<li>SET：负责可测试性和测试自动化体系的长期有效性。</li>
+<li>TE：重点在于评估对用户的影响以及软件产品整体目标上的风险。</li>
+<li>最好的 TE 不是那些基础算法、定理证明、功能实现上的牛人。TE 是稀缺个体，是技术人，关注用户，能在系统级别和端到端的视角上理解产品。他们是无情的、伟大的谈判专家，最重要的是，他们富有创造性、善于应对模糊性。这就是为什么 Google 或者任何一家公司要努力去招聘这种人才的原因。</li>
+<li>首先我们考察测试资质，我们的意图在于，弄清楚候选人是否不只是聪明和具有创造性，是否具有天生的测试才能。我们寻找的是对于事物结构、对于变量和配置的组合的各种可能性和意义的好奇心。我们寻找的是关于事物应该如何工作的强烈感觉，以及清晰表达的能力。我们还会试图寻找很强的人格魅力。面试时试图考察的另外一个关键特征，是 TE 所需要具备的处理模糊性、反驳糟糕想法的能力。我们通常会更改规格说明或者描述一个说不通的行为，只要候选人提出澄清性的问题就会发现这一点。他们如何处理这种模糊性，很大程度上反映了他们将来在工作上的表现。</li>
 </ul>
 <hr>
 <h6 id="chrome-的漫游测试法">Chrome 的漫游测试法：</h6>
@@ -188,7 +169,7 @@ Internet 上有近乎无尽的消费方式，而 Chrome 浏览器是 Internet �
 <p>这个漫游测试就是鼓励用户做这样的事，充分利用和测试软件的各种功能来帮助达到获取和组织信息的目的。</p>
 </blockquote>
 <p><strong>应用：</strong><br>
-测试 Chrome 浏览器能多好地从各种不同的信息源收集和组织数据。例如，用户能从多家站点获取信息并把它们存储在云端的文档上吗？离线内容能被成功的上传和使用吗？<!-- raw HTML omitted --><br>
+测试 Chrome 浏览器能多好地从各种不同的信息源收集和组织数据。例如，用户能从多家站点获取信息并把它们存储在云端的文档上吗？离线内容能被成功的上传和使用吗？<code>&lt;br/&gt;</code><br>
 Chrome 的学生漫游测试包括：</p>
 <ul>
 <li>复制粘贴：各种不同类型的数据能通过剪贴板传递吗？</li>
@@ -204,7 +185,7 @@ Chrome 的学生漫游测试包括：</p>
 <p>这个漫游测试关注于保证用户无论从哪里操作，都能够获得流畅可靠的体验。</p>
 </blockquote>
 <p><strong>应用：</strong><br>
-在不同的平台（Windows、Mac、Linux）上，使用操作系统中不同的网络连接设置，通过 Chrome 去浏览常用的站点，使用常用的功能。<!-- raw HTML omitted --><br>
+在不同的平台（Windows、Mac、Linux）上，使用操作系统中不同的网络连接设置，通过 Chrome 去浏览常用的站点，使用常用的功能。<code>&lt;br/&gt;</code><br>
 Chrome 的国际长途电话漫游包括：</p>
 <ul>
 <li>操作系统：Windows，Mac 和 Linux</li>
@@ -219,7 +200,7 @@ Chrome 的国际长途电话漫游包括：</p>
 <p>探索式测试人员的地标漫游测试是类似的，我们选取标志，然后顺着标志执行，我们将能穿过森林。&rdquo;</p>
 </blockquote>
 <p><strong>应用：</strong><br>
-在 Chrome 中，这个漫游测试要看看用户能不能从一个地标转移到另一个地标。验证用户可以到达各个地标，如不同的浏览器窗口，打开附件，设置，等等。<!-- raw HTML omitted --><br>
+在 Chrome 中，这个漫游测试要看看用户能不能从一个地标转移到另一个地标。验证用户可以到达各个地标，如不同的浏览器窗口，打开附件，设置，等等。<code>&lt;br/&gt;</code><br>
 Chrome 的地标漫游包括：</p>
 <ul>
 <li>浏览器窗口：这是用于浏览 Web 的浏览器主窗口。</li>
@@ -239,7 +220,7 @@ Chrome 的地标漫游包括：</p>
 <p>这种漫游测试可以发现那些只有在使用了很长一段时间以后才会出现的问题。</p>
 </blockquote>
 <p><strong>应用：</strong><br>
-打开很多标签页，安装扩展程序，变更主题，在同一个会话中不断浏览网页，持续尽可能长的时间。即使是不再使用了，也不要关闭任何标签页或者浏览窗口；不断打开更多的内容。如果这个漫游测试持续几天，那就在夜间保持打开 Chrome，到第二天继续测试。<!-- raw HTML omitted --><br>
+打开很多标签页，安装扩展程序，变更主题，在同一个会话中不断浏览网页，持续尽可能长的时间。即使是不再使用了，也不要关闭任何标签页或者浏览窗口；不断打开更多的内容。如果这个漫游测试持续几天，那就在夜间保持打开 Chrome，到第二天继续测试。<code>&lt;br/&gt;</code><br>
 Chrome 的通宵漫游测试包括：</p>
 <ul>
 <li>标签页和窗口：开启大量的标签页和窗口。</li>
@@ -253,8 +234,8 @@ Chrome 的通宵漫游测试包括：</p>
 <p>在软件领域，这种漫游测试考察用户是否能方便地利用被测软件提供的工具进行开发。与当地供应商和繁文缛节相对应，用户可以看看被测应用提供了多少工具，以及能够多方便地导入和导出内容。</p>
 </blockquote>
 <p><strong>应用：</strong><br>
-Chrome 提供了相当多的工具供 JavaScript 开发人员和 Web 开发人员使用，用以测试和运行他们的在线内容。使用这种漫游测试检验各种工具，生成示例脚本和测试在线内容。<!-- raw HTML omitted --><br>
-Chrome 里的工具<!-- raw HTML omitted --><br>
+Chrome 提供了相当多的工具供 JavaScript 开发人员和 Web 开发人员使用，用以测试和运行他们的在线内容。使用这种漫游测试检验各种工具，生成示例脚本和测试在线内容。<code>&lt;br/&gt;</code><br>
+Chrome 里的工具 <code>&lt;br/&gt;</code><br>
 Chrome 的公务漫游测试包括：</p>
 <ul>
 <li>开发人员工具：观察页面元素、资源、脚本，启用资源跟踪。</li>
@@ -266,8 +247,8 @@ Chrome 的公务漫游测试包括：</p>
 <p><strong>描述：</strong><br>
 &ldquo;每个城市都有一些危险地带，观光者都会谨慎地避开。软件中也存在危险地带&ndash;那些集中产生 Bug 的代码。&rdquo;<br>
 <strong>应用：</strong><br>
-Chrome 的重点是提供快速、简洁的 Web 浏览体验，但是在富内容上可能会有问题。当 Chrome 初次发布的时候，有报告说连 YouTube 上的视频都不能正确播放。虽然现在对这些问题的处理已经有了明显的改善，但在富内容方面仍然有不小的挑战。<!-- raw HTML omitted --><br>
-Chrome OS 中的危险地带漫游测试<!-- raw HTML omitted --><br>
+Chrome 的重点是提供快速、简洁的 Web 浏览体验，但是在富内容上可能会有问题。当 Chrome 初次发布的时候，有报告说连 YouTube 上的视频都不能正确播放。虽然现在对这些问题的处理已经有了明显的改善，但在富内容方面仍然有不小的挑战。<code>&lt;br/&gt;</code><br>
+Chrome OS 中的危险地带漫游测试 <code>&lt;br/&gt;</code><br>
 Chrome 的危险地带漫游测试包括：</p>
 <ul>
 <li>在线视频：Hulu，YouTube，ABC，NBC，全屏模式，以及高分辨率。</li>
@@ -283,8 +264,8 @@ Chrome 的危险地带漫游测试包括：</p>
 <p>软件领域里，这种漫游让用户探寻各种可能的方式来进行定制，把软件个性化，让用户体验到量身定做的感觉。</p>
 <p><strong>应用：</strong><br>
 尝试 Chrome 各种不同的定制方式，通过修改使用的主题、扩展程序、书签、设置、快捷键和用户概要等来获得特定的用户体验。<br>
-定制 Chrome 的方式<!-- raw HTML omitted --><br>
-Chrome 中的个性化漫游测试包括：<!-- raw HTML omitted --></p>
+定制 Chrome 的方式 <code>&lt;br/&gt;</code><br>
+Chrome 中的个性化漫游测试包括：<code>&lt;br/&gt;</code></p>
 <ul>
 <li>主题：使用主题定制 Chrome OS 的外观。</li>
 <li>扩展程序：下载并安装一些 Chrome 的扩展程序，来扩展功能和改变外观。</li>
@@ -377,7 +358,7 @@ Chrome 中的个性化漫游测试包括：<!-- raw HTML omitted --></p>
           <small><em>Theme - <a href="https://github.com/shaform/hugo-theme-den" rel="noopener" target="_blank">Den</a></em></small><br/>
           <small>
             &copy; 
-            Pan Feng
+            
             
               2017 -
             2023

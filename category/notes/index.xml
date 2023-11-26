@@ -5,186 +5,150 @@
     <link>/category/notes/</link>
     <description>Recent content in Notes on Wing</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 02 Apr 2023 19:30:00 +0800</lastBuildDate><atom:link href="/category/notes/index.xml" rel="self" type="application/rss+xml" />
+    <language>zh-cn</language>
+    <managingEditor>fy975713384@gmail.com (Pan, Feng)</managingEditor>
+    <webMaster>fy975713384@gmail.com (Pan, Feng)</webMaster>
+    <lastBuildDate>Sun, 02 Apr 2023 19:30:00 +0800</lastBuildDate>
+    <atom:link href="/category/notes/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>🔝 我的测试观</title>
       <link>/2018/08/24/%E6%88%91%E7%9A%84%E6%B5%8B%E8%AF%95%E8%A7%82/</link>
-      <pubDate>Fri, 24 Aug 2018 14:32:45 +0800</pubDate>
-      
+      <pubDate>Fri, 24 Aug 2018 14:32:45 +0800</pubDate><author>fy975713384@gmail.com (Pan, Feng)</author>
       <guid>/2018/08/24/%E6%88%91%E7%9A%84%E6%B5%8B%E8%AF%95%E8%A7%82/</guid>
       <description>软件测试的目的 确保终端用户的满意度 软件测试的目标 帮助团队对其产品或项目的质量有一个具体的感知 有效地完成探索式测试过程，找出系统中隐藏的风险 有</description>
     </item>
-    
     <item>
       <title>🔝 浅谈软件质量</title>
       <link>/2019/06/12/%E6%B5%85%E8%B0%88%E8%BD%AF%E4%BB%B6%E8%B4%A8%E9%87%8F/</link>
-      <pubDate>Wed, 12 Jun 2019 22:32:47 +0800</pubDate>
-      
+      <pubDate>Wed, 12 Jun 2019 22:32:47 +0800</pubDate><author>fy975713384@gmail.com (Pan, Feng)</author>
       <guid>/2019/06/12/%E6%B5%85%E8%B0%88%E8%BD%AF%E4%BB%B6%E8%B4%A8%E9%87%8F/</guid>
       <description>一、软件质量是什么 GB/T 25000.10-2016 标准（基于 ISO/IEC 25010:2011 标准）中将软件质量定义为： 在规定条件下使用时，软件满足用户明确和隐含要求的能力。满足程度越高，质量就越好</description>
     </item>
-    
     <item>
       <title>博客优化-修改软换行渲染配置</title>
       <link>/2023/04/02/%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96-%E4%BF%AE%E6%94%B9%E8%BD%AF%E6%8D%A2%E8%A1%8C%E6%B8%B2%E6%9F%93%E9%85%8D%E7%BD%AE/</link>
-      <pubDate>Sun, 02 Apr 2023 19:30:00 +0800</pubDate>
-      
+      <pubDate>Sun, 02 Apr 2023 19:30:00 +0800</pubDate><author>fy975713384@gmail.com (Pan, Feng)</author>
       <guid>/2023/04/02/%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96-%E4%BF%AE%E6%94%B9%E8%BD%AF%E6%8D%A2%E8%A1%8C%E6%B8%B2%E6%9F%93%E9%85%8D%E7%BD%AE/</guid>
       <description>博客优化-MarkDown 软换行问题 事情的背景是这样的：在看一个博主的技术视屏时，发现他用 Typora 编写 Markdown 文档时可以做到所见即所得。 其实这种功能我在</description>
     </item>
-    
     <item>
-      <title>SQL 语言介绍</title>
-      <link>/2022/11/20/sql-%E8%AF%AD%E8%A8%80%E4%BB%8B%E7%BB%8D/</link>
-      <pubDate>Sun, 20 Nov 2022 14:56:58 +0800</pubDate>
-      
-      <guid>/2022/11/20/sql-%E8%AF%AD%E8%A8%80%E4%BB%8B%E7%BB%8D/</guid>
-      <description>SQL 语言介绍 一、 SQL 语言背景 SQL(Structure Query Language) 语言是数据库的核心语言。 SQL 的发展是从 1974 年开始的，其发展过程如下： 1974 年 &amp;mdash;&amp;ndash; 由 Boyce 和 Chamberlin 提出，当时称 SEQUEL 1976 年 &amp;mdash;&amp;ndash; IBM 公司的 Sanjase 研</description>
-    </item>
-    
-    <item>
-      <title>Python元类介绍及实践</title>
-      <link>/2022/08/09/python%E5%85%83%E7%B1%BB%E4%BB%8B%E7%BB%8D%E5%8F%8A%E5%AE%9E%E8%B7%B5/</link>
-      <pubDate>Tue, 09 Aug 2022 20:09:33 +0800</pubDate>
-      
-      <guid>/2022/08/09/python%E5%85%83%E7%B1%BB%E4%BB%8B%E7%BB%8D%E5%8F%8A%E5%AE%9E%E8%B7%B5/</guid>
+      <title>Python 元类介绍及实践</title>
+      <link>/2022/08/09/python-%E5%85%83%E7%B1%BB%E4%BB%8B%E7%BB%8D%E5%8F%8A%E5%AE%9E%E8%B7%B5/</link>
+      <pubDate>Tue, 09 Aug 2022 20:09:33 +0800</pubDate><author>fy975713384@gmail.com (Pan, Feng)</author>
+      <guid>/2022/08/09/python-%E5%85%83%E7%B1%BB%E4%BB%8B%E7%BB%8D%E5%8F%8A%E5%AE%9E%E8%B7%B5/</guid>
       <description>Python 元类介绍及实践 一、 元编程和元类 1. 元编程技术简介 元编程 (Metaprogramming) 是一种计算机编程技术，这种技术可以使计算机程序将其它程序当做其数据进行处理。这意味着</description>
     </item>
-    
     <item>
       <title>ElementUI 表格数据行内修改方式</title>
       <link>/2022/05/06/elementui-%E8%A1%A8%E6%A0%BC%E6%95%B0%E6%8D%AE%E8%A1%8C%E5%86%85%E4%BF%AE%E6%94%B9%E6%96%B9%E5%BC%8F/</link>
-      <pubDate>Fri, 06 May 2022 18:19:59 +0800</pubDate>
-      
+      <pubDate>Fri, 06 May 2022 18:19:59 +0800</pubDate><author>fy975713384@gmail.com (Pan, Feng)</author>
       <guid>/2022/05/06/elementui-%E8%A1%A8%E6%A0%BC%E6%95%B0%E6%8D%AE%E8%A1%8C%E5%86%85%E4%BF%AE%E6%94%B9%E6%96%B9%E5%BC%8F/</guid>
       <description>单列修改 代码 &amp;lt;template&amp;gt; &amp;lt;div class=&amp;#34;app-container&amp;#34;&amp;gt; &amp;lt;el-table :data=&amp;#34;tableData&amp;#34; border style=&amp;#34;width: 60%&amp;#34;&amp;gt; &amp;lt;el-table-column v-for=&amp;#34;item of tableCol&amp;#34; :key=&amp;#34;item.key&amp;#34; :label=&amp;#34;item.label&amp;#34; :prop=&amp;#34;item.key&amp;#34; :width=&amp;#34;item.width&amp;#34; &amp;gt; &amp;lt;template #default=&amp;#34;{ row, $index }&amp;#34;&amp;gt; &amp;lt;div v-if=&amp;#34;item.key === &amp;#39;address&amp;#39;&amp;#34;&amp;gt; &amp;lt;div v-if=&amp;#34;addressEditIndex === $index&amp;#34;&amp;gt; &amp;lt;el-input ref=&amp;#34;addressInput&amp;#34; v-model=&amp;#34;row.address&amp;#34; placeholder=&amp;#34;请输入地址&amp;#34; @blur=&amp;#34;addressEditIndex = undefined&amp;#34; @change=&amp;#34;handleAddressUpdate(row)&amp;#34;</description>
     </item>
-    
     <item>
       <title>Nginx 配置之 X-Forwarded-For</title>
       <link>/2021/09/09/nginx-%E9%85%8D%E7%BD%AE%E4%B9%8B-x-forwarded-for/</link>
-      <pubDate>Thu, 09 Sep 2021 13:32:19 +0800</pubDate>
-      
+      <pubDate>Thu, 09 Sep 2021 13:32:19 +0800</pubDate><author>fy975713384@gmail.com (Pan, Feng)</author>
       <guid>/2021/09/09/nginx-%E9%85%8D%E7%BD%AE%E4%B9%8B-x-forwarded-for/</guid>
       <description>Nginx 配置之 X Forwarded For X-Forwarded-For X-Forwarded-For(XFF) 通常被当作 HTTP 请求头中的一个参数， 在客户端访问服务器的过程中如果需要经过 HTTP 代理或者负载均衡服务器（当前通常是 Nginx），可</description>
     </item>
-    
     <item>
       <title>Python 用户密码加密存储</title>
       <link>/2021/09/04/python-%E7%94%A8%E6%88%B7%E5%AF%86%E7%A0%81%E5%8A%A0%E5%AF%86%E5%AD%98%E5%82%A8/</link>
-      <pubDate>Sat, 04 Sep 2021 01:15:12 +0800</pubDate>
-      
+      <pubDate>Sat, 04 Sep 2021 01:15:12 +0800</pubDate><author>fy975713384@gmail.com (Pan, Feng)</author>
       <guid>/2021/09/04/python-%E7%94%A8%E6%88%B7%E5%AF%86%E7%A0%81%E5%8A%A0%E5%AF%86%E5%AD%98%E5%82%A8/</guid>
       <description>进行 Web 应用开发时，用户密码如何保存才足够安全是一个值得重视的问题，作为应用开发者，我们有责任保证用户的信息安全。对于金融行业来说，更是如此。</description>
     </item>
-    
     <item>
-      <title>Mysql日期时间操作</title>
-      <link>/2021/08/28/mysql%E6%97%A5%E6%9C%9F%E6%97%B6%E9%97%B4%E6%93%8D%E4%BD%9C/</link>
-      <pubDate>Sat, 28 Aug 2021 14:18:25 +0800</pubDate>
-      
-      <guid>/2021/08/28/mysql%E6%97%A5%E6%9C%9F%E6%97%B6%E9%97%B4%E6%93%8D%E4%BD%9C/</guid>
+      <title>Mysql 日期时间操作</title>
+      <link>/2021/08/28/mysql-%E6%97%A5%E6%9C%9F%E6%97%B6%E9%97%B4%E6%93%8D%E4%BD%9C/</link>
+      <pubDate>Sat, 28 Aug 2021 14:18:25 +0800</pubDate><author>fy975713384@gmail.com (Pan, Feng)</author>
+      <guid>/2021/08/28/mysql-%E6%97%A5%E6%9C%9F%E6%97%B6%E9%97%B4%E6%93%8D%E4%BD%9C/</guid>
       <description>Mysql 日期时间操作 时间戳 mysql&amp;gt; SELECT UNIX_TIMESTAMP(), FROM_UNIXTIME(UNIX_TIMESTAMP()); UNIX_TIMESTAMP()|FROM_UNIXTIME(UNIX_TIMESTAMP())| ----------------+-------------------------------+ 1630134918 |2021-08-28 07:15:18.0 | 日期时间查询 当前日期时间查询 mysql&amp;gt; SELECT CURRENT_TIMESTAMP, NOW(), LOCALTIME, LOCALTIMESTAMP, SYSDATE(); CURRENT_TIMESTAMP |NOW() |LOCALTIME |LOCALTIMESTAMP |SYSDATE() | ---------------------+---------------------+---------------------+---------------------+---------------------+ 2021-08-28 07:05:43.0|2021-08-28 07:05:43.0|2021-08-28 07:05:43.0|2021-08-28 07:05:43.0|2021-08-28 07:05:43.0| 当前日期查询 mysql&amp;gt; SELECT CURRENT_DATE, CURDATE(); CURRENT_DATE|CURDATE() | ------------+----------+ 2021-08-28 |2021-08-28| 当</description>
     </item>
-    
+    <item>
+      <title>SQL 语言介绍</title>
+      <link>/2021/08/28/sql-%E8%AF%AD%E8%A8%80%E4%BB%8B%E7%BB%8D/</link>
+      <pubDate>Sat, 28 Aug 2021 14:11:58 +0800</pubDate><author>fy975713384@gmail.com (Pan, Feng)</author>
+      <guid>/2021/08/28/sql-%E8%AF%AD%E8%A8%80%E4%BB%8B%E7%BB%8D/</guid>
+      <description>SQL 语言介绍 一、 SQL 语言背景 SQL(Structure Query Language) 语言是数据库的核心语言。 SQL 的发展是从 1974 年开始的，其发展过程如下： 1974 年 &amp;mdash;&amp;ndash; 由 Boyce 和 Chamberlin 提出，当时称 SEQUEL 1976 年 &amp;mdash;&amp;ndash; IBM 公司的 Sanjase 研</description>
+    </item>
     <item>
       <title>Python 并发编程</title>
-      <link>/2021/08/28/python-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/</link>
-      <pubDate>Sat, 28 Aug 2021 00:02:51 +0800</pubDate>
-      
-      <guid>/2021/08/28/python-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/</guid>
+      <link>/2021/07/21/python-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/</link>
+      <pubDate>Wed, 21 Jul 2021 00:02:51 +0800</pubDate><author>fy975713384@gmail.com (Pan, Feng)</author>
+      <guid>/2021/07/21/python-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/</guid>
       <description>Python 并发编程 CPU 密集型 &amp;amp; IO 密集型 线程安全 守护线程 多线程的工作过程（仅限于 Python） Python 在使用多线程的时候，调用的是 c 语言的原生线程。 拿到公共资</description>
     </item>
-    
     <item>
       <title>谨慎执行 Python 序列的重复操作</title>
       <link>/2020/12/24/%E8%B0%A8%E6%85%8E%E6%89%A7%E8%A1%8C-python-%E5%BA%8F%E5%88%97%E7%9A%84%E9%87%8D%E5%A4%8D%E6%93%8D%E4%BD%9C/</link>
-      <pubDate>Thu, 24 Dec 2020 10:57:51 +0800</pubDate>
-      
+      <pubDate>Thu, 24 Dec 2020 10:57:51 +0800</pubDate><author>fy975713384@gmail.com (Pan, Feng)</author>
       <guid>/2020/12/24/%E8%B0%A8%E6%85%8E%E6%89%A7%E8%A1%8C-python-%E5%BA%8F%E5%88%97%E7%9A%84%E9%87%8D%E5%A4%8D%E6%93%8D%E4%BD%9C/</guid>
       <description>序列是 Python 内置类型之一，常见的字符串、元组、列表都是序列类型的子类型。 Python 中序列支持重复 (*) 操作，可以便捷地生成包含 n 个重复元素的序列对象。 示例如</description>
     </item>
-    
     <item>
       <title>博客优化-表格样式优化</title>
       <link>/2020/12/11/%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96-%E8%A1%A8%E6%A0%BC%E6%A0%B7%E5%BC%8F%E4%BC%98%E5%8C%96/</link>
-      <pubDate>Fri, 11 Dec 2020 19:17:00 +0800</pubDate>
-      
+      <pubDate>Fri, 11 Dec 2020 19:17:00 +0800</pubDate><author>fy975713384@gmail.com (Pan, Feng)</author>
       <guid>/2020/12/11/%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96-%E8%A1%A8%E6%A0%BC%E6%A0%B7%E5%BC%8F%E4%BC%98%E5%8C%96/</guid>
       <description>最近在更新之前写的文章《python-处理时间与日期》时，发现网页渲染出来的 Markdown Table 十分难看，故打算优化一下 Table 的渲染 检查 DOM 作为一个前端小白，由于</description>
     </item>
-    
     <item>
       <title>Pycharm 继承类过多时创建索引失败问题</title>
       <link>/2020/08/21/pycharm-%E7%BB%A7%E6%89%BF%E7%B1%BB%E8%BF%87%E5%A4%9A%E6%97%B6%E5%88%9B%E5%BB%BA%E7%B4%A2%E5%BC%95%E5%A4%B1%E8%B4%A5%E9%97%AE%E9%A2%98/</link>
-      <pubDate>Fri, 21 Aug 2020 03:59:04 +0800</pubDate>
-      
+      <pubDate>Fri, 21 Aug 2020 03:59:04 +0800</pubDate><author>fy975713384@gmail.com (Pan, Feng)</author>
       <guid>/2020/08/21/pycharm-%E7%BB%A7%E6%89%BF%E7%B1%BB%E8%BF%87%E5%A4%9A%E6%97%B6%E5%88%9B%E5%BB%BA%E7%B4%A2%E5%BC%95%E5%A4%B1%E8%B4%A5%E9%97%AE%E9%A2%98/</guid>
       <description>最近团队在使用 Pycharm 的过程中一直被一个问题所困扰，就是通过 Pycharm 打开自动化测试项目时，Pycharm 一直显示在 indexing，导致工具的相关功能无</description>
     </item>
-    
     <item>
       <title>使用 Nginx 搭建私有静态资源服务器</title>
       <link>/2020/07/26/%E4%BD%BF%E7%94%A8-nginx-%E6%90%AD%E5%BB%BA%E7%A7%81%E6%9C%89%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E6%9C%8D%E5%8A%A1%E5%99%A8/</link>
-      <pubDate>Sun, 26 Jul 2020 14:43:51 +0800</pubDate>
-      
+      <pubDate>Sun, 26 Jul 2020 14:43:51 +0800</pubDate><author>fy975713384@gmail.com (Pan, Feng)</author>
       <guid>/2020/07/26/%E4%BD%BF%E7%94%A8-nginx-%E6%90%AD%E5%BB%BA%E7%A7%81%E6%9C%89%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E6%9C%8D%E5%8A%A1%E5%99%A8/</guid>
       <description>使用 Nginx 搭建自己的静态资源服务器 最近在学习 Vue 框架，学习过程中需要一个静态资源服务器，故先自己搭建一个供学习使用。 通过 docker 搭建 nginx 服务器 安装 docker （以 HomeBrew</description>
     </item>
-    
     <item>
       <title>Mac 配置 iTerm2 &amp; zsh 终端环境</title>
       <link>/2020/06/19/mac-%E9%85%8D%E7%BD%AE-iterm2-zsh-%E7%BB%88%E7%AB%AF%E7%8E%AF%E5%A2%83/</link>
-      <pubDate>Fri, 19 Jun 2020 23:01:23 +0800</pubDate>
-      
+      <pubDate>Fri, 19 Jun 2020 23:01:23 +0800</pubDate><author>fy975713384@gmail.com (Pan, Feng)</author>
       <guid>/2020/06/19/mac-%E9%85%8D%E7%BD%AE-iterm2-zsh-%E7%BB%88%E7%AB%AF%E7%8E%AF%E5%A2%83/</guid>
       <description>最近很悲催，工作用的 2019 款 13“ MacBookPro 主板坏了（据网管说已经坏了好几个了），而且一时大意没有用 Time Machine 做备份（非工作用的倒是做了 🤪🤪🤪），所以趁机水一</description>
     </item>
-    
     <item>
       <title>Python 魔法方法之自定义实例属性</title>
       <link>/2020/06/17/python-%E9%AD%94%E6%B3%95%E6%96%B9%E6%B3%95%E4%B9%8B%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AE%9E%E4%BE%8B%E5%B1%9E%E6%80%A7/</link>
-      <pubDate>Wed, 17 Jun 2020 12:39:01 +0800</pubDate>
-      
+      <pubDate>Wed, 17 Jun 2020 12:39:01 +0800</pubDate><author>fy975713384@gmail.com (Pan, Feng)</author>
       <guid>/2020/06/17/python-%E9%AD%94%E6%B3%95%E6%96%B9%E6%B3%95%E4%B9%8B%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AE%9E%E4%BE%8B%E5%B1%9E%E6%80%A7/</guid>
       <description>Python 魔法方法之自定义实例属性 Python 魔法方法系列 让你的代码更加 pythonic __getattribute__ object.__getattribute__(self, name) 方法用于自定义实例属性的访问，使用时需注意： 该魔法方法会在访问实例的任何属性时</description>
     </item>
-    
     <item>
       <title>Python 魔法方法之自定义实例</title>
       <link>/2020/06/17/python-%E9%AD%94%E6%B3%95%E6%96%B9%E6%B3%95%E4%B9%8B%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AE%9E%E4%BE%8B/</link>
-      <pubDate>Wed, 17 Jun 2020 12:38:01 +0800</pubDate>
-      
+      <pubDate>Wed, 17 Jun 2020 12:38:01 +0800</pubDate><author>fy975713384@gmail.com (Pan, Feng)</author>
       <guid>/2020/06/17/python-%E9%AD%94%E6%B3%95%E6%96%B9%E6%B3%95%E4%B9%8B%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AE%9E%E4%BE%8B/</guid>
       <description>Python 魔法方法之自定义实例 Python 魔法方法系列 让你的代码更加 pythonic 构造函数 &amp;amp; 析构函数 学习 Python 的自定义实例魔法方法前需要先了解两个概念，构造函数 和 析构函数。 【</description>
     </item>
-    
     <item>
       <title>wrk 性能测试工具详解</title>
       <link>/2019/11/12/wrk-%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95%E5%B7%A5%E5%85%B7%E8%AF%A6%E8%A7%A3/</link>
-      <pubDate>Tue, 12 Nov 2019 16:52:49 +0800</pubDate>
-      
+      <pubDate>Tue, 12 Nov 2019 16:52:49 +0800</pubDate><author>fy975713384@gmail.com (Pan, Feng)</author>
       <guid>/2019/11/12/wrk-%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95%E5%B7%A5%E5%85%B7%E8%AF%A6%E8%A7%A3/</guid>
       <description>建议练习时可以使用 FastApi 或 Flask 等 Web 服务端框架在本地搭建一个 HTTP 服务 wrk 简介 wrk 是一个用于 HTTP 协议的基准测试工具。 基准测试是一种性能测试方法，它通过设计科学</description>
     </item>
-    
     <item>
       <title>浅谈计算机字符编码</title>
       <link>/2019/10/28/%E6%B5%85%E8%B0%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81/</link>
-      <pubDate>Mon, 28 Oct 2019 00:58:33 +0800</pubDate>
-      
+      <pubDate>Mon, 28 Oct 2019 00:58:33 +0800</pubDate><author>fy975713384@gmail.com (Pan, Feng)</author>
       <guid>/2019/10/28/%E6%B5%85%E8%B0%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81/</guid>
       <description>浅谈计算机字符编码 程序员如果不弄懂字符编码它就会像幽灵一般纠缠你整个职业生涯，各种灵异事件会接踵而来，挥之不去。 &amp;mdash; 刘志军 [知乎] 基础知识： 1</description>
     </item>
-    
     <item>
       <title>Python 函数参数详解</title>
       <link>/2019/10/06/python-%E5%87%BD%E6%95%B0%E5%8F%82%E6%95%B0%E8%AF%A6%E8%A7%A3/</link>
-      <pubDate>Sun, 06 Oct 2019 16:14:18 +0800</pubDate>
-      
+      <pubDate>Sun, 06 Oct 2019 16:14:18 +0800</pubDate><author>fy975713384@gmail.com (Pan, Feng)</author>
       <guid>/2019/10/06/python-%E5%87%BD%E6%95%B0%E5%8F%82%E6%95%B0%E8%AF%A6%E8%A7%A3/</guid>
       <description>前言 最近在跟同事讨论一个方法的调用时涉及到了 Python 函数的位置参数和关键字参数的相关知识，发现之前学习 Python 时对函数参数研究的并不透彻，且很多地方已经</description>
     </item>
-    
   </channel>
 </rss>

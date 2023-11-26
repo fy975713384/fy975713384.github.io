@@ -5,132 +5,108 @@
     <link>/tag/python/</link>
     <description>Recent content in Python on Wing</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 09 Aug 2022 20:09:33 +0800</lastBuildDate><atom:link href="/tag/python/index.xml" rel="self" type="application/rss+xml" />
+    <language>zh-cn</language>
+    <managingEditor>fy975713384@gmail.com (Pan, Feng)</managingEditor>
+    <webMaster>fy975713384@gmail.com (Pan, Feng)</webMaster>
+    <lastBuildDate>Tue, 09 Aug 2022 20:09:33 +0800</lastBuildDate>
+    <atom:link href="/tag/python/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Python元类介绍及实践</title>
-      <link>/2022/08/09/python%E5%85%83%E7%B1%BB%E4%BB%8B%E7%BB%8D%E5%8F%8A%E5%AE%9E%E8%B7%B5/</link>
-      <pubDate>Tue, 09 Aug 2022 20:09:33 +0800</pubDate>
-      
-      <guid>/2022/08/09/python%E5%85%83%E7%B1%BB%E4%BB%8B%E7%BB%8D%E5%8F%8A%E5%AE%9E%E8%B7%B5/</guid>
+      <title>Python 元类介绍及实践</title>
+      <link>/2022/08/09/python-%E5%85%83%E7%B1%BB%E4%BB%8B%E7%BB%8D%E5%8F%8A%E5%AE%9E%E8%B7%B5/</link>
+      <pubDate>Tue, 09 Aug 2022 20:09:33 +0800</pubDate><author>fy975713384@gmail.com (Pan, Feng)</author>
+      <guid>/2022/08/09/python-%E5%85%83%E7%B1%BB%E4%BB%8B%E7%BB%8D%E5%8F%8A%E5%AE%9E%E8%B7%B5/</guid>
       <description>Python 元类介绍及实践 一、 元编程和元类 1. 元编程技术简介 元编程 (Metaprogramming) 是一种计算机编程技术，这种技术可以使计算机程序将其它程序当做其数据进行处理。这意味着</description>
     </item>
-    
     <item>
       <title>Python 用户密码加密存储</title>
       <link>/2021/09/04/python-%E7%94%A8%E6%88%B7%E5%AF%86%E7%A0%81%E5%8A%A0%E5%AF%86%E5%AD%98%E5%82%A8/</link>
-      <pubDate>Sat, 04 Sep 2021 01:15:12 +0800</pubDate>
-      
+      <pubDate>Sat, 04 Sep 2021 01:15:12 +0800</pubDate><author>fy975713384@gmail.com (Pan, Feng)</author>
       <guid>/2021/09/04/python-%E7%94%A8%E6%88%B7%E5%AF%86%E7%A0%81%E5%8A%A0%E5%AF%86%E5%AD%98%E5%82%A8/</guid>
       <description>进行 Web 应用开发时，用户密码如何保存才足够安全是一个值得重视的问题，作为应用开发者，我们有责任保证用户的信息安全。对于金融行业来说，更是如此。</description>
     </item>
-    
     <item>
       <title>Python 并发编程</title>
-      <link>/2021/08/28/python-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/</link>
-      <pubDate>Sat, 28 Aug 2021 00:02:51 +0800</pubDate>
-      
-      <guid>/2021/08/28/python-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/</guid>
-      <description>Python 并发编程 CPU 密集型 &amp;amp; IO 密集型 线程安全 守护线程 多线程的工作过程（仅限于 Python） Python 在使用多线程的时候，调用的是 c 语言的原生线程。 拿到公共资</description>
+      <link>/2021/07/21/python-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/</link>
+      <pubDate>Wed, 21 Jul 2021 00:02:51 +0800</pubDate><author>fy975713384@gmail.com (Pan, Feng)</author>
+      <guid>/2021/07/21/python-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/</guid>
+      <description>Python 并发编程 CPU 密集型 &amp;amp; IO 密集型 &amp;gt; 线程安全 &amp;gt; 守护线程 多线程的工作过程（仅限于 Python） Python 在使用多线程的时候，调用的是 c 语言的原生线程。 拿到公</description>
     </item>
-    
     <item>
       <title>谨慎执行 Python 序列的重复操作</title>
       <link>/2020/12/24/%E8%B0%A8%E6%85%8E%E6%89%A7%E8%A1%8C-python-%E5%BA%8F%E5%88%97%E7%9A%84%E9%87%8D%E5%A4%8D%E6%93%8D%E4%BD%9C/</link>
-      <pubDate>Thu, 24 Dec 2020 10:57:51 +0800</pubDate>
-      
+      <pubDate>Thu, 24 Dec 2020 10:57:51 +0800</pubDate><author>fy975713384@gmail.com (Pan, Feng)</author>
       <guid>/2020/12/24/%E8%B0%A8%E6%85%8E%E6%89%A7%E8%A1%8C-python-%E5%BA%8F%E5%88%97%E7%9A%84%E9%87%8D%E5%A4%8D%E6%93%8D%E4%BD%9C/</guid>
       <description>序列是 Python 内置类型之一，常见的字符串、元组、列表都是序列类型的子类型。 Python 中序列支持重复 (*) 操作，可以便捷地生成包含 n 个重复元素的序列对象。 示例如</description>
     </item>
-    
     <item>
       <title>Python 魔法方法之自定义实例属性</title>
       <link>/2020/06/17/python-%E9%AD%94%E6%B3%95%E6%96%B9%E6%B3%95%E4%B9%8B%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AE%9E%E4%BE%8B%E5%B1%9E%E6%80%A7/</link>
-      <pubDate>Wed, 17 Jun 2020 12:39:01 +0800</pubDate>
-      
+      <pubDate>Wed, 17 Jun 2020 12:39:01 +0800</pubDate><author>fy975713384@gmail.com (Pan, Feng)</author>
       <guid>/2020/06/17/python-%E9%AD%94%E6%B3%95%E6%96%B9%E6%B3%95%E4%B9%8B%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AE%9E%E4%BE%8B%E5%B1%9E%E6%80%A7/</guid>
       <description>Python 魔法方法之自定义实例属性 Python 魔法方法系列 让你的代码更加 pythonic __getattribute__ object.__getattribute__(self, name) 方法用于自定义实例属性的访问，使用时需注意： 该魔法方法会在访问实例的任何属性时</description>
     </item>
-    
     <item>
       <title>Python 魔法方法之自定义实例</title>
       <link>/2020/06/17/python-%E9%AD%94%E6%B3%95%E6%96%B9%E6%B3%95%E4%B9%8B%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AE%9E%E4%BE%8B/</link>
-      <pubDate>Wed, 17 Jun 2020 12:38:01 +0800</pubDate>
-      
+      <pubDate>Wed, 17 Jun 2020 12:38:01 +0800</pubDate><author>fy975713384@gmail.com (Pan, Feng)</author>
       <guid>/2020/06/17/python-%E9%AD%94%E6%B3%95%E6%96%B9%E6%B3%95%E4%B9%8B%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AE%9E%E4%BE%8B/</guid>
       <description>Python 魔法方法之自定义实例 Python 魔法方法系列 让你的代码更加 pythonic 构造函数 &amp;amp; 析构函数 学习 Python 的自定义实例魔法方法前需要先了解两个概念，构造函数 和 析构函数。 【</description>
     </item>
-    
     <item>
       <title>Python 函数参数详解</title>
       <link>/2019/10/06/python-%E5%87%BD%E6%95%B0%E5%8F%82%E6%95%B0%E8%AF%A6%E8%A7%A3/</link>
-      <pubDate>Sun, 06 Oct 2019 16:14:18 +0800</pubDate>
-      
+      <pubDate>Sun, 06 Oct 2019 16:14:18 +0800</pubDate><author>fy975713384@gmail.com (Pan, Feng)</author>
       <guid>/2019/10/06/python-%E5%87%BD%E6%95%B0%E5%8F%82%E6%95%B0%E8%AF%A6%E8%A7%A3/</guid>
       <description>前言 最近在跟同事讨论一个方法的调用时涉及到了 Python 函数的位置参数和关键字参数的相关知识，发现之前学习 Python 时对函数参数研究的并不透彻，且很多地方已经</description>
     </item>
-    
     <item>
       <title>Python 面向对象</title>
       <link>/2019/03/23/python-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/</link>
-      <pubDate>Sat, 23 Mar 2019 12:19:10 +0800</pubDate>
-      
+      <pubDate>Sat, 23 Mar 2019 12:19:10 +0800</pubDate><author>fy975713384@gmail.com (Pan, Feng)</author>
       <guid>/2019/03/23/python-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/</guid>
       <description>面向对象(Object Oriented)是软件开发方法，一种编程范式。 &amp;ndash;百度百科 Python 中的对象 Python 中一切皆对象 对象 是对数据的抽象 对象 拥</description>
     </item>
-    
     <item>
       <title>Python 处理时间与日期</title>
       <link>/2019/03/23/python-%E5%A4%84%E7%90%86%E6%97%B6%E9%97%B4%E4%B8%8E%E6%97%A5%E6%9C%9F/</link>
-      <pubDate>Sat, 23 Mar 2019 11:46:24 +0800</pubDate>
-      
+      <pubDate>Sat, 23 Mar 2019 11:46:24 +0800</pubDate><author>fy975713384@gmail.com (Pan, Feng)</author>
       <guid>/2019/03/23/python-%E5%A4%84%E7%90%86%E6%97%B6%E9%97%B4%E4%B8%8E%E6%97%A5%E6%9C%9F/</guid>
       <description>Python 时间与日期处理 在信贷项目中会频繁地对日期时间进行处理，尤其是账单平移工具会大量地进行时间计算，熟练掌握 Python 的日期时间操作将给这些测试工作带来</description>
     </item>
-    
     <item>
       <title>Python 处理系统文件</title>
       <link>/2019/01/04/python-%E5%A4%84%E7%90%86%E7%B3%BB%E7%BB%9F%E6%96%87%E4%BB%B6/</link>
-      <pubDate>Fri, 04 Jan 2019 11:30:02 +0800</pubDate>
-      
+      <pubDate>Fri, 04 Jan 2019 11:30:02 +0800</pubDate><author>fy975713384@gmail.com (Pan, Feng)</author>
       <guid>/2019/01/04/python-%E5%A4%84%E7%90%86%E7%B3%BB%E7%BB%9F%E6%96%87%E4%BB%B6/</guid>
       <description>Python 处理系统文件 内置方法 open() python open() 函数用于打开一个文件，创建一个 file 对象 语法：open(name[, mode[, buffering]]) name : 一个包含了你要访问的文件名称的字符串值 mode</description>
     </item>
-    
     <item>
       <title>Python 处理 json</title>
       <link>/2018/12/23/python-%E5%A4%84%E7%90%86-json/</link>
-      <pubDate>Sun, 23 Dec 2018 19:14:18 +0800</pubDate>
-      
+      <pubDate>Sun, 23 Dec 2018 19:14:18 +0800</pubDate><author>fy975713384@gmail.com (Pan, Feng)</author>
       <guid>/2018/12/23/python-%E5%A4%84%E7%90%86-json/</guid>
       <description>导入模块： import json 将 Python 对象编码成 JSON 字符串： json.dumps() &amp;gt;&amp;gt;&amp;gt; import json &amp;gt;&amp;gt;&amp;gt; json.dumps({&amp;#39;a&amp;#39;: &amp;#39;你好&amp;#39;, &amp;#39;b&amp;#39;: 7}, sort_keys=True, indent=4, separators=(&amp;#39;,&amp;#39;, &amp;#39;: &amp;#39;)) { &amp;#34;a&amp;#34;: &amp;#34;你好&amp;#34;, &amp;#34;b&amp;#34;: 7 } 将已编码的 JSON 字</description>
     </item>
-    
     <item>
       <title>Python 排序算法实现</title>
       <link>/2018/10/23/python-%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E5%AE%9E%E7%8E%B0/</link>
-      <pubDate>Tue, 23 Oct 2018 19:14:18 +0800</pubDate>
-      
+      <pubDate>Tue, 23 Oct 2018 19:14:18 +0800</pubDate><author>fy975713384@gmail.com (Pan, Feng)</author>
       <guid>/2018/10/23/python-%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E5%AE%9E%E7%8E%B0/</guid>
       <description>稳定排序 冒泡排序 工作原理 它重复地走访过要排序的数列，一次比较两个元素，如果他们的顺序错误就把他们交换过来。走访数列的工作是重复地进行直到没有</description>
     </item>
-    
     <item>
       <title>Python 字符串格式化</title>
       <link>/2018/10/06/python-%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%A0%BC%E5%BC%8F%E5%8C%96/</link>
-      <pubDate>Sat, 06 Oct 2018 16:14:18 +0800</pubDate>
-      
+      <pubDate>Sat, 06 Oct 2018 16:14:18 +0800</pubDate><author>fy975713384@gmail.com (Pan, Feng)</author>
       <guid>/2018/10/06/python-%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%A0%BC%E5%BC%8F%E5%8C%96/</guid>
       <description>推荐使用 f-Strings 字符串格式化之一：%-formatting 和 string.Template 转化说明符表达式：%[转换标记][宽度[.精确度]]转换类型 转换标记 解释 - 表示左对齐</description>
     </item>
-    
     <item>
       <title>Python Launcher（for Windows）指定 Python 执行版本</title>
       <link>/2018/09/09/python-launcherfor-windows%E6%8C%87%E5%AE%9A-python-%E6%89%A7%E8%A1%8C%E7%89%88%E6%9C%AC/</link>
-      <pubDate>Sun, 09 Sep 2018 18:27:30 +0800</pubDate>
-      
+      <pubDate>Sun, 09 Sep 2018 18:27:30 +0800</pubDate><author>fy975713384@gmail.com (Pan, Feng)</author>
       <guid>/2018/09/09/python-launcherfor-windows%E6%8C%87%E5%AE%9A-python-%E6%89%A7%E8%A1%8C%E7%89%88%E6%9C%AC/</guid>
       <description>一、什么是 Python Launcher 官网原文： New in version 3.3. The Python launcher for Windows is a utility which aids in locating and executing of different Python versions. It allows scripts (or the command-line) to indicate a preference for a specific Python version, and will locate and execute that version. Unlike the PATH variable, the launcher will correctly select the most appropriate version of</description>
     </item>
-    
   </channel>
 </rss>

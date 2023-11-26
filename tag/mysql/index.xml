@@ -5,15 +5,17 @@
     <link>/tag/mysql/</link>
     <description>Recent content in Mysql on Wing</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 28 Aug 2021 14:18:25 +0800</lastBuildDate><atom:link href="/tag/mysql/index.xml" rel="self" type="application/rss+xml" />
+    <language>zh-cn</language>
+    <managingEditor>fy975713384@gmail.com (Pan, Feng)</managingEditor>
+    <webMaster>fy975713384@gmail.com (Pan, Feng)</webMaster>
+    <lastBuildDate>Sat, 28 Aug 2021 14:18:25 +0800</lastBuildDate>
+    <atom:link href="/tag/mysql/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Mysql日期时间操作</title>
-      <link>/2021/08/28/mysql%E6%97%A5%E6%9C%9F%E6%97%B6%E9%97%B4%E6%93%8D%E4%BD%9C/</link>
-      <pubDate>Sat, 28 Aug 2021 14:18:25 +0800</pubDate>
-      
-      <guid>/2021/08/28/mysql%E6%97%A5%E6%9C%9F%E6%97%B6%E9%97%B4%E6%93%8D%E4%BD%9C/</guid>
+      <title>Mysql 日期时间操作</title>
+      <link>/2021/08/28/mysql-%E6%97%A5%E6%9C%9F%E6%97%B6%E9%97%B4%E6%93%8D%E4%BD%9C/</link>
+      <pubDate>Sat, 28 Aug 2021 14:18:25 +0800</pubDate><author>fy975713384@gmail.com (Pan, Feng)</author>
+      <guid>/2021/08/28/mysql-%E6%97%A5%E6%9C%9F%E6%97%B6%E9%97%B4%E6%93%8D%E4%BD%9C/</guid>
       <description>Mysql 日期时间操作 时间戳 mysql&amp;gt; SELECT UNIX_TIMESTAMP(), FROM_UNIXTIME(UNIX_TIMESTAMP()); UNIX_TIMESTAMP()|FROM_UNIXTIME(UNIX_TIMESTAMP())| ----------------+-------------------------------+ 1630134918 |2021-08-28 07:15:18.0 | 日期时间查询 当前日期时间查询 mysql&amp;gt; SELECT CURRENT_TIMESTAMP, NOW(), LOCALTIME, LOCALTIMESTAMP, SYSDATE(); CURRENT_TIMESTAMP |NOW() |LOCALTIME |LOCALTIMESTAMP |SYSDATE() | ---------------------+---------------------+---------------------+---------------------+---------------------+ 2021-08-28 07:05:43.0|2021-08-28 07:05:43.0|2021-08-28 07:05:43.0|2021-08-28 07:05:43.0|2021-08-28 07:05:43.0| 当前日期查询 mysql&amp;gt; SELECT CURRENT_DATE, CURDATE(); CURRENT_DATE|CURDATE() | ------------+----------+ 2021-08-28 |2021-08-28| 当</description>
     </item>
-    
   </channel>
 </rss>
