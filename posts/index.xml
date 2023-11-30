@@ -32,6 +32,13 @@
       <description>博客优化-MarkDown 软换行问题 事情的背景是这样的：在看一个博主的技术视屏时，发现他用 Typora 编写 Markdown 文档时可以做到所见即所得。 其实这种功能我在</description>
     </item>
     <item>
+      <title>更加优雅地在Python测试代码中查询数据库</title>
+      <link>/2022/08/30/%E6%9B%B4%E5%8A%A0%E4%BC%98%E9%9B%85%E5%9C%B0%E5%9C%A8python%E6%B5%8B%E8%AF%95%E4%BB%A3%E7%A0%81%E4%B8%AD%E6%9F%A5%E8%AF%A2%E6%95%B0%E6%8D%AE%E5%BA%93/</link>
+      <pubDate>Tue, 30 Aug 2022 21:03:55 +0800</pubDate><author>fy975713384@gmail.com (Pan, Feng)</author>
+      <guid>/2022/08/30/%E6%9B%B4%E5%8A%A0%E4%BC%98%E9%9B%85%E5%9C%B0%E5%9C%A8python%E6%B5%8B%E8%AF%95%E4%BB%A3%E7%A0%81%E4%B8%AD%E6%9F%A5%E8%AF%A2%E6%95%B0%E6%8D%AE%E5%BA%93/</guid>
+      <description>更加优雅地在 Python 测试代码中查询数据库 with connection: with connection.cursor() as cursor: sql = &amp;#34;SELECT `id`, `password` FROM `users` WHERE `email`=%s&amp;#34; cursor.execute(sql, (&amp;#39;webmaster@python.org&amp;#39;,)) result = cursor.fetchone() -&amp;gt; db.from_(_ := Table(&amp;#34;users&amp;#34;)).select(_.id, _.password).where(_.email.eq(&amp;#34;test&amp;#34;)).execute().fetchone() 的过程。 一、基于 PyMySQL 的原始写法 来自官网的样例（经过简化） import</description>
+    </item>
+    <item>
       <title>Python 元类介绍及实践</title>
       <link>/2022/08/09/python-%E5%85%83%E7%B1%BB%E4%BB%8B%E7%BB%8D%E5%8F%8A%E5%AE%9E%E8%B7%B5/</link>
       <pubDate>Tue, 09 Aug 2022 20:09:33 +0800</pubDate><author>fy975713384@gmail.com (Pan, Feng)</author>
@@ -142,13 +149,6 @@
       <pubDate>Tue, 12 Nov 2019 16:52:49 +0800</pubDate><author>fy975713384@gmail.com (Pan, Feng)</author>
       <guid>/2019/11/12/wrk-%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95%E5%B7%A5%E5%85%B7%E8%AF%A6%E8%A7%A3/</guid>
       <description>建议练习时可以使用 FastApi 或 Flask 等 Web 服务端框架在本地搭建一个 HTTP 服务 wrk 简介 wrk 是一个用于 HTTP 协议的基准测试工具。 基准测试是一种性能测试方法，它通过设计科学</description>
-    </item>
-    <item>
-      <title>浅谈计算机字符编码</title>
-      <link>/2019/10/28/%E6%B5%85%E8%B0%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81/</link>
-      <pubDate>Mon, 28 Oct 2019 00:58:33 +0800</pubDate><author>fy975713384@gmail.com (Pan, Feng)</author>
-      <guid>/2019/10/28/%E6%B5%85%E8%B0%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81/</guid>
-      <description>浅谈计算机字符编码 程序员如果不弄懂字符编码它就会像幽灵一般纠缠你整个职业生涯，各种灵异事件会接踵而来，挥之不去。 &amp;mdash; 刘志军 [知乎] 基础知识： 1</description>
     </item>
   </channel>
 </rss>

@@ -65,8 +65,22 @@
   </url>
   
   <url>
+    <loc>/tag/mysql/</loc>
+    <lastmod>2023-11-29T16:09:58+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>/tag/python/</loc>
     <lastmod>2023-11-29T14:17:34+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>/2022/08/30/%E6%9B%B4%E5%8A%A0%E4%BC%98%E9%9B%85%E5%9C%B0%E5%9C%A8python%E6%B5%8B%E8%AF%95%E4%BB%A3%E7%A0%81%E4%B8%AD%E6%9F%A5%E8%AF%A2%E6%95%B0%E6%8D%AE%E5%BA%93/</loc>
+    <lastmod>2022-08-30T21:03:55+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -130,13 +144,6 @@
   <url>
     <loc>/tag/%E5%AE%89%E5%85%A8/</loc>
     <lastmod>2021-09-05T17:03:43+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>/tag/mysql/</loc>
-    <lastmod>2023-11-29T16:09:58+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>

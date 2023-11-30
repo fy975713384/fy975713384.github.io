@@ -1,15 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Mysql on Wing</title>
+    <title>MySQL on Wing</title>
     <link>/tag/mysql/</link>
-    <description>Recent content in Mysql on Wing</description>
+    <description>Recent content in MySQL on Wing</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <managingEditor>fy975713384@gmail.com (Pan, Feng)</managingEditor>
     <webMaster>fy975713384@gmail.com (Pan, Feng)</webMaster>
-    <lastBuildDate>Sat, 28 Aug 2021 14:18:25 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 30 Aug 2022 21:03:55 +0800</lastBuildDate>
     <atom:link href="/tag/mysql/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>更加优雅地在Python测试代码中查询数据库</title>
+      <link>/2022/08/30/%E6%9B%B4%E5%8A%A0%E4%BC%98%E9%9B%85%E5%9C%B0%E5%9C%A8python%E6%B5%8B%E8%AF%95%E4%BB%A3%E7%A0%81%E4%B8%AD%E6%9F%A5%E8%AF%A2%E6%95%B0%E6%8D%AE%E5%BA%93/</link>
+      <pubDate>Tue, 30 Aug 2022 21:03:55 +0800</pubDate><author>fy975713384@gmail.com (Pan, Feng)</author>
+      <guid>/2022/08/30/%E6%9B%B4%E5%8A%A0%E4%BC%98%E9%9B%85%E5%9C%B0%E5%9C%A8python%E6%B5%8B%E8%AF%95%E4%BB%A3%E7%A0%81%E4%B8%AD%E6%9F%A5%E8%AF%A2%E6%95%B0%E6%8D%AE%E5%BA%93/</guid>
+      <description>更加优雅地在 Python 测试代码中查询数据库 with connection: with connection.cursor() as cursor: sql = &amp;#34;SELECT `id`, `password` FROM `users` WHERE `email`=%s&amp;#34; cursor.execute(sql, (&amp;#39;webmaster@python.org&amp;#39;,)) result = cursor.fetchone() -&amp;gt; db.from_(_ := Table(&amp;#34;users&amp;#34;)).select(_.id, _.password).where(_.email.eq(&amp;#34;test&amp;#34;)).execute().fetchone() 的过程。 一、基于 PyMySQL 的原始写法 来自官网的样例（经过简化） import</description>
+    </item>
     <item>
       <title>Mysql 日期时间操作</title>
       <link>/2021/08/28/mysql-%E6%97%A5%E6%9C%9F%E6%97%B6%E9%97%B4%E6%93%8D%E4%BD%9C/</link>
