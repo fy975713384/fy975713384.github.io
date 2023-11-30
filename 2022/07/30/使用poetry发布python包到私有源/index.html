@@ -120,8 +120,8 @@
   <article>
   <blockquote>
 <p>日常 Python 开发过程中，总是少不了需要连接测试数据库，发送接口请求，下载上传文件等等。<br>
-如果我们仅有一个项目需要执行这些操作，那把他们封装成公共方法放在本地的 utils 目录下固然可行。<br>
-但实际上往往会有多个项目需要执行这些操作。那么更好的方式是：把他们打成一个 Python 包，上传到公司的私有源中，需要使用的项目通过 pip install 安装即可。其优点不言而喻。</p>
+如果我们仅有一个项目需要执行这些操作，那把他们封装成公共方法放在本地的 utils 目录下固然可行，但实际上往往会有多个项目需要执行这些操作。<br>
+那么更好的方式是：把他们打成一个 Python 包，上传到公司的私有源中，需要使用的项目通过 pip install 安装即可。其优点不言而喻。</p>
 </blockquote>
 <h2 id="python-打包发布方式">Python 打包发布方式</h2>
 <p>Python 传统的打包发布方式是通过手动配置 <code>setup.py</code>、<code>setup.cfg</code> 文件，然后使用 <code>setuptools</code> 进行打包，最后借助 <code>twine</code> 进行发布包到 pypi 。</p>
