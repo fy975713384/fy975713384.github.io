@@ -39,6 +39,13 @@
       <description>Python 元类介绍及实践 一、 元编程和元类 1. 元编程技术简介 元编程 (Metaprogramming) 是一种计算机编程技术，这种技术可以使计算机程序将其它程序当做其数据进行处理。这意味着</description>
     </item>
     <item>
+      <title>使用Poetry发布Python包到私有源</title>
+      <link>/2022/07/30/%E4%BD%BF%E7%94%A8poetry%E5%8F%91%E5%B8%83python%E5%8C%85%E5%88%B0%E7%A7%81%E6%9C%89%E6%BA%90/</link>
+      <pubDate>Sat, 30 Jul 2022 10:57:51 +0800</pubDate><author>fy975713384@gmail.com (Pan, Feng)</author>
+      <guid>/2022/07/30/%E4%BD%BF%E7%94%A8poetry%E5%8F%91%E5%B8%83python%E5%8C%85%E5%88%B0%E7%A7%81%E6%9C%89%E6%BA%90/</guid>
+      <description>日常 Python 开发过程中，总是少不了需要连接测试数据库，发送接口请求，下载上传文件等等。 如果我们仅有一个项目需要执行这些操作，那把他们封装成公共方法</description>
+    </item>
+    <item>
       <title>ElementUI 表格数据行内修改方式</title>
       <link>/2022/05/06/elementui-%E8%A1%A8%E6%A0%BC%E6%95%B0%E6%8D%AE%E8%A1%8C%E5%86%85%E4%BF%AE%E6%94%B9%E6%96%B9%E5%BC%8F/</link>
       <pubDate>Fri, 06 May 2022 18:19:59 +0800</pubDate><author>fy975713384@gmail.com (Pan, Feng)</author>
@@ -142,13 +149,6 @@
       <pubDate>Mon, 28 Oct 2019 00:58:33 +0800</pubDate><author>fy975713384@gmail.com (Pan, Feng)</author>
       <guid>/2019/10/28/%E6%B5%85%E8%B0%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81/</guid>
       <description>浅谈计算机字符编码 程序员如果不弄懂字符编码它就会像幽灵一般纠缠你整个职业生涯，各种灵异事件会接踵而来，挥之不去。 &amp;mdash; 刘志军 [知乎] 基础知识： 1</description>
-    </item>
-    <item>
-      <title>Python 函数参数详解</title>
-      <link>/2019/10/06/python-%E5%87%BD%E6%95%B0%E5%8F%82%E6%95%B0%E8%AF%A6%E8%A7%A3/</link>
-      <pubDate>Sun, 06 Oct 2019 16:14:18 +0800</pubDate><author>fy975713384@gmail.com (Pan, Feng)</author>
-      <guid>/2019/10/06/python-%E5%87%BD%E6%95%B0%E5%8F%82%E6%95%B0%E8%AF%A6%E8%A7%A3/</guid>
-      <description>前言 最近在跟同事讨论一个方法的调用时涉及到了 Python 函数的位置参数和关键字参数的相关知识，发现之前学习 Python 时对函数参数研究的并不透彻，且很多地方已经</description>
     </item>
   </channel>
 </rss>
